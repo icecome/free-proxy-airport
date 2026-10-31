@@ -225,6 +225,34 @@ def parse_proxy_uri(uri: str) -> dict[str, Any] | None:
                 proxy["ws-opts"] = {"path": str(data.get("path", "/"))}
         return proxy if proxy["server"] and proxy["port"] else None
 
+    # Legacy whole-line-base64 ss variant: ss://base64(method:password@host:port)#name
+    if scheme == "ss" and "@" not in body:
+        try:
+            padded = body + "=" * (-len(body) % 4)
+            decoded_line = base64.b64decode(padded, validate=True).decode("utf-8")
+        except Exception:
+            return None
+        secret, _, hostport = decoded_line.rpartition("@")
+        host, _, port_str = hostport.rpartition(":")
+        host = host.strip("[]")
+        try:
+            port = int(port_str)
+        except ValueError:
+            return None
+        if not host or port <= 0 or port > 65535:
+            return None
+        method, _, pwd = secret.partition(":")
+        if not method or not pwd:
+            return None
+        return {
+            "name": name or f"ss-{host}",
+            "type": "ss",
+            "server": host,
+            "port": port,
+            "cipher": method,
+            "password": pwd,
+        }
+
     # generic user@host:port?query style: vless/trojan/ss/hysteria2/tuic/socks
     query: dict[str, str] = {}
     if "?" in body:
@@ -261,7 +289,7 @@ def parse_proxy_uri(uri: str) -> dict[str, Any] | None:
     }
 
     if proxy_type == "ss":
-        # userinfo may be base64(method:password) or method:password
+        # SIP002: userinfo may be base64(method:password) or plain method:password
         secret = userinfo
         try:
             padded = secret + "=" * (-len(secret) % 4)
