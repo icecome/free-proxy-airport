@@ -22,6 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
+import urllib.parse
 
 import requests
 import yaml
@@ -110,16 +111,19 @@ def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
 
 
 def maybe_base64_decode(text: str) -> str:
-    compact = "".join(text.split())
+    # Strip BOM and zero-width chars that break base64 sniffing on free sources.
+    cleaned = text.lstrip("﻿ \u200b\u200c\u200d").strip()
+    compact = "".join(cleaned.split())
     if not compact or len(compact) % 4 != 0:
-        return text
-    if not re.fullmatch(r"[A-Za-z0-9+/=]+", compact):
-        return text
+        return cleaned
+    if not re.fullmatch(r"[A-Za-z0-9+/=\-_=]+", compact):
+        return cleaned
     try:
-        decoded = base64.b64decode(compact, validate=True).decode("utf-8")
+        padded = compact + "=" * (-len(compact) % 4)
+        decoded = base64.b64decode(padded, validate=True).decode("utf-8")
     except Exception:
-        return text
-    return decoded if "proxies:" in decoded or "://" in decoded else text
+        return cleaned
+    return decoded if "proxies:" in decoded or "://" in decoded else cleaned
 
 
 def load_yaml_document(text: str) -> Any:
@@ -156,17 +160,193 @@ def extract_proxy_block(text: str) -> list[Any]:
     return []
 
 
+URI_SCHEME_TYPES = {
+    "ss": "ss",
+    "ssr": "ssr",
+    "vmess": "vmess",
+    "vless": "vless",
+    "trojan": "trojan",
+    "hysteria": "hysteria",
+    "hysteria2": "hysteria2",
+    "hy2": "hysteria2",
+    "tuic": "tuic",
+    "socks": "socks5",
+    "socks5": "socks5",
+}
+
+# Fields where URL percent-encoding must be decoded back to raw text.
+URI_DECODE_FIELDS = {"name", "password", "uuid", "servername", "sni", "host"}
+
+
+def _uri_fragment_name(uri: str) -> str:
+    fragment = uri.split("#", 1)[1] if "#" in uri else ""
+    return quote("", safe="") + fragment if False else fragment
+
+
+def parse_proxy_uri(uri: str) -> dict[str, Any] | None:
+    """Parse one vless:// vmess:// trojan:// ss:// hysteria2:// tuic:// share URI."""
+    scheme, _, body = uri.partition("://")
+    scheme = scheme.lower().strip()
+    if scheme not in URI_SCHEME_TYPES or not body:
+        return None
+
+    # name is the URL fragment after '#'
+    name = ""
+    if "#" in body:
+        body, name = body.split("#", 1)
+        name = urllib.parse.unquote(name).strip()
+
+    proxy_type = URI_SCHEME_TYPES[scheme]
+
+    if scheme == "vmess":
+        # vmess://base64(JSON) with fields {"add","port","id","ps",...}
+        raw = body.split("#", 1)[0]
+        try:
+            padded = raw + "=" * (-len(raw) % 4)
+            data = json.loads(base64.b64decode(padded, validate=True).decode("utf-8"))
+        except Exception:
+            return None
+        if not isinstance(data, dict):
+            return None
+        proxy = {
+            "name": str(data.get("ps") or name or "vmess-node"),
+            "type": "vmess",
+            "server": str(data.get("add", "")),
+            "port": data.get("port"),
+            "uuid": str(data.get("id", "")),
+            "alterId": int(data.get("aid", 0) or 0),
+            "cipher": str(data.get("scy") or "auto"),
+            "tls": bool(data.get("tls") in ("tls", True)),
+        }
+        net = str(data.get("net", "tcp"))
+        if net in ("ws", "grpc", "h2"):
+            proxy["network"] = net
+            if net == "ws":
+                proxy["ws-opts"] = {"path": str(data.get("path", "/"))}
+        return proxy if proxy["server"] and proxy["port"] else None
+
+    # generic user@host:port?query style: vless/trojan/ss/hysteria2/tuic/socks
+    query: dict[str, str] = {}
+    if "?" in body:
+        body, qs = body.split("?", 1)
+        for pair in qs.split("&"):
+            if "=" in pair:
+                k, _, v = pair.partition("=")
+                query[k] = urllib.parse.unquote(v)
+
+    userinfo = ""
+    if "@" in body:
+        userinfo, _, hostport = body.rpartition("@")
+    else:
+        # ss style without userinfo: base64(method:password)@host:port already
+        # handled above; some sources emit host:port only -> skip
+        hostport = body
+        if "@" not in body and scheme == "ss" and ":" not in body:
+            return None
+
+    host, _, port_str = hostport.rpartition(":")
+    host = host.strip("[]")
+    try:
+        port = int(port_str)
+    except ValueError:
+        return None
+    if not host or port <= 0 or port > 65535:
+        return None
+
+    proxy: dict[str, Any] = {
+        "name": name or f"{proxy_type}-{host}",
+        "type": proxy_type,
+        "server": host,
+        "port": port,
+    }
+
+    if proxy_type == "ss":
+        # userinfo may be base64(method:password) or method:password
+        secret = userinfo
+        try:
+            padded = secret + "=" * (-len(secret) % 4)
+            secret = base64.b64decode(padded, validate=True).decode("utf-8")
+        except Exception:
+            pass
+        method, _, pwd = secret.partition(":")
+        if not method or not pwd:
+            return None
+        proxy["cipher"] = method
+        proxy["password"] = pwd
+    elif proxy_type in ("vless", "trojan", "tuic"):
+        proxy["password" if proxy_type == "trojan" else "uuid"] = userinfo
+        if proxy_type == "tuic":
+            proxy["uuid"] = userinfo.partition(":")[0]
+            pwd = userinfo.partition(":")[2]
+            if pwd:
+                proxy["password"] = pwd
+    elif proxy_type in ("hysteria", "hysteria2", "socks5"):
+        proxy["password"] = userinfo
+
+    if query:
+        if query.get("security") == "tls" or proxy_type in ("trojan", "hysteria", "hysteria2", "tuic"):
+            proxy["tls"] = True
+        if query.get("sni"):
+            proxy["sni"] = query["sni"]
+        if query.get("servername") and "sni" not in proxy:
+            proxy["sni"] = query["servername"]
+        if query.get("flow"):
+            proxy["flow"] = query["flow"]
+        if query.get("type") in ("ws", "grpc", "tcp", "http"):
+            if query["type"] in ("ws", "grpc", "http"):
+                proxy["network"] = query["type"]
+            if query["type"] == "ws" and query.get("path"):
+                proxy["ws-opts"] = {"path": query["path"]}
+                if query.get("host"):
+                    proxy["ws-opts"]["headers"] = {"Host": query["host"]}
+        if query.get("fp"):
+            proxy["client-fingerprint"] = query["fp"]
+        if query.get("pbk"):
+            proxy["reality-opts"] = {"public-key": query["pbk"], **({"short-id": query["sid"]} if query.get("sid") else {})}
+
+    for field in URI_DECODE_FIELDS:
+        if field in proxy and isinstance(proxy[field], str):
+            proxy[field] = urllib.parse.unquote(proxy[field])
+    return proxy
+
+
+def parse_proxy_uri_lines(text: str) -> list[dict[str, Any]]:
+    """Extract share-URI nodes (one per line) from decoded subscription text."""
+    proxies: list[dict[str, Any]] = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or "://" not in line:
+            continue
+        parsed = parse_proxy_uri(line)
+        if parsed:
+            proxies.append(parsed)
+    return proxies
+
+
 def extract_proxies(text: str) -> list[dict[str, Any]]:
+    """Auto-detect the payload format and extract proxy dicts.
+
+    Supported formats, tried in order:
+      1. Clash YAML (full document with proxies: or a bare list)
+      2. Clash YAML proxy block embedded in larger text
+      3. Base64-encoded (1)/(3): decoded then parsed as URI list
+      4. Plain share-URI list (vless:// vmess:// trojan:// ss:// ssr://
+         hysteria:// hysteria2:// hy2:// tuic:// socks5://, one per line)
+    """
+    decoded = maybe_base64_decode(text)
+
     document = load_yaml_document(text)
+    proxies: list[Any] = []
     if isinstance(document, dict):
         proxies = document.get("proxies", [])
     elif isinstance(document, list):
         proxies = document
-    else:
-        proxies = []
 
     if not proxies:
         proxies = extract_proxy_block(text)
+
+    if not proxies:
+        proxies = parse_proxy_uri_lines(decoded)
 
     clean: list[dict[str, Any]] = []
     for proxy in proxies:
