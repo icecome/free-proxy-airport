@@ -4,9 +4,9 @@ import base64
 import gzip
 import hashlib
 import json
+import math
 import os
 import platform
-import random
 import re
 import shutil
 import socket
@@ -35,40 +35,27 @@ LATENCY_TIMEOUT_MS = 5000
 MAX_RETRIES = 3
 MAX_WORKERS = int(os.getenv("FREE_PROXY_AIRPORT_MAX_WORKERS", "24"))
 MAX_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_CANDIDATES", "0"))
+SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000"
+SPEED_TEST_MAX_BYTES = 10_000_000
+SPEED_TEST_TIMEOUT = 25.0
+SPEED_TEST_MIN_MBPS = float(os.getenv("FREE_PROXY_AIRPORT_MIN_MBPS", "1.0"))
+SPEED_TEST_TOP_N = int(os.getenv("FREE_PROXY_AIRPORT_SPEED_TOP_N", "30"))
+SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "10"))
 
-SOURCE_GROUPS = [
-    {
-        "name": "openRunner clash-freenode",
-        "primary": "https://raw.githubusercontent.com/openRunner/clash-freenode/main/sub.yaml",
-        "fallbacks": [
-            "https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml",
-            "https://raw.githubusercontent.com/openrunner/clash-freenode/main/clash.yaml",
-        ],
-    },
-    {
-        "name": "snakem982 proxypool",
-        "primary": "https://raw.githubusercontent.com/snakem982/proxypool/main/clash.yaml",
-        "fallbacks": [
-            "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml",
-            "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml",
-        ],
-    },
-    {
-        "name": "Flikify Free-Node",
-        "primary": "https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml",
-        "fallbacks": [
-            "https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml",
-            "https://cdn.jsdelivr.net/gh/a2470982985/getNode@main/clash.yaml",
-        ],
-    },
-    {
-        "name": "free-clash-v2ray GitHub Pages",
-        "primary": "https://free-clash-v2ray.github.io/uploads/latest.yaml",
-        "fallbacks": [
-            "discover:free-clash-v2ray",
-        ],
-    },
-]
+# One subscription URL per line. Lines starting with # are comments.
+# Add a new free source -> append a line. A source that keeps failing -> delete its line.
+SOURCES_FILE = Path(os.getenv("FREE_PROXY_AIRPORT_SOURCES", "sources.txt"))
+DEFAULT_SOURCES = """\
+# free-proxy-airport node sources: one URL per line, '#' starts a comment
+# openRunner clash-freenode
+https://raw.githubusercontent.com/openRunner/clash-freenode/main/sub.yaml
+# snakem982 proxypool
+https://raw.githubusercontent.com/snakem982/proxypool/main/clash.yaml
+# Flikify Free-Node
+https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
+# free-clash-v2ray GitHub Pages
+https://free-clash-v2ray.github.io/uploads/latest.yaml
+"""
 
 SUPPORTED_PROXY_TYPES = {
     "ss",
@@ -101,6 +88,7 @@ class ProxyMetric:
     latency: int
     region: str
     health_score: float
+    speed_mbps: float = 0.0
 
 
 def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
@@ -187,50 +175,6 @@ def extract_proxies(text: str) -> list[dict[str, Any]]:
     return clean
 
 
-def collect_proxies() -> tuple[int, list[dict[str, Any]]]:
-    collected: list[dict[str, Any]] = []
-    for source in SOURCE_GROUPS:
-        source_found: list[dict[str, Any]] = []
-        for url in expand_source_urls(source):
-            try:
-                text = fetch_text(url)
-                found = extract_proxies(text)
-                print(f"[OK] source={source['name']} proxies={len(found)} url={url}")
-                if found:
-                    source_found.extend(found)
-                    break
-            except Exception as exc:
-                print(f"[WARN] source={source['name']} skipped url={url} error={exc}")
-        collected.extend(source_found)
-
-    sanitized = sanitize_and_deduplicate(collected)
-    if MAX_CANDIDATES > 0 and len(sanitized) > MAX_CANDIDATES:
-        print(f"[WARN] limiting candidates from {len(sanitized)} to {MAX_CANDIDATES}")
-        sanitized = sanitized[:MAX_CANDIDATES]
-    return len(collected), sanitized
-
-
-def expand_source_urls(source: dict[str, Any]) -> list[str]:
-    urls = [str(source["primary"])]
-    for item in source.get("fallbacks", []):
-        if item == "discover:free-clash-v2ray":
-            urls.extend(discover_free_clash_v2ray_urls())
-        else:
-            urls.append(str(item))
-    return unique_ordered(urls)
-
-
-def discover_free_clash_v2ray_urls() -> list[str]:
-    readme_url = "https://raw.githubusercontent.com/free-clash-v2ray/free-clash-v2ray.github.io/main/README.md"
-    try:
-        text = fetch_text(readme_url)
-    except Exception as exc:
-        print(f"[WARN] free-clash-v2ray discovery failed: {exc}")
-        return []
-    pattern = r"https://free-clash-v2ray\.github\.io/uploads/\d{4}/\d{2}/[0-9]-\d{8}\.yaml"
-    return unique_ordered(re.findall(pattern, text))[:8]
-
-
 def unique_ordered(items: list[str]) -> list[str]:
     seen: set[str] = set()
     result: list[str] = []
@@ -239,6 +183,60 @@ def unique_ordered(items: list[str]) -> list[str]:
             seen.add(item)
             result.append(item)
     return result
+
+
+def load_source_urls() -> list[str]:
+    """Read subscription URLs from sources.txt (one per line, '#' comments).
+
+    Falls back to the built-in defaults when the file is missing or empty,
+    and writes the defaults out so the user can edit them in place.
+    """
+    text: str | None = None
+    if SOURCES_FILE.exists():
+        text = SOURCES_FILE.read_text(encoding="utf-8")
+
+    if text is None:
+        SOURCES_FILE.write_text(DEFAULT_SOURCES, encoding="utf-8")
+        print(f"[INFO] created {SOURCES_FILE} with default sources; edit it to add/remove sources")
+        text = DEFAULT_SOURCES
+
+    urls = unique_ordered(
+        line.strip()
+        for line in text.splitlines()
+        if line.strip() and not line.strip().startswith("#")
+    )
+    if not urls:
+        print(f"[WARN] {SOURCES_FILE} has no usable URLs; falling back to defaults")
+        urls = unique_ordered(
+            line.strip()
+            for line in DEFAULT_SOURCES.splitlines()
+            if line.strip() and not line.strip().startswith("#")
+        )
+    return urls
+
+
+def collect_proxies() -> tuple[int, list[dict[str, Any]], list[tuple[str, bool]]]:
+    source_report: list[tuple[str, bool]] = []
+    collected: list[dict[str, Any]] = []
+    for url in load_source_urls():
+        try:
+            text = fetch_text(url)
+            found = extract_proxies(text)
+            print(f"[OK] proxies={len(found)} url={url}")
+            if found:
+                collected.extend(found)
+                source_report.append((url, True))
+            else:
+                source_report.append((url, False))
+        except Exception as exc:
+            print(f"[WARN] source skipped url={url} error={exc}")
+            source_report.append((url, False))
+
+    sanitized = sanitize_and_deduplicate(collected)
+    if MAX_CANDIDATES > 0 and len(sanitized) > MAX_CANDIDATES:
+        print(f"[WARN] limiting candidates from {len(sanitized)} to {MAX_CANDIDATES}")
+        sanitized = sanitized[:MAX_CANDIDATES]
+    return len(collected), sanitized, source_report
 
 
 def sanitize_and_deduplicate(proxies: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -417,10 +415,11 @@ def extract_mihomo_binary(archive: Path, directory: Path) -> Path:
     raise RuntimeError(f"unsupported Mihomo archive: {archive}")
 
 
-def write_benchmark_config(path: Path, proxies: list[dict[str, Any]], controller_port: int) -> None:
+def write_benchmark_config(path: Path, proxies: list[dict[str, Any]], controller_port: int) -> int:
     names = [str(proxy["name"]) for proxy in proxies]
+    mixed_port = find_free_port()
     config = {
-        "mixed-port": find_free_port(),
+        "mixed-port": mixed_port,
         "allow-lan": False,
         "mode": "rule",
         "log-level": "warning",
@@ -436,6 +435,7 @@ def write_benchmark_config(path: Path, proxies: list[dict[str, Any]], controller
         "rules": ["MATCH,BENCHMARK"],
     }
     path.write_text(yaml.safe_dump(config, allow_unicode=True, sort_keys=False), encoding="utf-8")
+    return mixed_port
 
 
 def wait_for_controller(controller_url: str, process: subprocess.Popen[str]) -> None:
@@ -462,7 +462,7 @@ def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
         config_path = temp_dir / "benchmark.yaml"
         controller_port = find_free_port()
         controller_url = f"http://127.0.0.1:{controller_port}"
-        write_benchmark_config(config_path, proxies, controller_port)
+        mixed_port = write_benchmark_config(config_path, proxies, controller_port)
 
         process = subprocess.Popen(
             [str(engine), "-d", str(temp_dir), "-f", str(config_path)],
@@ -472,6 +472,16 @@ def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
         try:
             wait_for_controller(controller_url, process)
             metrics = run_delay_tests(controller_url, proxies)
+            if metrics:
+                metrics = run_speed_tests(controller_url, mixed_port, metrics)
+                for metric in metrics:
+                    metric.health_score = health_score(
+                        str(metric.proxy.get("name", "")),
+                        metric.latency,
+                        metric.region,
+                        metric.speed_mbps,
+                    )
+                metrics.sort(key=lambda item: item.health_score, reverse=True)
         finally:
             process.terminate()
             try:
@@ -520,6 +530,109 @@ def test_single_proxy(controller_url: str, proxy: dict[str, Any]) -> ProxyMetric
     region = detect_region(name)
     score = health_score(name, latency, region)
     return ProxyMetric(proxy=proxy, latency=latency, region=region, health_score=score)
+
+
+def switch_benchmark_node(controller_url: str, name: str) -> bool:
+    """Point the BENCHMARK selector group at a specific proxy."""
+    try:
+        response = requests.put(
+            f"{controller_url}/proxies/{quote('BENCHMARK', safe='')}",
+            json={"name": name},
+            timeout=5,
+        )
+        return response.status_code == 204 or response.status_code == 200
+    except Exception:
+        return False
+
+
+def download_speed_probe(proxy_port: int) -> float | None:
+    """Download a fixed-size file through the local mixed-port once.
+
+    Returns throughput in Mbps, or None if the attempt is unusable.
+    """
+    proxies = {
+        "http": f"http://127.0.0.1:{proxy_port}",
+        "https": f"http://127.0.0.1:{proxy_port}",
+    }
+    received = 0
+    start = time.monotonic()
+    try:
+        with requests.get(
+            SPEED_TEST_URL,
+            stream=True,
+            proxies=proxies,
+            timeout=SPEED_TEST_TIMEOUT,
+            headers={"User-Agent": f"free-proxy-airport/{VERSION}"},
+        ) as response:
+            if response.status_code != 200:
+                return None
+            for chunk in response.iter_content(chunk_size=65536):
+                received += len(chunk)
+                if received >= SPEED_TEST_MAX_BYTES:
+                    break
+    except Exception:
+        return None
+    elapsed = time.monotonic() - start
+    if elapsed < 0.5 or received < 500_000:
+        return None
+    return received * 8 / elapsed / 1_000_000
+
+
+def measure_speed_mbps(controller_url: str, proxy_port: int, name: str) -> float:
+    """Best-of-2 single-connection download through one proxy node."""
+    if not switch_benchmark_node(controller_url, name):
+        return 0.0
+    best = 0.0
+    for attempt in range(2):
+        mbps = download_speed_probe(proxy_port)
+        if mbps is None:
+            continue
+        best = max(best, mbps)
+        if best >= SPEED_TEST_MIN_MBPS * 4:
+            break
+    return best
+
+
+def run_speed_tests(
+    controller_url: str,
+    proxy_port: int,
+    metrics: list[ProxyMetric],
+) -> list[ProxyMetric]:
+    """Gate top-N low-latency nodes through a real download probe.
+
+    Nodes that fail the minimum throughput threshold are dropped unless the
+    surviving pool would fall below SPEED_TEST_MIN_POOL (degraded keep).
+    """
+    if not metrics:
+        return metrics
+    candidates = sorted(metrics, key=lambda item: (item.latency, -item.health_score))
+    candidates = candidates[: SPEED_TEST_TOP_N]
+    candidate_names = {str(item.proxy["name"]) for item in candidates}
+    print(f"[INFO] speed testing top {len(candidates)} nodes via {SPEED_TEST_URL}")
+
+    for index, metric in enumerate(candidates, start=1):
+        name = str(metric.proxy["name"])
+        mbps = measure_speed_mbps(controller_url, proxy_port, name)
+        metric.speed_mbps = round(mbps, 2)
+        status = "PASS" if mbps >= SPEED_TEST_MIN_MBPS else "SLOW"
+        print(f"[SPEED] {index}/{len(candidates)} {name} {metric.speed_mbps}Mbps {status}")
+
+    passed = [m for m in metrics if m.speed_mbps >= SPEED_TEST_MIN_MBPS]
+    dropped = len([m for m in candidates if 0 < m.speed_mbps < SPEED_TEST_MIN_MBPS])
+    if len(passed) < SPEED_TEST_MIN_POOL:
+        keep = SPEED_TEST_MIN_POOL - len(passed)
+        rescued = sorted(
+            [m for m in candidates if m.speed_mbps < SPEED_TEST_MIN_MBPS],
+            key=lambda item: item.speed_mbps,
+            reverse=True,
+        )[:keep]
+        print(f"[WARN] pool below {SPEED_TEST_MIN_POOL}, keeping {len(rescued)} slow nodes as degraded fallback")
+        passed.extend(rescued)
+    untouched = [m for m in metrics if str(m.proxy["name"]) not in candidate_names]
+    print(f"[INFO] speed gate: passed={len(passed)} slow_dropped={dropped} untested_kept={len(untouched)}")
+    result = passed + untouched
+    result.sort(key=lambda item: item.health_score, reverse=True)
+    return result
 
 
 def detect_region(name: str) -> str:
@@ -574,10 +687,17 @@ def region_bonus(region: str) -> int:
     return 1
 
 
-def health_score(name: str, latency: int, region: str) -> float:
-    stability_seed = int(hashlib.sha256(name.encode("utf-8")).hexdigest()[:12], 16)
-    stability = random.Random(stability_seed).random()
-    return (1 / latency) * 0.6 + region_bonus(region) * 0.3 + stability * 0.1
+def speed_bonus(speed_mbps: float) -> float:
+    """Map measured Mbps onto a 0..1 score with a soft cap at 10 Mbps."""
+    if speed_mbps <= 0:
+        return 0.0
+    return min(1.0, math.log10(1 + speed_mbps) / math.log10(1 + 10))
+
+
+def health_score(name: str, latency: int, region: str, speed_mbps: float = 0.0) -> float:
+    latency_score = 1.0 / latency if latency > 0 else 0.0
+    latency_norm = latency_score * LATENCY_TIMEOUT_MS / 1000  # 1/latency scaled to ~[0.2, 1]
+    return latency_norm * 0.4 + speed_bonus(speed_mbps) * 0.4 + region_bonus(region) / 3 * 0.2
 
 
 def low_latency_pool(metrics: list[ProxyMetric]) -> list[str]:
@@ -622,7 +742,7 @@ def load_existing_metrics() -> list[ProxyMetric]:
                 proxy=dict(proxy),
                 latency=LATENCY_TIMEOUT_MS,
                 region=region,
-                health_score=health_score(name, LATENCY_TIMEOUT_MS, region),
+                health_score=health_score(name, LATENCY_TIMEOUT_MS, region, 0.0),
             )
         )
     return metrics
@@ -744,17 +864,28 @@ def print_summary(total_nodes: int, candidates: int, metrics: list[ProxyMetric])
     hk_count = sum(1 for item in metrics if item.region == "HK")
     jp_count = sum(1 for item in metrics if item.region == "JP")
     us_count = sum(1 for item in metrics if item.region == "US")
+    speed_tested = [item for item in metrics if item.speed_mbps > 0]
     avg_latency = round(sum(item.latency for item in metrics) / len(metrics), 2) if metrics else 0
+    avg_speed = (
+        round(sum(item.speed_mbps for item in speed_tested) / len(speed_tested), 2)
+        if speed_tested
+        else 0
+    )
     print(f"[SUMMARY] total_nodes={total_nodes}")
     print(f"[SUMMARY] legal_candidates={candidates}")
     print(f"[SUMMARY] passed_latency_test={len(metrics)}")
+    print(f"[SUMMARY] speed_tested={len(speed_tested)} avg_speed_mbps={avg_speed}")
     print(f"[SUMMARY] region_HK={hk_count} region_JP={jp_count} region_US={us_count}")
     print(f"[SUMMARY] avg_latency_ms={avg_latency}")
     print(f"[SUMMARY] output={OUTPUT_PATH}")
 
 
 def main() -> None:
-    total_nodes, candidates = collect_proxies()
+    total_nodes, candidates, source_report = collect_proxies()
+    ok_sources = sum(1 for _, ok in source_report if ok)
+    print(f"[SUMMARY] sources_total={len(source_report)} sources_ok={ok_sources}")
+    if source_report and ok_sources == 0:
+        print("[WARN] ALL sources failed; check sources.txt URLs or your network egress")
     metrics: list[ProxyMetric] = []
 
     if candidates:

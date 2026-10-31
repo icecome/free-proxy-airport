@@ -1,0 +1,10 @@
+# free-proxy-airport 节点源：一行一个订阅 URL，# 开头是注释
+# 加新源：直接加一行。某个源连续多轮拉不到节点：删掉那行即可。
+# openRunner clash-freenode
+https://raw.githubusercontent.com/openRunner/clash-freenode/main/sub.yaml
+# snakem982 proxypool
+https://raw.githubusercontent.com/snakem982/proxypool/main/clash.yaml
+# Flikify Free-Node
+https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
+# free-clash-v2ray GitHub Pages
+https://free-clash-v2ray.github.io/uploads/latest.yaml
