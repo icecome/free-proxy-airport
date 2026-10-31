@@ -32,10 +32,16 @@ VERSION = "v7"
 OUTPUT_PATH = Path("output/clash.yaml")
 TEST_URL = "http://www.gstatic.com/generate_204"
 SOURCE_TIMEOUT = 25
-LATENCY_TIMEOUT_MS = 5000
+LATENCY_TIMEOUT_MS = int(os.getenv("FREE_PROXY_AIRPORT_LATENCY_TIMEOUT_MS", "8000"))
 MAX_RETRIES = 3
 MAX_WORKERS = int(os.getenv("FREE_PROXY_AIRPORT_MAX_WORKERS", "24"))
 MAX_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_CANDIDATES", "0"))
+# Cloud-side bandwidth gate is opt-in now: the client-side url-test and the
+# local cn_alive_check.py are the real quality filters; cloud only removes
+# globally dead servers.
+SPEED_GATE_ENABLED = os.getenv("FREE_PROXY_AIRPORT_SPEED_GATE", "0") == "1"
+# Cap the published pool so client configs stay manageable.
+MAX_OUTPUT_NODES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_OUTPUT", "400"))
 SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000"
 SPEED_TEST_MAX_BYTES = 10_000_000
 SPEED_TEST_TIMEOUT = 25.0
@@ -46,6 +52,7 @@ SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "10"))
 # One subscription URL per line. Lines starting with # are comments.
 # Add a new free source -> append a line. A source that keeps failing -> delete its line.
 SOURCES_FILE = Path(os.getenv("FREE_PROXY_AIRPORT_SOURCES", "sources.txt"))
+# Legacy fallback list, only used when sources.txt is missing/empty.
 DEFAULT_SOURCES = """\
 # free-proxy-airport node sources: one URL per line, '#' starts a comment
 # openRunner clash-freenode
@@ -54,8 +61,6 @@ https://raw.githubusercontent.com/openRunner/clash-freenode/main/sub.yaml
 https://raw.githubusercontent.com/snakem982/proxypool/main/clash.yaml
 # Flikify Free-Node
 https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
-# free-clash-v2ray GitHub Pages
-https://free-clash-v2ray.github.io/uploads/latest.yaml
 """
 
 SUPPORTED_PROXY_TYPES = {
@@ -69,7 +74,6 @@ SUPPORTED_PROXY_TYPES = {
     "hy2",
     "tuic",
     "socks5",
-    "http",
 }
 
 REQUIRED_GROUPS = (
@@ -680,7 +684,7 @@ def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
         try:
             wait_for_controller(controller_url, process)
             metrics = run_delay_tests(controller_url, proxies)
-            if metrics:
+            if metrics and SPEED_GATE_ENABLED:
                 metrics = run_speed_tests(controller_url, mixed_port, metrics)
                 for metric in metrics:
                     metric.health_score = health_score(
@@ -1041,10 +1045,11 @@ def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
 
 def write_config(config: dict[str, Any]) -> None:
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(
-        yaml.safe_dump(config, allow_unicode=True, sort_keys=False),
-        encoding="utf-8",
-    )
+    # Write raw BYTES: str.write_text on Windows may route through a locale
+    # encoder in some environments and double-encode CJK (mojibake). Encoding
+    # to UTF-8 bytes explicitly keeps node names intact everywhere.
+    payload = yaml.safe_dump(config, allow_unicode=True, sort_keys=False).encode("utf-8")
+    OUTPUT_PATH.write_bytes(payload)
 
 
 def validate_config(config: dict[str, Any]) -> None:
@@ -1110,6 +1115,15 @@ def main() -> None:
     if not metrics:
         metrics = [build_direct_fallback_metric()]
         print("[WARN] no live or previous nodes; using DIRECT-FALLBACK degraded config")
+
+    if SPEED_GATE_ENABLED and len(metrics) > 1:
+        print(f"[INFO] speed gate enabled on top {min(SPEED_TEST_TOP_N, len(metrics))} nodes")
+
+    # Cap the pool: the cloud's job is a broad alive-candidate list; the client
+    # url-test picks the winner. Keep the widest cheap-to-verify set.
+    if len(metrics) > MAX_OUTPUT_NODES:
+        print(f"[INFO] capping output from {len(metrics)} to top {MAX_OUTPUT_NODES} by health score")
+        metrics = metrics[:MAX_OUTPUT_NODES]
 
     metrics.sort(key=lambda item: item.health_score, reverse=True)
     config = build_config(metrics)
