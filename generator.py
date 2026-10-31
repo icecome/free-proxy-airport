@@ -53,6 +53,7 @@ SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "10"))
 # Add a new free source -> append a line. A source that keeps failing -> delete its line.
 SOURCES_FILE = Path(os.getenv("FREE_PROXY_AIRPORT_SOURCES", "sources.txt"))
 # Legacy fallback list, only used when sources.txt is missing/empty.
+# Kept in sync with sources.txt (2026-11-01 curation): dead sources removed.
 DEFAULT_SOURCES = """\
 # free-proxy-airport node sources: one URL per line, '#' starts a comment
 # openRunner clash-freenode
@@ -107,6 +108,14 @@ def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
             response = requests.get(url, headers=headers, timeout=SOURCE_TIMEOUT)
             response.raise_for_status()
             return response.content.decode("utf-8", errors="replace")
+        except requests.HTTPError as exc:
+            status = exc.response.status_code if exc.response is not None else None
+            if status is not None and 400 <= status < 500:
+                # Client error: retrying the same URL cannot succeed.
+                raise RuntimeError(f"failed to fetch {url}: HTTP {status} (no retry)") from exc
+            last_error = exc
+            if attempt < retries:
+                time.sleep(2 * attempt)
         except Exception as exc:
             last_error = exc
             if attempt < retries:
@@ -180,11 +189,6 @@ URI_SCHEME_TYPES = {
 
 # Fields where URL percent-encoding must be decoded back to raw text.
 URI_DECODE_FIELDS = {"name", "password", "uuid", "servername", "sni", "host"}
-
-
-def _uri_fragment_name(uri: str) -> str:
-    fragment = uri.split("#", 1)[1] if "#" in uri else ""
-    return quote("", safe="") + fragment if False else fragment
 
 
 def parse_proxy_uri(uri: str) -> dict[str, Any] | None:
@@ -540,9 +544,19 @@ def find_or_install_mihomo() -> Path:
         print(f"[OK] using cached proxy engine: {binary}")
         return binary
 
-    url = select_mihomo_asset()
+    url, expected_sha256 = select_mihomo_asset()
     print(f"[INFO] downloading proxy engine: {url}")
     archive = download_file(url, install_dir)
+    if expected_sha256:
+        actual = hashlib.sha256(archive.read_bytes()).hexdigest()
+        if actual != expected_sha256:
+            archive.unlink(missing_ok=True)
+            raise RuntimeError(
+                f"mihomo archive integrity check FAILED: expected {expected_sha256}, got {actual}"
+            )
+        print(f"[OK] mihomo archive sha256 verified: {actual[:16]}...")
+    else:
+        print("[WARN] mihomo release has no digest for this asset; proceeding without verification")
     extracted = extract_mihomo_binary(archive, install_dir)
     extracted.chmod(extracted.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
     if extracted != binary:
@@ -551,7 +565,12 @@ def find_or_install_mihomo() -> Path:
     return binary
 
 
-def select_mihomo_asset() -> str:
+def select_mihomo_asset() -> tuple[str, str | None]:
+    """Pick the best mihomo release asset URL.
+
+    Returns (url, expected_sha256). The digest comes from the GitHub API's
+    per-asset `digest` field (sha256:<hex>) when available; None otherwise.
+    """
     api_url = "https://api.github.com/repos/MetaCubeX/mihomo/releases/latest"
     data = requests.get(api_url, headers={"User-Agent": "free-proxy-airport"}, timeout=SOURCE_TIMEOUT).json()
     assets = data.get("assets", [])
@@ -574,7 +593,7 @@ def select_mihomo_asset() -> str:
     else:
         raise RuntimeError(f"unsupported architecture for Mihomo download: {machine}")
 
-    candidates: list[tuple[int, str]] = []
+    candidates: list[tuple[int, str, str | None]] = []
     for asset in assets:
         name = str(asset.get("name", "")).lower()
         download_url = str(asset.get("browser_download_url", ""))
@@ -591,12 +610,14 @@ def select_mihomo_asset() -> str:
             score += 10
         if "go120" not in name:
             score += 2
-        candidates.append((score, download_url))
+        digest = str(asset.get("digest", "") or "")
+        expected_sha = digest.split(":", 1)[1] if digest.startswith("sha256:") else None
+        candidates.append((score, download_url, expected_sha))
 
     if not candidates:
         raise RuntimeError("no matching Mihomo release asset found")
     candidates.sort(reverse=True)
-    return candidates[0][1]
+    return candidates[0][1], candidates[0][2]
 
 
 def download_file(url: str, directory: Path) -> Path:
@@ -646,22 +667,23 @@ def write_benchmark_config(path: Path, proxies: list[dict[str, Any]], controller
         ],
         "rules": ["MATCH,BENCHMARK"],
     }
-    path.write_text(yaml.safe_dump(config, allow_unicode=True, sort_keys=False), encoding="utf-8")
+    path.write_bytes(yaml.safe_dump(config, allow_unicode=True, sort_keys=False).encode("utf-8"))
     return mixed_port
 
 
 def wait_for_controller(controller_url: str, process: subprocess.Popen[str]) -> None:
+    last_error: Exception | None = None
     for _ in range(60):
         if process.poll() is not None:
-            raise RuntimeError("Mihomo exited before controller became ready")
+            raise RuntimeError(f"Mihomo exited before controller became ready (code={process.returncode})")
         try:
             response = requests.get(f"{controller_url}/version", timeout=1)
             if response.status_code == 200:
                 return
-        except Exception:
-            pass
+        except Exception as exc:
+            last_error = exc
         time.sleep(0.5)
-    raise RuntimeError("Mihomo controller did not become ready")
+    raise RuntimeError(f"Mihomo controller did not become ready; last probe error: {last_error}")
 
 
 def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
@@ -973,7 +995,10 @@ def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
 
     return {
         "mixed-port": 7890,
-        "allow-lan": True,
+        # Security: an open LAN proxy lets anyone on your network use this
+        # machine as their exit node. Keep it bound to localhost unless the
+        # user consciously edits this after import.
+        "allow-lan": False,
         "mode": "rule",
         "log-level": "info",
         "ipv6": True,

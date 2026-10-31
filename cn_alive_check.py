@@ -6,8 +6,9 @@
 
 用法：
     python cn_alive_check.py                          # 测当前订阅
-    python cn_alive_check.py -o alive.txt             # 输出存活节点名的 base64 订阅
-    python cn_alive_check.py --timeout 3000           # 单节点超时 ms（默认 4000）
+    python cn_alive_check.py -o alive.yaml            # 导出存活节点的 clash yaml
+    python cn_alive_check.py --timeout 4              # 单节点 TCP 超时秒数（默认 4）
+    python cn_alive_check.py --json report.json       # 输出完整报告
 
 结果分级：
     直连成功      -> 节点入口对你的三网可达（可能仍被协议墙识别，但入口通）
@@ -16,11 +17,9 @@
 from __future__ import annotations
 
 import argparse
-import base64
 import concurrent.futures
 import json
 import socket
-import sys
 import time
 from pathlib import Path
 
@@ -70,22 +69,38 @@ def tcp_alive(host: str, port: int, timeout: float) -> tuple[bool, float | None]
 
 
 def check_one(proxy: dict, timeout: float) -> dict:
-    host, port = str(proxy["server"]), int(proxy["port"])
+    name = str(proxy.get("name", "?"))
+    base = {"name": name, "type": proxy.get("type"), "server": proxy.get("server"),
+            "port": proxy.get("port"), "alive": False, "tcp_ms": None}
+    try:
+        host = str(proxy["server"]).strip()
+        port = int(proxy["port"])
+        if not host or port <= 0 or port > 65535:
+            raise ValueError(f"invalid host/port: {host!r}:{port!r}")
+    except (KeyError, TypeError, ValueError) as exc:
+        # Malformed node from a dirty source: mark dead instead of crashing
+        # the whole batch run.
+        base["error"] = f"skipped: {exc}"
+        return base
     alive, ms = tcp_alive(host, port, timeout)
-    return {"name": proxy.get("name", "?"), "type": proxy.get("type"), "server": host,
-            "port": port, "alive": alive, "tcp_ms": round(ms) if ms else None}
+    base.update({"server": host, "port": port, "alive": alive,
+                 "tcp_ms": round(ms) if ms else None})
+    return base
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--sub", default=SUB_URL)
-    ap.add_argument("--timeout", type=float, default=TIMEOUT_S)
+    ap.add_argument("--timeout", type=float, default=TIMEOUT_S,
+                    help="per-node TCP connect timeout in SECONDS (default 4)")
     ap.add_argument("--output", "-o", default=None, help="write alive nodes as base64 subscription")
     ap.add_argument("--json", default=None, help="write full report json")
     args = ap.parse_args()
 
     proxies = load_proxies(args.sub)
     print(f"loaded {len(proxies)} nodes from subscription")
+    # Reuse the fetched document for -o output: single download, consistent snapshot.
+    sub_text = requests.get(args.sub, timeout=20).content.decode("utf-8", errors="replace")
 
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as ex:
@@ -110,9 +125,8 @@ def main() -> None:
         print(f"report -> {args.json}")
 
     if args.output:
-        # fetch full proxy dicts for alive names, emit as clash yaml for direct use
-        resp = requests.get(args.sub, timeout=20)
-        data = yaml.safe_load(resp.content.decode("utf-8", errors="replace"))
+        # Reuse the earlier fetch; emit alive nodes as clash yaml for direct use
+        data = yaml.safe_load(sub_text)
         keep = {r["name"] for r in alive}
         alive_proxies = [p for p in data.get("proxies", []) if p.get("name") in keep]
         out = {"proxies": alive_proxies}
