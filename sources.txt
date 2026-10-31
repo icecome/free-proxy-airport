@@ -8,3 +8,25 @@ https://raw.githubusercontent.com/snakem982/proxypool/main/clash.yaml
 https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
 # free-clash-v2ray GitHub Pages
 https://free-clash-v2ray.github.io/uploads/latest.yaml
+# FreeProxies
+https://blue2sea.com/clash/dda5b7952385d118cd22b8148c6f4366
+
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/Clash.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/ClashMeta.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/QX.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/ShadowRocket.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/Surfboard.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/Surge.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/URI.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/V2Ray.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/mihomo.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/sing-box.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/raw/refs/heads/main/sub/sub.yml
+
+https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/10/20261031.yaml
+
+https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt
+
+https://cdn.jsdelivr.net/gh/bily1258-design/beimi@main/output/clash.yaml
+
+
