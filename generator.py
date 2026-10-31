@@ -698,30 +698,39 @@ def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
         controller_url = f"http://127.0.0.1:{controller_port}"
         mixed_port = write_benchmark_config(config_path, proxies, controller_port)
 
-        process = subprocess.Popen(
-            [str(engine), "-d", str(temp_dir), "-f", str(config_path)],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-        try:
-            wait_for_controller(controller_url, process)
-            metrics = run_delay_tests(controller_url, proxies)
-            if metrics and SPEED_GATE_ENABLED:
-                metrics = run_speed_tests(controller_url, mixed_port, metrics)
-                for metric in metrics:
-                    metric.health_score = health_score(
-                        str(metric.proxy.get("name", "")),
-                        metric.latency,
-                        metric.region,
-                        metric.speed_mbps,
-                    )
-                metrics.sort(key=lambda item: item.health_score, reverse=True)
-        finally:
-            process.terminate()
+        engine_log = temp_dir / "mihomo-stderr.log"
+        with engine_log.open("wb") as err_file:
+            process = subprocess.Popen(
+                [str(engine), "-d", str(temp_dir), "-f", str(config_path)],
+                stdout=subprocess.DEVNULL,
+                stderr=err_file,
+            )
             try:
-                process.wait(timeout=5)
-            except subprocess.TimeoutExpired:
-                process.kill()
+                wait_for_controller(controller_url, process)
+                metrics = run_delay_tests(controller_url, proxies)
+                if metrics and SPEED_GATE_ENABLED:
+                    metrics = run_speed_tests(controller_url, mixed_port, metrics)
+                    for metric in metrics:
+                        metric.health_score = health_score(
+                            str(metric.proxy.get("name", "")),
+                            metric.latency,
+                            metric.region,
+                            metric.speed_mbps,
+                        )
+                    metrics.sort(key=lambda item: item.health_score, reverse=True)
+            finally:
+                process.terminate()
+                try:
+                    process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    process.kill()
+                # Surface engine errors: a failed startup otherwise leaves no
+                # trace and the run silently degrades to the previous output.
+                if process.returncode not in (0, None):
+                    stderr_text = engine_log.read_text(encoding="utf-8", errors="replace")[-4000:]
+                    print(f"[ERROR] mihomo exited with code {process.returncode}; stderr tail:")
+                    for line in stderr_text.splitlines()[-40:]:
+                        print(f"  | {line}")
         return metrics
 
 
