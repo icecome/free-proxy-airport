@@ -51,9 +51,9 @@ CN_ALIVE_BOOST = float(os.getenv("FREE_PROXY_AIRPORT_CN_BOOST", "1000.0"))
 SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000"
 SPEED_TEST_MAX_BYTES = 10_000_000
 SPEED_TEST_TIMEOUT = 25.0
-SPEED_TEST_MIN_MBPS = float(os.getenv("FREE_PROXY_AIRPORT_MIN_MBPS", "1.0"))
+SPEED_TEST_MIN_MBPS = float(os.getenv("FREE_PROXY_AIRPORT_MIN_MBPS", "10.0"))
 SPEED_TEST_TOP_N = int(os.getenv("FREE_PROXY_AIRPORT_SPEED_TOP_N", "150"))
-SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "80"))
+SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "30"))
 
 # One subscription URL per line. Lines starting with # are comments.
 # Add a new free source -> append a line. A source that keeps failing -> delete its line.
@@ -148,7 +148,7 @@ def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
 
 def maybe_base64_decode(text: str) -> str:
     # Strip BOM and zero-width chars that break base64 sniffing on free sources.
-    cleaned = text.lstrip("闂佹寧锚缁ㄩ亶鍩€椤掆偓閵嗏偓u200b\u200c\u200d").strip()
+    cleaned = text.lstrip("闂傚倷鐒︾€笛囨晪缂備降鍔戞禍鍫曞春閳ь剚銇勯幒鍡椾壕闂侀潧妫岄崑鎼?00b\u200c\u200d").strip()
     compact = "".join(cleaned.split())
     if not compact or len(compact) % 4 != 0:
         return cleaned
