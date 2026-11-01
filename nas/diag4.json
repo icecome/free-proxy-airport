@@ -1,0 +1,1 @@
+{"image":"python:3.12-alpine","name":"diag4","cmd":["sh","-c","id > /workspace/id-out.txt 2>&1; chmod -R 777 /workspace/data /workspace/setup.log 2>/dev/null; cp /workspace/setup.log /workspace/data/setup-visible.log 2>&1"],"user":"1000:1000","mounts":[{"hostPath":"/vol1/1000/workstations/probe-workspace","containerPath":"/workspace","rw":true}]}
