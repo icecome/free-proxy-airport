@@ -686,52 +686,84 @@ def wait_for_controller(controller_url: str, process: subprocess.Popen[str]) -> 
     raise RuntimeError(f"Mihomo controller did not become ready; last probe error: {last_error}")
 
 
+def benchmark_single_batch(
+    engine: Path,
+    proxies: list[dict[str, Any]],
+    temp_root: Path,
+) -> tuple[list[ProxyMetric], str | None]:
+    """Run one mihomo instance over one batch of proxies.
+
+    Returns (metrics, error_message). error_message is None on success;
+    on engine startup failure it carries the stderr tail and metrics is [].
+    """
+    batch_dir = temp_root / f"batch-{abs(hash(tuple(sorted(p['name'] for p in proxies[:1])))) % 100000}"
+    batch_dir.mkdir(parents=True, exist_ok=True)
+    config_path = batch_dir / "benchmark.yaml"
+    controller_port = find_free_port()
+    controller_url = f"http://127.0.0.1:{controller_port}"
+    mixed_port = write_benchmark_config(config_path, proxies, controller_port)
+
+    engine_log = batch_dir / "mihomo-stderr.log"
+    with engine_log.open("wb") as err_file:
+        process = subprocess.Popen(
+            [str(engine), "-d", str(batch_dir), "-f", str(config_path)],
+            stdout=subprocess.DEVNULL,
+            stderr=err_file,
+        )
+        try:
+            wait_for_controller(controller_url, process)
+            metrics = run_delay_tests(controller_url, proxies)
+            if metrics and SPEED_GATE_ENABLED:
+                metrics = run_speed_tests(controller_url, mixed_port, metrics)
+                for metric in metrics:
+                    metric.health_score = health_score(
+                        str(metric.proxy.get("name", "")),
+                        metric.latency,
+                        metric.region,
+                        metric.speed_mbps,
+                    )
+                metrics.sort(key=lambda item: item.health_score, reverse=True)
+            return metrics, None
+        except RuntimeError as exc:
+            # Engine failed to start / died: capture stderr for diagnosis.
+            stderr_text = engine_log.read_text(encoding="utf-8", errors="replace")[-4000:]
+            tail = " | ".join(stderr_text.splitlines()[-8:])
+            return [], f"{exc}; stderr tail: {tail}"
+        finally:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+            if process.returncode not in (0, None):
+                stderr_text = engine_log.read_text(encoding="utf-8", errors="replace")[-4000:]
+                print(f"[ERROR] mihomo exited with code {process.returncode}; stderr tail:")
+                for line in stderr_text.splitlines()[-20:]:
+                    print(f"  | {line}")
+
+
 def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
+    """Benchmark candidates in batches so one poisoned batch cannot take
+    down the whole run (a single invalid proxy makes mihomo refuse to start)."""
     if not proxies:
         return []
 
     engine = find_or_install_mihomo()
-    with tempfile.TemporaryDirectory(prefix="free-proxy-airport-") as temp_name:
-        temp_dir = Path(temp_name)
-        config_path = temp_dir / "benchmark.yaml"
-        controller_port = find_free_port()
-        controller_url = f"http://127.0.0.1:{controller_port}"
-        mixed_port = write_benchmark_config(config_path, proxies, controller_port)
+    batch_size = 300
+    all_metrics: list[ProxyMetric] = []
+    batches = [proxies[i : i + batch_size] for i in range(0, len(proxies), batch_size)]
+    print(f"[INFO] benchmarking {len(proxies)} candidates in {len(batches)} batch(es) of <= {batch_size}")
 
-        engine_log = temp_dir / "mihomo-stderr.log"
-        with engine_log.open("wb") as err_file:
-            process = subprocess.Popen(
-                [str(engine), "-d", str(temp_dir), "-f", str(config_path)],
-                stdout=subprocess.DEVNULL,
-                stderr=err_file,
-            )
-            try:
-                wait_for_controller(controller_url, process)
-                metrics = run_delay_tests(controller_url, proxies)
-                if metrics and SPEED_GATE_ENABLED:
-                    metrics = run_speed_tests(controller_url, mixed_port, metrics)
-                    for metric in metrics:
-                        metric.health_score = health_score(
-                            str(metric.proxy.get("name", "")),
-                            metric.latency,
-                            metric.region,
-                            metric.speed_mbps,
-                        )
-                    metrics.sort(key=lambda item: item.health_score, reverse=True)
-            finally:
-                process.terminate()
-                try:
-                    process.wait(timeout=5)
-                except subprocess.TimeoutExpired:
-                    process.kill()
-                # Surface engine errors: a failed startup otherwise leaves no
-                # trace and the run silently degrades to the previous output.
-                if process.returncode not in (0, None):
-                    stderr_text = engine_log.read_text(encoding="utf-8", errors="replace")[-4000:]
-                    print(f"[ERROR] mihomo exited with code {process.returncode}; stderr tail:")
-                    for line in stderr_text.splitlines()[-40:]:
-                        print(f"  | {line}")
-        return metrics
+    with tempfile.TemporaryDirectory(prefix="free-proxy-airport-") as temp_name:
+        temp_root = Path(temp_name)
+        for index, batch in enumerate(batches, start=1):
+            metrics, error = benchmark_single_batch(engine, batch, temp_root)
+            print(f"[INFO] batch {index}/{len(batches)}: {len(metrics)} passed"
+                  + (f" (batch FAILED: {error[:300]})" if error else ""))
+            all_metrics.extend(metrics)
+
+    all_metrics.sort(key=lambda item: item.health_score, reverse=True)
+    return all_metrics
 
 
 def run_delay_tests(controller_url: str, proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
