@@ -31,6 +31,8 @@ import yaml
 VERSION = "v7"
 OUTPUT_PATH = Path("output/clash.yaml")
 TEST_URL = "http://www.gstatic.com/generate_204"
+# Real-egress check target used by the url-test selection stage.
+URL_TEST_URL = "https://www.google.com/generate_204"
 SOURCE_TIMEOUT = 25
 LATENCY_TIMEOUT_MS = int(os.getenv("FREE_PROXY_AIRPORT_LATENCY_TIMEOUT_MS", "8000"))
 MAX_RETRIES = 3
@@ -39,7 +41,7 @@ MAX_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_CANDIDATES", "0"))
 # Cloud-side bandwidth gate is opt-in now: the client-side url-test and the
 # local cn_alive_check.py are the real quality filters; cloud only removes
 # globally dead servers.
-SPEED_GATE_ENABLED = os.getenv("FREE_PROXY_AIRPORT_SPEED_GATE", "0") == "1"
+SPEED_GATE_ENABLED = os.getenv("FREE_PROXY_AIRPORT_SPEED_GATE", "1") == "1"
 # Cap the published pool so client configs stay manageable.
 MAX_OUTPUT_NODES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_OUTPUT", "400"))
 # CN-probe loop: queue size for the NAS worker, and the boost applied to
@@ -50,8 +52,8 @@ SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000"
 SPEED_TEST_MAX_BYTES = 10_000_000
 SPEED_TEST_TIMEOUT = 25.0
 SPEED_TEST_MIN_MBPS = float(os.getenv("FREE_PROXY_AIRPORT_MIN_MBPS", "1.0"))
-SPEED_TEST_TOP_N = int(os.getenv("FREE_PROXY_AIRPORT_SPEED_TOP_N", "30"))
-SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "10"))
+SPEED_TEST_TOP_N = int(os.getenv("FREE_PROXY_AIRPORT_SPEED_TOP_N", "150"))
+SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "80"))
 
 # One subscription URL per line. Lines starting with # are comments.
 # Add a new free source -> append a line. A source that keeps failing -> delete its line.
@@ -99,6 +101,7 @@ class ProxyMetric:
     region: str
     health_score: float
     speed_mbps: float = 0.0
+    url_test_ok: bool = False
 
 
 class Sid(str):
@@ -145,7 +148,7 @@ def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
 
 def maybe_base64_decode(text: str) -> str:
     # Strip BOM and zero-width chars that break base64 sniffing on free sources.
-    cleaned = text.lstrip("锘库€塡u200b\u200c\u200d").strip()
+    cleaned = text.lstrip("闂佹寧锚缁ㄩ亶鍩€椤掆偓閵嗏偓u200b\u200c\u200d").strip()
     compact = "".join(cleaned.split())
     if not compact or len(compact) % 4 != 0:
         return cleaned
@@ -948,6 +951,33 @@ def run_speed_tests(
     candidate_names = {str(item.proxy["name"]) for item in candidates}
     print(f"[INFO] speed testing top {len(candidates)} nodes via {SPEED_TEST_URL}")
 
+    # URL-test stage: fetch a real endpoint through each node before the
+    # bandwidth probe. Catches nodes whose TCP/delay is fine but which fail
+    # real HTTP egress (broken TLS, dead upstream, poisoned DNS...).
+    url_pass = 0
+    for metric in candidates:
+        name = str(metric.proxy["name"])
+        if not switch_benchmark_node(controller_url, name):
+            continue
+        try:
+            resp = requests.get(
+                URL_TEST_URL,
+                proxies={
+                    "http": f"http://127.0.0.1:{proxy_port}",
+                    "https": f"http://127.0.0.1:{proxy_port}",
+                },
+                timeout=12,
+                headers={"User-Agent": f"free-proxy-airport/{VERSION}"},
+            )
+            metric.url_test_ok = resp.status_code == 200 and len(resp.content) > 100
+        except Exception:
+            metric.url_test_ok = False
+        if metric.url_test_ok:
+            url_pass += 1
+    print(f"[INFO] url-test: {url_pass}/{len(candidates)} passed real HTTP egress")
+    candidates = [m for m in candidates if m.url_test_ok]
+    candidate_names = {str(item.proxy["name"]) for item in candidates}
+
     for index, metric in enumerate(candidates, start=1):
         name = str(metric.proxy["name"])
         mbps = measure_speed_mbps(controller_url, proxy_port, name)
@@ -955,19 +985,23 @@ def run_speed_tests(
         status = "PASS" if mbps >= SPEED_TEST_MIN_MBPS else "SLOW"
         print(f"[SPEED] {index}/{len(candidates)} {name} {metric.speed_mbps}Mbps {status}")
 
-    passed = [m for m in metrics if m.speed_mbps >= SPEED_TEST_MIN_MBPS]
+    passed = [m for m in metrics if m.speed_mbps >= SPEED_TEST_MIN_MBPS and m.url_test_ok]
     dropped = len([m for m in candidates if 0 < m.speed_mbps < SPEED_TEST_MIN_MBPS])
+    url_failed = len([m for m in candidates if not m.url_test_ok])
     if len(passed) < SPEED_TEST_MIN_POOL:
         keep = SPEED_TEST_MIN_POOL - len(passed)
         rescued = sorted(
-            [m for m in candidates if m.speed_mbps < SPEED_TEST_MIN_MBPS],
+            [m for m in candidates if m.speed_mbps < SPEED_TEST_MIN_MBPS or not m.url_test_ok],
             key=lambda item: item.speed_mbps,
             reverse=True,
         )[:keep]
         print(f"[WARN] pool below {SPEED_TEST_MIN_POOL}, keeping {len(rescued)} slow nodes as degraded fallback")
         passed.extend(rescued)
     untouched = [m for m in metrics if str(m.proxy["name"]) not in candidate_names]
-    print(f"[INFO] speed gate: passed={len(passed)} slow_dropped={dropped} untested_kept={len(untouched)}")
+    print(
+        f"[INFO] speed gate: passed={len(passed)} slow_dropped={dropped} "
+        f"url_failed={url_failed} untested_kept={len(untouched)}"
+    )
     result = passed + untouched
     result.sort(key=lambda item: item.health_score, reverse=True)
     return result
