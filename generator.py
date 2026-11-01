@@ -42,6 +42,10 @@ MAX_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_CANDIDATES", "0"))
 SPEED_GATE_ENABLED = os.getenv("FREE_PROXY_AIRPORT_SPEED_GATE", "0") == "1"
 # Cap the published pool so client configs stay manageable.
 MAX_OUTPUT_NODES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_OUTPUT", "400"))
+# CN-probe loop: queue size for the NAS worker, and the boost applied to
+# nodes the NAS reported alive within the last hour.
+PROBE_QUEUE_LIMIT = int(os.getenv("FREE_PROXY_AIRPORT_PROBE_QUEUE", "500"))
+CN_ALIVE_BOOST = float(os.getenv("FREE_PROXY_AIRPORT_CN_BOOST", "1000.0"))
 SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000"
 SPEED_TEST_MAX_BYTES = 10_000_000
 SPEED_TEST_TIMEOUT = 25.0
@@ -1177,6 +1181,47 @@ def write_config(config: dict[str, Any]) -> None:
     OUTPUT_PATH.write_bytes(payload)
 
 
+def write_probe_queue(candidates: list[dict[str, Any]]) -> None:
+    """Emit the CN-probe queue for the NAS worker (data/probe_queue.json)."""
+    queue_path = Path("data/probe_queue.json")
+    queue_path.parent.mkdir(parents=True, exist_ok=True)
+    targets = []
+    for proxy in candidates[:PROBE_QUEUE_LIMIT]:
+        cred = str(proxy.get("uuid") or proxy.get("password") or "")
+        targets.append(
+            {
+                "fp": proxy_fingerprint(proxy)[:16],
+                "name": str(proxy.get("name", "")),
+                "type": str(proxy.get("type", "")),
+                "server": str(proxy.get("server", "")),
+                "port": int(proxy.get("port", 0)),
+            }
+        )
+    queue_path.write_text(
+        json.dumps({"queued_at": datetime.now(timezone.utc).isoformat(), "targets": targets}, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    print(f"[SUMMARY] probe_queue={len(targets)} -> {queue_path}")
+
+
+def load_cn_alive() -> dict[str, dict[str, Any]]:
+    """Read NAS probe results (data/cn_alive.json), 1h freshness window."""
+    path = Path("data/cn_alive.json")
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    probed_at = data.get("probed_at", 0)
+    if time.time() - probed_at > 3600:
+        print("[INFO] cn_alive results stale (>1h), ignoring")
+        return {}
+    alive = {r.get("fp", ""): r for r in data.get("alive", []) if r.get("fp")}
+    print(f"[INFO] cn_alive: {len(alive)} alive nodes reported at {probed_at}")
+    return alive
+
+
 def validate_config(config: dict[str, Any]) -> None:
     if not isinstance(config.get("proxies"), list) or not config["proxies"]:
         raise RuntimeError("generated config has no proxies")
@@ -1243,6 +1288,28 @@ def main() -> None:
 
     if SPEED_GATE_ENABLED and len(metrics) > 1:
         print(f"[INFO] speed gate enabled on top {min(SPEED_TEST_TOP_N, len(metrics))} nodes")
+
+    # CN-view integration: nodes the NAS probed alive get a decisive boost so
+    # they survive the output cap regardless of the US-side health score.
+    cn_alive = load_cn_alive()
+    if cn_alive:
+        boosted = 0
+        for metric in metrics:
+            fp = proxy_fingerprint(metric.proxy)[:16]
+            if fp in cn_alive:
+                metric.health_score += CN_ALIVE_BOOST
+                boosted += 1
+        print(f"[INFO] cn_alive boost applied to {boosted} nodes")
+
+    # Emit the next probe queue from the full candidate set (before capping)
+    try:
+        write_probe_queue(
+            sorted(candidates, key=lambda p: 0)[:PROBE_QUEUE_LIMIT]
+            if not metrics
+            else [m.proxy for m in metrics] + [c for c in candidates if c not in [m.proxy for m in metrics[:50]]][:PROBE_QUEUE_LIMIT]
+        )
+    except Exception as exc:
+        print(f"[WARN] probe queue write failed: {exc}")
 
     # Cap the pool: the cloud's job is a broad alive-candidate list; the client
     # url-test picks the winner. Keep the widest cheap-to-verify set.
