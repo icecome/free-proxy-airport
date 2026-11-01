@@ -814,6 +814,8 @@ def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
     if not proxies:
         return []
 
+    global _CN_ALIVE_NAMES
+    _CN_ALIVE_NAMES = {r.get("server", "") + ":" + str(r.get("port", "")) for r in get_cn_alive_cached().values()}
     engine = find_or_install_mihomo()
     batch_size = 300
     all_metrics: list[ProxyMetric] = []
@@ -923,6 +925,8 @@ def measure_speed_mbps(controller_url: str, proxy_port: int, name: str) -> float
     """Best-of-2 single-connection download through one proxy node."""
     if not switch_benchmark_node(controller_url, name):
         return 0.0
+    if name in _CN_ALIVE_NAMES:
+        return SPEED_TEST_MIN_MBPS + 1  # CN-verified: skip download probe
     best = 0.0
     for attempt in range(2):
         mbps = download_speed_probe(proxy_port)
@@ -957,6 +961,11 @@ def run_speed_tests(
     url_pass = 0
     for metric in candidates:
         name = str(metric.proxy["name"])
+        if is_cn_alive(metric.proxy):
+            metric.url_test_ok = True
+            metric.speed_mbps = max(metric.speed_mbps, SPEED_TEST_MIN_MBPS + 1)
+            url_pass += 1
+            continue
         if not switch_benchmark_node(controller_url, name):
             continue
         try:
@@ -1213,6 +1222,25 @@ def write_config(config: dict[str, Any]) -> None:
     # to UTF-8 bytes explicitly keeps node names intact everywhere.
     payload = yaml.safe_dump(config, allow_unicode=True, sort_keys=False).encode("utf-8")
     OUTPUT_PATH.write_bytes(payload)
+
+
+
+
+_CN_ALIVE_CACHE: dict[str, dict[str, Any]] | None = None
+_CN_ALIVE_NAMES: set[str] = set()
+
+
+def get_cn_alive_cached() -> dict[str, dict[str, Any]]:
+    """Load cn_alive once per run; gates consult it to protect CN-verified nodes."""
+    global _CN_ALIVE_CACHE
+    if _CN_ALIVE_CACHE is None:
+        _CN_ALIVE_CACHE = load_cn_alive()
+    return _CN_ALIVE_CACHE
+
+
+def is_cn_alive(proxy: dict[str, Any]) -> bool:
+    fp = proxy_fingerprint(proxy)[:16]
+    return fp in get_cn_alive_cached()
 
 
 def write_probe_queue(candidates: list[dict[str, Any]]) -> None:
