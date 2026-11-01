@@ -145,7 +145,7 @@ def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
 
 def maybe_base64_decode(text: str) -> str:
     # Strip BOM and zero-width chars that break base64 sniffing on free sources.
-    cleaned = text.lstrip("﻿ \u200b\u200c\u200d").strip()
+    cleaned = text.lstrip("锘库€塡u200b\u200c\u200d").strip()
     compact = "".join(cleaned.split())
     if not compact or len(compact) % 4 != 0:
         return cleaned
@@ -1330,3 +1330,5 @@ if __name__ == "__main__":
     except Exception as exc:
         print(f"[ERROR] {exc}", file=sys.stderr)
         raise
+
+# CN-PROBE-LOOP-ACTIVE: queue emission enabled 2026-11-01
