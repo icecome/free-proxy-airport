@@ -97,6 +97,22 @@ class ProxyMetric:
     speed_mbps: float = 0.0
 
 
+class Sid(str):
+    """REALITY short-id that must serialize as a quoted YAML string.
+
+    PyYAML's resolver writes numeric-looking strings like '08' unquoted;
+    mihomo's YAML 1.1 parser then reads them back as integers and rejects the
+    whole config ("invalid REALITY short ID"). Wrapping in this subclass with
+    an explicit representer forces quoting.
+    """
+
+
+yaml.SafeDumper.add_representer(
+    Sid,
+    lambda dumper, data: dumper.represent_scalar("tag:yaml.org,2002:str", str(data), style="'"),
+)
+
+
 def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
     headers = {
         "User-Agent": f"free-proxy-airport/{VERSION} (+https://github.com/)",
@@ -320,7 +336,10 @@ def parse_proxy_uri(uri: str) -> dict[str, Any] | None:
         proxy["password"] = userinfo
 
     if query:
-        if query.get("security") == "tls" or proxy_type in ("trojan", "hysteria", "hysteria2", "tuic"):
+        if query.get("security") in ("tls", "reality") or proxy_type in ("trojan", "hysteria", "hysteria2", "tuic"):
+            # reality implies TLS: mihomo rejects "REALITY requires TLS" otherwise
+            proxy["tls"] = True
+        if query.get("security") == "reality":
             proxy["tls"] = True
         if query.get("sni"):
             proxy["sni"] = query["sni"]
@@ -491,6 +510,46 @@ def normalize_proxy(raw: dict[str, Any], index: int) -> dict[str, Any] | None:
     if proxy_type == "hy2":
         proxy_type = "hysteria2"
     proxy["type"] = proxy_type
+
+    # mihomo refuses to load the whole config if any node has REALITY options
+    # without TLS (observed cloud failure "proxy 535: REALITY requires TLS").
+    # Sources emit this broken combination regularly, so repair it here for
+    # every node regardless of origin (URI-parsed or YAML).
+    if "reality-opts" in proxy and proxy.get("tls") is not True:
+        proxy["tls"] = True
+
+    # mihomo hard-requires up/down bandwidth fields for hysteria(2)
+    # ("unset fields: down, up"); free sources omit them constantly.
+    if proxy_type in ("hysteria", "hysteria2"):
+        proxy.setdefault("up", "100 Mbps")
+        proxy.setdefault("down", "200 Mbps")
+
+    # ss 2022-blake3 ciphers demand a base64-encoded key; sources sometimes
+    # ship raw keys, which mihomo rejects at load time ("decode key").
+    if proxy_type == "ss" and str(proxy.get("cipher", "")).startswith("2022-blake3"):
+        password = str(proxy.get("password", ""))
+        try:
+            base64.b64decode(password + "=" * (-len(password) % 4), validate=True)
+        except Exception:
+            return None  # invalid key: mihomo refuses the whole config otherwise
+
+    # REALITY short-id: mihomo wants hex, max 8 bytes. Two hazards here:
+    # 1. garbage values ("invalid REALITY short ID") -> drop the node
+    # 2. PyYAML writes numeric-looking strings like '08'/'09' UNQUOTED,
+    #    mihomo's YAML 1.1 parser then reads them as integers -> same error.
+    #    Fix by canonicalizing: strip leading zeros and re-encode as a hex
+    #    string prefixed with '0x'? No - sid must be plain hex. Instead wrap
+    #    the value so safe_dump ALWAYS emits it quoted (see write_config for
+    #    the representer).
+    reality = proxy.get("reality-opts")
+    if isinstance(reality, dict) and "short-id" in reality:
+        sid = str(reality.get("short-id") or "").strip().lower()
+        if sid and re.fullmatch(r"[0-9a-f]{1,16}", sid) and int(sid, 16) > 0:
+            reality["short-id"] = Sid(reality["short-id"])
+        elif sid:
+            return None  # garbage short-id poisons the whole mihomo config
+        else:
+            del reality["short-id"]
 
     name = str(proxy.get("name", "")).strip() or f"node-{index}"
     server = str(proxy.get("server", "")).strip()
