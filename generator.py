@@ -148,7 +148,7 @@ def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
 
 def maybe_base64_decode(text: str) -> str:
     # Strip BOM and zero-width chars that break base64 sniffing on free sources.
-    cleaned = text.lstrip("闂傚倷鐒︾€笛囨晪缂備降鍔戞禍鍫曞春閳ь剚銇勯幒鍡椾壕闂侀潧妫岄崑鎼?00b\u200c\u200d").strip()
+    cleaned = text.lstrip("闂傚倸鍊烽悞锔锯偓绗涘洦鏅紓鍌欓檷閸旀垶绂嶉崼鏇炴槬闁逞屽墯閵囧嫰骞掗崱妞惧闂備線娼уΛ宀勫磻閹?00b\u200c\u200d").strip()
     compact = "".join(cleaned.split())
     if not compact or len(compact) % 4 != 0:
         return cleaned
@@ -1248,8 +1248,8 @@ def load_cn_alive() -> dict[str, dict[str, Any]]:
     except Exception:
         return {}
     probed_at = data.get("probed_at", 0)
-    if time.time() - probed_at > 3600:
-        print("[INFO] cn_alive results stale (>1h), ignoring")
+    if time.time() - probed_at > 21600:
+        print("[INFO] cn_alive results stale (>6h), ignoring")
         return {}
     alive = {r.get("fp", ""): r for r in data.get("alive", []) if r.get("fp")}
     print(f"[INFO] cn_alive: {len(alive)} alive nodes reported at {probed_at}")
