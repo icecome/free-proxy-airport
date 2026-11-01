@@ -48,6 +48,9 @@ MAX_OUTPUT_NODES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_OUTPUT", "400"))
 # nodes the NAS reported alive within the last hour.
 PROBE_QUEUE_LIMIT = int(os.getenv("FREE_PROXY_AIRPORT_PROBE_QUEUE", "500"))
 CN_ALIVE_BOOST = float(os.getenv("FREE_PROXY_AIRPORT_CN_BOOST", "1000.0"))
+CANDIDATES_FILE = Path("data/candidates.json")
+# How long a cloud-collected candidate set stays valid for phase B.
+CANDIDATES_TTL_SECONDS = 26 * 3600
 SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000"
 SPEED_TEST_MAX_BYTES = 10_000_000
 SPEED_TEST_TIMEOUT = 25.0
@@ -1243,6 +1246,67 @@ def is_cn_alive(proxy: dict[str, Any]) -> bool:
     return fp in get_cn_alive_cached()
 
 
+def save_candidates(metrics: list[ProxyMetric], total_nodes: int, sources_ok: int) -> None:
+    """Persist cloud-verified candidates for the NAS phase."""
+    CANDIDATES_FILE.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "saved_at": int(time.time()),
+        "total_nodes": total_nodes,
+        "sources_ok": sources_ok,
+        "candidates": [
+            {
+                "proxy": m.proxy,
+                "latency": m.latency,
+                "region": m.region,
+                "speed_mbps": m.speed_mbps,
+                "health_score": round(m.health_score, 6),
+            }
+            for m in metrics
+        ],
+    }
+    CANDIDATES_FILE.write_text(
+        json.dumps(payload, ensure_ascii=False), encoding="utf-8"
+    )
+    print(f"[SUMMARY] candidates_saved={len(metrics)} -> {CANDIDATES_FILE}")
+
+
+def load_candidates() -> tuple[list[ProxyMetric], int, int] | None:
+    """Load cloud-verified candidates saved by the collection run."""
+    if not CANDIDATES_FILE.exists():
+        return None
+    try:
+        payload = json.loads(CANDIDATES_FILE.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"[WARN] candidates.json unreadable: {exc}")
+        return None
+    age = time.time() - payload.get("saved_at", 0)
+    if age > CANDIDATES_TTL_SECONDS:
+        print(f"[INFO] candidates.json stale ({age/3600:.1f}h > TTL), ignoring")
+        return None
+    metrics = [
+        ProxyMetric(
+            proxy=c["proxy"],
+            latency=c["latency"],
+            region=c["region"],
+            health_score=c["health_score"],
+            speed_mbps=c.get("speed_mbps", 0.0),
+            url_test_ok=True,
+        )
+        for c in payload.get("candidates", [])
+        if isinstance(c.get("proxy"), dict)
+    ]
+    print(f"[INFO] loaded {len(metrics)} cloud-verified candidates (age {age/60:.0f}min)")
+    return metrics, payload.get("total_nodes", 0), payload.get("sources_ok", 0)
+
+
+def publish(metrics: list[ProxyMetric], total_nodes: int, candidates: int) -> None:
+    metrics.sort(key=lambda item: item.health_score, reverse=True)
+    config = build_config(metrics)
+    validate_config(config)
+    write_config(config)
+    print_summary(total_nodes, candidates, metrics)
+
+
 def write_probe_queue(candidates: list[dict[str, Any]]) -> None:
     """Emit the CN-probe queue for the NAS worker (data/probe_queue.json)."""
     queue_path = Path("data/probe_queue.json")
@@ -1326,64 +1390,87 @@ def print_summary(total_nodes: int, candidates: int, metrics: list[ProxyMetric])
 
 
 def main() -> None:
-    total_nodes, candidates, source_report = collect_proxies()
-    ok_sources = sum(1 for _, ok in source_report if ok)
-    print(f"[SUMMARY] sources_total={len(source_report)} sources_ok={ok_sources}")
-    if source_report and ok_sources == 0:
-        print("[WARN] ALL sources failed; check sources.txt URLs or your network egress")
-    metrics: list[ProxyMetric] = []
+    """Two-phase pipeline.
 
-    if candidates:
-        try:
-            metrics = benchmark_proxies(candidates)
-        except Exception as exc:
-            print(f"[WARN] real latency benchmark unavailable: {exc}")
-
-    if not metrics:
-        metrics = load_existing_metrics()
-        if metrics:
-            print("[WARN] no live nodes passed; reusing previous non-empty output as degraded fallback")
-
-    if not metrics:
-        metrics = [build_direct_fallback_metric()]
-        print("[WARN] no live or previous nodes; using DIRECT-FALLBACK degraded config")
-
-    if SPEED_GATE_ENABLED and len(metrics) > 1:
-        print(f"[INFO] speed gate enabled on top {min(SPEED_TEST_TOP_N, len(metrics))} nodes")
-
-    # CN-view integration: nodes the NAS probed alive get a decisive boost so
-    # they survive the output cap regardless of the US-side health score.
+    Phase A (no fresh NAS verdict):  collect -> gates -> save candidates.json
+                                     + probe queue. Publishing keeps the last
+                                     good subscription untouched.
+    Phase B (fresh NAS verdict):     load candidates.json -> merge NAS verdicts
+                                     -> cap 400 -> publish.
+    """
     cn_alive = load_cn_alive()
-    if cn_alive:
-        boosted = 0
-        for metric in metrics:
-            fp = proxy_fingerprint(metric.proxy)[:16]
-            if fp in cn_alive:
-                metric.health_score += CN_ALIVE_BOOST
-                boosted += 1
-        print(f"[INFO] cn_alive boost applied to {boosted} nodes")
+    has_nas_verdict = bool(cn_alive)
 
-    # Emit the next probe queue from the full candidate set (before capping)
-    try:
-        write_probe_queue(
-            sorted(candidates, key=lambda p: 0)[:PROBE_QUEUE_LIMIT]
-            if not metrics
-            else [m.proxy for m in metrics] + [c for c in candidates if c not in [m.proxy for m in metrics[:50]]][:PROBE_QUEUE_LIMIT]
-        )
-    except Exception as exc:
-        print(f"[WARN] probe queue write failed: {exc}")
+    if not has_nas_verdict:
+        # ---------------- PHASE A: collection run ----------------
+        print("=== PHASE A: collection run (no fresh NAS verdict) ===")
+        total_nodes, candidates, source_report = collect_proxies()
+        ok_sources = sum(1 for _, ok in source_report if ok)
+        print(f"[SUMMARY] sources_total={len(source_report)} sources_ok={ok_sources}")
+        if source_report and ok_sources == 0:
+            print("[WARN] ALL sources failed; check sources.txt URLs or your network egress")
 
-    # Cap the pool: the cloud's job is a broad alive-candidate list; the client
-    # url-test picks the winner. Keep the widest cheap-to-verify set.
+        metrics: list[ProxyMetric] = []
+        if candidates:
+            try:
+                metrics = benchmark_proxies(candidates)
+            except Exception as exc:
+                print(f"[WARN] benchmark unavailable: {exc}")
+
+        if metrics:
+            save_candidates(metrics, total_nodes, ok_sources)
+            # full pool becomes the next probe queue
+            try:
+                write_probe_queue([m.proxy for m in metrics])
+            except Exception as exc:
+                print(f"[WARN] probe queue write failed: {exc}")
+            print("[INFO] phase A complete: candidates staged, subscription NOT republished")
+            return
+
+        # benchmark failed entirely -> keep last good output
+        legacy = load_existing_metrics()
+        if legacy:
+            print("[WARN] benchmark failed; keeping last good subscription")
+            publish(legacy, total_nodes, len(candidates))
+        else:
+            print("[WARN] nothing works; DIRECT-FALLBACK degraded config")
+            publish([build_direct_fallback_metric()], 0, 0)
+        return
+
+    # ---------------- PHASE B: publish run ----------------
+    print("=== PHASE B: publish run (fresh NAS verdict) ===")
+    loaded = load_candidates()
+    if not loaded:
+        print("[WARN] no staged candidates; falling back to full collection+publish")
+        total_nodes, candidates, _ = collect_proxies()
+        metrics: list[ProxyMetric] = []
+        if candidates:
+            try:
+                metrics = benchmark_proxies(candidates)
+            except Exception:
+                metrics = []
+        if not metrics:
+            legacy = load_existing_metrics()
+            publish(legacy or [build_direct_fallback_metric()], total_nodes, len(candidates))
+            return
+        total_nodes, candidates_count = total_nodes, len(candidates)
+    else:
+        metrics, total_nodes, candidates_count = loaded
+
+    # merge NAS verdicts: CN-alive nodes get boosted + re-marked verified
+    boosted = 0
+    for metric in metrics:
+        if is_cn_alive(metric.proxy):
+            metric.health_score += CN_ALIVE_BOOST
+            metric.url_test_ok = True
+            boosted += 1
+    print(f"[INFO] NAS verdicts merged: {boosted} CN-alive nodes boosted")
+
     if len(metrics) > MAX_OUTPUT_NODES:
-        print(f"[INFO] capping output from {len(metrics)} to top {MAX_OUTPUT_NODES} by health score")
+        print(f"[INFO] capping {len(metrics)} -> {MAX_OUTPUT_NODES}")
         metrics = metrics[:MAX_OUTPUT_NODES]
 
-    metrics.sort(key=lambda item: item.health_score, reverse=True)
-    config = build_config(metrics)
-    validate_config(config)
-    write_config(config)
-    print_summary(total_nodes, len(candidates), metrics)
+    publish(metrics, total_nodes, candidates_count)
 
 
 if __name__ == "__main__":
