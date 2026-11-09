@@ -1,5 +1,5 @@
 {
- "probed_at": 1794248313,
+ "probed_at": 1794251045,
  "vantage": "nas-cn",
  "total": 500,
  "alive_count": 237,
@@ -9,42 +9,42 @@
    "server": "104.18.40.100",
    "port": 443,
    "alive": true,
-   "tcp_ms": 165
+   "tcp_ms": 50
   },
   {
    "fp": "5387331d45c28cf2",
    "server": "freev2.cloudflare.182682.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 114
+   "tcp_ms": 124
   },
   {
    "fp": "d1b25f5fe2b7bcdf",
    "server": "v2jp.k1.ssnss.live",
    "port": 44184,
    "alive": true,
-   "tcp_ms": 172
+   "tcp_ms": 473
   },
   {
    "fp": "6bf9384264df3d7c",
    "server": "ench-snet-app.w-ctrip.cn",
    "port": 24133,
    "alive": true,
-   "tcp_ms": 225
+   "tcp_ms": 261
   },
   {
    "fp": "b834f7db0be145bb",
    "server": "101.36.104.239",
    "port": 10808,
    "alive": true,
-   "tcp_ms": 264
+   "tcp_ms": 241
   },
   {
    "fp": "c54550862ab1bcfc",
    "server": "101.36.104.46",
    "port": 10808,
    "alive": true,
-   "tcp_ms": 245
+   "tcp_ms": 237
   },
   {
    "fp": "17567a1c9beccb3f",
@@ -58,7 +58,7 @@
    "server": "188.114.98.0",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 195
   },
   {
    "fp": "6486772b0c372bce",
@@ -72,91 +72,91 @@
    "server": "104.21.91.49",
    "port": 443,
    "alive": true,
-   "tcp_ms": 102
+   "tcp_ms": 81
   },
   {
    "fp": "10a04886cc3fb3a7",
    "server": "104.17.11.191",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 195
   },
   {
    "fp": "dc8422ee864afb26",
    "server": "43.173.1.153",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 118
+   "tcp_ms": 113
   },
   {
    "fp": "a732a58466484cf0",
    "server": "162.159.254.3",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 198
   },
   {
    "fp": "1c2c50662787f5f5",
    "server": "8.35.211.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 201
+   "tcp_ms": 198
   },
   {
    "fp": "e58481df838460fd",
    "server": "172.67.166.188",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 208
   },
   {
    "fp": "749e9ac683029e4d",
    "server": "47.236.168.243",
    "port": 1080,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 220
   },
   {
    "fp": "3c5f3bc68e8c5dd4",
    "server": "jp.huahua.wiki",
    "port": 443,
    "alive": true,
-   "tcp_ms": 146
+   "tcp_ms": 98
   },
   {
    "fp": "9d2c83ae8c30b00d",
    "server": "47.242.19.215",
    "port": 8899,
    "alive": true,
-   "tcp_ms": 51
+   "tcp_ms": 50
   },
   {
    "fp": "f89cf71b0a292e43",
    "server": "104.19.33.25",
    "port": 443,
    "alive": true,
-   "tcp_ms": 47
+   "tcp_ms": 49
   },
   {
    "fp": "c5de61d5edc75689",
    "server": "mdk.mdmekjll.best",
    "port": 80,
    "alive": true,
-   "tcp_ms": 307
+   "tcp_ms": 159
   },
   {
    "fp": "1feae04dfdd9027a",
    "server": "px2.5ibtc.cn",
    "port": 443,
    "alive": true,
-   "tcp_ms": 430
+   "tcp_ms": 269
   },
   {
    "fp": "ec42d50512d7a236",
    "server": "188.114.98.0",
    "port": 443,
    "alive": true,
-   "tcp_ms": 201
+   "tcp_ms": 198
   },
   {
    "fp": "7088c2470229648b",
@@ -170,84 +170,84 @@
    "server": "172.67.199.126",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 216
+   "tcp_ms": 211
   },
   {
    "fp": "448f2b3e9512824b",
    "server": "104.20.5.134",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 201
   },
   {
    "fp": "8937e492e8dc401c",
    "server": "fast.145779.xyz",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 789
+   "tcp_ms": 419
   },
   {
    "fp": "c7d7667fe9328f00",
    "server": "104.18.35.86",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 93
+   "tcp_ms": 48
   },
   {
    "fp": "3172536e371dc060",
    "server": "fast.145779.xyz",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 282
+   "tcp_ms": 267
   },
   {
    "fp": "561bf13a91cd0b0f",
    "server": "188.114.99.0",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 191
+   "tcp_ms": 202
   },
   {
    "fp": "8f3d0e68a47399b0",
    "server": "188.114.98.0",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 191
   },
   {
    "fp": "192aad7103551397",
    "server": "172.67.68.157",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 192
   },
   {
    "fp": "ba6aea757a916afe",
    "server": "188.114.98.0",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 200
   },
   {
    "fp": "dc686909f6ca1c21",
    "server": "104.19.95.153",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 196
   },
   {
    "fp": "8d48f0747d01234c",
    "server": "104.18.32.47",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 190
   },
   {
    "fp": "b312ac113a2131f0",
    "server": "188.114.96.6",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 195
   },
   {
    "fp": "91619312e73fcf00",
@@ -261,147 +261,147 @@
    "server": "104.18.41.86",
    "port": 443,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 198
   },
   {
    "fp": "17c545fbc9256376",
    "server": "45.61.188.134",
    "port": 44499,
    "alive": true,
-   "tcp_ms": 259
+   "tcp_ms": 262
   },
   {
    "fp": "c609a8acdd23ec72",
    "server": "us.huahua.wiki",
    "port": 443,
    "alive": true,
-   "tcp_ms": 272
+   "tcp_ms": 264
   },
   {
    "fp": "2d0ce4c2893a04ae",
    "server": "172.64.150.43",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 201
+   "tcp_ms": 200
   },
   {
    "fp": "ceec34d7150a4fe9",
    "server": "172.64.152.241",
    "port": 443,
    "alive": true,
-   "tcp_ms": 46
+   "tcp_ms": 90
   },
   {
    "fp": "7ec2226e4c220b83",
    "server": "172.64.229.133",
    "port": 443,
    "alive": true,
-   "tcp_ms": 47
+   "tcp_ms": 46
   },
   {
    "fp": "a07858a68bdf7611",
    "server": "172.64.146.66",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 164
   },
   {
    "fp": "cf8fd4fbee197d28",
    "server": "104.25.95.31",
    "port": 443,
    "alive": true,
-   "tcp_ms": 189
+   "tcp_ms": 200
   },
   {
    "fp": "3f1d10b7797e68a7",
    "server": "104.26.4.2",
    "port": 443,
    "alive": true,
-   "tcp_ms": 189
+   "tcp_ms": 190
   },
   {
    "fp": "12d20761448068e9",
    "server": "172.66.1.36",
    "port": 443,
    "alive": true,
-   "tcp_ms": 101
+   "tcp_ms": 75
   },
   {
    "fp": "ca3d4a9d078f62c9",
    "server": "104.20.17.210",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 196
   },
   {
    "fp": "c672e1c6d4ca8b06",
    "server": "104.24.58.225",
    "port": 443,
    "alive": true,
-   "tcp_ms": 198
+   "tcp_ms": 200
   },
   {
    "fp": "8aadc62db6c1ea07",
    "server": "104.16.195.204",
    "port": 443,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 195
   },
   {
    "fp": "565ede48318b87b2",
    "server": "104.16.75.203",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 197
   },
   {
    "fp": "4c73571b2a961b96",
    "server": "23.149.28.8.sslip.io",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 411
+   "tcp_ms": 250
   },
   {
    "fp": "2069a80d7c6e4953",
    "server": "151.101.1.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 79
   },
   {
    "fp": "24289cae3de31551",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 333
+   "tcp_ms": 304
   },
   {
    "fp": "69942a4ab4cb0c1f",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 310
   },
   {
    "fp": "1e8a9a9943c51d48",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 317
+   "tcp_ms": 293
   },
   {
    "fp": "37b9bae290217cea",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 257
+   "tcp_ms": 154
   },
   {
    "fp": "935cf36be90ce3fb",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 254
+   "tcp_ms": 270
   },
   {
    "fp": "02d3be36b3f7817a",
@@ -415,98 +415,98 @@
    "server": "cg1c02.waimaojd.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 207
+   "tcp_ms": 263
   },
   {
    "fp": "fbabf76601575d72",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 80
+   "tcp_ms": 96
   },
   {
    "fp": "ec95ed39594eee5b",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 171
+   "tcp_ms": 94
   },
   {
    "fp": "fe108596c3cc2237",
    "server": "172.64.150.28",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 190
   },
   {
    "fp": "c401e72c9bdb7db9",
    "server": "104.16.217.89",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 198
   },
   {
    "fp": "e477853cee2f620c",
    "server": "104.17.245.250",
    "port": 443,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 188
   },
   {
    "fp": "c15f08bd75748585",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 316
+   "tcp_ms": 285
   },
   {
    "fp": "4c87fa43963efcd2",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 154
+   "tcp_ms": 159
   },
   {
    "fp": "0a78ef4b5429993a",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 149
+   "tcp_ms": 87
   },
   {
    "fp": "387df892b7a8830a",
    "server": "151.101.193.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 88
+   "tcp_ms": 81
   },
   {
    "fp": "354c6d199cab0138",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 84
+   "tcp_ms": 81
   },
   {
    "fp": "ca86a1a03bb3a4cc",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 86
   },
   {
    "fp": "5f39f40143e96b03",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 83
+   "tcp_ms": 101
   },
   {
    "fp": "cbbf97bfe5feb7d8",
    "server": "104.21.221.158",
    "port": 443,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 196
   },
   {
    "fp": "7ab38a68c9be149a",
@@ -520,7 +520,7 @@
    "server": "104.19.114.162",
    "port": 443,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 190
   },
   {
    "fp": "0ead93517c14746d",
@@ -534,119 +534,119 @@
    "server": "172.67.159.207",
    "port": 443,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 205
   },
   {
    "fp": "1aca60b6751b0bd2",
    "server": "104.18.60.55",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 199
   },
   {
    "fp": "66f4e2bd5476cb69",
    "server": "151.101.1.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 74
+   "tcp_ms": 78
   },
   {
    "fp": "0ea6264dda81c305",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 80
+   "tcp_ms": 81
   },
   {
    "fp": "ef2ed996b33785bd",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 84
   },
   {
    "fp": "76a9cbab2dd1a769",
    "server": "151.101.193.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 87
   },
   {
    "fp": "42b4cbc3d2ecf0ae",
    "server": "179.255.107.182",
    "port": 443,
    "alive": true,
-   "tcp_ms": 160
+   "tcp_ms": 158
   },
   {
    "fp": "a6f54da49f4e903e",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 87
   },
   {
    "fp": "12cb0fe180578df8",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 138
   },
   {
    "fp": "4c06aabcb8238bbd",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 198
   },
   {
    "fp": "7ddc5160426fe569",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 206
+   "tcp_ms": 92
   },
   {
    "fp": "5ce839e8ef355878",
    "server": "151.101.193.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 84
+   "tcp_ms": 78
   },
   {
    "fp": "866fbd881b610899",
    "server": "151.101.1.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 85
+   "tcp_ms": 81
   },
   {
    "fp": "73478c6eab93cf25",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 88
+   "tcp_ms": 131
   },
   {
    "fp": "e3986048d4b59e2a",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 85
+   "tcp_ms": 77
   },
   {
    "fp": "b1457f8d384ba11d",
    "server": "151.101.1.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 87
+   "tcp_ms": 79
   },
   {
    "fp": "16a91222af6abd3c",
    "server": "104.17.154.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 50
+   "tcp_ms": 46
   },
   {
    "fp": "6e4cb4c052200e1e",
@@ -660,21 +660,21 @@
    "server": "172.67.138.17",
    "port": 443,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 214
   },
   {
    "fp": "b0ca02893feb7d42",
    "server": "172.66.0.1",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 98
+   "tcp_ms": 79
   },
   {
    "fp": "c3e5bd63d19fe9b5",
    "server": "172.64.155.209",
    "port": 443,
    "alive": true,
-   "tcp_ms": 150
+   "tcp_ms": 47
   },
   {
    "fp": "50991d16419e1f46",
@@ -695,147 +695,147 @@
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 84
+   "tcp_ms": 77
   },
   {
    "fp": "66c3726c6078a9e8",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 81
+   "tcp_ms": 128
   },
   {
    "fp": "e1c314d1702e5b3d",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 79
+   "tcp_ms": 81
   },
   {
    "fp": "b3693d4504c18365",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 84
+   "tcp_ms": 85
   },
   {
    "fp": "4b0ea5a92e2c1765",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 85
+   "tcp_ms": 133
   },
   {
    "fp": "3ab3a8d64ea78d7e",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 75
+   "tcp_ms": 80
   },
   {
    "fp": "071fcb9f0ebec429",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 80
   },
   {
    "fp": "6d48156926a90a4a",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 83
+   "tcp_ms": 87
   },
   {
    "fp": "1cacd3eb84558b38",
    "server": "bounded-crammed.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 293
+   "tcp_ms": 152
   },
   {
    "fp": "3f83d33d6ddf5810",
    "server": "172.67.76.40",
    "port": 443,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 188
   },
   {
    "fp": "531063254b0cc1a0",
    "server": "172.64.229.72",
    "port": 443,
    "alive": true,
-   "tcp_ms": 52
+   "tcp_ms": 48
   },
   {
    "fp": "d3063bab92113c26",
    "server": "104.17.46.205",
    "port": 443,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 193
   },
   {
    "fp": "270a78ba504e4e64",
    "server": "104.17.184.120",
    "port": 443,
    "alive": true,
-   "tcp_ms": 46
+   "tcp_ms": 47
   },
   {
    "fp": "c0a5962e2e15b626",
    "server": "104.18.51.110",
    "port": 443,
    "alive": true,
-   "tcp_ms": 201
+   "tcp_ms": 190
   },
   {
    "fp": "e9c86d0ade0a4e7e",
    "server": "104.24.173.112",
    "port": 443,
    "alive": true,
-   "tcp_ms": 198
+   "tcp_ms": 197
   },
   {
    "fp": "e3b32ec80ba6b376",
    "server": "minimize-evenness.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 89
   },
   {
    "fp": "c8aca6aa770e5983",
    "server": "bounded-crammed.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 84
   },
   {
    "fp": "9ca96b09c65fb924",
    "server": "grimness-backlogs.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 311
   },
   {
    "fp": "5c085d4afce01124",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 86
+   "tcp_ms": 83
   },
   {
    "fp": "a340b611f56affff",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 87
+   "tcp_ms": 202
   },
   {
    "fp": "46a3db0fd52f7992",
    "server": "199.232.153.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 209
+   "tcp_ms": 205
   },
   {
    "fp": "787f31185b60429f",
@@ -849,21 +849,21 @@
    "server": "grimness-backlogs.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 83
+   "tcp_ms": 306
   },
   {
    "fp": "9f5be2d13a6040cc",
    "server": "grimness-backlogs.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 81
+   "tcp_ms": 156
   },
   {
    "fp": "8a70298e16127e72",
    "server": "grimness-backlogs.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 79
+   "tcp_ms": 227
   },
   {
    "fp": "b7dfdf41fcdb258c",
@@ -877,28 +877,28 @@
    "server": "104.18.45.38",
    "port": 443,
    "alive": true,
-   "tcp_ms": 137
+   "tcp_ms": 44
   },
   {
    "fp": "e650a5c2e782ce93",
    "server": "88.216.69.253",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 198
   },
   {
    "fp": "1e4ea5c2aede45ce",
    "server": "172.66.0.162",
    "port": 443,
    "alive": true,
-   "tcp_ms": 76
+   "tcp_ms": 80
   },
   {
    "fp": "f3f194edce88ba53",
    "server": "104.19.164.25",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 190
   },
   {
    "fp": "3f35902e37fcbd24",
@@ -912,91 +912,91 @@
    "server": "104.24.197.20",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 191
+   "tcp_ms": 198
   },
   {
    "fp": "8a0d61a2f780d85a",
    "server": "104.18.32.47",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 204
   },
   {
    "fp": "f295c0e9b7734ac1",
    "server": "172.64.150.181",
    "port": 443,
    "alive": true,
-   "tcp_ms": 196
+   "tcp_ms": 193
   },
   {
    "fp": "d9e022dac361a817",
    "server": "104.26.13.31",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 191
   },
   {
    "fp": "e30f0167b8d390ec",
    "server": "104.19.90.200",
    "port": 443,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 200
   },
   {
    "fp": "b0e8d376f3ee3313",
    "server": "172.67.231.28",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 198
   },
   {
    "fp": "11316659598db14a",
    "server": "bounded-crammed.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 90
   },
   {
    "fp": "e5880af19c8c058a",
    "server": "bounded-crammed.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 86
+   "tcp_ms": 85
   },
   {
    "fp": "3f5de2e75ed42828",
    "server": "grimness-backlogs.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 78
   },
   {
    "fp": "946035d873b3ef1f",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 79
   },
   {
    "fp": "821e75e3826ad089",
    "server": "app-mi-26.spbstudentlife.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 251
+   "tcp_ms": 380
   },
   {
    "fp": "2aa78679c56c81a6",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 196
   },
   {
    "fp": "93165cd4f8d03073",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 85
   },
   {
    "fp": "13cc940c9578ae87",
@@ -1010,98 +1010,98 @@
    "server": "grimness-backlogs.cdn-content.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 81
+   "tcp_ms": 77
   },
   {
    "fp": "62d03bd7559f2d68",
    "server": "piracy-android.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 79
+   "tcp_ms": 77
   },
   {
    "fp": "9ec98c91fecfd892",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 80
+   "tcp_ms": 86
   },
   {
    "fp": "58d3c581a7333d7b",
    "server": "bounded-crammed.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 86
   },
   {
    "fp": "539afb91601196ad",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 87
+   "tcp_ms": 84
   },
   {
    "fp": "0cb5b61e2de1dad2",
    "server": "69.55.49.177",
    "port": 38182,
    "alive": true,
-   "tcp_ms": 1296
+   "tcp_ms": 267
   },
   {
    "fp": "f423e9a62e2f7c23",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 86
+   "tcp_ms": 140
   },
   {
    "fp": "d2ea28288f76a5a7",
    "server": "bounded-crammed.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 80
+   "tcp_ms": 84
   },
   {
    "fp": "d9412b64540f3900",
    "server": "ench-snet-app.w-ctrip.cn",
    "port": 26429,
    "alive": true,
-   "tcp_ms": 281
+   "tcp_ms": 290
   },
   {
    "fp": "0f0d97d0b21705d4",
    "server": "45.61.188.134",
    "port": 44499,
    "alive": true,
-   "tcp_ms": 260
+   "tcp_ms": 1266
   },
   {
    "fp": "9c5e5a86c8ab3e2b",
    "server": "a0688bt.us4.h1clayd.click",
    "port": 443,
    "alive": true,
-   "tcp_ms": 370
+   "tcp_ms": 373
   },
   {
    "fp": "7ad0f91ec94f4aaa",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 81
   },
   {
    "fp": "6a1e0d4dc3e92fc2",
    "server": "172.64.158.170",
    "port": 443,
    "alive": true,
-   "tcp_ms": 53
+   "tcp_ms": 83
   },
   {
    "fp": "f7b56a6a1045b150",
    "server": "104.16.162.89",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 198
+   "tcp_ms": 192
   },
   {
    "fp": "6dd0dc46d6cffac9",
@@ -1115,7 +1115,7 @@
    "server": "172.64.146.66",
    "port": 443,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 160
   },
   {
    "fp": "561a13b5d99101c8",
@@ -1129,28 +1129,28 @@
    "server": "104.19.235.15",
    "port": 443,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 200
   },
   {
    "fp": "20ea0a7e47f24f70",
    "server": "104.16.0.85",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 194
   },
   {
    "fp": "aaf4d83682f12042",
    "server": "bounded-crammed.video-streams.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 81
+   "tcp_ms": 78
   },
   {
    "fp": "8a6227607f7c539f",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 86
+   "tcp_ms": 194
   },
   {
    "fp": "50b3aefa0d05c9df",
@@ -1164,105 +1164,105 @@
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 77
+   "tcp_ms": 118
   },
   {
    "fp": "3da51af38be3e5e7",
    "server": "adheres-scruple.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 85
+   "tcp_ms": 142
   },
   {
    "fp": "1ed82b64c44239d9",
    "server": "69.55.49.177",
    "port": 38182,
    "alive": true,
-   "tcp_ms": 301
+   "tcp_ms": 280
   },
   {
    "fp": "8ff04f47151676ca",
    "server": "151.101.161.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 224
+   "tcp_ms": 223
   },
   {
    "fp": "bb9217824b14915c",
    "server": "151.101.65.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 84
+   "tcp_ms": 82
   },
   {
    "fp": "94c4ea3f9029f27b",
    "server": "a0688bt.us4.h1clayd.click",
    "port": 443,
    "alive": true,
-   "tcp_ms": 310
+   "tcp_ms": 341
   },
   {
    "fp": "d4e60e449ca4a972",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 87
   },
   {
    "fp": "8b7b4eb6d0a03616",
    "server": "ghosts-spasm.quick-cdn.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 81
   },
   {
    "fp": "2e3e6769f7b7e965",
    "server": "185.145.99.41",
    "port": 1080,
    "alive": true,
-   "tcp_ms": 191
+   "tcp_ms": 194
   },
   {
    "fp": "4a2abe3c9fe4c5ee",
    "server": "154.26.188.52",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1151
+   "tcp_ms": 218
   },
   {
    "fp": "47f81cea8f696399",
    "server": "104.17.44.17",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 197
   },
   {
    "fp": "c151584c4e8ef61b",
    "server": "172.64.150.43",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 200
   },
   {
    "fp": "82e875d5d899781e",
    "server": "104.26.13.54",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 189
   },
   {
    "fp": "4a7221a41c302093",
    "server": "104.24.46.107",
    "port": 443,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 198
   },
   {
    "fp": "280b062bdd5aaccf",
    "server": "104.21.70.21",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 207
+   "tcp_ms": 202
   },
   {
    "fp": "924bfc9bce347dc7",
@@ -1276,42 +1276,42 @@
    "server": "104.18.36.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 201
+   "tcp_ms": 192
   },
   {
    "fp": "209fa20d738fc5a9",
    "server": "8.6.112.86",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 198
+   "tcp_ms": 203
   },
   {
    "fp": "63cd064fe9e000b8",
    "server": "172.67.151.38",
    "port": 443,
    "alive": true,
-   "tcp_ms": 218
+   "tcp_ms": 208
   },
   {
    "fp": "53184a74e6b431b1",
    "server": "104.25.10.54",
    "port": 443,
    "alive": true,
-   "tcp_ms": 196
+   "tcp_ms": 191
   },
   {
    "fp": "4c473002830f648a",
    "server": "104.18.0.181",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 187
+   "tcp_ms": 193
   },
   {
    "fp": "8c289852d5033111",
    "server": "104.18.37.247",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 189
   },
   {
    "fp": "482e4f68c08134e0",
@@ -1325,42 +1325,42 @@
    "server": "104.26.12.54",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 188
+   "tcp_ms": 189
   },
   {
    "fp": "83e1850ebf88232c",
    "server": "104.16.122.227",
    "port": 443,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 197
   },
   {
    "fp": "a2c08b4a5bfef300",
    "server": "172.67.155.148",
    "port": 443,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 207
   },
   {
    "fp": "22e99daf9048c8d4",
    "server": "172.64.153.153",
    "port": 443,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 195
   },
   {
    "fp": "8407ae8db36584d4",
    "server": "104.18.47.73",
    "port": 443,
    "alive": true,
-   "tcp_ms": 121
+   "tcp_ms": 44
   },
   {
    "fp": "2d288bb2d9fba164",
    "server": "172.64.155.209",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 95
+   "tcp_ms": 49
   },
   {
    "fp": "cf09ce6e34fe0254",
@@ -1374,217 +1374,217 @@
    "server": "104.16.34.14",
    "port": 443,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 193
   },
   {
    "fp": "8c540132ad1d0207",
    "server": "104.18.8.74",
    "port": 443,
    "alive": true,
-   "tcp_ms": 188
+   "tcp_ms": 190
   },
   {
    "fp": "9ecbe0c74c2dde20",
    "server": "172.67.159.109",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 209
   },
   {
    "fp": "675f6c1477099fb9",
    "server": "104.16.0.1",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 194
   },
   {
    "fp": "24128db1ad42de1e",
    "server": "104.27.74.207",
    "port": 443,
    "alive": true,
-   "tcp_ms": 194
+   "tcp_ms": 203
   },
   {
    "fp": "9163d36972cd3433",
    "server": "172.66.140.66",
    "port": 443,
    "alive": true,
-   "tcp_ms": 76
+   "tcp_ms": 81
   },
   {
    "fp": "2b8c48334d549125",
    "server": "104.20.61.103",
    "port": 443,
    "alive": true,
-   "tcp_ms": 132
+   "tcp_ms": 143
   },
   {
    "fp": "7b3f44111eb289ac",
    "server": "188.164.248.216",
    "port": 443,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 197
   },
   {
    "fp": "ce15a1ff45fc4783",
    "server": "104.16.231.20",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 193
+   "tcp_ms": 196
   },
   {
    "fp": "8cc77f0f2fb054c1",
    "server": "172.67.75.172",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 189
+   "tcp_ms": 191
   },
   {
    "fp": "de61b96216ff49e2",
    "server": "104.25.238.196",
    "port": 443,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 197
   },
   {
    "fp": "1718115844d1c9e2",
    "server": "104.18.41.190",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 202
   },
   {
    "fp": "62a5c40a6e621d63",
    "server": "104.27.93.208",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 197
   },
   {
    "fp": "b56898b9c76a1480",
    "server": "104.19.226.84",
    "port": 443,
    "alive": true,
-   "tcp_ms": 189
+   "tcp_ms": 192
   },
   {
    "fp": "fc9e23c2a3106934",
    "server": "104.18.41.188",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 194
   },
   {
    "fp": "e044826cb7a1bded",
    "server": "104.25.231.228",
    "port": 443,
    "alive": true,
-   "tcp_ms": 198
+   "tcp_ms": 193
   },
   {
    "fp": "41bfb212542e7dba",
    "server": "104.18.35.15",
    "port": 443,
    "alive": true,
-   "tcp_ms": 163
+   "tcp_ms": 47
   },
   {
    "fp": "ed53bdce2b6f00b0",
    "server": "172.67.115.132",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 193
   },
   {
    "fp": "37424f1d82f87eed",
    "server": "188.114.97.6",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 191
   },
   {
    "fp": "6c6471144d8cfe3c",
    "server": "104.16.215.234",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 197
   },
   {
    "fp": "c3c12ee1f3b7f3d9",
    "server": "104.17.162.11",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 141
+   "tcp_ms": 50
   },
   {
    "fp": "b1784c7e74ef87c1",
    "server": "172.64.80.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 200
   },
   {
    "fp": "e37bc52b36e307e0",
    "server": "104.17.96.84",
    "port": 443,
    "alive": true,
-   "tcp_ms": 150
+   "tcp_ms": 56
   },
   {
    "fp": "a02958512ed4ae14",
    "server": "172.67.126.12",
    "port": 443,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 199
   },
   {
    "fp": "00bba86ce3b3c28d",
    "server": "172.67.135.88",
    "port": 443,
    "alive": true,
-   "tcp_ms": 165
+   "tcp_ms": 167
   },
   {
    "fp": "f0d307a97807d7bf",
    "server": "104.26.12.31",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 188
   },
   {
    "fp": "5f8f09c53e6fb678",
    "server": "104.20.23.85",
    "port": 443,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 199
   },
   {
    "fp": "b5d2e84c9bda9d07",
    "server": "172.67.141.182",
    "port": 443,
    "alive": true,
-   "tcp_ms": 214
+   "tcp_ms": 213
   },
   {
    "fp": "b54919dab4a13ed9",
    "server": "104.18.35.86",
    "port": 2082,
    "alive": true,
-   "tcp_ms": 145
+   "tcp_ms": 48
   },
   {
    "fp": "b8b8dd079d52461a",
    "server": "ccc.010304.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 271
+   "tcp_ms": 682
   },
   {
    "fp": "b7883838d548cd5f",
    "server": "172.64.153.66",
    "port": 443,
    "alive": true,
-   "tcp_ms": 193
+   "tcp_ms": 196
   },
   {
    "fp": "0328bd654f44a052",
@@ -1598,63 +1598,63 @@
    "server": "www.speedtest.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 71
+   "tcp_ms": 56
   },
   {
    "fp": "2811567729ffde5f",
    "server": "104.18.35.86",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 138
+   "tcp_ms": 46
   },
   {
    "fp": "0e6885e45fe01d3e",
    "server": "saas.sin.fan",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 134
+   "tcp_ms": 112
   },
   {
    "fp": "595f31225aa1292f",
    "server": "epam.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 283
+   "tcp_ms": 292
   },
   {
    "fp": "c269eb7cc7bef658",
    "server": "vless.herogoing.top",
    "port": 443,
    "alive": true,
-   "tcp_ms": 435
+   "tcp_ms": 222
   },
   {
    "fp": "46f8f38ea0ddb933",
    "server": "cf.090227.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 106
+   "tcp_ms": 81
   },
   {
    "fp": "fbb35dfed4f79abb",
    "server": "104.18.35.86",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 47
+   "tcp_ms": 52
   },
   {
    "fp": "83c59ec60dbfc391",
    "server": "104.18.35.86",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 48
   },
   {
    "fp": "cba8d80f8a28c280",
    "server": "104.17.3.81",
    "port": 443,
    "alive": true,
-   "tcp_ms": 191
+   "tcp_ms": 201
   },
   {
    "fp": "71bd1418bdb64d09",
