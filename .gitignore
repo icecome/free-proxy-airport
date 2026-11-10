@@ -1,2 +1,6 @@
 .history/
 __pycache__/
+# Local diagnostics / rollback snapshots (not published)
+out/
+_bak-*/
+*.pyc

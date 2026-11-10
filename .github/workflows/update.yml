@@ -2,7 +2,9 @@ name: AI Self-Healing Proxy v7
 
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    # Every 30 min: the run budget is now ~10-15 min (see SPEED_TEST_* in
+    # generator.py), so the 2-hour cadence wasted freshness for no reason.
+    - cron: "*/30 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -16,14 +18,27 @@ permissions:
 
 concurrency:
   group: ai-self-healing-proxy-v7
+  # false: never kill a run that is mid-collection, it would leave the
+  # subscription half-written. The budget keeps runs short enough that a queued
+  # run still starts within the same hour.
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    # Hard ceiling. The old budget needed ~105 min per run while cron fired
+    # every 2h, so runs overlapped, queued runs were cancelled, and the
+    # published file froze on 2026-11-01.
+    timeout-minutes: 40
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # The NAS pushes data/cn_alive.json every ~45 min. Without this the
+          # checkout is fine but the later `git push` rejects (non-fast-forward)
+          # -- that is exactly how run #22 failed at "Commit output".
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,6 +49,10 @@ jobs:
         run: python -m pip install --upgrade requests pyyaml
 
       - name: Generate Clash subscription
+        env:
+          # Collection is the only way a stale probe queue ever gets refreshed;
+          # see the Phase A/B deadlock notes in generator.py:main().
+          FREE_PROXY_AIRPORT_FORCE_COLLECT: "1"
         run: |
           python generator.py
           mkdir -p docs
@@ -44,14 +63,29 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/clash.yaml docs/clash.yaml docs/.nojekyll
-          if [ -f data/probe_queue.json ]; then git add data/probe_queue.json; fi
+          # candidates.json was never committed, so Phase B never found a
+          # staged set and every run re-collected from scratch.
+          for f in output/clash.yaml docs/clash.yaml docs/.nojekyll data/candidates.json data/probe_queue.json; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "Update Clash subscription"
-            git push
+            exit 0
           fi
+          git commit -m "Update Clash subscription"
+          # Rebase-retry: the NAS worker commits to the same branch on its own
+          # schedule, so a plain push races it and fails.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push attempt $attempt rejected, rebasing onto origin/main"
+            git pull --rebase --autostash origin main || true
+            sleep $((attempt * 5))
+          done
+          echo "push failed after 5 attempts"
+          exit 1
 
       - name: Validate Clash Verge subscription
         run: |
@@ -103,6 +137,28 @@ jobs:
           ):
               if rule not in rules:
                   raise SystemExit(f"missing rule: {rule}")
+
+          # Regression guards for the two bugs that froze this subscription:
+          # 1) health-check URL blackholed in CN makes every client show red
+          # 2) one CDN host shipping 12 credential variants shows as "duplicates"
+          from urllib.parse import urlparse
+          for name, group in groups.items():
+              if group.get("type") in ("url-test", "fallback"):
+                  url = str(group.get("url", ""))
+                  host = urlparse(url).hostname or ""
+                  if host in ("www.gstatic.com", "www.google.com", "google.com", "gstatic.com"):
+                      raise SystemExit(f"{name} uses a CN-blackholed health URL: {url}")
+                  if not host.startswith("cp.cloudflare.com") and "generate_204" not in url:
+                      raise SystemExit(f"{name} unexpected health URL: {url}")
+          # Client lists one row per host:port; protocol is irrelevant here.
+          ends = [(str(p.get("server", "")).strip().lower(), p.get("port"))
+                  for p in data["proxies"]]
+          dup = len(ends) - len(set(ends))
+          if dup > 0:
+              raise SystemExit(f"{dup} duplicate endpoints still published")
+          if "DIRECT" not in groups["PROXY"]["proxies"]:
+              raise SystemExit("PROXY group lost its DIRECT escape hatch")
+          print(f"validation OK: {len(ends)} unique endpoints, all health URLs CN-reachable")
           PY
           python -m http.server 8080 --directory docs >/tmp/free-proxy-airport-pages.log 2>&1 &
           server_pid=$!

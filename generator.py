@@ -28,15 +28,22 @@ import requests
 import yaml
 
 
-VERSION = "v7"
+VERSION = "v7.1"
 OUTPUT_PATH = Path("output/clash.yaml")
-TEST_URL = "http://www.gstatic.com/generate_204"
-# Real-egress check target used by the url-test selection stage.
-URL_TEST_URL = "https://www.google.com/generate_204"
-SOURCE_TIMEOUT = 25
-LATENCY_TIMEOUT_MS = int(os.getenv("FREE_PROXY_AIRPORT_LATENCY_TIMEOUT_MS", "8000"))
+# Health-check target. This URL is embedded in every proxy-group as `url`,
+# so it is probed BY THE CLIENT, from inside mainland China, through each
+# node. gstatic/google generate_204 are TCP-blackholed in CN (measured:
+# connect timeout at t+6s on 2026-11-10) -> every group reports all-red and
+# users read that as "the subscription is dead". cp.cloudflare.com answers
+# 204 from CN in ~600ms and from the US runner alike.
+TEST_URL = os.getenv("FREE_PROXY_AIRPORT_TEST_URL", "http://cp.cloudflare.com/generate_204")
+# Egress proof executed on the GitHub runner (US vantage): a node that cannot
+# reach a censored-target endpoint is a broken tunnel even if TCP connects.
+URL_TEST_URL = os.getenv("FREE_PROXY_AIRPORT_URL_TEST_URL", "https://www.google.com/generate_204")
+SOURCE_TIMEOUT = int(os.getenv("FREE_PROXY_AIRPORT_SOURCE_TIMEOUT", "12"))
+LATENCY_TIMEOUT_MS = int(os.getenv("FREE_PROXY_AIRPORT_LATENCY_TIMEOUT_MS", "5000"))
 MAX_RETRIES = 3
-MAX_WORKERS = int(os.getenv("FREE_PROXY_AIRPORT_MAX_WORKERS", "24"))
+MAX_WORKERS = int(os.getenv("FREE_PROXY_AIRPORT_MAX_WORKERS", "48"))
 MAX_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_CANDIDATES", "0"))
 # Cloud-side bandwidth gate is opt-in now: the client-side url-test and the
 # local cn_alive_check.py are the real quality filters; cloud only removes
@@ -47,16 +54,55 @@ MAX_OUTPUT_NODES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_OUTPUT", "400"))
 # CN-probe loop: queue size for the NAS worker, and the boost applied to
 # nodes the NAS reported alive within the last hour.
 PROBE_QUEUE_LIMIT = int(os.getenv("FREE_PROXY_AIRPORT_PROBE_QUEUE", "500"))
+# Deprecated: CN verdicts now rank as tier-0 in publish_sort_key instead of
+# adding a score bonus, which used to pin one frozen set above the 400-node
+# cut line. Kept so old env files do not break; no longer read.
 CN_ALIVE_BOOST = float(os.getenv("FREE_PROXY_AIRPORT_CN_BOOST", "1000.0"))
 CANDIDATES_FILE = Path("data/candidates.json")
 # How long a cloud-collected candidate set stays valid for phase B.
 CANDIDATES_TTL_SECONDS = 26 * 3600
-SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000"
-SPEED_TEST_MAX_BYTES = 10_000_000
-SPEED_TEST_TIMEOUT = 25.0
-SPEED_TEST_MIN_MBPS = float(os.getenv("FREE_PROXY_AIRPORT_MIN_MBPS", "10.0"))
-SPEED_TEST_TOP_N = int(os.getenv("FREE_PROXY_AIRPORT_SPEED_TOP_N", "150"))
-SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "30"))
+SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=4000000"
+SPEED_TEST_MAX_BYTES = 3_000_000
+SPEED_TEST_TIMEOUT = float(os.getenv("FREE_PROXY_AIRPORT_SPEED_TIMEOUT", "10"))
+# Free nodes rarely sustain 10 Mbps; a 10 Mbps gate threw away working
+# nodes and, worse, forced the "rescue slow nodes" path which re-admitted
+# everything untested. 2 Mbps is the honest floor for usable browsing.
+SPEED_TEST_MIN_MBPS = float(os.getenv("FREE_PROXY_AIRPORT_MIN_MBPS", "2.0"))
+SPEED_TEST_TOP_N = int(os.getenv("FREE_PROXY_AIRPORT_SPEED_TOP_N", "60"))
+SPEED_TEST_MIN_POOL = int(os.getenv("FREE_PROXY_AIRPORT_MIN_POOL", "24"))
+# One download attempt per node keeps a full run inside the Actions budget
+# (the old 2x25s x 150 nodes schedule needed ~105 min and could never finish
+# before the next cron tick, which is what froze the published file).
+SPEED_TEST_ATTEMPTS = int(os.getenv("FREE_PROXY_AIRPORT_SPEED_ATTEMPTS", "1"))
+# Second egress gate. Off by default: the delay probe is already a real HTTP
+# fetch through the node, this stage only re-proved it serially.
+URL_TEST_STAGE = os.getenv("FREE_PROXY_AIRPORT_URL_TEST_STAGE", "0") == "1"
+# Pure-Python fallback when the mihomo binary cannot be fetched (GitHub
+# release assets return 403 from some networks). Without this the whole
+# benchmark throws, main() sees empty metrics and republishes the last good
+# file -- which is exactly how the subscription stayed frozen for 8 days.
+TCP_FALLBACK_TIMEOUT_MS = int(os.getenv("FREE_PROXY_AIRPORT_TCP_TIMEOUT_MS", "2000"))
+TCP_FALLBACK_WORKERS = int(os.getenv("FREE_PROXY_AIRPORT_TCP_WORKERS", "64"))
+# Wall-clock cap for the mihomo archive; exceeded -> TCP fallback.
+ENGINE_DOWNLOAD_TIMEOUT = int(os.getenv("FREE_PROXY_AIRPORT_ENGINE_TIMEOUT", "45"))
+# Set to 1 to skip the mihomo binary entirely and always use the pure-Python
+# TCP reachability gate. Useful on hosts where GitHub release assets are
+# blocked (403) or stalled behind a TLS interceptor.
+SKIP_ENGINE = os.getenv("FREE_PROXY_AIRPORT_SKIP_ENGINE", "0") == "1"
+# Endpoint-level dedup budget. Free pools re-share one CDN host across a
+# dozen different UUIDs; only one of those credentials is accepted
+# server-side, so the rest are guaranteed-red entries that clients count as
+# duplicates (measured on the live subscription: 74 nodes over 20 endpoints,
+# one host carrying 12). Default 1 = one node per (family, server, port).
+DEDUP_ENDPOINT_MAX = int(os.getenv("FREE_PROXY_AIRPORT_DEDUP_ENDPOINT", "1"))
+# How many same-host copies may enter the benchmark per endpoint. 1 would
+# discard the working credential when it is not the first one in source
+# order; 3 covers the common "one host, several UUIDs" pattern cheaply.
+DEDUP_ENDPOINT_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_DEDUP_CANDIDATES", "3"))
+# A NAS verdict older than this must not keep pinning the same nodes to the
+# top of the published file; the probe queue itself went 8 days stale and
+# that is why the same handful of nodes shipped forever.
+CN_ALIVE_FRESH_SECONDS = int(os.getenv("FREE_PROXY_AIRPORT_CN_FRESH", "7200"))
 
 # One subscription URL per line. Lines starting with # are comments.
 # Add a new free source -> append a line. A source that keeps failing -> delete its line.
@@ -65,12 +111,13 @@ SOURCES_FILE = Path(os.getenv("FREE_PROXY_AIRPORT_SOURCES", "sources.txt"))
 # Kept in sync with sources.txt (2026-11-01 curation): dead sources removed.
 DEFAULT_SOURCES = """\
 # free-proxy-airport node sources: one URL per line, '#' starts a comment
-# openRunner clash-freenode
-https://raw.githubusercontent.com/openRunner/clash-freenode/main/sub.yaml
-# snakem982 proxypool
-https://raw.githubusercontent.com/snakem982/proxypool/main/clash.yaml
-# Flikify Free-Node
-https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
+# Verified 2026-11-10. openRunner/clash-freenode (sub.yaml removed, 404) and
+# Flikify/Free-Node (both files 0 bytes) were dropped; snakem982 now serves
+# source/clash-meta-2.yaml instead of the old main/clash.yaml.
+https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/V2Ray.yml
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml
+https://raw.githubusercontent.com/bily1258-design/beimi/main/output/clash.yaml
 """
 
 SUPPORTED_PROXY_TYPES = {
@@ -105,6 +152,10 @@ class ProxyMetric:
     health_score: float
     speed_mbps: float = 0.0
     url_test_ok: bool = False
+    # Set when a *fresh* NAS verdict says the node's endpoint is reachable
+    # from mainland China. Ranks above unverified nodes without inflating
+    # health_score (which used to pin one frozen set to the top forever).
+    cn_verified: bool = False
 
 
 class Sid(str):
@@ -134,6 +185,23 @@ def fetch_text(url: str, retries: int = MAX_RETRIES) -> str:
             response = requests.get(url, headers=headers, timeout=SOURCE_TIMEOUT)
             response.raise_for_status()
             return response.content.decode("utf-8", errors="replace")
+        except requests.exceptions.SSLError as exc:
+            # Some CI/Windows hosts put a TLS interceptor with a private CA in
+            # front of raw.githubusercontent.com; the default CA bundle then
+            # rejects the cert while the plain content is fine. Sources are
+            # public text files and node payloads are validated by
+            # normalize_proxy() before use.
+            try:
+                response = requests.get(
+                    url, headers=headers, timeout=SOURCE_TIMEOUT, verify=False
+                )
+                response.raise_for_status()
+                return response.content.decode("utf-8", errors="replace")
+            except Exception:
+                pass
+            last_error = exc
+            if attempt < retries:
+                time.sleep(2 * attempt)
         except requests.HTTPError as exc:
             status = exc.response.status_code if exc.response is not None else None
             if status is not None and 400 <= status < 500:
@@ -487,6 +555,8 @@ def collect_proxies() -> tuple[int, list[dict[str, Any]], list[tuple[str, bool]]
 def sanitize_and_deduplicate(proxies: list[dict[str, Any]]) -> list[dict[str, Any]]:
     seen_fingerprints: set[str] = set()
     seen_names: set[str] = set()
+    endpoint_counts: dict[tuple[str, str, int], int] = {}
+    dropped_same_host = 0
     result: list[dict[str, Any]] = []
 
     for index, raw in enumerate(proxies, start=1):
@@ -499,6 +569,16 @@ def sanitize_and_deduplicate(proxies: list[dict[str, Any]]) -> list[dict[str, An
             continue
         seen_fingerprints.add(fingerprint)
 
+        # Keep a few copies per host so the benchmark can still discover which
+        # credential the server actually accepts, but never let one CDN edge
+        # flood the candidate set: 20 hosts x 12 UUIDs used to eat the whole
+        # output budget while only one credential per host ever worked.
+        key = client_endpoint_key(proxy)
+        if endpoint_counts.get(key, 0) >= DEDUP_ENDPOINT_CANDIDATES:
+            dropped_same_host += 1
+            continue
+        endpoint_counts[key] = endpoint_counts.get(key, 0) + 1
+
         base_name = str(proxy["name"]).strip() or f"node-{index}"
         name = base_name
         suffix = 2
@@ -508,7 +588,42 @@ def sanitize_and_deduplicate(proxies: list[dict[str, Any]]) -> list[dict[str, An
         proxy["name"] = name
         seen_names.add(name)
         result.append(proxy)
+
+    if dropped_same_host:
+        print(
+            f"[INFO] candidate filter: dropped {dropped_same_host} extra copies of "
+            f"already-covered hosts (cap {DEDUP_ENDPOINT_CANDIDATES}/endpoint); "
+            f"{len(result)} unique candidates remain"
+        )
     return result
+
+
+def dedupe_published_by_endpoint(metrics: list[ProxyMetric]) -> list[ProxyMetric]:
+    """Collapse published nodes to one per (family, server, port).
+
+    Metrics arrive sorted by score, so the surviving node is the one that
+    actually passed the throughput/egress gates. Without this, the same CDN
+    host ships a dozen entries, of which all but one are guaranteed-red in the
+    client — that is the "去重了还是重复" symptom users see.
+    """
+    if DEDUP_ENDPOINT_MAX <= 0:
+        return metrics
+    kept: list[ProxyMetric] = []
+    used: dict[tuple[str, int], int] = {}
+    merged = 0
+    for metric in metrics:
+        key = client_endpoint_key(metric.proxy)
+        if used.get(key, 0) >= DEDUP_ENDPOINT_MAX:
+            merged += 1
+            continue
+        used[key] = used.get(key, 0) + 1
+        kept.append(metric)
+    if merged:
+        print(
+            f"[INFO] endpoint dedup at publish: {len(metrics)} -> {len(kept)} "
+            f"(dropped {merged} shadow copies of the same host)"
+        )
+    return kept
 
 
 def normalize_proxy(raw: dict[str, Any], index: int) -> dict[str, Any] | None:
@@ -593,6 +708,53 @@ def proxy_fingerprint(proxy: dict[str, Any]) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
+# Protocol families that dial the same transport on the same socket. Used to
+# recognise "same host, different credential/alias" copies that survive the
+# credential-aware fingerprint.
+PROTOCOL_FAMILY = {
+    "ss": "ss",
+    "ssr": "ss",
+    "vmess": "vmess",
+    "vless": "vless",
+    "trojan": "trojan",
+    "hysteria": "hysteria2",
+    "hysteria2": "hysteria2",
+    "hy2": "hysteria2",
+    "tuic": "tuic",
+    "socks": "socks5",
+    "socks5": "socks5",
+}
+
+
+def endpoint_key(proxy: dict[str, Any]) -> tuple[str, str, int]:
+    """Client-visible identity of a node: (protocol family, host, port).
+
+    Two nodes with the same key differ only in credential/name, so at most one
+    of them can be the accepted one — publishing both is what clients show as
+    duplicate entries where all but one are red.
+
+    NOTE: the key deliberately keeps the family out of the dedup decision at
+    publish time (see dedupe_published_by_endpoint): from the client's point
+    of view two entries with the same host:port are the same server, whatever
+    protocol each claims. Returning the family here would let e.g. an ss and
+    a trojan node on the same 443 slip through as "different" nodes.
+    """
+    raw_type = str(proxy.get("type", "")).strip().lower()
+    family = PROTOCOL_FAMILY.get(raw_type, raw_type)
+    host = str(proxy.get("server", "")).strip().lower()
+    try:
+        port = int(proxy.get("port", 0))
+    except (TypeError, ValueError):
+        port = 0
+    return (family, host, port)
+
+
+def client_endpoint_key(proxy: dict[str, Any]) -> tuple[str, int]:
+    """What the client actually lists: (host, port), protocol-independent."""
+    _, host, port = endpoint_key(proxy)
+    return (host, port)
+
+
 def find_free_port() -> int:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind(("127.0.0.1", 0))
@@ -641,7 +803,13 @@ def select_mihomo_asset() -> tuple[str, str | None]:
     per-asset `digest` field (sha256:<hex>) when available; None otherwise.
     """
     api_url = "https://api.github.com/repos/MetaCubeX/mihomo/releases/latest"
-    data = requests.get(api_url, headers={"User-Agent": "free-proxy-airport"}, timeout=SOURCE_TIMEOUT).json()
+    headers = {"User-Agent": "free-proxy-airport"}
+    try:
+        data = requests.get(api_url, headers=headers, timeout=SOURCE_TIMEOUT).json()
+    except requests.exceptions.SSLError:
+        # Same private-CA interceptor case as fetch_text(); the release
+        # metadata is public and the downloaded archive is sha256-checked.
+        data = requests.get(api_url, headers=headers, timeout=SOURCE_TIMEOUT, verify=False).json()
     assets = data.get("assets", [])
     system = platform.system().lower()
     machine = platform.machine().lower()
@@ -690,14 +858,40 @@ def select_mihomo_asset() -> tuple[str, str | None]:
 
 
 def download_file(url: str, directory: Path) -> Path:
+    """Download with a wall-clock cap.
+
+    A TLS interceptor can leave `requests.get(stream=True)` hanging forever
+    even with per-socket timeouts; cap the whole transfer so a blocked binary
+    degrades to the TCP fallback instead of freezing the entire run.
+    """
     target = directory / Path(url.split("?")[0]).name
-    with requests.get(url, stream=True, timeout=SOURCE_TIMEOUT) as response:
-        response.raise_for_status()
-        with target.open("wb") as file:
-            for chunk in response.iter_content(chunk_size=1024 * 512):
-                if chunk:
-                    file.write(chunk)
-    return target
+    keywords = [dict(verify=True), dict(verify=False)]
+    last_error: Exception | None = None
+    for kw in keywords:
+        try:
+            with requests.get(
+                url, stream=True, timeout=(6, SOURCE_TIMEOUT), **kw
+            ) as resp:
+                resp.raise_for_status()
+                started = time.monotonic()
+                with target.open("wb") as file:
+                    for chunk in resp.iter_content(chunk_size=1024 * 512):
+                        if chunk:
+                            file.write(chunk)
+                        if time.monotonic() - started > ENGINE_DOWNLOAD_TIMEOUT:
+                            raise TimeoutError(
+                                f"engine download exceeded {ENGINE_DOWNLOAD_TIMEOUT}s"
+                            )
+            if target.stat().st_size > 0:
+                return target
+        except requests.exceptions.SSLError as exc:
+            last_error = exc
+            continue
+        except Exception as exc:
+            last_error = exc
+            break
+    target.unlink(missing_ok=True)
+    raise RuntimeError(f"failed to download {url}: {last_error}")
 
 
 def extract_mihomo_binary(archive: Path, directory: Path) -> Path:
@@ -791,7 +985,7 @@ def benchmark_single_batch(
                         metric.region,
                         metric.speed_mbps,
                     )
-                metrics.sort(key=lambda item: item.health_score, reverse=True)
+                metrics.sort(key=publish_sort_key)
             return metrics, None
         except RuntimeError as exc:
             # Engine failed to start / died: capture stderr for diagnosis.
@@ -811,15 +1005,82 @@ def benchmark_single_batch(
                     print(f"  | {line}")
 
 
+def tcp_reachable(proxy: dict[str, Any]) -> tuple[bool, int]:
+    """Measure a TCP connect to the node's entry, no external engine needed.
+
+    Does not prove the tunnel works end-to-end (that needs a real proxy
+    client), but it removes the ~62% of published nodes whose port is simply
+    dead from the client's network. Combined with the client-side url-test
+    group this is a usable fallback when mihomo cannot be installed.
+    """
+    host = str(proxy.get("server", "")).strip()
+    try:
+        port = int(proxy.get("port", 0))
+    except (TypeError, ValueError):
+        return False, 0
+    if not host or port <= 0 or port > 65535:
+        return False, 0
+    deadline = TCP_FALLBACK_TIMEOUT_MS / 1000
+    start = time.monotonic()
+    try:
+        with socket.create_connection((host, port), timeout=deadline):
+            return True, max(1, int((time.monotonic() - start) * 1000))
+    except OSError:
+        return False, 0
+
+
+def tcp_fallback_benchmark(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
+    """Rank candidates by direct TCP reachability + region.
+
+    Used only when find_or_install_mihomo() fails; it never leaves the
+    pipeline with an empty metric list, so the "republish the frozen file"
+    branch is not reached.
+    """
+    metrics: list[ProxyMetric] = []
+    workers = max(1, min(TCP_FALLBACK_WORKERS, len(proxies)))
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {executor.submit(tcp_reachable, p): i for i, p in enumerate(proxies)}
+        verdicts: dict[int, tuple[bool, int]] = {
+            futures[f]: f.result() for f in as_completed(futures)
+        }
+    for index, (alive, latency) in verdicts.items():
+        if not alive:
+            continue
+        proxy = proxies[index]
+        region = detect_region(str(proxy.get("name", "")))
+        metrics.append(
+            ProxyMetric(
+                proxy=proxy,
+                latency=latency,
+                region=region,
+                health_score=health_score(str(proxy.get("name", "")), latency, region),
+                url_test_ok=True,
+            )
+        )
+    print(f"[INFO] TCP fallback: {len(metrics)}/{len(proxies)} reachable (no mihomo needed)")
+    return metrics
+
+
 def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
     """Benchmark candidates in batches so one poisoned batch cannot take
-    down the whole run (a single invalid proxy makes mihomo refuse to start)."""
+    down the whole run (a single invalid proxy makes mihomo refuse to start).
+
+    If the engine binary is unavailable (403 / blocked release assets), fall
+    back to pure-Python TCP reachability instead of returning nothing.
+    """
     if not proxies:
         return []
 
     global _CN_ALIVE_NAMES
     _CN_ALIVE_NAMES = {r.get("server", "") + ":" + str(r.get("port", "")) for r in get_cn_alive_cached().values()}
-    engine = find_or_install_mihomo()
+    if SKIP_ENGINE:
+        print("[INFO] FREE_PROXY_AIRPORT_SKIP_ENGINE=1: using TCP fallback directly")
+        return tcp_fallback_benchmark(proxies)
+    try:
+        engine = find_or_install_mihomo()
+    except Exception as exc:
+        print(f"[WARN] mihomo unavailable ({type(exc).__name__}: {exc}); using TCP fallback")
+        return tcp_fallback_benchmark(proxies)
     batch_size = 300
     all_metrics: list[ProxyMetric] = []
     batches = [proxies[i : i + batch_size] for i in range(0, len(proxies), batch_size)]
@@ -833,7 +1094,15 @@ def benchmark_proxies(proxies: list[dict[str, Any]]) -> list[ProxyMetric]:
                   + (f" (batch FAILED: {error[:300]})" if error else ""))
             all_metrics.extend(metrics)
 
-    all_metrics.sort(key=lambda item: item.health_score, reverse=True)
+    if not all_metrics:
+        # Every batch failed (e.g. binary starts but rejects the config, or
+        # the controller never comes up). Do NOT return an empty list: main()
+        # would treat that as "benchmark failed" and republish the frozen
+        # subscription again.
+        print("[WARN] all mihomo batches failed; using TCP fallback instead of stale republish")
+        return tcp_fallback_benchmark(proxies)
+
+    all_metrics.sort(key=publish_sort_key)
     return all_metrics
 
 
@@ -856,7 +1125,7 @@ def run_delay_tests(controller_url: str, proxies: list[dict[str, Any]]) -> list[
                 metrics.append(metric)
             if completed % 25 == 0 or completed == len(futures):
                 print(f"[INFO] tested {completed}/{len(futures)} kept={len(metrics)}")
-    metrics.sort(key=lambda item: item.health_score, reverse=True)
+    metrics.sort(key=publish_sort_key)
     return metrics
 
 
@@ -924,14 +1193,22 @@ def download_speed_probe(proxy_port: int) -> float | None:
     return received * 8 / elapsed / 1_000_000
 
 
-def measure_speed_mbps(controller_url: str, proxy_port: int, name: str) -> float:
-    """Best-of-2 single-connection download through one proxy node."""
+def measure_speed_mbps(controller_url: str, proxy_port: int, proxy: dict[str, Any]) -> float:
+    """Single-connection download through one proxy node.
+
+    The CN-alive short circuit used to compare the node NAME against a set of
+    "server:port" strings, which can never match — every NAS-verified node
+    still burned a full download probe, and the 105-minute runs that froze the
+    schedule were the result. Compare on the endpoint instead.
+    """
+    name = str(proxy["name"])
     if not switch_benchmark_node(controller_url, name):
         return 0.0
-    if name in _CN_ALIVE_NAMES:
+    endpoint = str(proxy.get("server", "")) + ":" + str(proxy.get("port", ""))
+    if endpoint in _CN_ALIVE_NAMES:
         return SPEED_TEST_MIN_MBPS + 1  # CN-verified: skip download probe
     best = 0.0
-    for attempt in range(2):
+    for _attempt in range(max(1, SPEED_TEST_ATTEMPTS)):
         mbps = download_speed_probe(proxy_port)
         if mbps is None:
             continue
@@ -958,41 +1235,50 @@ def run_speed_tests(
     candidate_names = {str(item.proxy["name"]) for item in candidates}
     print(f"[INFO] speed testing top {len(candidates)} nodes via {SPEED_TEST_URL}")
 
-    # URL-test stage: fetch a real endpoint through each node before the
-    # bandwidth probe. Catches nodes whose TCP/delay is fine but which fail
-    # real HTTP egress (broken TLS, dead upstream, poisoned DNS...).
-    url_pass = 0
-    for metric in candidates:
-        name = str(metric.proxy["name"])
-        if is_cn_alive(metric.proxy):
+    # Optional second egress stage. Disabled by default: the mihomo delay
+    # probe above already performs a real HTTP fetch *through* the node, so
+    # this stage re-proved the same thing serially at 12s per node — 30
+    # minutes of the run for zero extra information, and the single biggest
+    # reason a run could not finish before the next cron tick.
+    if URL_TEST_STAGE:
+        url_pass = 0
+        for metric in candidates:
+            name = str(metric.proxy["name"])
+            if is_cn_alive(metric.proxy):
+                metric.url_test_ok = True
+                metric.speed_mbps = max(metric.speed_mbps, SPEED_TEST_MIN_MBPS + 1)
+                url_pass += 1
+                continue
+            if not switch_benchmark_node(controller_url, name):
+                continue
+            try:
+                resp = requests.get(
+                    URL_TEST_URL,
+                    proxies={
+                        "http": f"http://127.0.0.1:{proxy_port}",
+                        "https": f"http://127.0.0.1:{proxy_port}",
+                    },
+                    timeout=12,
+                    headers={"User-Agent": f"free-proxy-airport/{VERSION}"},
+                )
+                metric.url_test_ok = resp.status_code == 200 and len(resp.content) > 100
+            except Exception:
+                metric.url_test_ok = False
+            if metric.url_test_ok:
+                url_pass += 1
+        print(f"[INFO] url-test: {url_pass}/{len(candidates)} passed real HTTP egress")
+        candidates = [m for m in candidates if m.url_test_ok]
+        candidate_names = {str(item.proxy["name"]) for item in candidates}
+    else:
+        # The delay probe already succeeded for every candidate, so treat it
+        # as the egress proof and keep the whole gate consistent.
+        for metric in candidates:
             metric.url_test_ok = True
-            metric.speed_mbps = max(metric.speed_mbps, SPEED_TEST_MIN_MBPS + 1)
-            url_pass += 1
-            continue
-        if not switch_benchmark_node(controller_url, name):
-            continue
-        try:
-            resp = requests.get(
-                URL_TEST_URL,
-                proxies={
-                    "http": f"http://127.0.0.1:{proxy_port}",
-                    "https": f"http://127.0.0.1:{proxy_port}",
-                },
-                timeout=12,
-                headers={"User-Agent": f"free-proxy-airport/{VERSION}"},
-            )
-            metric.url_test_ok = resp.status_code == 200 and len(resp.content) > 100
-        except Exception:
-            metric.url_test_ok = False
-        if metric.url_test_ok:
-            url_pass += 1
-    print(f"[INFO] url-test: {url_pass}/{len(candidates)} passed real HTTP egress")
-    candidates = [m for m in candidates if m.url_test_ok]
-    candidate_names = {str(item.proxy["name"]) for item in candidates}
+        print(f"[INFO] url-test stage skipped (delay probes already prove egress): {len(candidates)} candidates")
 
     for index, metric in enumerate(candidates, start=1):
         name = str(metric.proxy["name"])
-        mbps = measure_speed_mbps(controller_url, proxy_port, name)
+        mbps = measure_speed_mbps(controller_url, proxy_port, metric.proxy)
         metric.speed_mbps = round(mbps, 2)
         status = "PASS" if mbps >= SPEED_TEST_MIN_MBPS else "SLOW"
         print(f"[SPEED] {index}/{len(candidates)} {name} {metric.speed_mbps}Mbps {status}")
@@ -1015,7 +1301,7 @@ def run_speed_tests(
         f"url_failed={url_failed} untested_kept={len(untouched)}"
     )
     result = passed + untouched
-    result.sort(key=lambda item: item.health_score, reverse=True)
+    result.sort(key=publish_sort_key)
     return result
 
 
@@ -1132,6 +1418,28 @@ def load_existing_metrics() -> list[ProxyMetric]:
     return metrics
 
 
+def url_test_group(name: str, proxies: list[str], interval: int = 120) -> dict[str, Any]:
+    """url-test group tuned for a pool of free nodes.
+
+    tolerance: without it url-test re-elects on every 1ms wobble, so the exit
+    IP changes mid-session and logins/AI endpoints break - users read that as
+    "the node is unstable".
+    lazy: probe on load instead of only after the first proxied request, so
+    the client shows real latency immediately instead of "testing...".
+    """
+    return {
+        "name": name,
+        "type": "url-test",
+        "proxies": proxies,
+        "url": TEST_URL,
+        "interval": interval,
+        "tolerance": 50,
+        "lazy": False,
+        "max-failed-times": 3,
+        "timeout": 5000,
+    }
+
+
 def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
     if not metrics:
         metrics = [build_direct_fallback_metric()]
@@ -1159,52 +1467,25 @@ def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
         "generated-at": datetime.now(timezone.utc).isoformat(),
         "proxies": proxies,
         "proxy-groups": [
-            {
-                "name": "AUTO-FAST",
-                "type": "url-test",
-                "proxies": all_names,
-                "url": TEST_URL,
-                "interval": 120,
-            },
-            {
-                "name": "HK-POOL",
-                "type": "url-test",
-                "proxies": hk_names,
-                "url": TEST_URL,
-                "interval": 120,
-            },
-            {
-                "name": "JP-POOL",
-                "type": "url-test",
-                "proxies": jp_names,
-                "url": TEST_URL,
-                "interval": 120,
-            },
-            {
-                "name": "US-POOL",
-                "type": "url-test",
-                "proxies": us_names,
-                "url": TEST_URL,
-                "interval": 120,
-            },
-            {
-                "name": "AI-POOL",
-                "type": "url-test",
-                "proxies": ai_names,
-                "url": TEST_URL,
-                "interval": 120,
-            },
+            url_test_group("AUTO-FAST", all_names),
+            url_test_group("HK-POOL", hk_names),
+            url_test_group("JP-POOL", jp_names),
+            url_test_group("US-POOL", us_names),
+            url_test_group("AI-POOL", ai_names, interval=180),
             {
                 "name": "FALLBACK",
                 "type": "fallback",
                 "proxies": ["AUTO-FAST", "HK-POOL", "JP-POOL", "US-POOL"],
                 "url": TEST_URL,
                 "interval": 120,
+                "lazy": False,
             },
             {
                 "name": "PROXY",
                 "type": "select",
-                "proxies": ["AUTO-FAST", "FALLBACK"],
+                # DIRECT last: when every free node is red the user can still
+                # get online instead of the client showing a dead config.
+                "proxies": ["AUTO-FAST", "FALLBACK", "DIRECT"],
             },
         ],
         "rules": [
@@ -1231,6 +1512,14 @@ def write_config(config: dict[str, Any]) -> None:
 
 _CN_ALIVE_CACHE: dict[str, dict[str, Any]] | None = None
 _CN_ALIVE_NAMES: set[str] = set()
+# probed_at of the loaded NAS verdict; drives the freshness demotion.
+_CN_ALIVE_TS: float = 0.0
+
+
+def cn_verdict_is_fresh() -> bool:
+    if not _CN_ALIVE_TS:
+        return False
+    return (time.time() - _CN_ALIVE_TS) <= CN_ALIVE_FRESH_SECONDS
 
 
 def get_cn_alive_cached() -> dict[str, dict[str, Any]]:
@@ -1299,8 +1588,23 @@ def load_candidates() -> tuple[list[ProxyMetric], int, int] | None:
     return metrics, payload.get("total_nodes", 0), payload.get("sources_ok", 0)
 
 
+def publish_sort_key(metric: ProxyMetric) -> tuple[int, float]:
+    """CN-verified first, then by health score.
+
+    Ordering is a tier, not a score bonus: +1000 on health_score guaranteed
+    that whatever the NAS had verified survived every 400-node cap, so newly
+    collected nodes never reached clients and the published set looked frozen
+    even when the whole pipeline had run.
+    """
+    return (0 if metric.cn_verified else 1, -metric.health_score)
+
+
 def publish(metrics: list[ProxyMetric], total_nodes: int, candidates: int) -> None:
-    metrics.sort(key=lambda item: item.health_score, reverse=True)
+    metrics = dedupe_published_by_endpoint(metrics)
+    metrics.sort(key=publish_sort_key)
+    if len(metrics) > MAX_OUTPUT_NODES:
+        print(f"[INFO] capping {len(metrics)} -> {MAX_OUTPUT_NODES}")
+        metrics = metrics[:MAX_OUTPUT_NODES]
     config = build_config(metrics)
     validate_config(config)
     write_config(config)
@@ -1331,7 +1635,12 @@ def write_probe_queue(candidates: list[dict[str, Any]]) -> None:
 
 
 def load_cn_alive() -> dict[str, dict[str, Any]]:
-    """Read NAS probe results (data/cn_alive.json), 1h freshness window."""
+    """Read NAS probe results (data/cn_alive.json), 6h max age.
+
+    Also records when the verdict was produced so later stages can demote it
+    from admission gate to hint once it stops being fresh.
+    """
+    global _CN_ALIVE_TS
     path = Path("data/cn_alive.json")
     if not path.exists():
         return {}
@@ -1343,6 +1652,7 @@ def load_cn_alive() -> dict[str, dict[str, Any]]:
     if time.time() - probed_at > 21600:
         print("[INFO] cn_alive results stale (>6h), ignoring")
         return {}
+    _CN_ALIVE_TS = float(probed_at or 0)
     alive = {r.get("fp", ""): r for r in data.get("alive", []) if r.get("fp")}
     print(f"[INFO] cn_alive: {len(alive)} alive nodes reported at {probed_at}")
     return alive
@@ -1397,13 +1707,29 @@ def main() -> None:
                                      good subscription untouched.
     Phase B (fresh NAS verdict):     load candidates.json -> merge NAS verdicts
                                      -> cap 400 -> publish.
+
+    Deadlock this fixes: the NAS publishes data/cn_alive.json every ~45 min, so
+    `has_nas_verdict` was ALWAYS true. Phase A therefore never ran again, the
+    probe queue stayed frozen at 2026-11-01 15:59 for 8 days (the NAS kept
+    re-probing the same dead endpoints), candidates.json was never committed by
+    CI so Phase B always fell back to a full collection, and a full collection
+    with the old 105-minute budget could never finish before the next cron
+    tick. Force collection with FREE_PROXY_AIRPORT_FORCE_COLLECT=1.
     """
     cn_alive = load_cn_alive()
     has_nas_verdict = bool(cn_alive)
+    force_collect = os.getenv("FREE_PROXY_AIRPORT_FORCE_COLLECT", "0") == "1"
+    stale_verdict = has_nas_verdict and not cn_verdict_is_fresh()
+    if stale_verdict:
+        age_min = (time.time() - _CN_ALIVE_TS) / 60
+        print(
+            f"[INFO] NAS verdict is {age_min:.0f}min old (> {CN_ALIVE_FRESH_SECONDS//60}min): "
+            "refreshing candidates instead of republishing the pinned set"
+        )
 
-    if not has_nas_verdict:
+    if not has_nas_verdict or force_collect or stale_verdict:
         # ---------------- PHASE A: collection run ----------------
-        print("=== PHASE A: collection run (no fresh NAS verdict) ===")
+        print("=== PHASE A: collection run ===")
         total_nodes, candidates, source_report = collect_proxies()
         ok_sources = sum(1 for _, ok in source_report if ok)
         print(f"[SUMMARY] sources_total={len(source_report)} sources_ok={ok_sources}")
@@ -1424,6 +1750,13 @@ def main() -> None:
                 write_probe_queue([m.proxy for m in metrics])
             except Exception as exc:
                 print(f"[WARN] probe queue write failed: {exc}")
+            if force_collect or stale_verdict:
+                # Keep serving the freshly measured set instead of leaving a
+                # days-old file up while waiting for the NAS round trip.
+                print("[INFO] phase A: publishing measured set directly (verdict stale/forced)")
+                merge_cn_verdicts(metrics, cn_alive)
+                publish(metrics, total_nodes, len(candidates))
+                return
             print("[INFO] phase A complete: candidates staged, subscription NOT republished")
             return
 
@@ -1454,23 +1787,34 @@ def main() -> None:
             publish(legacy or [build_direct_fallback_metric()], total_nodes, len(candidates))
             return
         total_nodes, candidates_count = total_nodes, len(candidates)
+        # The queue MUST be refreshed on this path too. Without it the NAS
+        # keeps probing whatever it was queued with weeks ago, its verdicts
+        # describe endpoints that no longer exist, and every publish keeps
+        # shipping the same pinned handful of nodes.
+        try:
+            write_probe_queue([m.proxy for m in metrics])
+        except Exception as exc:
+            print(f"[WARN] probe queue write failed: {exc}")
     else:
         metrics, total_nodes, candidates_count = loaded
 
-    # merge NAS verdicts: CN-alive nodes get boosted + re-marked verified
+    merge_cn_verdicts(metrics, cn_alive)
+    publish(metrics, total_nodes, candidates_count)
+
+
+def merge_cn_verdicts(metrics: list[ProxyMetric], cn_alive: dict[str, dict[str, Any]]) -> None:
+    """Mark CN-verified nodes as a ranking tier (never as a score bonus)."""
     boosted = 0
     for metric in metrics:
         if is_cn_alive(metric.proxy):
-            metric.health_score += CN_ALIVE_BOOST
+            metric.cn_verified = True
             metric.url_test_ok = True
             boosted += 1
-    print(f"[INFO] NAS verdicts merged: {boosted} CN-alive nodes boosted")
-
-    if len(metrics) > MAX_OUTPUT_NODES:
-        print(f"[INFO] capping {len(metrics)} -> {MAX_OUTPUT_NODES}")
-        metrics = metrics[:MAX_OUTPUT_NODES]
-
-    publish(metrics, total_nodes, candidates_count)
+    print(f"[INFO] NAS verdicts merged: {boosted}/{len(metrics)} CN-verified (tier-0)")
+    if not boosted:
+        print("[WARN] no candidate matched the NAS verdict set: queue/verdict fingerprints diverged")
+    elif not cn_alive:
+        print("[INFO] no NAS verdict available: ranking falls back to measured health score")
 
 
 if __name__ == "__main__":

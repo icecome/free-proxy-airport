@@ -1,46 +1,42 @@
-# free-proxy-airport 鑺傜偣婧愶細涓€琛屼竴涓闃?URL锛? 寮€澶存槸娉ㄩ噴
-# 鍔犳柊婧愶細鐩存帴鍔犱竴琛屻€傛煇涓簮杩炵画澶氳疆鎷変笉鍒拌妭鐐癸細鍒犳帀閭ｈ鍗冲彲銆?
-# 鍚屼粨搴撳鏍煎紡锛坈lash/v2ray/mihomo 绛夛級鍙繚鐣欎竴鏉★紝鑺傜偣澶ф鐜囩浉鍚屻€?
+# free-proxy-airport 节点源：一行一个订阅 URL，# 开头是注释
+# 加新源：直接加一行。某个源连续多轮拉不到节点：删掉那行即可。
+# 同仓库多格式（clash/v2ray/mihomo 等）只保留一条，节点大概率相同。
 
-# === 闀挎湡榛樿婧?===
-# openRunner clash-freenode
-https://raw.githubusercontent.com/openRunner/clash-freenode/main/sub.yaml
-# snakem982 proxypool
-https://raw.githubusercontent.com/snakem982/proxypool/main/clash.yaml
-# Flikify Free-Node
-https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
+# === 长期默认源（2026-11-10 全部核实）===
+# openRunner clash-freenode —— 已删：仓库只剩 README.md + featured.jpg，sub.yaml 已移除（404）
+# snakem982 proxypool —— 路径已变：main/clash.yaml 404，现用 source/clash-meta-2.yaml（实测 63 节点）
+https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+# Flikify Free-Node —— 已删：clash.yaml 与 v2ray.txt 均为 0 字节，仓库自 2026-09-05 无更新
 
-# === 2026-11-01 鎵弿瀹炴祴鍙敤锛堝墠100浠撳簱锛屾寜鑺傜偣鏁版帓搴忥級 ===
-# cbusifabcap daily_free_vpn锛?228 鑺傜偣锛宐ase64-URI锛涘悓浠撳簱鍏朵綑鏍煎紡宸插幓閲嶏級
+# === 2026-11-01 扫描实测可用（前100仓库，按节点数排序）===
+# cbusifabcap daily_free_vpn（1228 节点，base64-URI；同仓库其余格式已去重）
 https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/V2Ray.yml
-# yy1588133 proxy-pool锛?198 鑺傜偣锛宑lash-yaml锛?
+# yy1588133 proxy-pool（1198 节点，clash-yaml）
 https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml
-# bily1258-design beimi锛?80 鑺傜偣锛宑lash-yaml锛涜蛋 raw 鐩磋繛锛屽純鐢ㄨ澧欑殑 jsDelivr 闀滃儚锛?
+# bily1258-design beimi（580 节点，clash-yaml；走 raw 直连，弃用被墙的 jsDelivr 镜像）
 https://raw.githubusercontent.com/bily1258-design/beimi/main/output/clash.yaml
-# chenzhihan1751-cyber node-sub-zixf锛?08 鑺傜偣锛屾槑鏂?URI锛?
+# chenzhihan1751-cyber node-sub-zixf（408 节点，明文 URI）
 https://raw.githubusercontent.com/chenzhihan1751-cyber/node-sub-zixf/main/sub/v2ray.txt
-# cheshi888 freesub-v2锛?79 鑺傜偣锛岃嚜绉版湁娴嬫椿+瀹跺鐢勯€夛級
+# cheshi888 freesub-v2（379 节点，自称有测活+家宽优选）
 https://raw.githubusercontent.com/cheshi888/freesub-v2/main/output/clash.yaml
-# meroseem acaesub锛?31 鑺傜偣锛?
+# meroseem acaesub（231 节点）
 https://raw.githubusercontent.com/meroseem/acaesub/main/output/clash.yaml
-# lucas8864 freesub锛?28 鑺傜偣锛?
+# lucas8864 freesub（228 节点）
 https://raw.githubusercontent.com/lucas8864/freesub/main/output/clash.yaml
-# OgdenThomas freesub锛?92 鑺傜偣锛?
+# OgdenThomas freesub（192 节点）
 https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/clash.yaml
-# v2raynnodes clashfree锛?1 鑺傜偣锛?
+# v2raynnodes clashfree（91 节点）
 https://raw.githubusercontent.com/v2raynnodes/clashfree/main/clash.yaml
-# v2raynnodes v2rayfree锛?0 鑺傜偣锛屾槑鏂?URI锛?
+# v2raynnodes v2rayfree（70 节点，明文 URI）
 https://raw.githubusercontent.com/v2raynnodes/v2rayfree/main/v2ray.txt
-# blue2sea FreeProxies锛?3 鑺傜偣锛涜绔欐湁闃叉墥锛屽伓鍙戣繑鍥?HTML锛屽睘姝ｅ父锛?
-https://blue2sea.com/clash/dda5b7952385d118cd22b8148c6f4366
-# Pawdroid Free-servers锛?3 鑺傜偣锛宐ase64-URI锛?
-https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
-# WLget V2Ray_configs_64锛? 鑺傜偣锛?
-https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt
+# blue2sea / Pawdroid / WLget —— 2026-11-10 实测已停用：
+#   blue2sea 返回 HTTP 500 + 191KB HTML（17s），并非节点数据
+#   Pawdroid/Free-servers/main/sub 与 WLget/V2Ray_configs_64/.../ConfigSub_list.txt 均 SSL 握手失败
+# 单源 3 次重试 × 25s 会让整轮采集卡 75s，直接剔除
 
-# === 宸插垹闄わ紙2026-11-01 娓呯悊锛?===
-# free-clash-v2ray.github.io 鈥斺€?latest.yaml 404
-# cdn.jsdelivr.net/gh/bily1258-design/beimi 鈥斺€?jsDelivr 琚锛屾敼鐢?raw 鐩磋繛
-# cbusifabcap 鐨?Clash/ClashMeta/mihomo 瀛愰〉 鈥斺€?涓?V2Ray.yml 鍚屾簮浠呮牸寮忎笉鍚?
-# ermaozi01 subscribe/clash.yml 鈥斺€?涓?v2ray.txt 鍚屾簮鍚岃妭鐐癸紝鍙暀涓€鏉?
-# sfdr.zaixianyouxi.dpdns.org 鈥斺€?甯︽棩鏈?URL 浼氳繃鏈燂紝涓旀湇鍔＄ mojibake 缂栫爜闂寰呬慨
+# === 已删除（2026-11-01 清理）===
+# free-clash-v2ray.github.io —— latest.yaml 404
+# cdn.jsdelivr.net/gh/bily1258-design/beimi —— jsDelivr 被墙，改用 raw 直连
+# cbusifabcap 的 Clash/ClashMeta/mihomo 子页 —— 与 V2Ray.yml 同源仅格式不同
+# ermaozi01 subscribe/clash.yml —— 与 v2ray.txt 同源同节点，只留一条
+# sfdr.zaixianyouxi.dpdns.org —— 带日期后缀 URL 会过期，且服务端 mojibake 编码问题待修
