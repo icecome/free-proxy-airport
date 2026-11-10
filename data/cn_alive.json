@@ -1,106 +1,106 @@
 {
- "probed_at": 1794287718,
+ "probed_at": 1794290777,
  "vantage": "nas-cn",
  "total": 500,
- "alive_count": 500,
+ "alive_count": 499,
  "alive": [
   {
    "fp": "596db1c8155bda14",
    "server": "211.34.73.83",
    "port": 12251,
    "alive": true,
-   "tcp_ms": 2141
+   "tcp_ms": 97
   },
   {
    "fp": "da24dbafce2bf8ea",
    "server": "t2w2t2w2.bpca2026.top",
    "port": 443,
    "alive": true,
-   "tcp_ms": 117
+   "tcp_ms": 123
   },
   {
    "fp": "eff74f7abf523977",
    "server": "47.129.105.174",
    "port": 50000,
    "alive": true,
-   "tcp_ms": 111
+   "tcp_ms": 103
   },
   {
    "fp": "f3b3b07aed9d1c95",
    "server": "151.101.36.201",
    "port": 443,
    "alive": true,
-   "tcp_ms": 152
+   "tcp_ms": 202
   },
   {
    "fp": "dc06ba520bfe2753",
    "server": "201.58.189.105",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 151
+   "tcp_ms": 148
   },
   {
    "fp": "0e0a708853a5d584",
    "server": "91.198.108.191",
    "port": 443,
    "alive": true,
-   "tcp_ms": 269
+   "tcp_ms": 193
   },
   {
    "fp": "e4039d3feaabf293",
    "server": "154.51.41.193",
    "port": 443,
    "alive": true,
-   "tcp_ms": 151
+   "tcp_ms": 156
   },
   {
    "fp": "bc0bdf556ea1baf3",
    "server": "zibanabz.jonsonvip.ir",
    "port": 3939,
    "alive": true,
-   "tcp_ms": 153
+   "tcp_ms": 165
   },
   {
    "fp": "87e25b5dcc4771c5",
    "server": "212.103.62.233",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 182
   },
   {
    "fp": "2b756a0df0b39d98",
    "server": "78.17.39.129",
    "port": 443,
    "alive": true,
-   "tcp_ms": 266
+   "tcp_ms": 264
   },
   {
    "fp": "8cad1cf5a71b6489",
    "server": "38.145.220.39",
    "port": 443,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 209
   },
   {
    "fp": "7ee03e0ab0837e23",
    "server": "147.45.76.226",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 1245
+   "tcp_ms": 207
   },
   {
    "fp": "1217180e0951ca60",
    "server": "146.75.59.186",
    "port": 443,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 200
   },
   {
    "fp": "15194a0b9a0f8d5d",
    "server": "193.160.208.240",
    "port": 443,
    "alive": true,
-   "tcp_ms": 250
+   "tcp_ms": 178
   },
   {
    "fp": "f6ca100f0374143f",
@@ -114,329 +114,329 @@
    "server": "50.7.44.27",
    "port": 443,
    "alive": true,
-   "tcp_ms": 179
+   "tcp_ms": 175
   },
   {
    "fp": "61e060da89891399",
    "server": "36.38.117.86",
    "port": 12203,
    "alive": true,
-   "tcp_ms": 134
+   "tcp_ms": 126
   },
   {
    "fp": "5f7f01f55fb86233",
    "server": "202.50.253.99",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 184
+   "tcp_ms": 189
   },
   {
    "fp": "2af09cb5afc39713",
    "server": "35.182.250.103",
    "port": 443,
    "alive": true,
-   "tcp_ms": 261
+   "tcp_ms": 265
   },
   {
    "fp": "65b8673ffc14d4e3",
    "server": "72.61.179.194",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 172
+   "tcp_ms": 175
   },
   {
    "fp": "06261c2146443f20",
    "server": "172.66.0.172",
    "port": 443,
    "alive": true,
-   "tcp_ms": 84
+   "tcp_ms": 83
   },
   {
    "fp": "46d6f5ebbd643f50",
    "server": "84.32.209.103",
    "port": 443,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 232
   },
   {
    "fp": "444bec0061565ffe",
    "server": "195.133.92.228",
    "port": 443,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 192
   },
   {
    "fp": "1d30935ed937930e",
    "server": "76.250.141.252",
    "port": 443,
    "alive": true,
-   "tcp_ms": 267
+   "tcp_ms": 247
   },
   {
    "fp": "b216d14edbbb84cb",
    "server": "35.182.245.215",
    "port": 443,
    "alive": true,
-   "tcp_ms": 254
+   "tcp_ms": 257
   },
   {
    "fp": "e949cebd28a380ed",
    "server": "31.56.197.205",
    "port": 443,
    "alive": true,
-   "tcp_ms": 271
+   "tcp_ms": 157
   },
   {
    "fp": "999f84c6792a9863",
    "server": "8.35.211.87",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1223
+   "tcp_ms": 194
   },
   {
    "fp": "15b4463519922c35",
    "server": "support.zoom.us.vltj.qzz.io",
    "port": 443,
    "alive": true,
-   "tcp_ms": 225
+   "tcp_ms": 1222
   },
   {
    "fp": "b50b55eb1e4d7664",
    "server": "23.227.38.99",
    "port": 443,
    "alive": true,
-   "tcp_ms": 163
+   "tcp_ms": 158
   },
   {
    "fp": "08d74da70b5a3134",
    "server": "161.118.200.170",
    "port": 443,
    "alive": true,
-   "tcp_ms": 263
+   "tcp_ms": 216
   },
   {
    "fp": "c1c02e61db65b9cf",
    "server": "194.87.199.13",
    "port": 443,
    "alive": true,
-   "tcp_ms": 182
+   "tcp_ms": 180
   },
   {
    "fp": "86ddb9301519affc",
    "server": "n2.topingr.ir",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1345
+   "tcp_ms": 4248
   },
   {
    "fp": "7f948953c06836d5",
    "server": "213.176.92.168",
    "port": 14430,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 260
   },
   {
    "fp": "5a9201d1a8a519ee",
    "server": "213.176.92.168",
    "port": 10444,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 207
   },
   {
    "fp": "5bfd561ec624ee27",
    "server": "202.50.253.72",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 183
+   "tcp_ms": 184
   },
   {
    "fp": "964b851a466f7c7a",
    "server": "prvtch.titun.su",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 204
   },
   {
    "fp": "fcc646bf7c8e1c5a",
    "server": "68.183.72.92",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1276
+   "tcp_ms": 246
   },
   {
    "fp": "529390483b4ecd88",
    "server": "202.50.253.27",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 186
+   "tcp_ms": 180
   },
   {
    "fp": "ed9651c7f9b0aa02",
    "server": "202.50.253.54",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 1200
+   "tcp_ms": 183
   },
   {
    "fp": "c7784452749ff643",
    "server": "129.212.232.171",
    "port": 443,
    "alive": true,
-   "tcp_ms": 279
+   "tcp_ms": 217
   },
   {
    "fp": "ae503a55d1ae37ec",
    "server": "79.182.39.108",
    "port": 443,
    "alive": true,
-   "tcp_ms": 316
+   "tcp_ms": 244
   },
   {
    "fp": "d168307f5aea1364",
    "server": "187.7.206.127",
    "port": 61374,
    "alive": true,
-   "tcp_ms": 317
+   "tcp_ms": 270
   },
   {
    "fp": "124e9caafb1f6e95",
    "server": "45.66.128.2",
    "port": 443,
    "alive": true,
-   "tcp_ms": 101
+   "tcp_ms": 107
   },
   {
    "fp": "d06d423c82fd3c7d",
    "server": "89.127.232.228",
    "port": 443,
    "alive": true,
-   "tcp_ms": 264
+   "tcp_ms": 1269
   },
   {
    "fp": "f5fe8798ba2b60ac",
    "server": "216.236.45.248",
    "port": 1891,
    "alive": true,
-   "tcp_ms": 1130
+   "tcp_ms": 133
   },
   {
    "fp": "0328bd654f44a052",
    "server": "104.18.1.1",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 2242
+   "tcp_ms": 207
   },
   {
    "fp": "ee89edba5c62d3b9",
    "server": "188.114.98.0",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1209
+   "tcp_ms": 191
   },
   {
    "fp": "3c236a212b2fd42d",
    "server": "157.228.130.240",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1262
+   "tcp_ms": 254
   },
   {
    "fp": "272e0969b45743c5",
    "server": "172.66.170.172",
    "port": 80,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 191
   },
   {
    "fp": "a4379e1b030d4f2d",
    "server": "218.102.64.147",
    "port": 18246,
    "alive": true,
-   "tcp_ms": 1213
+   "tcp_ms": 202
   },
   {
    "fp": "8e8adc035e4f19b5",
    "server": "104.27.110.37",
    "port": 80,
    "alive": true,
-   "tcp_ms": 1209
+   "tcp_ms": 199
   },
   {
    "fp": "63f2f6d719e36b2a",
    "server": "172.64.149.65",
    "port": 443,
    "alive": true,
-   "tcp_ms": 193
+   "tcp_ms": 198
   },
   {
    "fp": "ea0bdf9b4bc09f4b",
    "server": "104.18.1.1",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 199
   },
   {
    "fp": "f8967a8775a4d37d",
    "server": "ld.235231.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 304
+   "tcp_ms": 1556
   },
   {
    "fp": "16c8ce59759cb12f",
    "server": "104.18.109.147",
    "port": 80,
    "alive": true,
-   "tcp_ms": 1213
+   "tcp_ms": 202
   },
   {
    "fp": "eea3e1e72c8c8529",
    "server": "146.75.57.111",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 1221
   },
   {
    "fp": "d6127dd595ca43fe",
    "server": "130.94.29.155",
    "port": 443,
    "alive": true,
-   "tcp_ms": 88
+   "tcp_ms": 89
   },
   {
    "fp": "24a8663933f84152",
    "server": "104.21.70.21",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 198
   },
   {
    "fp": "d91553099dde0877",
    "server": "104.25.199.149",
    "port": 80,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 201
   },
   {
    "fp": "9312c3305825a713",
    "server": "172.66.158.115",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 224
+   "tcp_ms": 193
   },
   {
    "fp": "40c49a2dd95f83db",
    "server": "www.gov.se",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 291
+   "tcp_ms": 1088
   },
   {
    "fp": "3f2dc2ecea4f595b",
    "server": "help1.digikala-aparat-zula.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 224
+   "tcp_ms": 207
   },
   {
    "fp": "f856ef0c5f369e88",
@@ -450,294 +450,294 @@
    "server": "104.21.7.133",
    "port": 80,
    "alive": true,
-   "tcp_ms": 218
+   "tcp_ms": 201
   },
   {
    "fp": "7c31cdfaaa94d3ea",
    "server": "104.26.13.31",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 190
   },
   {
    "fp": "fd391c5dde9dd10c",
    "server": "104.18.153.182",
    "port": 443,
    "alive": true,
-   "tcp_ms": 193
+   "tcp_ms": 196
   },
   {
    "fp": "7faba67982afb58d",
    "server": "104.18.26.94",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 160
   },
   {
    "fp": "750acae4ac96b170",
    "server": "ip.sb",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 221
+   "tcp_ms": 203
   },
   {
    "fp": "edb6f0e5ecc3085b",
    "server": "104.21.57.84",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 214
+   "tcp_ms": 201
   },
   {
    "fp": "2811567729ffde5f",
    "server": "104.18.35.86",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 147
+   "tcp_ms": 88
   },
   {
    "fp": "5badb1d342713dbd",
    "server": "172.66.44.133",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2236
+   "tcp_ms": 190
   },
   {
    "fp": "2556526a3ceab41f",
    "server": "cf.0sm.com",
    "port": 80,
    "alive": true,
-   "tcp_ms": 253
+   "tcp_ms": 197
   },
   {
    "fp": "0ace041765f50282",
    "server": "104.19.173.68",
    "port": 443,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 199
   },
   {
    "fp": "20bc3ee43bd40f43",
    "server": "172.64.150.43",
    "port": 2052,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 200
   },
   {
    "fp": "3d068dc4b1ab0c3e",
    "server": "202.50.253.63",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 1192
+   "tcp_ms": 182
   },
   {
    "fp": "06923f4286710e91",
    "server": "202.50.253.45",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 184
+   "tcp_ms": 181
   },
   {
    "fp": "0fcc0be349dda4a5",
    "server": "104.17.136.198",
    "port": 443,
    "alive": true,
-   "tcp_ms": 215
+   "tcp_ms": 201
   },
   {
    "fp": "b330614096257fc4",
    "server": "172.66.203.67",
    "port": 443,
    "alive": true,
-   "tcp_ms": 81
+   "tcp_ms": 80
   },
   {
    "fp": "7f1f70ba67726d60",
    "server": "202.50.253.90",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 182
+   "tcp_ms": 181
   },
   {
    "fp": "46da91974b5f20eb",
    "server": "188.114.97.6",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 191
   },
   {
    "fp": "ef7c4740deefa3a5",
    "server": "e33xr.qzz.io",
    "port": 80,
    "alive": true,
-   "tcp_ms": 456
+   "tcp_ms": 422
   },
   {
    "fp": "bd8592f13b15b627",
    "server": "172.66.0.230",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 76
+   "tcp_ms": 80
   },
   {
    "fp": "ecceeb4040326e2d",
    "server": "172.67.74.90",
    "port": 443,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 189
   },
   {
    "fp": "c2858a8c659638b6",
    "server": "162.159.153.4",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1164
+   "tcp_ms": 158
   },
   {
    "fp": "e2d1b00ddea58dbc",
    "server": "172.67.145.14",
    "port": 443,
    "alive": true,
-   "tcp_ms": 214
+   "tcp_ms": 190
   },
   {
    "fp": "4fa81a2c53f68312",
    "server": "172.67.155.136",
    "port": 2095,
    "alive": true,
-   "tcp_ms": 1226
+   "tcp_ms": 1198
   },
   {
    "fp": "c7851e930375bc9e",
    "server": "104.21.88.77",
    "port": 443,
    "alive": true,
-   "tcp_ms": 97
+   "tcp_ms": 76
   },
   {
    "fp": "b1f7471565468bf7",
    "server": "172.67.79.160",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 1245
+   "tcp_ms": 1193
   },
   {
    "fp": "965821d7751b8d7d",
    "server": "188.114.97.6",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 222
+   "tcp_ms": 198
   },
   {
    "fp": "429c40118f6e8942",
    "server": "188.114.97.6",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 3270
+   "tcp_ms": 198
   },
   {
    "fp": "6796aa454792b55b",
    "server": "188.114.98.112",
    "port": 80,
    "alive": true,
-   "tcp_ms": 218
+   "tcp_ms": 192
   },
   {
    "fp": "276bc3b44e6e6cb4",
    "server": "188.114.97.6",
    "port": 443,
    "alive": true,
-   "tcp_ms": 188
+   "tcp_ms": 191
   },
   {
    "fp": "cf2e3eeb993824c1",
    "server": "104.21.70.21",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 189
   },
   {
    "fp": "67ac7fd49dc2ba1f",
    "server": "172.67.155.136",
    "port": 2086,
    "alive": true,
-   "tcp_ms": 214
+   "tcp_ms": 191
   },
   {
    "fp": "d1d974666b86dfe7",
    "server": "188.114.97.6",
    "port": 443,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 191
   },
   {
    "fp": "68b01ef27de6a56e",
    "server": "cfnode-11ivy8.pages.dev",
    "port": 443,
    "alive": true,
-   "tcp_ms": 654
+   "tcp_ms": 645
   },
   {
    "fp": "8bd7dabc555649f2",
    "server": "188.114.97.9",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2239
+   "tcp_ms": 192
   },
   {
    "fp": "cb76b6f676482b0b",
    "server": "104.17.28.83",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 48
+   "tcp_ms": 100
   },
   {
    "fp": "73948d7d5dcfb3fd",
    "server": "172.67.130.187",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 165
+   "tcp_ms": 212
   },
   {
    "fp": "321d8baf3361c0a9",
    "server": "154.211.8.227",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 1226
+   "tcp_ms": 194
   },
   {
    "fp": "c436c7a8e616278d",
    "server": "202.50.253.18",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 188
+   "tcp_ms": 184
   },
   {
    "fp": "365d67022df15d67",
    "server": "104.19.150.163",
    "port": 443,
    "alive": true,
-   "tcp_ms": 57
+   "tcp_ms": 151
   },
   {
    "fp": "b6e27cb07678ee47",
    "server": "202.50.253.81",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 186
+   "tcp_ms": 185
   },
   {
    "fp": "ca9dba02bf471479",
    "server": "188.114.96.9",
    "port": 443,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 197
   },
   {
    "fp": "938f57b456f0912a",
    "server": "104.21.14.232",
    "port": 443,
    "alive": true,
-   "tcp_ms": 214
+   "tcp_ms": 198
   },
   {
    "fp": "a52bb6a42bcfc80a",
@@ -751,154 +751,154 @@
    "server": "172.66.0.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 82
   },
   {
    "fp": "8416d665525c642c",
    "server": "saas.sin.fan",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 89
+   "tcp_ms": 88
   },
   {
    "fp": "442711adbb93955d",
    "server": "cf.877771.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 98
   },
   {
    "fp": "b37a40477682e094",
    "server": "104.17.77.77",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 221
+   "tcp_ms": 192
   },
   {
    "fp": "1713bb9e59ab43a3",
    "server": "cf.0sm.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 222
+   "tcp_ms": 159
   },
   {
    "fp": "1ed82b64c44239d9",
    "server": "69.55.49.177",
    "port": 38182,
    "alive": true,
-   "tcp_ms": 316
+   "tcp_ms": 301
   },
   {
    "fp": "4ee2150d6f886181",
    "server": "104.21.64.198",
    "port": 2095,
    "alive": true,
-   "tcp_ms": 2232
+   "tcp_ms": 1206
   },
   {
    "fp": "8ac261293a82943f",
    "server": "172.64.144.240",
    "port": 443,
    "alive": true,
-   "tcp_ms": 3133
+   "tcp_ms": 168
   },
   {
    "fp": "c66306cb96d9fd39",
    "server": "172.67.73.213",
    "port": 443,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 195
   },
   {
    "fp": "401184d18a98c91b",
    "server": "103.133.1.160",
    "port": 80,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 199
   },
   {
    "fp": "e00cbae6e11ca791",
    "server": "188.164.248.67",
    "port": 443,
    "alive": true,
-   "tcp_ms": 218
+   "tcp_ms": 198
   },
   {
    "fp": "8d38a7d127f7d10f",
    "server": "172.64.145.82",
    "port": 443,
    "alive": true,
-   "tcp_ms": 81
+   "tcp_ms": 170
   },
   {
    "fp": "1d6975fb2cba4bdf",
    "server": "epam.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 207
   },
   {
    "fp": "43108f98eb749407",
    "server": "789156.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1866
+   "tcp_ms": 265
   },
   {
    "fp": "1fa7ac0dde2ef405",
    "server": "172.64.229.129",
    "port": 2052,
    "alive": true,
-   "tcp_ms": 119
+   "tcp_ms": 136
   },
   {
    "fp": "b8ea17c220742b9f",
    "server": "104.20.45.141",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1225
+   "tcp_ms": 187
   },
   {
    "fp": "c828034f3a408794",
    "server": "eu02.123450908.xyz",
    "port": 2052,
    "alive": true,
-   "tcp_ms": 911
+   "tcp_ms": 429
   },
   {
    "fp": "ffdccb93dd82737e",
    "server": "172.66.0.172",
    "port": 443,
    "alive": true,
-   "tcp_ms": 77
+   "tcp_ms": 99
   },
   {
    "fp": "4ab4e39245c41609",
    "server": "202.50.253.36",
    "port": 19999,
    "alive": true,
-   "tcp_ms": 1197
+   "tcp_ms": 183
   },
   {
    "fp": "56b06aee08eb4514",
    "server": "172.67.161.144",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 209
+   "tcp_ms": 200
   },
   {
    "fp": "83c59ec60dbfc391",
    "server": "104.18.35.86",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 51
+   "tcp_ms": 184
   },
   {
    "fp": "e0dd640a365c7e45",
    "server": "104.19.45.195",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1180
+   "tcp_ms": 127
   },
   {
    "fp": "a3721340ec75d616",
@@ -912,189 +912,189 @@
    "server": "104.21.91.53",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 78
+   "tcp_ms": 97
   },
   {
    "fp": "1df1cdb4b8a86f30",
    "server": "104.19.174.68",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 190
   },
   {
    "fp": "d325c48b1b247ad5",
    "server": "cf.090227.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 115
+   "tcp_ms": 1196
   },
   {
    "fp": "c367f8799918d89e",
    "server": "104.21.70.21",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2249
+   "tcp_ms": 1235
   },
   {
    "fp": "daa94a244b63a5c8",
    "server": "104.21.70.21",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 206
   },
   {
    "fp": "7f5e03c92d9dd131",
    "server": "aslanbilit.ir",
    "port": 80,
    "alive": true,
-   "tcp_ms": 1824
+   "tcp_ms": 1296
   },
   {
    "fp": "311574c12c3b7b4e",
    "server": "188.114.97.6",
    "port": 443,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 191
   },
   {
    "fp": "dbc7c678892f4174",
    "server": "104.25.5.52",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 198
   },
   {
    "fp": "18076e92c37cc3f8",
    "server": "104.21.70.21",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1225
+   "tcp_ms": 205
   },
   {
    "fp": "bb27b5faf94cac83",
    "server": "172.67.75.172",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 1223
   },
   {
    "fp": "cb9d59182eca9c41",
    "server": "8.39.125.213",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 190
   },
   {
    "fp": "d6c387cb4dc760e6",
    "server": "172.64.80.1",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 2268
+   "tcp_ms": 204
   },
   {
    "fp": "3e98310dd3c5ba55",
    "server": "172.64.80.1",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 193
+   "tcp_ms": 199
   },
   {
    "fp": "b0869450f5ee813f",
    "server": "172.67.167.179",
    "port": 443,
    "alive": true,
-   "tcp_ms": 209
+   "tcp_ms": 210
   },
   {
    "fp": "232506eeb8f462b6",
    "server": "172.67.74.177",
    "port": 443,
    "alive": true,
-   "tcp_ms": 3289
+   "tcp_ms": 211
   },
   {
    "fp": "87aead16f629f998",
    "server": "104.16.72.30",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 193
   },
   {
    "fp": "00bba86ce3b3c28d",
    "server": "172.67.135.88",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1185
+   "tcp_ms": 171
   },
   {
    "fp": "f712b20368d26175",
    "server": "courses.mftplus.qzz.io",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 284
+   "tcp_ms": 606
   },
   {
    "fp": "aee8e917f3c7d7c7",
    "server": "104.21.73.135",
    "port": 80,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 211
   },
   {
    "fp": "51e18c875270e0b4",
    "server": "172.67.208.235",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 170
+   "tcp_ms": 211
   },
   {
    "fp": "974b73d6b8f59891",
    "server": "one-for-all.levikogjgfdd.ir",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 268
+   "tcp_ms": 269
   },
   {
    "fp": "e554edc53ff93199",
    "server": "vless.gem-audio2.us.ci",
    "port": 443,
    "alive": true,
-   "tcp_ms": 624
+   "tcp_ms": 1678
   },
   {
    "fp": "849bfe0c27006f1d",
    "server": "212.77.75.25",
    "port": 1088,
    "alive": true,
-   "tcp_ms": 164
+   "tcp_ms": 172
   },
   {
    "fp": "595f31225aa1292f",
    "server": "epam.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1073
+   "tcp_ms": 123
   },
   {
    "fp": "e22196ed08da3f75",
    "server": "www.speedtest.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 178
+   "tcp_ms": 1205
   },
   {
    "fp": "5daf813f15fd6642",
    "server": "47.236.168.243",
    "port": 1080,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 222
   },
   {
    "fp": "3b156a0a48fd3222",
    "server": "172.66.47.45",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1230
+   "tcp_ms": 213
   },
   {
    "fp": "bce8fbcbac2baf42",
@@ -1108,238 +1108,238 @@
    "server": "188.114.98.0",
    "port": 443,
    "alive": true,
-   "tcp_ms": 202
+   "tcp_ms": 199
   },
   {
    "fp": "6e55409039b63498",
    "server": "172.64.229.21",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2215
+   "tcp_ms": 173
   },
   {
    "fp": "fe8aed9c10e44bab",
    "server": "cf.090227.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 94
+   "tcp_ms": 198
   },
   {
    "fp": "f8feb881eb206b2f",
    "server": "5.255.99.75",
    "port": 1080,
    "alive": true,
-   "tcp_ms": 1217
+   "tcp_ms": 216
   },
   {
    "fp": "85b20f674f8e42c1",
    "server": "www.speedtest.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 58
+   "tcp_ms": 149
   },
   {
    "fp": "6ba34aed82589846",
    "server": "104.27.0.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 190
   },
   {
    "fp": "6efba64ee037ce19",
    "server": "104.18.0.181",
    "port": 2052,
    "alive": true,
-   "tcp_ms": 3243
+   "tcp_ms": 211
   },
   {
    "fp": "378da9b4d1da71cc",
    "server": "91.107.179.68",
    "port": 10809,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 202
   },
   {
    "fp": "51edb77032692a07",
    "server": "104.16.0.1",
    "port": 2052,
    "alive": true,
-   "tcp_ms": 1208
+   "tcp_ms": 189
   },
   {
    "fp": "7ac1e4ea2c9a5f19",
    "server": "172.64.80.1",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 189
+   "tcp_ms": 199
   },
   {
    "fp": "677dec9adc5b2453",
    "server": "188.114.96.3",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 201
+   "tcp_ms": 1224
   },
   {
    "fp": "6dd0dc46d6cffac9",
    "server": "104.21.26.36",
    "port": 443,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 211
   },
   {
    "fp": "57d6ac6511da7137",
    "server": "172.64.145.94",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1133
+   "tcp_ms": 99
   },
   {
    "fp": "87cfe4734f507d44",
    "server": "172.64.144.198",
    "port": 443,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 187
   },
   {
    "fp": "4799521b1220af0e",
    "server": "172.64.147.154",
    "port": 443,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 164
   },
   {
    "fp": "198d6f98906d492e",
    "server": "162.159.152.4",
    "port": 443,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 162
   },
   {
    "fp": "9116a33daf51c610",
    "server": "104.16.148.5",
    "port": 443,
    "alive": true,
-   "tcp_ms": 146
+   "tcp_ms": 121
   },
   {
    "fp": "10ab6ccb029c2d68",
    "server": "fans.liverpool.qzz.io",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 1253
+   "tcp_ms": 578
   },
   {
    "fp": "b1beb1784c064222",
    "server": "mybb.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 747
+   "tcp_ms": 606
   },
   {
    "fp": "976a29f4045497ab",
    "server": "172.64.150.248",
    "port": 443,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 192
   },
   {
    "fp": "1cd2edc2d50b7129",
    "server": "172.64.148.193",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2249
+   "tcp_ms": 199
   },
   {
    "fp": "89a8661b6e392296",
    "server": "104.21.63.28",
    "port": 443,
    "alive": true,
-   "tcp_ms": 206
+   "tcp_ms": 1229
   },
   {
    "fp": "fb25659548e7a01a",
    "server": "one-for-all.levikogjgfdd.ir",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 191
+   "tcp_ms": 192
   },
   {
    "fp": "ac3d41950000bdea",
    "server": "104.20.28.233",
    "port": 80,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 194
   },
   {
    "fp": "9093434a5122ea1a",
    "server": "172.64.159.45",
    "port": 443,
    "alive": true,
-   "tcp_ms": 64
+   "tcp_ms": 174
   },
   {
    "fp": "b1784c7e74ef87c1",
    "server": "172.64.80.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 191
   },
   {
    "fp": "8d1741e6171196e3",
    "server": "one-for-all.levikogjgfdd.ir",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 200
   },
   {
    "fp": "1bdeeff1619255f3",
    "server": "172.67.75.194",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 1224
+   "tcp_ms": 210
   },
   {
    "fp": "83d802471acaca2f",
    "server": "172.64.157.52",
    "port": 443,
    "alive": true,
-   "tcp_ms": 147
+   "tcp_ms": 176
   },
   {
    "fp": "d38b437342a91fe3",
    "server": "185.125.103.62",
    "port": 8082,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 171
   },
   {
    "fp": "670aec0bd31bfd47",
    "server": "194.180.191.249",
    "port": 443,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 213
   },
   {
    "fp": "6bf3b65c8bf18af6",
    "server": "wangcai.cf.877774.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 215
+   "tcp_ms": 310
   },
   {
    "fp": "3abc8225bc2d68b2",
    "server": "172.64.146.116",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1174
+   "tcp_ms": 164
   },
   {
    "fp": "f79ef9bd253bdbad",
    "server": "104.19.50.28",
    "port": 443,
    "alive": true,
-   "tcp_ms": 145
+   "tcp_ms": 93
   },
   {
    "fp": "a7daac8cc07ba357",
@@ -1353,175 +1353,175 @@
    "server": "web-tomcat.pages.dev",
    "port": 443,
    "alive": true,
-   "tcp_ms": 685
+   "tcp_ms": 506
   },
   {
    "fp": "fc6d9a4e05d7e798",
    "server": "104.27.124.133",
    "port": 443,
    "alive": true,
-   "tcp_ms": 215
+   "tcp_ms": 198
   },
   {
    "fp": "c8cdba0f6380fa37",
    "server": "stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1006
+   "tcp_ms": 218
   },
   {
    "fp": "2c8b5d187386443c",
    "server": "104.17.3.81",
    "port": 443,
    "alive": true,
-   "tcp_ms": 194
+   "tcp_ms": 203
   },
   {
    "fp": "730896cd2bfdec63",
    "server": "216.24.57.40",
    "port": 8880,
    "alive": true,
-   "tcp_ms": 161
+   "tcp_ms": 160
   },
   {
    "fp": "414dff6556f72709",
    "server": "icook.tw",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 3349
+   "tcp_ms": 271
   },
   {
    "fp": "270a0f69d6e9b6c8",
    "server": "167.68.11.30",
    "port": 8880,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 200
   },
   {
    "fp": "59295eb2a3763ec8",
    "server": "162.159.152.205",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1159
+   "tcp_ms": 159
   },
   {
    "fp": "3d8cf4f78b2255e8",
    "server": "104.26.3.138",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1240
+   "tcp_ms": 207
   },
   {
    "fp": "3db9c4e1f93dce9f",
    "server": "172.67.65.56",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1214
+   "tcp_ms": 211
   },
   {
    "fp": "4fc6b52a8ca15164",
    "server": "162.159.152.4",
    "port": 443,
    "alive": true,
-   "tcp_ms": 161
+   "tcp_ms": 158
   },
   {
    "fp": "5e0e1e917bef5ba2",
    "server": "172.64.147.91",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1067
+   "tcp_ms": 180
   },
   {
    "fp": "ac00ea63ee646558",
    "server": "188.114.97.3",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 198
   },
   {
    "fp": "ccf2e821f6442791",
    "server": "188.164.248.96",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 1210
   },
   {
    "fp": "49c01ee92404f4b1",
    "server": "188.164.248.81",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 1210
+   "tcp_ms": 191
   },
   {
    "fp": "741614c61d133355",
    "server": "172.64.147.180",
    "port": 443,
    "alive": true,
-   "tcp_ms": 162
+   "tcp_ms": 127
   },
   {
    "fp": "b0851cf95a108f15",
    "server": "proxy-34l.pages.dev",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 1229
+   "tcp_ms": 353
   },
   {
    "fp": "abb06e57fd468d22",
    "server": "104.18.47.140",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 64
+   "tcp_ms": 183
   },
   {
    "fp": "46f8f38ea0ddb933",
    "server": "cf.090227.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 79
+   "tcp_ms": 86
   },
   {
    "fp": "c5d8055c308fc2fc",
    "server": "172.64.150.34",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 189
   },
   {
    "fp": "357b67e820e4bd80",
    "server": "104.21.3.133",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 197
   },
   {
    "fp": "d51e6efb61e4f1a9",
    "server": "104.20.28.74",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 221
+   "tcp_ms": 204
   },
   {
    "fp": "8592060f481f4ffb",
    "server": "172.64.147.2",
    "port": 443,
    "alive": true,
-   "tcp_ms": 173
+   "tcp_ms": 180
   },
   {
    "fp": "ccd4d601e0522ff5",
    "server": "172.67.130.187",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 166
+   "tcp_ms": 213
   },
   {
    "fp": "0a4f90f7bbadc5fa",
    "server": "104.21.3.133",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 221
+   "tcp_ms": 201
   },
   {
    "fp": "1ead0f26f1003bbd",
@@ -1535,238 +1535,238 @@
    "server": "172.67.69.86",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 1218
+   "tcp_ms": 208
   },
   {
    "fp": "b0661ac3b73111a7",
    "server": "104.19.173.68",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 220
+   "tcp_ms": 1216
   },
   {
    "fp": "92400950e870b5fb",
    "server": "172.67.209.13",
    "port": 443,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 1191
   },
   {
    "fp": "7fdc5e2dfa46793b",
    "server": "cdn.7zz.cn",
    "port": 443,
    "alive": true,
-   "tcp_ms": 524
+   "tcp_ms": 1196
   },
   {
    "fp": "02b8b17bcf8be1d4",
    "server": "epam.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 579
+   "tcp_ms": 119
   },
   {
    "fp": "3fa565ebc58ec069",
    "server": "vless4.gem-audio2.us.ci",
    "port": 443,
    "alive": true,
-   "tcp_ms": 460
+   "tcp_ms": 271
   },
   {
    "fp": "e8f7f18de0e9fa9e",
    "server": "www.wto.org",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 290
+   "tcp_ms": 227
   },
   {
    "fp": "07ea4ac824fbc051",
    "server": "172.64.144.148",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1069
+   "tcp_ms": 179
   },
   {
    "fp": "dbc6096e5d6925fc",
    "server": "172.64.152.52",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2114
+   "tcp_ms": 90
   },
   {
    "fp": "7d97350472844ecf",
    "server": "188.164.248.123",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 1222
+   "tcp_ms": 193
   },
   {
    "fp": "5704e2c2c9990ebc",
    "server": "172.67.78.117",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1213
+   "tcp_ms": 204
   },
   {
    "fp": "8b5f5bb2a2a6e165",
    "server": "104.17.100.185",
    "port": 443,
    "alive": true,
-   "tcp_ms": 160
+   "tcp_ms": 118
   },
   {
    "fp": "8e0ce1da6b428047",
    "server": "shin-ra.ccwu.cc",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1399
+   "tcp_ms": 427
   },
   {
    "fp": "bef3b404681d7029",
    "server": "vless2.gem-audio2.us.ci",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1242
+   "tcp_ms": 411
   },
   {
    "fp": "6e73fb34d441bb4e",
    "server": "188.164.248.61",
    "port": 443,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 198
   },
   {
    "fp": "900f40a2dadf9346",
    "server": "172.67.160.192",
    "port": 443,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 1203
   },
   {
    "fp": "0948e3241cdf35ce",
    "server": "172.66.47.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1225
+   "tcp_ms": 197
   },
   {
    "fp": "d00b1e61f7f84647",
    "server": "104.17.112.90",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 180
+   "tcp_ms": 184
   },
   {
    "fp": "67dfc23c249aa3ce",
    "server": "104.17.44.17",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 197
   },
   {
    "fp": "358ea83b4703310a",
    "server": "104.234.239.139",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 202
   },
   {
    "fp": "3f6663d6299aef7f",
    "server": "104.18.33.141",
    "port": 443,
    "alive": true,
-   "tcp_ms": 150
+   "tcp_ms": 175
   },
   {
    "fp": "4a913acdf5434d0c",
    "server": "104.17.148.111",
    "port": 443,
    "alive": true,
-   "tcp_ms": 80
+   "tcp_ms": 179
   },
   {
    "fp": "afb925c305dc11e4",
    "server": "saas.sin.fan",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 89
+   "tcp_ms": 84
   },
   {
    "fp": "f5ac5d0a317eaf3c",
    "server": "104.17.148.111",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 51
+   "tcp_ms": 159
   },
   {
    "fp": "c0d828bb1d425b5d",
    "server": "104.24.30.89",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 193
   },
   {
    "fp": "b5d2e84c9bda9d07",
    "server": "172.67.141.182",
    "port": 443,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 164
   },
   {
    "fp": "8509d3b95ed6f68e",
    "server": "vless3.gem-audio2.us.ci",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1328
+   "tcp_ms": 424
   },
   {
    "fp": "b6a588090f457d4a",
    "server": "cf.008500.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 166
+   "tcp_ms": 417
   },
   {
    "fp": "7787bf69c8b82920",
    "server": "141.101.121.196",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 198
   },
   {
    "fp": "7ec2d689bbeaf054",
    "server": "172.67.174.10",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1207
+   "tcp_ms": 188
   },
   {
    "fp": "5ef4967f3783369d",
    "server": "104.234.239.139",
    "port": 443,
    "alive": true,
-   "tcp_ms": 205
+   "tcp_ms": 197
   },
   {
    "fp": "2721d195ed9f4545",
    "server": "104.25.199.149",
    "port": 443,
    "alive": true,
-   "tcp_ms": 3257
+   "tcp_ms": 201
   },
   {
    "fp": "b436656ba48fc58d",
    "server": "tn1r.eu.cc",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1502
+   "tcp_ms": 1531
   },
   {
    "fp": "c50b85a960f76105",
    "server": "172.67.137.19",
    "port": 443,
    "alive": true,
-   "tcp_ms": 169
+   "tcp_ms": 212
   },
   {
    "fp": "b8892939fdbbe39b",
@@ -1780,322 +1780,322 @@
    "server": "104.24.210.142",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1241
+   "tcp_ms": 191
   },
   {
    "fp": "4c9436572f02a865",
    "server": "104.239.72.227",
    "port": 443,
    "alive": true,
-   "tcp_ms": 198
+   "tcp_ms": 193
   },
   {
    "fp": "e98802cb2fb34b2f",
    "server": "164.38.155.247",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 191
   },
   {
    "fp": "c8ab3d2b57d9fd97",
    "server": "45.12.30.196",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 201
   },
   {
    "fp": "bf4e1d5cb0f534ab",
    "server": "92.53.190.167",
    "port": 443,
    "alive": true,
-   "tcp_ms": 196
+   "tcp_ms": 193
   },
   {
    "fp": "210841122d0b3510",
    "server": "172.64.149.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 188
+   "tcp_ms": 193
   },
   {
    "fp": "9dd07d79cecfd8b7",
    "server": "172.64.156.230",
    "port": 443,
    "alive": true,
-   "tcp_ms": 63
+   "tcp_ms": 60
   },
   {
    "fp": "3d63fbf3f6723c34",
    "server": "saas.sin.fan",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 92
+   "tcp_ms": 86
   },
   {
    "fp": "3940145f74362efb",
    "server": "104.18.34.16",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1185
+   "tcp_ms": 157
   },
   {
    "fp": "7d0adc5cc42e4e23",
    "server": "172.64.150.18",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1224
+   "tcp_ms": 192
   },
   {
    "fp": "705ee9982a9a73bf",
    "server": "104.26.15.138",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 192
   },
   {
    "fp": "70757ca3ae0ffa0f",
    "server": "104.21.64.198",
    "port": 2086,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 192
   },
   {
    "fp": "0e6885e45fe01d3e",
    "server": "saas.sin.fan",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 87
+   "tcp_ms": 90
   },
   {
    "fp": "f139d49fa9a2f3c6",
    "server": "104.21.13.229",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 200
   },
   {
    "fp": "92d5f36eb8659f51",
    "server": "172.67.67.178",
    "port": 443,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 195
   },
   {
    "fp": "2df4612b4c420562",
    "server": "172.64.152.87",
    "port": 443,
    "alive": true,
-   "tcp_ms": 152
+   "tcp_ms": 184
   },
   {
    "fp": "adb97c4f1da6e0b9",
    "server": "172.66.1.12",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1089
+   "tcp_ms": 80
   },
   {
    "fp": "73bbd5cf28232804",
    "server": "104.17.167.185",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 153
+   "tcp_ms": 191
   },
   {
    "fp": "22361dca430f8436",
    "server": "188.114.98.0",
    "port": 443,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 192
   },
   {
    "fp": "2907c5a437306f23",
    "server": "172.67.184.45",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1212
+   "tcp_ms": 201
   },
   {
    "fp": "f2407207c5bfab56",
    "server": "104.24.31.89",
    "port": 443,
    "alive": true,
-   "tcp_ms": 207
+   "tcp_ms": 199
   },
   {
    "fp": "eff5ef5654a94cfd",
    "server": "172.66.45.42",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 203
   },
   {
    "fp": "d786b615a48ffc33",
    "server": "190.93.244.166",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 206
+   "tcp_ms": 196
   },
   {
    "fp": "996aaf5746e319d1",
    "server": "104.18.109.147",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 1213
+   "tcp_ms": 194
   },
   {
    "fp": "0914629f52a9616c",
    "server": "104.21.77.142",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 208
   },
   {
    "fp": "bcf2b99b62d569a5",
    "server": "104.18.109.147",
    "port": 2052,
    "alive": true,
-   "tcp_ms": 189
+   "tcp_ms": 190
   },
   {
    "fp": "0b826eab451f391e",
    "server": "27.50.48.13",
    "port": 443,
    "alive": true,
-   "tcp_ms": 196
+   "tcp_ms": 194
   },
   {
    "fp": "8f9acaee5d0f4208",
    "server": "45.130.125.151",
    "port": 443,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 190
   },
   {
    "fp": "b124452c4e4b6385",
    "server": "www.5h.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 323
+   "tcp_ms": 224
   },
   {
    "fp": "0fcd9929a2151234",
    "server": "172.64.147.85",
    "port": 443,
    "alive": true,
-   "tcp_ms": 149
+   "tcp_ms": 190
   },
   {
    "fp": "1268a08b742951dd",
    "server": "104.16.251.179",
    "port": 443,
    "alive": true,
-   "tcp_ms": 136
+   "tcp_ms": 176
   },
   {
    "fp": "a83815e5f7d3df80",
    "server": "104.27.110.37",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1210
+   "tcp_ms": 191
   },
   {
    "fp": "e34529f8ad8dbed7",
    "server": "www.digitalocean.com",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 1441
+   "tcp_ms": 272
   },
   {
    "fp": "bfb4ce52764245f0",
    "server": "8.35.211.188",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 1200
+   "tcp_ms": 199
   },
   {
    "fp": "f7a380608d4864a4",
    "server": "172.105.241.119",
    "port": 1916,
    "alive": true,
-   "tcp_ms": 61
+   "tcp_ms": 60
   },
   {
    "fp": "9fe3fd6303ab512a",
    "server": "fans.liverpool.qzz.io",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 171
+   "tcp_ms": 210
   },
   {
    "fp": "3147d077988f3b45",
    "server": "188.114.96.3",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 197
   },
   {
    "fp": "96ae27190d35ad06",
    "server": "kclx.eu.org",
    "port": 443,
    "alive": true,
-   "tcp_ms": 756
+   "tcp_ms": 419
   },
   {
    "fp": "2768d9befba42c23",
    "server": "172.64.156.111",
    "port": 443,
    "alive": true,
-   "tcp_ms": 139
+   "tcp_ms": 160
   },
   {
    "fp": "45c44b9f192102b1",
    "server": "188.164.248.48",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 1226
+   "tcp_ms": 197
   },
   {
    "fp": "394b33ed7d219ac7",
    "server": "80.240.18.227",
    "port": 10051,
    "alive": true,
-   "tcp_ms": 235
+   "tcp_ms": 240
   },
   {
    "fp": "3172536e371dc060",
    "server": "fast.145779.xyz",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 736
+   "tcp_ms": 554
   },
   {
    "fp": "1a0c4601e9fc32c2",
    "server": "104.24.210.142",
    "port": 443,
    "alive": true,
-   "tcp_ms": 209
+   "tcp_ms": 194
   },
   {
    "fp": "8937e492e8dc401c",
    "server": "fast.145779.xyz",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 697
+   "tcp_ms": 584
   },
   {
    "fp": "8f7bb4be3e014101",
    "server": "104.18.40.171",
    "port": 443,
    "alive": true,
-   "tcp_ms": 163
+   "tcp_ms": 173
   },
   {
    "fp": "bd7221ea62e4779c",
    "server": "104.21.73.135",
    "port": 443,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 214
   },
   {
    "fp": "7d2514a789954e02",
@@ -2109,679 +2109,672 @@
    "server": "104.18.185.26",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2235
+   "tcp_ms": 201
   },
   {
    "fp": "9fb83d91a652ca88",
    "server": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev",
    "port": 443,
    "alive": true,
-   "tcp_ms": 685
+   "tcp_ms": 629
   },
   {
    "fp": "9aa0d599eaf697a2",
    "server": "178.208.86.182",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 192
   },
   {
    "fp": "a1ef900aff0eccf6",
    "server": "190.93.245.187",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 193
   },
   {
    "fp": "5fdc6888ad3728df",
    "server": "104.20.22.159",
    "port": 443,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 202
   },
   {
    "fp": "9fd3a4ade9c8529e",
    "server": "188.114.96.3",
    "port": 443,
    "alive": true,
-   "tcp_ms": 216
+   "tcp_ms": 189
   },
   {
    "fp": "75fe49015801f23f",
    "server": "141.101.115.230",
    "port": 443,
    "alive": true,
-   "tcp_ms": 210
+   "tcp_ms": 194
   },
   {
    "fp": "3761679a36e2f4d5",
    "server": "104.19.55.100",
    "port": 443,
    "alive": true,
-   "tcp_ms": 164
+   "tcp_ms": 187
   },
   {
    "fp": "0a7053fd791a7385",
    "server": "104.16.58.88",
    "port": 443,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 198
   },
   {
    "fp": "075e981fbfe961c4",
    "server": "104.18.221.221",
    "port": 443,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 192
   },
   {
    "fp": "927649406964badd",
    "server": "172.67.142.169",
    "port": 443,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 165
   },
   {
    "fp": "ad5a67052869dbed",
    "server": "104.19.233.159",
    "port": 80,
    "alive": true,
-   "tcp_ms": 1215
+   "tcp_ms": 205
   },
   {
    "fp": "cbbf313481020428",
    "server": "188.114.97.6",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 224
+   "tcp_ms": 203
   },
   {
    "fp": "9ff6c8b70fc0f73e",
    "server": "172.67.128.201",
    "port": 443,
    "alive": true,
-   "tcp_ms": 169
+   "tcp_ms": 214
   },
   {
    "fp": "8de7684be6627c72",
    "server": "saas.sin.fan",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 1089
+   "tcp_ms": 86
   },
   {
    "fp": "02b3d1d91a8dfd83",
    "server": "162.159.135.234",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 1187
   },
   {
    "fp": "21965da11d10f8ac",
    "server": "courses.mftplus.qzz.io",
    "port": 443,
    "alive": true,
-   "tcp_ms": 220
+   "tcp_ms": 219
   },
   {
    "fp": "f422d0dbf48dd679",
    "server": "188.114.96.0",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 1205
+   "tcp_ms": 198
   },
   {
    "fp": "b44677a84d16542a",
    "server": "199.181.197.99",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1211
+   "tcp_ms": 200
   },
   {
    "fp": "e7000a171771d81c",
    "server": "104.25.0.1",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 215
+   "tcp_ms": 198
   },
   {
    "fp": "9b75ff2e95dadebd",
    "server": "104.21.0.1",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 1212
+   "tcp_ms": 192
   },
   {
    "fp": "be970ee92da8b688",
    "server": "www.buydomains.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1424
+   "tcp_ms": 376
   },
   {
    "fp": "feb5097bfb0ba9d6",
    "server": "104.21.74.214",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 207
+   "tcp_ms": 211
   },
   {
    "fp": "20f17e2241b06026",
    "server": "104.27.124.133",
    "port": 80,
    "alive": true,
-   "tcp_ms": 214
+   "tcp_ms": 206
   },
   {
    "fp": "9a7cfc97fcac31a6",
    "server": "172.64.158.78",
    "port": 443,
    "alive": true,
-   "tcp_ms": 107
+   "tcp_ms": 188
   },
   {
    "fp": "dff0d845d5859d28",
    "server": "104.26.0.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 205
+   "tcp_ms": 210
   },
   {
    "fp": "cfd89c71347c745d",
    "server": "104.25.0.1",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 190
+   "tcp_ms": 188
   },
   {
    "fp": "bfb0bf9883930609",
    "server": "104.17.0.1",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 1220
+   "tcp_ms": 201
   },
   {
    "fp": "1a762c8fd815c246",
    "server": "104.17.165.248",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 1158
   },
   {
    "fp": "5f5ce6da9f550658",
    "server": "www.speedtest.net",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 77
+   "tcp_ms": 186
   },
   {
    "fp": "e2d4aea852f0e50c",
    "server": "104.21.7.133",
    "port": 443,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 188
   },
   {
    "fp": "ad6130b8d2608e43",
    "server": "www.speedtest.net",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1185
+   "tcp_ms": 195
   },
   {
    "fp": "da30d873bbfe7931",
    "server": "141.101.123.232",
    "port": 443,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 192
   },
   {
    "fp": "0c6ab125b45cc74d",
    "server": "cf.130519.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 201
+   "tcp_ms": 198
   },
   {
    "fp": "25d916abe23e4586",
    "server": "www.speedtest.net",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 1099
+   "tcp_ms": 1202
   },
   {
    "fp": "2e670e60b109b1f8",
    "server": "167.68.4.131",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 217
+   "tcp_ms": 201
   },
   {
    "fp": "49c9b51dbac15cb3",
    "server": "188.114.97.6",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 193
   },
   {
    "fp": "a32aa01c717e48f2",
    "server": "www.speedtest.net",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 117
+   "tcp_ms": 201
   },
   {
    "fp": "a6f80ade724d45c4",
    "server": "88.216.67.54",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1243
+   "tcp_ms": 198
   },
   {
    "fp": "2fb28bf1d6eacd0b",
    "server": "188.114.97.6",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 218
+   "tcp_ms": 202
   },
   {
    "fp": "7aa266aacd9df9d6",
    "server": "199.181.197.99",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2237
+   "tcp_ms": 204
   },
   {
    "fp": "2cb397001312e9c9",
    "server": "www.speedtest.net",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 165
+   "tcp_ms": 190
   },
   {
    "fp": "52dc9bf6b3d11556",
    "server": "www.speedtest.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 180
-  },
-  {
-   "fp": "f7fe2c4f921fbe57",
-   "server": "103.228.169.140",
-   "port": 443,
-   "alive": true,
-   "tcp_ms": 173
+   "tcp_ms": 193
   },
   {
    "fp": "655b74b6aa68800f",
    "server": "103.107.53.42",
    "port": 443,
    "alive": true,
-   "tcp_ms": 106
+   "tcp_ms": 102
   },
   {
    "fp": "320ef1851573e49d",
    "server": "152.53.255.10",
    "port": 443,
    "alive": true,
-   "tcp_ms": 269
+   "tcp_ms": 256
   },
   {
    "fp": "4a96a6fb22b92e25",
    "server": "69.55.49.177",
    "port": 38182,
    "alive": true,
-   "tcp_ms": 2437
+   "tcp_ms": 287
   },
   {
    "fp": "20b217df1f67d6df",
    "server": "jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net",
    "port": 443,
    "alive": true,
-   "tcp_ms": 159
+   "tcp_ms": 167
   },
   {
    "fp": "6f21a40c2e8dd773",
    "server": "162.159.130.234",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 159
+   "tcp_ms": 160
   },
   {
    "fp": "38d699311cdc7740",
    "server": "104.168.249.36",
    "port": 1080,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 201
   },
   {
    "fp": "0f0d97d0b21705d4",
    "server": "45.61.188.134",
    "port": 44499,
    "alive": true,
-   "tcp_ms": 280
+   "tcp_ms": 273
   },
   {
    "fp": "c67cadbc59ccabe0",
    "server": "162.159.130.234",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 159
+   "tcp_ms": 160
   },
   {
    "fp": "d6b384e5fe871d70",
    "server": "104.19.219.230",
    "port": 443,
    "alive": true,
-   "tcp_ms": 207
+   "tcp_ms": 198
   },
   {
    "fp": "7ac01a30d344e1c7",
    "server": "188.114.98.5",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1231
+   "tcp_ms": 3278
   },
   {
    "fp": "6c2f279b903e8001",
    "server": "104.27.88.172",
    "port": 80,
    "alive": true,
-   "tcp_ms": 194
+   "tcp_ms": 197
   },
   {
    "fp": "b61690506c489341",
    "server": "121.169.46.116",
    "port": 1090,
    "alive": true,
-   "tcp_ms": 85
+   "tcp_ms": 89
   },
   {
    "fp": "0968d015eee910e8",
    "server": "172.64.155.209",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 1067
+   "tcp_ms": 164
   },
   {
    "fp": "72da64afa8a510f6",
    "server": "www.visa.com.sg",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 483
+   "tcp_ms": 290
   },
   {
    "fp": "d345b2ba0fac01ef",
    "server": "104.18.151.231",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1192
+   "tcp_ms": 201
   },
   {
    "fp": "c4a311190bef6960",
    "server": "172.67.199.126",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 2243
+   "tcp_ms": 215
   },
   {
    "fp": "8d99e9cc97ec2b8d",
    "server": "104.18.151.231",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1212
+   "tcp_ms": 195
   },
   {
    "fp": "b66f286953cfb75c",
    "server": "starlink-ft.251313.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2566
+   "tcp_ms": 597
   },
   {
    "fp": "9165dcaf7c882718",
    "server": "185.125.103.62",
    "port": 8082,
    "alive": true,
-   "tcp_ms": 173
+   "tcp_ms": 197
   },
   {
    "fp": "26a39323cc40030c",
    "server": "45.12.30.40",
    "port": 8880,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 194
   },
   {
    "fp": "7ceed0792d3a85c2",
    "server": "109.120.155.155",
    "port": 444,
    "alive": true,
-   "tcp_ms": 233
+   "tcp_ms": 232
   },
   {
    "fp": "7b408274da3cb6c5",
    "server": "84.22.150.39",
    "port": 7443,
    "alive": true,
-   "tcp_ms": 233
+   "tcp_ms": 232
   },
   {
    "fp": "d16b508e5362be8d",
    "server": "57.129.130.10",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 152
+   "tcp_ms": 154
   },
   {
    "fp": "50a554c9042d0e52",
    "server": "188.114.96.94",
    "port": 443,
    "alive": true,
-   "tcp_ms": 194
+   "tcp_ms": 202
   },
   {
    "fp": "30c5aa1b0620601e",
    "server": "45.130.125.160",
    "port": 443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 202
   },
   {
    "fp": "ee7d5ec4692b8e80",
    "server": "103.116.7.100",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 2248
+   "tcp_ms": 194
   },
   {
    "fp": "d9209abe5d143708",
    "server": "109.176.239.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 157
   },
   {
    "fp": "5441e2bcb605dd6b",
    "server": "46.101.46.169",
    "port": 486,
    "alive": true,
-   "tcp_ms": 249
+   "tcp_ms": 243
   },
   {
    "fp": "ce8caa50f8f3fc6f",
    "server": "57.129.130.57",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 148
   },
   {
    "fp": "c2601bd227fd1f88",
    "server": "172.64.146.66",
    "port": 443,
    "alive": true,
-   "tcp_ms": 161
+   "tcp_ms": 160
   },
   {
    "fp": "b61774e09543325c",
    "server": "80.240.18.227",
    "port": 10051,
    "alive": true,
-   "tcp_ms": 2247
+   "tcp_ms": 234
   },
   {
    "fp": "6d28f37856c86dca",
    "server": "104.18.155.229",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 199
   },
   {
    "fp": "1ce9d6c13dc5dad6",
    "server": "104.16.72.70",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1232
+   "tcp_ms": 201
   },
   {
    "fp": "304bfd9eb9b500a7",
    "server": "185.207.197.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 160
+   "tcp_ms": 161
   },
   {
    "fp": "dbef12a61489f98d",
    "server": "172.64.147.34",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 122
+   "tcp_ms": 164
   },
   {
    "fp": "274da0a98aba940f",
    "server": "216.24.57.30",
    "port": 8880,
    "alive": true,
-   "tcp_ms": 165
+   "tcp_ms": 159
   },
   {
    "fp": "cc35a1ffcf2fb040",
    "server": "104.26.12.140",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 209
+   "tcp_ms": 197
   },
   {
    "fp": "26b6fe1dca7f2384",
    "server": "141.193.213.10",
    "port": 443,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 157
   },
   {
    "fp": "0a746aa06868e45c",
    "server": "54.178.110.17",
    "port": 4443,
    "alive": true,
-   "tcp_ms": 82
+   "tcp_ms": 62
   },
   {
    "fp": "3f17025ffd69c5a1",
    "server": "www.gov.se",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1250
+   "tcp_ms": 179
   },
   {
    "fp": "70e20e7ede59e064",
    "server": "57.129.130.57",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 159
+   "tcp_ms": 157
   },
   {
    "fp": "a89390a9c8f34a2b",
    "server": "45.12.30.30",
    "port": 8880,
    "alive": true,
-   "tcp_ms": 1231
+   "tcp_ms": 197
   },
   {
    "fp": "13e14c9c5dfb6f29",
    "server": "37.120.222.70",
    "port": 8082,
    "alive": true,
-   "tcp_ms": 1196
+   "tcp_ms": 173
   },
   {
    "fp": "efbd62b7bf149e52",
    "server": "aslanbilit.ir",
    "port": 443,
    "alive": true,
-   "tcp_ms": 213
+   "tcp_ms": 450
   },
   {
    "fp": "165cd683a854ad29",
    "server": "45.77.241.190",
    "port": 8441,
    "alive": true,
-   "tcp_ms": 1344
+   "tcp_ms": 220
   },
   {
    "fp": "072dc2a9db91cc35",
    "server": "185.125.103.62",
    "port": 8082,
    "alive": true,
-   "tcp_ms": 1208
+   "tcp_ms": 1185
   },
   {
    "fp": "cece77b36c137358",
    "server": "154.83.2.50",
    "port": 8880,
    "alive": true,
-   "tcp_ms": 1229
+   "tcp_ms": 1205
   },
   {
    "fp": "3505eb2f8d4f277a",
    "server": "57.129.130.57",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 156
+   "tcp_ms": 149
   },
   {
    "fp": "eb59a3f62fbaae20",
    "server": "57.129.130.200",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 156
+   "tcp_ms": 160
   },
   {
    "fp": "6b1825edd9d831d8",
    "server": "57.129.130.63",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 149
+   "tcp_ms": 157
   },
   {
    "fp": "e54ea19a6fecd10e",
    "server": "45.77.241.190",
    "port": 8441,
    "alive": true,
-   "tcp_ms": 339
+   "tcp_ms": 220
   },
   {
    "fp": "9f039ebf92b41a91",
    "server": "57.129.130.200",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 150
   },
   {
    "fp": "1ac6fa6d54e2ee37",
    "server": "80.240.18.227",
    "port": 10051,
    "alive": true,
-   "tcp_ms": 274
+   "tcp_ms": 240
   },
   {
    "fp": "f1de9ece6fc2d7a7",
@@ -2795,49 +2788,49 @@
    "server": "45.77.241.190",
    "port": 8441,
    "alive": true,
-   "tcp_ms": 224
+   "tcp_ms": 217
   },
   {
    "fp": "30bb7d85877da59f",
    "server": "104.19.47.188",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 71
+   "tcp_ms": 160
   },
   {
    "fp": "f90678023551b0da",
    "server": "8.35.211.36",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 2230
+   "tcp_ms": 195
   },
   {
    "fp": "14f619786d7583b5",
    "server": "8.35.211.114",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1197
+   "tcp_ms": 200
   },
   {
    "fp": "10dc2380a660071c",
    "server": "8.35.211.87",
    "port": 2096,
    "alive": true,
-   "tcp_ms": 197
+   "tcp_ms": 189
   },
   {
    "fp": "6b3d5def0ccb2958",
    "server": "5.9.117.252",
    "port": 4433,
    "alive": true,
-   "tcp_ms": 1160
+   "tcp_ms": 154
   },
   {
    "fp": "5a10168653ae44ce",
    "server": "fbi.gov",
    "port": 443,
    "alive": true,
-   "tcp_ms": 369
+   "tcp_ms": 1026
   },
   {
    "fp": "e96c602cc7d2defd",
@@ -2851,133 +2844,133 @@
    "server": "185.193.29.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1215
+   "tcp_ms": 192
   },
   {
    "fp": "eca3b3cbd2fd9a89",
    "server": "84.22.150.39",
    "port": 7443,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 216
   },
   {
    "fp": "25b9958e3d3d930b",
    "server": "45.135.235.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 204
+   "tcp_ms": 1229
   },
   {
    "fp": "c927323800fc4644",
    "server": "45.131.6.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1214
+   "tcp_ms": 199
   },
   {
    "fp": "e1c3c01289b39313",
    "server": "209.46.30.149",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1211
+   "tcp_ms": 194
   },
   {
    "fp": "d9f4a2117fc8d5dd",
    "server": "103.71.23.244",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1268
+   "tcp_ms": 310
   },
   {
    "fp": "a9b17ee5ca5f86b5",
    "server": "140.238.33.0",
    "port": 33940,
    "alive": true,
-   "tcp_ms": 2094
+   "tcp_ms": 60
   },
   {
    "fp": "4424a9d33f523972",
    "server": "8.35.211.185",
    "port": 443,
    "alive": true,
-   "tcp_ms": 215
+   "tcp_ms": 198
   },
   {
    "fp": "5f86384ec53ae14c",
    "server": "188.114.97.6",
    "port": 80,
    "alive": true,
-   "tcp_ms": 1222
+   "tcp_ms": 188
   },
   {
    "fp": "99d923efa03bb5f6",
    "server": "173.245.49.194",
    "port": 443,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 191
   },
   {
    "fp": "454e60c964d3e3db",
    "server": "185.18.250.245",
    "port": 443,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 201
   },
   {
    "fp": "a04806007048057e",
    "server": "8.35.211.43",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1216
+   "tcp_ms": 198
   },
   {
    "fp": "1ad60f3c882031cd",
    "server": "139.64.235.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 207
+   "tcp_ms": 1209
   },
   {
    "fp": "d2b584639b35c716",
    "server": "213.111.148.137",
    "port": 443,
    "alive": true,
-   "tcp_ms": 273
+   "tcp_ms": 1204
   },
   {
    "fp": "45f41b01e8d30343",
    "server": "104.17.171.60",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 1083
+   "tcp_ms": 179
   },
   {
    "fp": "0e7c9e388f620526",
    "server": "178.105.133.160",
    "port": 4443,
    "alive": true,
-   "tcp_ms": 1147
+   "tcp_ms": 144
   },
   {
    "fp": "3c37b51f801f1e45",
    "server": "8.6.112.242",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1223
+   "tcp_ms": 192
   },
   {
    "fp": "989c00665bbeb1fb",
    "server": "178.105.133.160",
    "port": 4443,
    "alive": true,
-   "tcp_ms": 2237
+   "tcp_ms": 150
   },
   {
    "fp": "2ed57612d2ff6c09",
    "server": "172.66.148.229",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 218
+   "tcp_ms": 199
   },
   {
    "fp": "8dc16e14e2b6efbc",
@@ -2991,112 +2984,112 @@
    "server": "172.64.155.209",
    "port": 443,
    "alive": true,
-   "tcp_ms": 68
+   "tcp_ms": 111
   },
   {
    "fp": "64d1335c0718384b",
    "server": "178.105.133.160",
    "port": 4443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 144
   },
   {
    "fp": "d64be09c839f6bb3",
    "server": "104.18.8.246",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 194
   },
   {
    "fp": "9f0faced62181e1f",
    "server": "103.31.4.202",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1275
+   "tcp_ms": 256
   },
   {
    "fp": "d8b6a55e79c59ffb",
    "server": "188.42.145.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 219
+   "tcp_ms": 192
   },
   {
    "fp": "aa7b585e318cc536",
    "server": "104.17.53.217",
    "port": 443,
    "alive": true,
-   "tcp_ms": 114
+   "tcp_ms": 2214
   },
   {
    "fp": "21cd2b3ca3f5f93a",
    "server": "162.159.149.63",
    "port": 443,
    "alive": true,
-   "tcp_ms": 2188
+   "tcp_ms": 156
   },
   {
    "fp": "c1160fabaed94c25",
    "server": "104.16.114.170",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1213
+   "tcp_ms": 198
   },
   {
    "fp": "b5da4e4364cbe133",
    "server": "104.27.207.122",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1233
+   "tcp_ms": 194
   },
   {
    "fp": "af6ecb2b4b33e643",
    "server": "104.21.14.123",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1221
+   "tcp_ms": 199
   },
   {
    "fp": "4eb759b1dd084ec3",
    "server": "188.114.99.8",
    "port": 443,
    "alive": true,
-   "tcp_ms": 221
+   "tcp_ms": 200
   },
   {
    "fp": "ce118e0056d85b0a",
    "server": "190.93.244.20",
    "port": 443,
    "alive": true,
-   "tcp_ms": 216
+   "tcp_ms": 193
   },
   {
    "fp": "482ea78d68e89fee",
    "server": "104.18.41.190",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1225
+   "tcp_ms": 1218
   },
   {
    "fp": "124c1bdda0816039",
    "server": "23.27.20.142",
    "port": 48537,
    "alive": true,
-   "tcp_ms": 158
+   "tcp_ms": 268
   },
   {
    "fp": "46ed3e61bae7c8cf",
    "server": "172.64.152.241",
    "port": 443,
    "alive": true,
-   "tcp_ms": 157
+   "tcp_ms": 163
   },
   {
    "fp": "019313e9e4e427fc",
    "server": "54.178.110.17",
    "port": 4443,
    "alive": true,
-   "tcp_ms": 1063
+   "tcp_ms": 60
   },
   {
    "fp": "4f25a94df1dec855",
@@ -3110,399 +3103,399 @@
    "server": "172.105.241.119",
    "port": 1916,
    "alive": true,
-   "tcp_ms": 1063
+   "tcp_ms": 80
   },
   {
    "fp": "afaaf71946fe82e1",
    "server": "104.26.5.157",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 204
   },
   {
    "fp": "a0569bc2af58f5dc",
    "server": "172.67.71.122",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 211
+   "tcp_ms": 207
   },
   {
    "fp": "e0f943d774395c32",
    "server": "23.27.20.142",
    "port": 48537,
    "alive": true,
-   "tcp_ms": 164
+   "tcp_ms": 180
   },
   {
    "fp": "bda2cc99ab644d7a",
    "server": "172.67.75.52",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 215
+   "tcp_ms": 207
   },
   {
    "fp": "4760187ec4eef346",
    "server": "104.16.149.244",
    "port": 2087,
    "alive": true,
-   "tcp_ms": 2121
+   "tcp_ms": 119
   },
   {
    "fp": "f9f040a3f2c9a4e6",
    "server": "23.27.20.142",
    "port": 48537,
    "alive": true,
-   "tcp_ms": 160
+   "tcp_ms": 164
   },
   {
    "fp": "1b8119ad85516db1",
    "server": "109.120.155.155",
    "port": 444,
    "alive": true,
-   "tcp_ms": 234
+   "tcp_ms": 233
   },
   {
    "fp": "4fab400b182df14e",
    "server": "104.18.27.94",
    "port": 443,
    "alive": true,
-   "tcp_ms": 161
+   "tcp_ms": 160
   },
   {
    "fp": "c626059200a50752",
    "server": "37.120.222.70",
    "port": 8082,
    "alive": true,
-   "tcp_ms": 176
+   "tcp_ms": 172
   },
   {
    "fp": "fb3457012766e234",
    "server": "57.129.130.200",
    "port": 52014,
    "alive": true,
-   "tcp_ms": 163
+   "tcp_ms": 149
   },
   {
    "fp": "475967e1c3a9f4d1",
    "server": "104.21.108.4",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 198
   },
   {
    "fp": "46bf3ce3f1b59494",
    "server": "178.104.70.11",
    "port": 443,
    "alive": true,
-   "tcp_ms": 200
+   "tcp_ms": 142
   },
   {
    "fp": "e4dc2f6f827be34d",
    "server": "172.67.134.136",
    "port": 443,
    "alive": true,
-   "tcp_ms": 215
+   "tcp_ms": 212
   },
   {
    "fp": "0312e64afb3d5e46",
    "server": "172.67.78.150",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 1228
+   "tcp_ms": 210
   },
   {
    "fp": "aecef84d221c7bfb",
    "server": "172.66.47.18",
    "port": 443,
    "alive": true,
-   "tcp_ms": 212
+   "tcp_ms": 1234
   },
   {
    "fp": "8288b536425b91f9",
    "server": "37.120.222.70",
    "port": 8082,
    "alive": true,
-   "tcp_ms": 177
+   "tcp_ms": 180
   },
   {
    "fp": "0867c268de0e7023",
    "server": "104.19.44.174",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 128
+   "tcp_ms": 183
   },
   {
    "fp": "f3a514aaee76a30e",
    "server": "cf.3666888.xyz",
    "port": 443,
    "alive": true,
-   "tcp_ms": 494
+   "tcp_ms": 315
   },
   {
    "fp": "24ebe8903d3df2f3",
    "server": "104.19.56.112",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 130
+   "tcp_ms": 185
   },
   {
    "fp": "81c8cb5f10f03784",
    "server": "43.174.195.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 108
+   "tcp_ms": 101
   },
   {
    "fp": "b36739668c24e496",
    "server": "103.116.7.67",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 1222
+   "tcp_ms": 197
   },
   {
    "fp": "6719ae1123ee3212",
    "server": "104.17.148.22",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 171
+   "tcp_ms": 107
   },
   {
    "fp": "1efb2fe041d7c0a3",
    "server": "104.17.147.22",
    "port": 2083,
    "alive": true,
-   "tcp_ms": 49
+   "tcp_ms": 189
   },
   {
    "fp": "4838d6e22d576a0e",
    "server": "104.17.147.22",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 136
+   "tcp_ms": 104
   },
   {
    "fp": "907841e6aeb18657",
    "server": "162.159.130.234",
    "port": 443,
    "alive": true,
-   "tcp_ms": 159
+   "tcp_ms": 1158
   },
   {
    "fp": "26da7b061b20043c",
    "server": "radar.cloudflare.com",
    "port": 8080,
    "alive": true,
-   "tcp_ms": 231
+   "tcp_ms": 399
   },
   {
    "fp": "ff458afdeeb8ac2d",
    "server": "172.64.149.88",
    "port": 443,
    "alive": true,
-   "tcp_ms": 199
+   "tcp_ms": 194
   },
   {
    "fp": "dedeff611cea839d",
    "server": "104.21.58.37",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 1221
+   "tcp_ms": 198
   },
   {
    "fp": "334531328e60deec",
    "server": "172.105.241.119",
    "port": 1916,
    "alive": true,
-   "tcp_ms": 1073
+   "tcp_ms": 79
   },
   {
    "fp": "e3736b5b15ad2c80",
    "server": "65.21.252.66",
    "port": 10805,
    "alive": true,
-   "tcp_ms": 2269
+   "tcp_ms": 177
   },
   {
    "fp": "781cbec73c620415",
    "server": "77.221.154.152",
    "port": 8444,
    "alive": true,
-   "tcp_ms": 1202
+   "tcp_ms": 205
   },
   {
    "fp": "c6a4693787e299c5",
    "server": "173.245.49.79",
    "port": 443,
    "alive": true,
-   "tcp_ms": 192
+   "tcp_ms": 195
   },
   {
    "fp": "bd66f7bee34363fb",
    "server": "172.66.44.124",
    "port": 443,
    "alive": true,
-   "tcp_ms": 208
+   "tcp_ms": 1226
   },
   {
    "fp": "2674cd696b609337",
    "server": "ip13.shabkhosh.sbs",
    "port": 443,
    "alive": true,
-   "tcp_ms": 93
+   "tcp_ms": 240
   },
   {
    "fp": "fa5f6f0851e89efe",
    "server": "104.17.177.160",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 112
+   "tcp_ms": 182
   },
   {
    "fp": "6916a96701b9ffcd",
    "server": "104.21.58.37",
    "port": 2053,
    "alive": true,
-   "tcp_ms": 203
+   "tcp_ms": 200
   },
   {
    "fp": "5368499544f28b99",
    "server": "prvtch.titun.su",
    "port": 443,
    "alive": true,
-   "tcp_ms": 194
+   "tcp_ms": 1213
   },
   {
    "fp": "d2bb0059d428f379",
    "server": "79.182.39.109",
    "port": 443,
    "alive": true,
-   "tcp_ms": 304
+   "tcp_ms": 282
   },
   {
    "fp": "020bf495f9249b1c",
    "server": "vipccc.cc",
    "port": 443,
    "alive": true,
-   "tcp_ms": 310
+   "tcp_ms": 437
   },
   {
    "fp": "17357b2d27dc563f",
    "server": "94.247.142.1",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1203
+   "tcp_ms": 202
   },
   {
    "fp": "d694bf5767e07ec1",
    "server": "14f7f5f0.mrbl69black.pages.dev",
    "port": 443,
    "alive": true,
-   "tcp_ms": 273
+   "tcp_ms": 624
   },
   {
    "fp": "e83903831b6e3767",
    "server": "162.159.249.92",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1224
+   "tcp_ms": 203
   },
   {
    "fp": "ca03f6702d5c4828",
    "server": "172.66.44.78",
    "port": 443,
    "alive": true,
-   "tcp_ms": 207
+   "tcp_ms": 210
   },
   {
    "fp": "e9e2cab662aa3cb0",
    "server": "172.66.47.178",
    "port": 443,
    "alive": true,
-   "tcp_ms": 205
+   "tcp_ms": 211
   },
   {
    "fp": "65c277f4ba1a60c3",
    "server": "188.114.97.3",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1208
+   "tcp_ms": 198
   },
   {
    "fp": "6bd273a45118471a",
    "server": "188.114.97.9",
    "port": 443,
    "alive": true,
-   "tcp_ms": 205
+   "tcp_ms": 194
   },
   {
    "fp": "eff51fcd17ef0a3f",
    "server": "snowflake.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 220
+   "tcp_ms": 661
   },
   {
    "fp": "60670a2ea122dc35",
    "server": "spacex.com",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1217
+   "tcp_ms": 195
   },
   {
    "fp": "8a597d104916a2a4",
    "server": "79.182.39.108",
    "port": 443,
    "alive": true,
-   "tcp_ms": 1256
+   "tcp_ms": 250
   },
   {
    "fp": "260ba8f290909eb6",
    "server": "162.159.128.17",
    "port": 443,
    "alive": true,
-   "tcp_ms": 162
+   "tcp_ms": 159
   },
   {
    "fp": "18b0afefdbadcf4b",
    "server": "179.43.166.190",
    "port": 443,
    "alive": true,
-   "tcp_ms": 184
+   "tcp_ms": 1212
   },
   {
    "fp": "41e81c796662d3fc",
    "server": "46.19.138.214",
    "port": 443,
    "alive": true,
-   "tcp_ms": 196
+   "tcp_ms": 1205
   },
   {
    "fp": "c4aa0a79dca23676",
    "server": "dddz-1-x.473221.xyz",
    "port": 13239,
    "alive": true,
-   "tcp_ms": 1151
+   "tcp_ms": 126
   },
   {
    "fp": "ac4ffd034b288af1",
    "server": "94.241.172.107",
    "port": 443,
    "alive": true,
-   "tcp_ms": 136
+   "tcp_ms": 130
   },
   {
    "fp": "2969db0b44df72b9",
    "server": "104.17.70.206",
    "port": 8443,
    "alive": true,
-   "tcp_ms": 195
+   "tcp_ms": 203
   },
   {
    "fp": "88eff9452db1e067",
    "server": "dddz-1-x.473221.xyz",
    "port": 34759,
    "alive": true,
-   "tcp_ms": 119
+   "tcp_ms": 115
   }
  ]
 }
