@@ -21,8 +21,20 @@ python cn_alive_check.py -o out\alive.yaml
 
 # 回归自检（不需要网络）
 python out\test_dedup.py
-python out\verify_config.py
+python out\test_loopback.py
+python out\verify_config.py output\clash.yaml
 ```
+
+## 已修问题（2026-11-10）
+
+| 症状 | 根因 | 修复 |
+|---|---|---|
+| 客户端全部「测试连接失败」 | 每个 url-test 组的 `url` 是 `http://www.gstatic.com/generate_204`，国内直连 TCP 超时 | 换成 `http://cp.cloudflare.com/generate_204`（国内实测 204/614ms），url-test 加 `tolerance=50` / `timeout=5000` / `max-failed-times=3`，`PROXY` 组加 `DIRECT` |
+| 400 节点几乎从不更新、固定几个能用 | `CN_ALIVE_BOOST=1000` 把 NAS 验证节点永久钉在截断线上；run 预算 105min > cron 2h 导致排队/取消；`has_nas_verdict` 恒真使 Phase A 从不执行、probe_queue 冻结 8 天；mihomo 下载 403 后回退重发旧文件 | `cn_verified` 改排序层级；测速预算收紧；cron `*/30` + `timeout-minutes: 40`；`FORCE_COLLECT` + 陈旧 verdict 强制采集；纯 Python TCP 降级，二进制拿不到也产出新订阅 |
+| 去重后仍重复、固定 73 个 | 旧去重按含 UUID 的指纹判重，同一 CDN 入口 12 个不同 UUID 全部通过 | `client_endpoint_key(host, port)` 按客户端实际列出去重，候选期每入口 3 副本、发布期 1 个 |
+| 生成配置含本地回环节点 | 产物里 vmess `[NoMoreWalls#001] 防范境外势力渗透` 指向 `127.0.0.53:80`（uuid `88888888-...`），溯源为 `yy1588133/proxy-pool/main/clash.yaml` 中 10 处 `server: 127.0.0.53`；旧 `normalize_proxy` 只判 `if not server` | 新增 `is_non_routable_server()`（`ipaddress` 覆盖 127.0.0.0/8、`::1`、`0.0.0.0`、169.254、组播、保留段、私网段、localhost 字面量），在 4 个入口拦截：`normalize_proxy` 主采集、`load_existing_metrics` 回退重发旁路、`load_candidates` Phase B 旁路、`publish` 最后兜底；CI `Validate` 与 `verify_config.py` 加回归守卫，`out/test_loopback.py` 覆盖 21 拒绝 + 8 放行 + 3 条旁路 |
+
+注意：`sni: 127.0.0.1` 之类字段**不过滤**——SNI 是 TLS 握手声明的主机名，由服务端解释，拨号目标仍是 `server` 的公网域名。域名形态的 `server` 也放行，不在采集期做 DNS 解析，交由下游 TCP/egress 门判定。
 
 环境变量（全部可选）：
 

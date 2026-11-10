@@ -3,6 +3,7 @@ from __future__ import annotations
 import base64
 import gzip
 import hashlib
+import ipaddress
 import json
 import math
 import os
@@ -626,6 +627,44 @@ def dedupe_published_by_endpoint(metrics: list[ProxyMetric]) -> list[ProxyMetric
     return kept
 
 
+def is_non_routable_server(value: Any) -> bool:
+    """Reject addresses that can never be a public proxy endpoint.
+
+    Free subscription sources leak nodes whose `server` is a loopback /
+    unspecified / link-local / multicast / reserved / private literal, or the
+    literal hostnames `localhost` / `::1`. Published as-is they are guaranteed
+    dead entries: the client dials its own machine (or nothing at all), and in
+    the worst case points traffic at a service on the user's LAN.
+
+    IPv4 127.0.0.0/8 is covered by ipaddress.is_loopback (127.0.0.53 included),
+    so the check is not a hard-coded single address.
+
+    Hostnames are NOT rejected here: most nodes use a DNS name, and resolving
+    every one of them at collection time is both slow and unreliable. A name
+    that resolves to a private address is caught by the TCP/egress gates
+    downstream.
+    """
+    text = str(value or "").strip().strip("[]")
+    if not text:
+        return True
+    lowered = text.lower()
+    if lowered in {"localhost", "localhost.localdomain", "ip6-localhost", "ip6-loopback"}:
+        return True
+    try:
+        ip = ipaddress.ip_address(text)
+    except ValueError:
+        # Not an IP literal: treat as a hostname and let the benchmark decide.
+        return False
+    return bool(
+        ip.is_loopback
+        or ip.is_unspecified
+        or ip.is_link_local
+        or ip.is_multicast
+        or ip.is_reserved
+        or ip.is_private
+    )
+
+
 def normalize_proxy(raw: dict[str, Any], index: int) -> dict[str, Any] | None:
     proxy = {key: value for key, value in raw.items() if value is not None}
     proxy_type = str(proxy.get("type", "")).lower().strip()
@@ -679,6 +718,11 @@ def normalize_proxy(raw: dict[str, Any], index: int) -> dict[str, Any] | None:
     name = str(proxy.get("name", "")).strip() or f"node-{index}"
     server = str(proxy.get("server", "")).strip()
     if not server:
+        return None
+    if is_non_routable_server(server):
+        # Upstream sources leak loopback/literal-private nodes (observed:
+        # vmess 127.0.0.53:80 uuid 88888888-...). Drop at the single ingress
+        # so they never reach fingerprints, probe queue or published config.
         return None
 
     try:
@@ -1405,6 +1449,11 @@ def load_existing_metrics() -> list[ProxyMetric]:
     for proxy in data["proxies"]:
         if not isinstance(proxy, dict):
             continue
+        # Republishing a frozen config is the one path that bypasses
+        # normalize_proxy(); keep the same server sanity gate here so a
+        # loopback node in an old file cannot survive a "keep last good" run.
+        if is_non_routable_server(proxy.get("server")):
+            continue
         name = str(proxy.get("name", ""))
         region = detect_region(name)
         metrics.append(
@@ -1583,6 +1632,7 @@ def load_candidates() -> tuple[list[ProxyMetric], int, int] | None:
         )
         for c in payload.get("candidates", [])
         if isinstance(c.get("proxy"), dict)
+        and not is_non_routable_server(c["proxy"].get("server"))
     ]
     print(f"[INFO] loaded {len(metrics)} cloud-verified candidates (age {age/60:.0f}min)")
     return metrics, payload.get("total_nodes", 0), payload.get("sources_ok", 0)
@@ -1600,6 +1650,13 @@ def publish_sort_key(metric: ProxyMetric) -> tuple[int, float]:
 
 
 def publish(metrics: list[ProxyMetric], total_nodes: int, candidates: int) -> None:
+    # Last-line defence: every ingress above filters non-routable servers,
+    # but a future path could bypass them. Never write a loopback/literal-
+    # private endpoint into the public subscription.
+    before = len(metrics)
+    metrics = [m for m in metrics if not is_non_routable_server(m.proxy.get("server"))]
+    if len(metrics) != before:
+        print(f"[INFO] publish filter: dropped {before - len(metrics)} non-routable node(s)")
     metrics = dedupe_published_by_endpoint(metrics)
     metrics.sort(key=publish_sort_key)
     if len(metrics) > MAX_OUTPUT_NODES:

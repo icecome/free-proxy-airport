@@ -158,7 +158,27 @@ jobs:
               raise SystemExit(f"{dup} duplicate endpoints still published")
           if "DIRECT" not in groups["PROXY"]["proxies"]:
               raise SystemExit("PROXY group lost its DIRECT escape hatch")
-          print(f"validation OK: {len(ends)} unique endpoints, all health URLs CN-reachable")
+
+          # Free sources leak loopback/literal-private nodes (127.0.0.53 seen
+          # in a published vmess entry). They can never be public proxies.
+          import ipaddress
+          bad = []
+          for p in data["proxies"]:
+              s = str(p.get("server", "")).strip().strip("[]")
+              if s.lower() in ("localhost", "localhost.localdomain", "::1"):
+                  bad.append(s)
+                  continue
+              try:
+                  ip = ipaddress.ip_address(s)
+              except ValueError:
+                  continue  # hostname: resolved downstream
+              if (ip.is_loopback or ip.is_unspecified or ip.is_link_local
+                      or ip.is_multicast or ip.is_reserved or ip.is_private):
+                  bad.append(s)
+          if bad:
+              raise SystemExit(f"non-routable server addresses published: {bad[:5]}")
+          print(f"validation OK: {len(ends)} unique endpoints, all health URLs CN-reachable, "
+                "no loopback/private literals")
           PY
           python -m http.server 8080 --directory docs >/tmp/free-proxy-airport-pages.log 2>&1 &
           server_pid=$!
