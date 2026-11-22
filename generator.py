@@ -529,22 +529,124 @@ def load_source_urls() -> list[str]:
     return urls
 
 
+SOURCE_STATS_FILE = Path("data/source_stats.json")
+SOURCE_STATS_TTL_DAYS = 30
+SOURCE_DEAD_STREAK_LIMIT = 3
+
+
+def load_source_stats() -> dict[str, dict[str, Any]]:
+    """Cross-run source health, keyed by URL.
+
+    Each entry: {last_count, history:[counts], dead_streak, priority, updated_at}
+    """
+    if not SOURCE_STATS_FILE.exists():
+        return {}
+    try:
+        data = json.loads(SOURCE_STATS_FILE.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
+    except Exception as exc:
+        print(f"[WARN] source_stats unreadable: {exc}")
+        return {}
+
+
+def save_source_stats(stats: dict[str, dict[str, Any]]) -> None:
+    SOURCE_STATS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    SOURCE_STATS_FILE.write_bytes(
+        json.dumps(stats, ensure_ascii=False, indent=1).encode("utf-8")
+    )
+
+
+def compute_source_priority(entry: dict[str, Any]) -> float:
+    """Map observed source behaviour onto a candidate weight.
+
+    1.0 normal / 0.3 partial breakage / 1.2 healthy newcomer.
+    """
+    counts = [c for c in entry.get("history", []) if isinstance(c, int)]
+    if not counts:
+        return 1.0
+    last = counts[-1]
+    if last == 0:
+        return 0.0
+    prev = [c for c in counts[:-1] if c > 0]
+    if prev:
+        typical = sorted(prev)[len(prev) // 2]
+        if typical > 0 and last / typical < 0.3:
+            return 0.3
+    if len(counts) <= 2 and last >= 50:
+        return 1.2
+    return 1.0
+
+
+def update_source_stats(
+    stats: dict[str, dict[str, Any]], counts: dict[str, int]
+) -> dict[str, dict[str, Any]]:
+    now = int(time.time())
+    for url, count in counts.items():
+        entry = stats.setdefault(url, {"history": [], "dead_streak": 0})
+        entry["last_count"] = count
+        entry["updated_at"] = now
+        hist = list(entry.get("history", []))
+        hist.append(count)
+        entry["history"] = hist[-10:]
+        entry["dead_streak"] = entry.get("dead_streak", 0) + 1 if count == 0 else 0
+        entry["priority"] = compute_source_priority(entry)
+    horizon = now - SOURCE_STATS_TTL_DAYS * 86400
+    return {k: v for k, v in stats.items() if v.get("updated_at", now) >= horizon}
+
+
+def prune_dead_sources(
+    stats: dict[str, dict[str, Any]], urls: list[str]
+) -> tuple[list[str], list[str]]:
+    """Split sources into (kept, pruned) by sustained total failure."""
+    kept, pruned = [], []
+    for url in urls:
+        if stats.get(url, {}).get("dead_streak", 0) >= SOURCE_DEAD_STREAK_LIMIT:
+            pruned.append(url)
+        else:
+            kept.append(url)
+    return kept, pruned
+
+
 def collect_proxies() -> tuple[int, list[dict[str, Any]], list[tuple[str, bool]]]:
+    stats = load_source_stats()
+    urls, pruned = prune_dead_sources(stats, load_source_urls())
+    for url in pruned:
+        print(f"[BLACKLIST] dead for {stats[url].get('dead_streak', 0)} runs, dropped: {url}")
+
     source_report: list[tuple[str, bool]] = []
     collected: list[dict[str, Any]] = []
-    for url in load_source_urls():
+    counts: dict[str, int] = {}
+    for url in urls:
         try:
             text = fetch_text(url)
             found = extract_proxies(text)
+            counts[url] = len(found)
             print(f"[OK] proxies={len(found)} url={url}")
             if found:
+                priority = stats.get(url, {}).get("priority", 1.0)
+                for proxy in found:
+                    proxy["_source_priority"] = priority
                 collected.extend(found)
                 source_report.append((url, True))
             else:
                 source_report.append((url, False))
         except Exception as exc:
+            counts[url] = 0
             print(f"[WARN] source skipped url={url} error={exc}")
             source_report.append((url, False))
+
+    stats = update_source_stats(stats, counts)
+    save_source_stats(stats)
+    demoted = [u for u in urls if 0 < stats.get(u, {}).get("priority", 1.0) < 1.0]
+    promoted = [u for u in urls if stats.get(u, {}).get("priority", 1.0) > 1.0]
+    print(
+        f"[SUMMARY] source_health: kept={len(urls)} pruned={len(pruned)} "
+        f"demoted={len(demoted)} promoted={len(promoted)}"
+    )
+    for url in demoted:
+        print(f"[DEMOTE] priority={stats[url]['priority']} {url}")
+    for url in promoted:
+        print(f"[PROMOTE] priority={stats[url]['priority']} {url}")
 
     sanitized = sanitize_and_deduplicate(collected)
     if MAX_CANDIDATES > 0 and len(sanitized) > MAX_CANDIDATES:
@@ -735,6 +837,10 @@ def normalize_proxy(raw: dict[str, Any], index: int) -> dict[str, Any] | None:
     proxy["name"] = name
     proxy["server"] = server
     proxy["port"] = port
+    # Keep the source weight as a private key so benchmark scoring can use it;
+    # it is stripped before the config is written (mihomo rejects unknown keys).
+    if "_source_priority" in proxy:
+        proxy["_source_priority"] = float(proxy["_source_priority"] or 1.0)
     return proxy
 
 
@@ -1187,7 +1293,8 @@ def test_single_proxy(controller_url: str, proxy: dict[str, Any]) -> ProxyMetric
     if latency <= 0 or latency > LATENCY_TIMEOUT_MS:
         return None
     region = detect_region(name)
-    score = health_score(name, latency, region)
+    score = health_score(name, latency, region, 0.0,
+                         float(proxy.get("_source_priority", 1.0) or 1.0))
     return ProxyMetric(proxy=proxy, latency=latency, region=region, health_score=score)
 
 
@@ -1408,10 +1515,19 @@ def speed_bonus(speed_mbps: float) -> float:
     return min(1.0, math.log10(1 + speed_mbps) / math.log10(1 + 10))
 
 
-def health_score(name: str, latency: int, region: str, speed_mbps: float = 0.0) -> float:
+def health_score(
+    name: str,
+    latency: int,
+    region: str,
+    speed_mbps: float = 0.0,
+    source_priority: float = 1.0,
+) -> float:
     latency_score = 1.0 / latency if latency > 0 else 0.0
     latency_norm = latency_score * LATENCY_TIMEOUT_MS / 1000  # 1/latency scaled to ~[0.2, 1]
-    return latency_norm * 0.4 + speed_bonus(speed_mbps) * 0.4 + region_bonus(region) / 3 * 0.2
+    base = latency_norm * 0.4 + speed_bonus(speed_mbps) * 0.4 + region_bonus(region) / 3 * 0.2
+    # Sources that keep collapsing (partial breakage) have their nodes demoted
+    # so a healthy source outranks them at the same measured latency.
+    return base * max(0.0, source_priority)
 
 
 def low_latency_pool(metrics: list[ProxyMetric]) -> list[str]:
@@ -1493,7 +1609,10 @@ def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
     if not metrics:
         metrics = [build_direct_fallback_metric()]
 
-    proxies = [item.proxy for item in metrics]
+    proxies = []
+    for item in metrics:
+        clean = {k: v for k, v in item.proxy.items() if not k.startswith("_")}
+        proxies.append(clean)
     all_names = [item.proxy["name"] for item in metrics]
     hk_names = names_for_region(metrics, "HK")
     jp_names = names_for_region(metrics, "JP")

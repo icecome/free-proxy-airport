@@ -2,9 +2,12 @@ name: AI Self-Healing Proxy v7
 
 on:
   schedule:
-    # Every 30 min: the run budget is now ~10-15 min (see SPEED_TEST_* in
-    # generator.py), so the 2-hour cadence wasted freshness for no reason.
-    - cron: "*/30 * * * *"
+    # Every 6 hours. A full run (collect -> url-test -> bandwidth gate) costs
+    # 40-50 min, so a 30-min cron meant >100% duty cycle: runs piled up, queued
+    # runs were cancelled, and GitHub throttled/suspended the schedule
+    # (observed 2026-11-01 onward: zero schedule triggers for 3 weeks).
+    # ~50 min every 6h = ~14% duty cycle, well inside the free-tier budget.
+    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -26,10 +29,10 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    # Hard ceiling. The old budget needed ~105 min per run while cron fired
-    # every 2h, so runs overlapped, queued runs were cancelled, and the
-    # published file froze on 2026-11-01.
-    timeout-minutes: 40
+    # Hard ceiling. Measured runs take 40-50 min (3000 delay probes + 150
+    # url-tests + 150 bandwidth probes). Cap at 90 so a pathological run is
+    # killed instead of eating the whole monthly quota.
+    timeout-minutes: 90
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -65,7 +68,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # candidates.json was never committed, so Phase B never found a
           # staged set and every run re-collected from scratch.
-          for f in output/clash.yaml docs/clash.yaml docs/.nojekyll data/candidates.json data/probe_queue.json; do
+          for f in output/clash.yaml docs/clash.yaml docs/.nojekyll data/candidates.json data/probe_queue.json data/source_stats.json; do
             if [ -e "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then
