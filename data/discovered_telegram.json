@@ -1,0 +1,216 @@
+{
+  "generated_at": 1795360640,
+  "candidates_tried": 24,
+  "channels_reachable": 9,
+  "channels_with_proxy_data": 4,
+  "usable": [
+    {
+      "handle": "v2raynodes",
+      "url": "https://t.me/s/v2raynodes",
+      "title": "ᴠ2ʀᴀʏ ɴᴏᴅᴇꜱ 🩸",
+      "description": "",
+      "posts_seen": 20,
+      "proxy_links": 13,
+      "sub_links": 4,
+      "sample_links": [
+        "vless://TuhinDroidZone-TDZ-6NR@grx.tdz-server.store:443?path=%2FTelegram-%40TuhinBroh&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=web.telegram.org#TuhinDroidZone",
+        "vless://TuhinDroidZone-TDZ-6NRZ@grx.tdz-server.store:443?path=%2FTelegram-%40TuhinBroh&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=web.telegram.org#TuhinDroidZone",
+        "vless://Telegram:%20%40TuhinBroh@84.32.100.45:8443?type=tcp&encryption=none&security=tls&fp=chrome&alpn=h2%2Chttp%2F1.1#TuhinDroidZone",
+        "vless://Telegram:",
+        "vless://Telegram:%40TuhinBroh@sgc.tdz-server.store:20378?type=ws&encryption=none&path=%2F%40TuhinBroh&host=&security=none#TDZ-SGC"
+      ],
+      "sample_subs": [
+        "https://84.32.100.45:2096/sub/TuhinDroidZone",
+        "https://sgc.tdz-server.store:2096/sub/TDZ-SGC-WS-NTLS",
+        "https://sgc.tuhinbro.org:2096/sub/TDZ-SGC-FREE-QPR0",
+        "https://sgc.tdz-server.store:2096/sub/TuhinDroidZone"
+      ],
+      "html_bytes": 138572
+    },
+    {
+      "handle": "v2rayfree",
+      "url": "https://t.me/s/v2rayfree",
+      "title": "VPNs Proxy Mtproto",
+      "description": "🙂Please forward to your friends to use🙂\n\nℹ️Doesn't work, please report to the botℹ️\n\n🌀@VPNsAdmin_Bot🌀",
+      "posts_seen": 20,
+      "proxy_links": 4,
+      "sub_links": 0,
+      "sample_links": [
+        "vless://935573d9-db1a-4235-8454-ded612105be6@5.180.82.155:8080?security=reality&encryption=none&pbk=-y9ICGWwLbWYcKSXZNiBAaSvh9e1odOgYVKxiCIuhWw&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=abc6c826d165#%40Spartan_YT",
+        "vless://e53a92c7-4a78-49cc-ab01-917661058b9a@172.64.153.22:8443?path=%2F%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net&type=ws&allowInsecure=0&sni=egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net#%D8%AF%DA%A9%D8%AA%D8%B1%20%D9%86%DB%8C%DA%A9",
+        "vmess://https://t.me/proxy?server=77.72.80.83&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ",
+        "vless://1893673b-0802-445a-9b0e-7de8d9991359@khaneh.berozsho.click:443?encryption=none&type=tcp&headerType=http&host=filmnet.com&security=none#%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AE%D8%B1%DB%8C%D8%AF%20%D9%BE%DB%8C%D8%A7%D9%85%20%D8%A8%D8%AF%DB%8C%D8%AFtel:iam_ac"
+      ],
+      "sample_subs": [],
+      "html_bytes": 111187
+    },
+    {
+      "handle": "nodeshare",
+      "url": "https://t.me/s/nodeshare",
+      "title": "NodeShare",
+      "description": "NodeShare官方频道",
+      "posts_seen": 13,
+      "proxy_links": 3,
+      "sub_links": 0,
+      "sample_links": [
+        "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIua1gemHj+WJqeS9me+8mjQwMEdCIOWNleiKgueCuee/u+WimSB8IFRH77yaQE5vZGVTaGFyZSIsDQogICJhZGQiOiAiMTQ4LjEwMC43Ni4yMTQiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNWUwOGNhNDItNDY5MS00OWQzLThjODYtYWRiYWM3MDJiN2FmIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJ6aGliby4xOTE5ODEwLmNvbSIsDQogICJwYXRoIjogIi81Vjg5Wm4iLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAiIiwNCiAgImFscG4iOiAiIg0KfQ==",
+        "trojan://H3eaPtFUPbrDTFhO@111222333.1919810.com:990#",
+        "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIuS9juW7tui/nyB8IOa4uOaIj+S4k+eUqCIsDQogICJhZGQiOiAiMTQ4LjEwMC43Ni4yMTQiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNWUwOGNhNDItNDY5MS00OWQzLThjODYtYWRiYWM3MDJiN2FmIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIi…»"
+      ],
+      "sample_subs": [],
+      "html_bytes": 101763
+    },
+    {
+      "handle": "freefq",
+      "url": "https://t.me/s/freefq",
+      "title": "去远方",
+      "description": "远方的世界，没有墙",
+      "posts_seen": 17,
+      "proxy_links": 0,
+      "sub_links": 1,
+      "sample_links": [],
+      "sample_subs": [
+        "https://zwc365.com/hide/shadowsocks-v2ray-plugin.html"
+      ],
+      "html_bytes": 105740
+    }
+  ],
+  "all_reachable": [
+    {
+      "handle": "v2rayfree",
+      "url": "https://t.me/s/v2rayfree",
+      "title": "VPNs Proxy Mtproto",
+      "description": "🙂Please forward to your friends to use🙂\n\nℹ️Doesn't work, please report to the botℹ️\n\n🌀@VPNsAdmin_Bot🌀",
+      "posts_seen": 20,
+      "proxy_links": 4,
+      "sub_links": 0,
+      "sample_links": [
+        "vless://935573d9-db1a-4235-8454-ded612105be6@5.180.82.155:8080?security=reality&encryption=none&pbk=-y9ICGWwLbWYcKSXZNiBAaSvh9e1odOgYVKxiCIuhWw&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=abc6c826d165#%40Spartan_YT",
+        "vless://e53a92c7-4a78-49cc-ab01-917661058b9a@172.64.153.22:8443?path=%2F%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net&type=ws&allowInsecure=0&sni=egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net#%D8%AF%DA%A9%D8%AA%D8%B1%20%D9%86%DB%8C%DA%A9",
+        "vmess://https://t.me/proxy?server=77.72.80.83&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ",
+        "vless://1893673b-0802-445a-9b0e-7de8d9991359@khaneh.berozsho.click:443?encryption=none&type=tcp&headerType=http&host=filmnet.com&security=none#%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AE%D8%B1%DB%8C%D8%AF%20%D9%BE%DB%8C%D8%A7%D9%85%20%D8%A8%D8%AF%DB%8C%D8%AFtel:iam_ac"
+      ],
+      "sample_subs": [],
+      "html_bytes": 111187
+    },
+    {
+      "handle": "v2raynodes",
+      "url": "https://t.me/s/v2raynodes",
+      "title": "ᴠ2ʀᴀʏ ɴᴏᴅᴇꜱ 🩸",
+      "description": "",
+      "posts_seen": 20,
+      "proxy_links": 13,
+      "sub_links": 4,
+      "sample_links": [
+        "vless://TuhinDroidZone-TDZ-6NR@grx.tdz-server.store:443?path=%2FTelegram-%40TuhinBroh&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=web.telegram.org#TuhinDroidZone",
+        "vless://TuhinDroidZone-TDZ-6NRZ@grx.tdz-server.store:443?path=%2FTelegram-%40TuhinBroh&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=web.telegram.org#TuhinDroidZone",
+        "vless://Telegram:%20%40TuhinBroh@84.32.100.45:8443?type=tcp&encryption=none&security=tls&fp=chrome&alpn=h2%2Chttp%2F1.1#TuhinDroidZone",
+        "vless://Telegram:",
+        "vless://Telegram:%40TuhinBroh@sgc.tdz-server.store:20378?type=ws&encryption=none&path=%2F%40TuhinBroh&host=&security=none#TDZ-SGC"
+      ],
+      "sample_subs": [
+        "https://84.32.100.45:2096/sub/TuhinDroidZone",
+        "https://sgc.tdz-server.store:2096/sub/TDZ-SGC-WS-NTLS",
+        "https://sgc.tuhinbro.org:2096/sub/TDZ-SGC-FREE-QPR0",
+        "https://sgc.tdz-server.store:2096/sub/TuhinDroidZone"
+      ],
+      "html_bytes": 138572
+    },
+    {
+      "handle": "nodeshare",
+      "url": "https://t.me/s/nodeshare",
+      "title": "NodeShare",
+      "description": "NodeShare官方频道",
+      "posts_seen": 13,
+      "proxy_links": 3,
+      "sub_links": 0,
+      "sample_links": [
+        "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIua1gemHj+WJqeS9me+8mjQwMEdCIOWNleiKgueCuee/u+WimSB8IFRH77yaQE5vZGVTaGFyZSIsDQogICJhZGQiOiAiMTQ4LjEwMC43Ni4yMTQiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNWUwOGNhNDItNDY5MS00OWQzLThjODYtYWRiYWM3MDJiN2FmIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJ6aGliby4xOTE5ODEwLmNvbSIsDQogICJwYXRoIjogIi81Vjg5Wm4iLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAiIiwNCiAgImFscG4iOiAiIg0KfQ==",
+        "trojan://H3eaPtFUPbrDTFhO@111222333.1919810.com:990#",
+        "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIuS9juW7tui/nyB8IOa4uOaIj+S4k+eUqCIsDQogICJhZGQiOiAiMTQ4LjEwMC43Ni4yMTQiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNWUwOGNhNDItNDY5MS00OWQzLThjODYtYWRiYWM3MDJiN2FmIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIi…»"
+      ],
+      "sample_subs": [],
+      "html_bytes": 101763
+    },
+    {
+      "handle": "freefq",
+      "url": "https://t.me/s/freefq",
+      "title": "去远方",
+      "description": "远方的世界，没有墙",
+      "posts_seen": 17,
+      "proxy_links": 0,
+      "sub_links": 1,
+      "sample_links": [],
+      "sample_subs": [
+        "https://zwc365.com/hide/shadowsocks-v2ray-plugin.html"
+      ],
+      "html_bytes": 105740
+    },
+    {
+      "handle": "fanqiang",
+      "url": "https://t.me/s/fanqiang",
+      "title": "VPN|梯子|节点|机场免费推荐",
+      "description": "",
+      "posts_seen": 20,
+      "proxy_links": 0,
+      "sub_links": 0,
+      "sample_links": [],
+      "sample_subs": [],
+      "html_bytes": 129356
+    },
+    {
+      "handle": "vpnfree",
+      "url": "https://t.me/s/vpnfree",
+      "title": "VPNsafe | Интернет Технологии",
+      "description": "Официальный канал телеграм-бота @VPNsafebot",
+      "posts_seen": 20,
+      "proxy_links": 0,
+      "sub_links": 0,
+      "sample_links": [],
+      "sample_subs": [],
+      "html_bytes": 179166
+    },
+    {
+      "handle": "clashnodefree",
+      "url": "https://t.me/s/clashnodefree",
+      "title": "clashnodefree",
+      "description": "",
+      "posts_seen": 2,
+      "proxy_links": 0,
+      "sub_links": 0,
+      "sample_links": [],
+      "sample_subs": [],
+      "html_bytes": 24931
+    },
+    {
+      "handle": "freeproxy",
+      "url": "https://t.me/s/freeproxy",
+      "title": "Proxy",
+      "description": "",
+      "posts_seen": 2,
+      "proxy_links": 0,
+      "sub_links": 0,
+      "sample_links": [],
+      "sample_subs": [],
+      "html_bytes": 27263
+    },
+    {
+      "handle": "proxypool",
+      "url": "https://t.me/s/proxypool",
+      "title": "proxies.st ~ News",
+      "description": "Proxies.ST – Fast, secure proxies. Browse, automate & connect — anywhere, anytime. 🚀\n\nSupport ~ @proxiesstadmin",
+      "posts_seen": 7,
+      "proxy_links": 0,
+      "sub_links": 0,
+      "sample_links": [],
+      "sample_subs": [],
+      "html_bytes": 56053
+    }
+  ],
+  "sub_host_health": {
+    "84.32.100.45": true,
+    "sgc.tdz-server.store": false,
+    "sgc.tuhinbro.org": false,
+    "zwc365.com": true
+  }
+}

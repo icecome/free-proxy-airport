@@ -40,3 +40,30 @@ https://raw.githubusercontent.com/v2raynnodes/v2rayfree/main/v2ray.txt
 # cbusifabcap 的 Clash/ClashMeta/mihomo 子页 —— 与 V2Ray.yml 同源仅格式不同
 # ermaozi01 subscribe/clash.yml —— 与 v2ray.txt 同源同节点，只留一条
 # sfdr.zaixianyouxi.dpdns.org —— 带日期后缀 URL 会过期，且服务端 mojibake 编码问题待修
+
+# === 2026-11-23 自动发现（GitHub Search 扫 400 仓库，TCP 抽样存活 ≥30%）===
+# 生成脚本：scripts/discover_github.py → scripts/check_discovered.py
+# 复现：python scripts/discover_github.py --pages 3 --max-repos 400 --workers 16
+#       python scripts/check_discovered.py --in data/discovered_github.json \
+#              --out data/checked_github.json --sample 10
+# kevin-sanas free-clash-verge（500 节点，TCP 10/10，与 1000ttank 同内容只留本条）
+https://raw.githubusercontent.com/kevin-sanas/free-clash-verge/main/output/clash.yaml
+# ermaozi get_subscribe（318 节点，TCP 3/10）
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+# share-daily node（216 节点，TCP 10/10）
+https://raw.githubusercontent.com/share-daily/node/main/clash.yaml
+# xituimao spider-clash（95 节点，全部 vmess，TCP 3/10）
+https://raw.githubusercontent.com/xituimao/spider-clash/main/output/clash.yaml
+# ermaozi01 free_clash_vpn（30 节点，TCP 8/10；与 2026-11-01 那条 v2ray.txt 不同源）
+https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml
+
+# === 本轮扫描到但未采纳（留档，避免下轮重复探测）===
+# 15605875200-spec/abaaba —— 800 节点但 TCP 0/10
+# cheshi888/freesub-v2 —— 已有源，675 节点但 TCP 0/10（云端爬虫产物，节点已死）
+# masitankitavim-ux/free-node-aggregator —— 279 节点，TCP 0/10
+# awesome-vpn/awesome-vpn —— 23 节点，TCP 0/10
+# 1000ttank/free-vpn-clash-aggregator —— 与 kevin-sanas 内容 SHA256 完全一致
+# Phirisyyds/sysu-clash-sub / lutfiatuln/node-pool / haiwanai/free-nodes —— TCP ≤20%，样本太小
+# zhulinghuanyu/Subscribe、zhulinghuanyu/Node —— 17/11 节点，体量不足
+# guo0914/Free-Node、v2raydog-node/free-nodes —— 11/17 节点，TCP 高但总量太小
+

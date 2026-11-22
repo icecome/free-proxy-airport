@@ -1,0 +1,312 @@
+{
+  "checked": 20,
+  "alive": 20,
+  "results": [
+    {
+      "url": "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml",
+      "ok": true,
+      "nodes": 1193,
+      "kinds": {
+        "socks5": 54,
+        "vless": 308,
+        "ss": 287,
+        "http": 242,
+        "trojan": 122,
+        "wireguard": 4,
+        "ssr": 1,
+        "anytls": 4,
+        "hysteria": 6,
+        "vmess": 97,
+        "hysteria2": 68
+      },
+      "bytes": 515268,
+      "tcp_sample": 10,
+      "tcp_alive": 9
+    },
+    {
+      "url": "https://raw.githubusercontent.com/15605875200-spec/abaaba/main/clash.yaml",
+      "ok": true,
+      "nodes": 800,
+      "kinds": {
+        "hysteria2": 105,
+        "ss": 86,
+        "trojan": 66,
+        "vless": 407,
+        "vmess": 136
+      },
+      "bytes": 232741,
+      "tcp_sample": 10,
+      "tcp_alive": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/bily1258-design/beimi/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 751,
+      "kinds": {
+        "vless": 506,
+        "ss": 53,
+        "trojan": 118,
+        "hysteria2": 38,
+        "vmess": 36
+      },
+      "bytes": 274159,
+      "tcp_sample": 10,
+      "tcp_alive": 6
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cheshi888/freesub-v2/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 675,
+      "kinds": {
+        "ss": 272,
+        "vless": 221,
+        "trojan": 36,
+        "vmess": 77,
+        "hysteria2": 69
+      },
+      "bytes": 228136,
+      "tcp_sample": 10,
+      "tcp_alive": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kevin-sanas/free-clash-verge/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 500,
+      "kinds": {
+        "ss": 127,
+        "trojan": 90,
+        "ssr": 2,
+        "socks5": 3,
+        "hysteria2": 40,
+        "vless": 216,
+        "vmess": 22
+      },
+      "bytes": 133691,
+      "tcp_sample": 10,
+      "tcp_alive": 10
+    },
+    {
+      "url": "https://raw.githubusercontent.com/1000ttank/free-vpn-clash-aggregator/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 500,
+      "kinds": {
+        "ss": 127,
+        "trojan": 90,
+        "ssr": 2,
+        "socks5": 3,
+        "hysteria2": 40,
+        "vless": 216,
+        "vmess": 22
+      },
+      "bytes": 133691,
+      "tcp_sample": 10,
+      "tcp_alive": 10
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/V2Ray.yml",
+      "ok": true,
+      "nodes": 1210,
+      "kinds": {
+        "ss": 286,
+        "vless": 393,
+        "vmess": 171,
+        "hysteria2": 241,
+        "socks": 47,
+        "trojan": 55,
+        "hysteria": 12,
+        "anytls": 4,
+        "ssr": 1
+      },
+      "bytes": 345108,
+      "tcp_sample": 10,
+      "tcp_alive": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Phirisyyds/sysu-clash-sub/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 400,
+      "kinds": {
+        "hysteria2": 94,
+        "vless": 58,
+        "ss": 63,
+        "vmess": 142,
+        "trojan": 41,
+        "ssr": 2
+      },
+      "bytes": 127114,
+      "tcp_sample": 10,
+      "tcp_alive": 2
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+      "ok": true,
+      "nodes": 318,
+      "kinds": {
+        "vmess": 16,
+        "hysteria": 5,
+        "hysteria2": 63,
+        "trojan": 21,
+        "vless": 106,
+        "ss": 76,
+        "http": 26,
+        "anytls": 4,
+        "ssr": 1
+      },
+      "bytes": 159744,
+      "tcp_sample": 10,
+      "tcp_alive": 3
+    },
+    {
+      "url": "https://raw.githubusercontent.com/masitankitavim-ux/free-node-aggregator/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 279,
+      "kinds": {
+        "ss": 185,
+        "trojan": 15,
+        "vless": 40,
+        "hysteria2": 22,
+        "vmess": 17
+      },
+      "bytes": 97419,
+      "tcp_sample": 10,
+      "tcp_alive": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lutfiatuln/node-pool/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 250,
+      "kinds": {
+        "ss": 82,
+        "vless": 51,
+        "trojan": 44,
+        "vmess": 66,
+        "ssr": 3,
+        "http": 3,
+        "hysteria2": 1
+      },
+      "bytes": 74182,
+      "tcp_sample": 10,
+      "tcp_alive": 2
+    },
+    {
+      "url": "https://raw.githubusercontent.com/haiwanai/free-nodes/main/sub.yaml",
+      "ok": true,
+      "nodes": 87,
+      "kinds": {
+        "ss": 51,
+        "vless": 21,
+        "trojan": 4,
+        "hysteria2": 8,
+        "vmess": 3
+      },
+      "bytes": 22492,
+      "tcp_sample": 10,
+      "tcp_alive": 1
+    },
+    {
+      "url": "https://raw.githubusercontent.com/share-daily/node/main/clash.yaml",
+      "ok": true,
+      "nodes": 216,
+      "kinds": {
+        "http": 199,
+        "vmess": 1,
+        "ss": 10,
+        "vless": 4,
+        "anytls": 2
+      },
+      "bytes": 30806,
+      "tcp_sample": 10,
+      "tcp_alive": 10
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xituimao/spider-clash/main/output/clash.yaml",
+      "ok": true,
+      "nodes": 95,
+      "kinds": {
+        "vmess": 95
+      },
+      "bytes": 32389,
+      "tcp_sample": 10,
+      "tcp_alive": 3
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml",
+      "ok": true,
+      "nodes": 30,
+      "kinds": {
+        "trojan": 1,
+        "ss": 1,
+        "vmess": 4,
+        "vless": 23,
+        "hysteria": 1
+      },
+      "bytes": 26229,
+      "tcp_sample": 10,
+      "tcp_alive": 8
+    },
+    {
+      "url": "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml",
+      "ok": true,
+      "nodes": 23,
+      "kinds": {
+        "vless": 11,
+        "trojan": 5,
+        "hysteria2": 3,
+        "ss": 4
+      },
+      "bytes": 9164,
+      "tcp_sample": 10,
+      "tcp_alive": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhulinghuanyu/Subscribe/main/v2ray.txt",
+      "ok": true,
+      "nodes": 17,
+      "kinds": {
+        "hysteria2": 3,
+        "vless": 11,
+        "ss": 2,
+        "trojan": 1
+      },
+      "bytes": 2972,
+      "tcp_sample": 10,
+      "tcp_alive": 1
+    },
+    {
+      "url": "https://raw.githubusercontent.com/v2raydog-node/free-nodes/main/clash.yaml",
+      "ok": true,
+      "nodes": 17,
+      "kinds": {
+        "vmess": 1,
+        "ss": 11,
+        "vless": 5
+      },
+      "bytes": 5144,
+      "tcp_sample": 10,
+      "tcp_alive": 8
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhulinghuanyu/Node/main/v2ray.txt",
+      "ok": true,
+      "nodes": 11,
+      "kinds": {
+        "ss": 11
+      },
+      "bytes": 2024,
+      "tcp_sample": 1,
+      "tcp_alive": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/guo0914/Free-Node/main/v2ray.txt",
+      "ok": true,
+      "nodes": 11,
+      "kinds": {
+        "vless": 9,
+        "ss": 2
+      },
+      "bytes": 3156,
+      "tcp_sample": 8,
+      "tcp_alive": 7
+    }
+  ]
+}

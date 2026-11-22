@@ -1,0 +1,189 @@
+{
+  "generated_at": 1795365194,
+  "rows": [
+    {
+      "url": "https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/V2Ray.yml",
+      "source": "github",
+      "nodes": 1210,
+      "tcp_pct": 0.0,
+      "new": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml",
+      "source": "github",
+      "nodes": 1193,
+      "tcp_pct": 90.0,
+      "new": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/15605875200-spec/abaaba/main/clash.yaml",
+      "source": "github",
+      "nodes": 800,
+      "tcp_pct": 0.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/bily1258-design/beimi/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 751,
+      "tcp_pct": 60.0,
+      "new": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cheshi888/freesub-v2/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 675,
+      "tcp_pct": 0.0,
+      "new": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kevin-sanas/free-clash-verge/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 500,
+      "tcp_pct": 100.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/1000ttank/free-vpn-clash-aggregator/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 500,
+      "tcp_pct": 100.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Phirisyyds/sysu-clash-sub/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 400,
+      "tcp_pct": 20.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+      "source": "github",
+      "nodes": 318,
+      "tcp_pct": 30.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/masitankitavim-ux/free-node-aggregator/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 279,
+      "tcp_pct": 0.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lutfiatuln/node-pool/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 250,
+      "tcp_pct": 20.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/share-daily/node/main/clash.yaml",
+      "source": "github",
+      "nodes": 216,
+      "tcp_pct": 100.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xituimao/spider-clash/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 95,
+      "tcp_pct": 30.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/haiwanai/free-nodes/main/sub.yaml",
+      "source": "github",
+      "nodes": 87,
+      "tcp_pct": 10.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml",
+      "source": "github",
+      "nodes": 30,
+      "tcp_pct": 80.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml",
+      "source": "github",
+      "nodes": 23,
+      "tcp_pct": 0.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/v2raydog-node/free-nodes/main/clash.yaml",
+      "source": "github",
+      "nodes": 17,
+      "tcp_pct": 80.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhulinghuanyu/Subscribe/main/v2ray.txt",
+      "source": "github",
+      "nodes": 17,
+      "tcp_pct": 10.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/guo0914/Free-Node/main/v2ray.txt",
+      "source": "github",
+      "nodes": 11,
+      "tcp_pct": 87.5,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhulinghuanyu/Node/main/v2ray.txt",
+      "source": "github",
+      "nodes": 11,
+      "tcp_pct": 0.0,
+      "new": true
+    }
+  ],
+  "recommended": [
+    {
+      "url": "https://raw.githubusercontent.com/kevin-sanas/free-clash-verge/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 500,
+      "tcp_pct": 100.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/1000ttank/free-vpn-clash-aggregator/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 500,
+      "tcp_pct": 100.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+      "source": "github",
+      "nodes": 318,
+      "tcp_pct": 30.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/share-daily/node/main/clash.yaml",
+      "source": "github",
+      "nodes": 216,
+      "tcp_pct": 100.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xituimao/spider-clash/main/output/clash.yaml",
+      "source": "github",
+      "nodes": 95,
+      "tcp_pct": 30.0,
+      "new": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml",
+      "source": "github",
+      "nodes": 30,
+      "tcp_pct": 80.0,
+      "new": true
+    }
+  ]
+}
