@@ -113,6 +113,8 @@ jobs:
           }
           required_groups = {
               "AUTO-FAST": "url-test",
+              "VERIFIED": "url-test",
+              "UNVERIFIED": "url-test",
               "HK-POOL": "url-test",
               "JP-POOL": "url-test",
               "US-POOL": "url-test",

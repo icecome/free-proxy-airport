@@ -54,6 +54,7 @@ MAX_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_CANDIDATES", "0"))
 SPEED_GATE_ENABLED = os.getenv("FREE_PROXY_AIRPORT_SPEED_GATE", "1") == "1"
 # Cap the published pool so client configs stay manageable.
 MAX_OUTPUT_NODES = int(os.getenv("FREE_PROXY_AIRPORT_MAX_OUTPUT", "400"))
+MARKER_PREFIXES = ("✅ ", "⚠️ ")
 # CN-probe loop: queue size for the NAS worker, and the boost applied to
 # nodes the NAS reported alive within the last hour.
 PROBE_QUEUE_LIMIT = int(os.getenv("FREE_PROXY_AIRPORT_PROBE_QUEUE", "500"))
@@ -143,6 +144,8 @@ SUPPORTED_PROXY_TYPES = {
 
 REQUIRED_GROUPS = (
     "AUTO-FAST",
+    "VERIFIED",
+    "UNVERIFIED",
     "HK-POOL",
     "JP-POOL",
     "US-POOL",
@@ -1659,11 +1662,22 @@ def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
     if not metrics:
         metrics = [build_direct_fallback_metric()]
 
+    # Prefix node names so the client list itself shows which nodes were
+    # proven usable from CN (✅) and which are unverified newcomers (⚠️).
+    for item in metrics:
+        name = str(item.proxy.get("name", ""))
+        if name.startswith(tuple(MARKER_PREFIXES)):
+            continue
+        marker = "✅ " if item.proxy.get("_verified_ok") else "⚠️ "
+        item.proxy["name"] = marker + name
+
     proxies = []
     for item in metrics:
         clean = {k: v for k, v in item.proxy.items() if not k.startswith("_")}
         proxies.append(clean)
     all_names = [item.proxy["name"] for item in metrics]
+    verified_names = [i.proxy["name"] for i in metrics if i.proxy.get("_verified_ok")]
+    unverified_names = [i.proxy["name"] for i in metrics if not i.proxy.get("_verified_ok")]
     hk_names = names_for_region(metrics, "HK")
     jp_names = names_for_region(metrics, "JP")
     us_names = names_for_region(metrics, "US")
@@ -1686,6 +1700,10 @@ def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
         "proxies": proxies,
         "proxy-groups": [
             url_test_group("AUTO-FAST", all_names),
+            # Locally proven to tunnel real traffic from a CN network. Put
+            # first: it is the only group whose members are known-good.
+            url_test_group("VERIFIED", verified_names or all_names[:1]),
+            url_test_group("UNVERIFIED", unverified_names or all_names[:1]),
             url_test_group("HK-POOL", hk_names),
             url_test_group("JP-POOL", jp_names),
             url_test_group("US-POOL", us_names),
@@ -1701,9 +1719,10 @@ def build_config(metrics: list[ProxyMetric]) -> dict[str, Any]:
             {
                 "name": "PROXY",
                 "type": "select",
-                # DIRECT last: when every free node is red the user can still
-                # get online instead of the client showing a dead config.
-                "proxies": ["AUTO-FAST", "FALLBACK", "DIRECT"],
+                # VERIFIED first (only known-good nodes), then the mixed pool,
+                # then DIRECT so the user can still get online when every free
+                # node is red instead of facing a dead config.
+                "proxies": ["VERIFIED", "AUTO-FAST", "FALLBACK", "DIRECT"],
             },
         ],
         "rules": [
