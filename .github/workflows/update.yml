@@ -7,7 +7,7 @@ on:
     # runs were cancelled, and GitHub throttled/suspended the schedule
     # (observed 2026-11-01 onward: zero schedule triggers for 3 weeks).
     # ~50 min every 6h = ~14% duty cycle, well inside the free-tier budget.
-    - cron: "0 */6 * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -68,7 +68,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # candidates.json was never committed, so Phase B never found a
           # staged set and every run re-collected from scratch.
-          for f in output/clash.yaml docs/clash.yaml docs/.nojekyll data/candidates.json data/probe_queue.json data/source_stats.json; do
+          for f in output/clash.yaml docs/clash.yaml docs/.nojekyll data/candidates.json data/probe_queue.json data/source_stats.json data/node_registry.json; do
             if [ -e "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then

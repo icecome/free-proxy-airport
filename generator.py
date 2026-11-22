@@ -23,6 +23,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
+
+import node_registry as registry
 import urllib.parse
 
 import requests
@@ -99,7 +101,12 @@ DEDUP_ENDPOINT_MAX = int(os.getenv("FREE_PROXY_AIRPORT_DEDUP_ENDPOINT", "1"))
 # How many same-host copies may enter the benchmark per endpoint. 1 would
 # discard the working credential when it is not the first one in source
 # order; 3 covers the common "one host, several UUIDs" pattern cheaply.
-DEDUP_ENDPOINT_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_DEDUP_CANDIDATES", "3"))
+# One credential variant per (host, port). Keeping 3 assumed different
+# credentials on the same endpoint might individually work; the full 2459-node
+# verification showed only 16/2208 endpoints behaved that way, while the extra
+# rows surfaced as visible duplicates in every client (clients dedupe on
+# server:port, so 3 variants over 171 endpoints = ~188 redundant rows).
+DEDUP_ENDPOINT_CANDIDATES = int(os.getenv("FREE_PROXY_AIRPORT_DEDUP_CANDIDATES", "1"))
 # A NAS verdict older than this must not keep pinning the same nodes to the
 # top of the published file; the probe queue itself went 8 days stale and
 # that is why the same handful of nodes shipped forever.
@@ -649,6 +656,26 @@ def collect_proxies() -> tuple[int, list[dict[str, Any]], list[tuple[str, bool]]
         print(f"[PROMOTE] priority={stats[url]['priority']} {url}")
 
     sanitized = sanitize_and_deduplicate(collected)
+
+    # Registry filter: blacklisted nodes are dropped, verified ones are marked
+    # so publication can prefer them.
+    reg = registry.load_registry()
+    before = len(sanitized)
+    kept = []
+    verified_hits = 0
+    for proxy in sanitized:
+        if registry.is_blacklisted(reg, proxy):
+            continue
+        if registry.is_verified(reg, proxy):
+            proxy["_verified_ok"] = True
+            verified_hits += 1
+        kept.append(proxy)
+    sanitized = kept
+    print(
+        f"[SUMMARY] registry: dropped_blacklisted={before - len(sanitized)} "
+        f"verified={verified_hits} candidates={len(sanitized)}"
+    )
+
     if MAX_CANDIDATES > 0 and len(sanitized) > MAX_CANDIDATES:
         print(f"[WARN] limiting candidates from {len(sanitized)} to {MAX_CANDIDATES}")
         sanitized = sanitized[:MAX_CANDIDATES]
@@ -1295,6 +1322,9 @@ def test_single_proxy(controller_url: str, proxy: dict[str, Any]) -> ProxyMetric
     region = detect_region(name)
     score = health_score(name, latency, region, 0.0,
                          float(proxy.get("_source_priority", 1.0) or 1.0))
+    if proxy.get("_verified_ok"):
+        # locally proven to tunnel real traffic from CN: keep it above the cap
+        score += 1000.0
     return ProxyMetric(proxy=proxy, latency=latency, region=region, health_score=score)
 
 

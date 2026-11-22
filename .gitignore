@@ -1,6 +1,12 @@
-.history/
+﻿.history/
 __pycache__/
 # Local diagnostics / rollback snapshots (not published)
 out/
 _bak-*/
 *.pyc
+.tools/
+_*.txt
+_*.log
+_*.json
+verify_report.json
+verify_full.json
