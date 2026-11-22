@@ -1,0 +1,101 @@
+{
+ "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml": {
+  "history": [
+   63
+  ],
+  "dead_streak": 0,
+  "last_count": 63,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/V2Ray.yml": {
+  "history": [
+   628
+  ],
+  "dead_streak": 0,
+  "last_count": 628,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml": {
+  "history": [
+   1193
+  ],
+  "dead_streak": 0,
+  "last_count": 1193,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/bily1258-design/beimi/main/output/clash.yaml": {
+  "history": [
+   751
+  ],
+  "dead_streak": 0,
+  "last_count": 751,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/chenzhihan1751-cyber/node-sub-zixf/main/sub/v2ray.txt": {
+  "history": [
+   726
+  ],
+  "dead_streak": 0,
+  "last_count": 726,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/cheshi888/freesub-v2/main/output/clash.yaml": {
+  "history": [
+   722
+  ],
+  "dead_streak": 0,
+  "last_count": 722,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/meroseem/acaesub/main/output/clash.yaml": {
+  "history": [
+   343
+  ],
+  "dead_streak": 0,
+  "last_count": 343,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/lucas8864/freesub/main/output/clash.yaml": {
+  "history": [
+   461
+  ],
+  "dead_streak": 0,
+  "last_count": 461,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/clash.yaml": {
+  "history": [
+   119
+  ],
+  "dead_streak": 0,
+  "last_count": 119,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ },
+ "https://raw.githubusercontent.com/v2raynnodes/clashfree/main/clash.yaml": {
+  "history": [
+   1
+  ],
+  "dead_streak": 0,
+  "last_count": 1,
+  "updated_at": 1795347716,
+  "priority": 1.0
+ },
+ "https://raw.githubusercontent.com/v2raynnodes/v2rayfree/main/v2ray.txt": {
+  "history": [
+   50
+  ],
+  "dead_streak": 0,
+  "last_count": 50,
+  "updated_at": 1795347716,
+  "priority": 1.2
+ }
+}
