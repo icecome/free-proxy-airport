@@ -7,237 +7,189 @@ unified-delay: true
 tcp-concurrent: true
 global-client-fingerprint: chrome
 generated-by: free-proxy-airport-v7.1
-generated-at: '2026-11-22T14:20:36.035880+00:00'
+generated-at: '2026-11-22T14:34:03.828654+00:00'
 proxies:
+- name: 🇺🇸 美国 (United States) 668 - xiaohe
+  server: 188.114.99.137
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🇩🇪DE_41|207KB/s|M003-260806
+  type: vless
+  server: 170.114.45.6
+  port: 80
+  uuid: f028d829-249a-4692-b45f-1b4cde8ef0c7
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.com
+- type: vless
+  name: '[free18#044] 🇨🇭_瑞士 (12)'
+  server: 185.18.250.2
+  port: 443
+  uuid: 10997f19-2951-4a9b-a26f-611a6bd72d02
+  udp: true
+  tls: true
+  servername: worker3.sicoro1729.workers.dev
+  sni: worker3.sicoro1729.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+- name: vless-1828374447
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  sni: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 590 - xiaohe
+  server: 104.19.70.201
+  port: 443
+  udp: true
+  type: trojan
+  password: 1vkFHbQX_gN1U8V8jVc
+  sni: mhpanel.kigaping.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+- name: 🇩🇪DE_35|103KB/s|M003-260806
+  type: vless
+  server: support.zoom.us
+  port: 80
+  uuid: f028d829-249a-4692-b45f-1b4cde8ef0c7
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.com
+- name: 🇺🇸US_133|314KB/s|R002-260618
+  type: socks5
+  server: 216.132.114.27
+  port: 62000
+  password: Snp1ZmlKNjI6NzViUG9SY0I=
+- name: 🇺🇸 美国 (United States) 20 - xiaohe
+  server: 38.91.100.16
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
 - name: 🇺🇸US_27|490KB/s|S001-260618
   type: socks5
   server: 69.55.49.177
   port: 38182
   password: Og==
-- name: '[freeSub#001] D🔴🇸🇬hos_dokng.com_731ac5ff'
-  password: '8888'
-  port: 1080
-  server: 47.236.168.243
-  type: socks5
-  username: '8888'
-- name: '[freeSub#104] A🟢🇹🇭res_dokng.com_021435aa'
-  password: YlRoWvE0dL_cUqS94wPeKnA4
-  port: 62000
-  server: 87.84.49.245
-  type: socks5
-  username: ks878449260d
-- name: '[freeSub#107] A🟢🇲🇽res[📺🐙🔍]_dokng.com_6938d0ba'
-  password: KsPAxZGn
-  port: 42000
-  server: 94.194.166.52
-  type: socks5
-  username: userLRgK
-- name: '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
-  password: l1tlrdx52v
-  port: 62000
-  server: 66.253.2.69
-  type: socks5
-  username: u_rb1dba2
-- name: '[freeSub#114] A🟢🇲🇽res[📺]_dokng.com_9b6eb0d6'
-  password: 2j7CCZQb
-  port: 62000
-  server: 94.194.164.203
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: rVkkraqT
-  x-toolall-mihomo: true
-- name: '[freeSub#120] A🟢🇲🇽res_dokng.com_f20cb370'
-  password: lcFa8dTH
-  port: 62000
-  server: 94.194.165.96
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: QyVdo5ks
-  x-toolall-mihomo: true
-- name: '[freeSub#128] C🟠🇲🇽hos_dokng.com_d02e3829'
-  password: sZnD8GTz
-  port: 42000
-  server: 144.225.47.158
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  type: socks5
-  udp: true
-  username: DJy1T0dt
-  x-toolall-mihomo: true
-- name: '[freeSub#136] C🟠🇲🇽hos_dokng.com_12126395'
-  password: sZnD8GTz
-  port: 42000
-  server: 144.225.47.106
-  type: socks5
-  username: DJy1T0dt
-- name: '[freeSub#146] C🟠🇲🇽hos_dokng.com_d123f47b'
-  password: sZnD8GTz
-  port: 42000
-  server: 144.225.47.68
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: DJy1T0dt
-  x-toolall-mihomo: true
-- name: '[freeSub#158] D🔴🇵🇭hos_dokng.com_dffdda48'
-  password: s6a1j38q
-  port: 42000
-  server: 103.18.230.88
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: uv4oakg5
-  x-toolall-mihomo: true
-- name: '[freeSub#167] U⚪🇰🇷ukn_dokng.com_418b38c8'
-  port: 1090
-  server: 121.169.46.116
-  type: socks5
-- client-fingerprint: firefox
-  name: '[freeSub#171] A🟢🇳🇱res[🤖🔮📺🎵]_dokng.com_2e8886fe'
-  network: tcp
-  packet-encoding: xudp
+- name: 🇺🇸 美国 | USA 6
+  server: sparkling-gadabout.quick-cdn.net
   port: 443
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: '361d0dd59c70516f'
-  server: 196.196.148.85
-  servername: 5d0319t.nl7.h1clayd.click
-  tls: true
   type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: 5b79e8a94241
-  name: '[freeSub#175] A🟢🇳🇱res[🤖💬🔮🧩]_dokng.com_1e276af8'
-  network: grpc
+  uuid: 172f27e4-ba6f-4744-a0eb-7bf15e89ae6c
+  tls: true
+  servername: sparkling-gadabout.quick-cdn.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: sparkling-gadabout.quick-cdn.net
+  udp: true
+- name: 🇺🇸 美国 (United States) 363 - xiaohe
+  server: guanwang.awsno.com
   port: 443
-  reality-opts:
-    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
-    short-id: '50a749f0eccb628c'
-  server: 196.245.52.183
-  servername: 15b171g.nl7.h1clayd.click
+  udp: true
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: guanwang.awsno.com
   skip-cert-verify: false
-  sni: 15b171g.nl7.h1clayd.click
-  tls: true
-  type: vless
-  udp: true
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: 99f2107b03f8
-  name: '[freeSub#180] C🟠🇺🇸hos[🤖🔮🧩📺]_dokng.com_e49a43e6'
-  network: grpc
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- name: 🇯🇵 日本 (Japan) 507 - xiaohe
+  server: 172.105.203.15
   port: 443
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: 'bd8f712209a9c283'
-  server: 153.56.230.6
-  servername: 0592efg.us8.h1clayd.click
-  tls: true
+  udp: true
   type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: 99f2107b03f8
-  name: '[freeSub#186] C🟠🇺🇸hos[🤖💬🔮🎮]_dokng.com_52af43bb'
-  network: grpc
+  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
+  tls: true
+  reality-opts:
+    public-key: HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA
+    short-id: '0784b134'
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 499 - xiaohe
+  server: 172.104.86.181
   port: 443
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: 'bd8f712209a9c283'
-  server: 162.35.101.177
-  servername: 0592efg.us8.h1clayd.click
-  tls: true
+  udp: true
   type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- name: '[freeSub#203] D🔴🇮🇹hos_dokng.com_c59918d2'
-  password: 'null'
-  port: 9050
-  server: 45.61.129.165
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  tls: true
+  reality-opts:
+    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
+    short-id: 'c8559ca1'
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: '[zhuhaiuk#013] JP - zhuhai.uk'
   type: socks5
-  username: 'null'
-- name: '[freeSub#205] A🟢🇹🇭res_dokng.com_8be67b1a'
-  password: YlRoWvE0dL_cUqS94wPeKnA4
-  port: 62000
-  server: 87.84.49.140
-  type: socks5
-  username: ks878449260d
-- name: '[freeSub#207] D🔴🇰🇷hos_dokng.com_e6634bb5'
-  port: 1080
-  server: 183.106.215.208
-  type: socks5
-- name: '[freeSub#208] D🔴🇫🇷hos_dokng.com_7e0187d9'
-  password: Zn5mR7vA
-  port: 42000
-  server: 144.56.22.78
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  type: socks5
-  udp: true
-  username: L8wP3kQx
-  x-toolall-mihomo: true
-- name: '[freeSub#218] A🟢🇧🇷res_dokng.com_dbd9f715'
-  password: 0mvrt5jb
-  port: 62000
-  server: 191.7.129.133
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: uwrgfkwg
-  x-toolall-mihomo: true
-- name: '[freeSub#221] A🟢🇹🇭res_dokng.com_d8030385'
-  password: fAgE2jqK
-  port: 42000
-  server: 151.246.108.69
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: h87527jJ
-  x-toolall-mihomo: true
-- name: '[freeSub#224] A🟢🇹🇭res[💬🔮🎵🐙]_dokng.com_da6cca38'
-  password: 1pB7HV6u
-  port: 42000
-  server: 151.246.109.86
-  type: socks5
-  username: AJ3d9gJw
-- name: '[freeSub#226] C🟠🇲🇽hos_dokng.com_445b01af'
-  password: DJy1T0dt
-  port: 42000
-  server: 144.225.47.8
-  type: socks5
-  username: Tek2x6av
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '[freeSub#230] C🟠🇪🇸hos[🤖💬🔮🎮]_dokng.com_c851b7e4'
-  network: tcp
+  server: 101.36.104.46
+  port: 10808
+- name: 🇯🇵 日本 (Japan) 517 - xiaohe
+  server: 198.13.53.39
   port: 443
-  reality-opts:
-    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
-    short-id: '42426c882c5fcd41'
-  server: 196.196.149.81
-  servername: 7aa271t.es1.h1clayd.click
-  tls: true
+  udp: true
   type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  x-toolall-mihomo: true
-- name: '[freeSub#234] C🟠🇲🇽hos_dokng.com_a749b37b'
-  password: DJy1T0dt
-  port: 42000
-  server: 144.225.47.161
+  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
+  tls: true
+  reality-opts:
+    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
+    short-id: '7a7cc838'
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: '[zhuhaiuk#014] JP - zhuhai.uk 02'
   type: socks5
-  username: Tek2x6av
-- name: '[freeSub#236] A🟢🇹🇭res_dokng.com_63f8b36e'
-  password: Ks4Iab43
-  port: 42000
-  server: 82.47.152.151
-  type: socks5
-  username: userLjVB
+  server: 101.36.104.239
+  port: 10808
 - name: '[freeSub#246] D🔴🇯🇵hos_dokng.com_13120a28'
   password: EGJDy5Kg
   port: 42000
@@ -248,233 +200,130 @@ proxies:
   udp: true
   username: paZFN3JA
   x-toolall-mihomo: true
-- name: '[freeSub#253] A🟢🇹🇭res_dokng.com_3254c865'
-  password: ao3W5ZML
-  port: 42000
-  server: 168.222.8.66
-  type: socks5
-  username: JPjarpW3
-- client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 512 - xiaohe
+  server: 45.77.8.233
+  port: 443
+  udp: true
+  type: vless
+  uuid: 242212a6-200b-4c09-b2e5-86a8dd490331
+  tls: true
+  reality-opts:
+    public-key: JSC_NT5_PEEbNCQIJjSSlpwkWWF94o0XAP3iboF6nlY
+    short-id: 'de193635'
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 521 - xiaohe
+  server: 45.76.222.108
+  port: 443
+  udp: true
+  type: vless
+  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
+  tls: true
+  reality-opts:
+    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
+    short-id: 'b5c85d2d'
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 530 - xiaohe
+  server: 149.28.29.156
+  port: 443
+  udp: true
+  type: vless
+  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+  tls: true
+  reality-opts:
+    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+    short-id: 'e535df57'
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇭🇰 香港 | HKG 2
+  server: 116.213.43.43
+  port: 11106
+  type: vless
+  uuid: 2e7bd251-52be-4ffa-b79e-108e1fe07185
+  tls: true
   flow: xtls-rprx-vision
-  name: '[freeSub#255] C🟠🇪🇸hos[💬🔮🎮✈️]_dokng.com_2e5562ed'
-  port: 443
   reality-opts:
-    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
-    short-id: '42426c882c5fcd41'
-  server: 196.196.149.80
-  servername: 7aa271t.es1.h1clayd.click
-  skip-cert-verify: false
-  sni: 7aa271t.es1.h1clayd.click
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  x-toolall-mihomo: true
-- name: '[freeSub#257] A🟢🇹🇭res_dokng.com_bd4cb820'
-  password: VAwyJQX0iKMJiyCw5UVK9wGH
-  port: 42000
-  server: 103.14.164.30
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: route164JIa2CBPxfy
-  x-toolall-mihomo: true
-- name: '[freeSub#258] C🟠🇺🇸hos_dokng.com_54966195'
-  password: kingstar123++
-  port: 62000
-  server: 23.230.200.250
-  type: socks5
-  username: kingstar123
-- name: '[freeSub#262] C🟠🇹🇭hos_dokng.com_5acf8d13'
-  password: KT5hiU8o
-  port: 42000
-  server: 104.234.70.82
-  type: socks5
-  username: rnt2L4XO
-- name: '[freeSub#266] A🟢🇻🇳res_dokng.com_0a65daba'
-  password: jHsK2gqs
-  port: 62000
-  server: 103.184.113.236
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: qT46DZLv
-  x-toolall-mihomo: true
-- name: '[freeSub#268] A🟢🇹🇭res_dokng.com_bc7e86e5'
-  password: zdnivBaI
-  port: 62000
-  server: 109.66.136.194
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: r3ZzP8WW
-  x-toolall-mihomo: true
-- name: '[freeSub#274] A🟢🇹🇭res_dokng.com_bf81894b'
-  password: 1pB7HV6u
-  port: 42000
-  server: 151.246.109.158
-  type: socks5
-  username: AJ3d9gJw
-- client-fingerprint: firefox
-  name: '[freeSub#276] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_72b598f1'
-  port: 443
-  reality-opts:
-    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
-    short-id: 'ba2a3dce62b99092'
-  server: 217.69.174.175
-  servername: 04535dt.us8.h1clayd.click
-  tls: true
-  type: vless
-  udp: true
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- client-fingerprint: firefox
-  name: '[freeSub#282] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_3c052db8'
+    public-key: -13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns
+    short-id: 'da12e31124830d42'
+  servername: www.apple.com
+  client-fingerprint: chrome
   network: tcp
-  port: 443
-  reality-opts:
-    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
-    short-id: 'ba2a3dce62b99092'
-  server: 196.245.52.187
-  servername: 04535dt.us8.h1clayd.click
-  tls: true
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: 99f2107b03f8
-  name: '[freeSub#284] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_5eb446e9'
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: 'bd8f712209a9c283'
-  server: 89.124.122.19
-  servername: 0592efg.us8.h1clayd.click
-  tls: true
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- name: '[freeSub#286] A🟢🇮🇩res_dokng.com_9bb962cb'
-  password: RRWtX6XP
-  port: 62000
-  server: 203.84.138.59
-  sub_tag: R002-260618
-  type: socks5
-  udp: true
-  username: 9tcjLp2W
-  x-toolall-mihomo: true
-- name: '[NoMoreWalls#168] 🇦🇪[www.v2nodes.com] trojan-AE-... #1'
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  port: 20123
-  server: sclass-00.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-- name: '[NoMoreWalls#183] 🇨🇳 CN_87 #1'
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20103
-  server: sclass-01.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
   udp: true
 - name: '[NoMoreWalls#216] 🇭🇰HK_2|1.1MB/s'
   port: 5001
   server: 219.78.223.199
   skip-cert-verify: true
   type: socks5
-- name: '[NoMoreWalls#218] 🇮🇩ID_1|1.5MB/s'
-  password: APJ7RmY9
-  port: 62000
-  server: 202.155.99.212
-  skip-cert-verify: true
+- name: 🇸🇬 新加坡 | SGP 3
+  server: 54.179.142.35
+  port: 8443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  udp: true
+- name: '[freeSub#001] D🔴🇸🇬hos_dokng.com_731ac5ff'
+  password: '8888'
+  port: 1080
+  server: 47.236.168.243
   type: socks5
-  username: gebHTLF6
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: mobile.api.Event
-  name: '[NoMoreWalls#237] 🇷🇺 俄罗斯 | RUS 2'
-  network: grpc
+  username: '8888'
+- name: 🇸🇬 新加坡 (Singapore) 571 - xiaohe
+  server: 139.180.221.53
   port: 443
-  server: 201.51.12.98
-  servername: vps3.nemnogogo.com
-  tls: true
+  udp: true
   type: vless
-  udp: true
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: mobile.api.Event
-  name: '[NoMoreWalls#239] 🇷🇺 俄罗斯 | RUS 4'
-  network: grpc
-  port: 443
-  server: 201.24.116.192
-  servername: vps3.nemnogogo.com
+  uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
   tls: true
-  type: vless
-  udp: true
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-- name: '[zhuhaiuk#004] US - zhuhai.uk 09'
-  type: socks5
-  server: 193.25.215.182
-  port: 22222
-- name: '[zhuhaiuk#013] JP - zhuhai.uk'
-  type: socks5
-  server: 101.36.104.46
-  port: 10808
-- name: '[zhuhaiuk#014] JP - zhuhai.uk 02'
-  type: socks5
-  server: 101.36.104.239
-  port: 10808
-- name: '[zhuhaiuk#016] VN - zhuhai.uk'
-  type: socks5
-  server: 221.133.22.195
-  port: 62000
-  username: KUs4xRXd
-  password: 480w0Yy4
-- type: vless
-  name: '[free18#304] 🇪🇪_爱沙尼亚 (8)'
-  server: 7aa271t.es1.h1clayd.click
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: 7aa271t.es1.h1clayd.click
-  sni: 7aa271t.es1.h1clayd.click
-  skip-cert-verify: false
+  reality-opts:
+    public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
+    short-id: '2f6f6f87'
+  servername: itunes.apple.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
-    short-id: '42426c882c5fcd41'
-- type: vless
-  name: '[free18#314] 🇸🇨_塞舌尔 (18)'
-  server: 196.196.148.177
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇭🇰 中国香港 (Hong Kong) 582 - xiaohe
+  server: leviko-hk4795.shopingggg.ir
+  port: 31001
   udp: true
-  tls: true
-  servername: 4935e4t.de25.h1clayd.click
-  sni: 4935e4t.de25.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: '6976d670818644cc'
-- name: '🇳🇱 荷兰 | NLD #3'
   type: vless
-  server: 48.102.205.89
-  port: 22444
-  uuid: a9ff24d3-f308-4e72-acb9-a76062583837
-  tls: true
-  sni: fontanka.ru
+  uuid: 12a4f736-2238-49ee-831f-5516f15cc951
   flow: xtls-rprx-vision
-  client-fingerprint: firefox
+  tls: true
+  reality-opts:
+    public-key: lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY
+    short-id: '39793bc4708abbbb'
+  servername: mensura.cdn-apple.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 | SGP 2
+  server: 54.179.142.35
+  port: 443
+  type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 100 Mbps
+  down: 200 Mbps
 - name: 🇺🇸 美国 (United States) 224 - xiaohe
   server: 107.191.58.86
   port: 443
@@ -492,6 +341,12 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
+- name: '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
+  password: l1tlrdx52v
+  port: 62000
+  server: 66.253.2.69
+  type: socks5
+  username: u_rb1dba2
 - name: 🇺🇸 美国 (United States) 243 - xiaohe
   server: 172.233.129.172
   port: 443
@@ -543,23 +398,821 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 499 - xiaohe
-  server: 172.104.86.181
+- name: 🇺🇸 美国 | USA 3
+  server: 43.110.39.161
   port: 443
-  udp: true
   type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  uuid: da39704f-79b2-460e-b77f-8d12397b3112
   tls: true
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: 'c8559ca1'
-  servername: itunes.apple.com
+    public-key: OsXk2qNUNsQsjMHAx6z6GdVflb0gD5AI8izM5W_J_00
+    short-id: 'db9af76e455811d0'
+  servername: www.apple.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: 🇺🇸US_136|437KB/s|M003-260806
+  type: vmess
+  server: 107.150.19.24
+  port: 54321
+  uuid: 2659ef8a-3456-48f8-95fe-08b82d3f4984
+  alterId: 0
+  cipher: auto
+  tls: false
+- name: 🇺🇸 美国 | USA
+  server: vless.cloudxzw2027.ccwu.cc
+  port: 443
+  type: vless
+  uuid: 2f12e5b5-6ce7-47ab-88b9-6110c1a3fc60
+  tls: true
+  servername: vless.cloudxzw2027.ccwu.cc
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /xzw
     headers:
-      Host: itunes.apple.com
+      Host: vless.cloudxzw2027.ccwu.cc
+  udp: true
+- name: '[freeSub#258] C🟠🇺🇸hos_dokng.com_54966195'
+  password: kingstar123++
+  port: 62000
+  server: 23.230.200.250
+  type: socks5
+  username: kingstar123
+- client-fingerprint: edge
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
+  name: '[freeSub#186] C🟠🇺🇸hos[🤖💬🔮🎮]_dokng.com_52af43bb'
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: 'bd8f712209a9c283'
+  server: 162.35.101.177
+  servername: 0592efg.us8.h1clayd.click
+  tls: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  x-toolall-mihomo: true
+- name: 🇺🇸 美国 | USA 5
+  server: a2dgus.supertoolify.com
+  port: 443
+  type: trojan
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  sni: a2dgus.supertoolify.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国 (United States) 656 - xiaohe
+  server: 31.76.3.52
+  port: 443
+  udp: true
+  type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  tls: true
+  servername: payablemeta.cleanfoodshop.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /media/ws/
+- client-fingerprint: edge
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
+  name: '[freeSub#180] C🟠🇺🇸hos[🤖🔮🧩📺]_dokng.com_e49a43e6'
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: 'bd8f712209a9c283'
+  server: 153.56.230.6
+  servername: 0592efg.us8.h1clayd.click
+  tls: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  x-toolall-mihomo: true
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
+  name: '[freeSub#284] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_5eb446e9'
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: 'bd8f712209a9c283'
+  server: 89.124.122.19
+  servername: 0592efg.us8.h1clayd.click
+  tls: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  x-toolall-mihomo: true
+- client-fingerprint: firefox
+  name: '[freeSub#282] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_3c052db8'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: 'ba2a3dce62b99092'
+  server: 196.245.52.187
+  servername: 04535dt.us8.h1clayd.click
+  tls: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  x-toolall-mihomo: true
+- client-fingerprint: firefox
+  name: '[freeSub#276] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_72b598f1'
+  port: 443
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: 'ba2a3dce62b99092'
+  server: 217.69.174.175
+  servername: 04535dt.us8.h1clayd.click
+  tls: true
+  type: vless
+  udp: true
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  x-toolall-mihomo: true
+- name: 🇺🇸 美国 (United States) 621 - xiaohe
+  server: 179.254.115.111
+  port: 443
+  udp: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: 'ba2a3dce62b99092'
+  servername: 04535dt.us8.h1clayd.click
+  client-fingerprint: edge
+- name: '[zhuhaiuk#004] US - zhuhai.uk 09'
+  type: socks5
+  server: 193.25.215.182
+  port: 22222
+- name: 🇲🇽MX_2|220KB/s|R002-260618
+  type: socks5
+  server: 72.57.228.30
+  port: 62000
+  password: VUJYaWNoMEs6VnZVQUZpMkU=
+- name: '[freeSub#107] A🟢🇲🇽res[📺🐙🔍]_dokng.com_6938d0ba'
+  password: KsPAxZGn
+  port: 42000
+  server: 94.194.166.52
+  type: socks5
+  username: userLRgK
+- name: '[freeSub#114] A🟢🇲🇽res[📺]_dokng.com_9b6eb0d6'
+  password: 2j7CCZQb
+  port: 62000
+  server: 94.194.164.203
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: rVkkraqT
+  x-toolall-mihomo: true
+- name: '[freeSub#120] A🟢🇲🇽res_dokng.com_f20cb370'
+  password: lcFa8dTH
+  port: 62000
+  server: 94.194.165.96
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: QyVdo5ks
+  x-toolall-mihomo: true
+- name: '[freeSub#226] C🟠🇲🇽hos_dokng.com_445b01af'
+  password: DJy1T0dt
+  port: 42000
+  server: 144.225.47.8
+  type: socks5
+  username: Tek2x6av
+- name: '[freeSub#234] C🟠🇲🇽hos_dokng.com_a749b37b'
+  password: DJy1T0dt
+  port: 42000
+  server: 144.225.47.161
+  type: socks5
+  username: Tek2x6av
+- name: 🇹🇼 🇨🇳 台湾 | TWN 2
+  server: 161.114.15.215
+  port: 30502
+  type: trojan
+  password: 5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm
+  sni: www.cloudflare.com
+  skip-cert-verify: true
+  udp: true
+- name: '[freeSub#136] C🟠🇲🇽hos_dokng.com_12126395'
+  password: sZnD8GTz
+  port: 42000
+  server: 144.225.47.106
+  type: socks5
+  username: DJy1T0dt
+- name: ❓Other_89|252KB/s|M003-260806
+  type: ss
+  server: 147.224.251.204
+  port: 50356
+  cipher: 2022-blake3-chacha20-poly1305
+  password: ZF5zVVjNvtcTkEWiK1sNAzCVZB+Hgu9hHzeOdjBoKMQ=
+- name: '[freeSub#128] C🟠🇲🇽hos_dokng.com_d02e3829'
+  password: sZnD8GTz
+  port: 42000
+  server: 144.225.47.158
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  type: socks5
+  udp: true
+  username: DJy1T0dt
+  x-toolall-mihomo: true
+- name: '[freeSub#146] C🟠🇲🇽hos_dokng.com_d123f47b'
+  password: sZnD8GTz
+  port: 42000
+  server: 144.225.47.68
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: DJy1T0dt
+  x-toolall-mihomo: true
+- name: '[freeSub#203] D🔴🇮🇹hos_dokng.com_c59918d2'
+  password: 'null'
+  port: 9050
+  server: 45.61.129.165
+  type: socks5
+  username: 'null'
+- name: 🇳🇱NL_61|577KB/s|B007-260618
+  type: vless
+  server: 94.241.172.107
+  port: 443
+  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+  tls: true
+  sni: 94.241.172.107
+  client-fingerprint: chrome
+- name: 🇳🇱NL_85|215KB/s|M003-260806
+  type: vless
+  server: 212.192.3.63
+  port: 9543
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  tls: true
+  sni: storage.yandexcloud.net
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+- name: 🇨🇿 捷克 (Czech) 367 - xiaohe
+  server: 195.133.93.179
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇨🇾 塞浦路斯 (Cyprus) 504 - xiaohe
+  server: 132.243.242.40
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: chrome
+- name: 🇫🇷FR_6|1.3MB/s
+  type: vless
+  server: 62.210.24.143
+  port: 32202
+  uuid: 28148be2-61a7-4f36-8adb-030cc9f82bd0
+  tls: true
+  sni: www.amazon.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: bGe_-nAtOq6_w_2mv6pcmD8RzJP65Tti-vyMP2hAwDc
+    short-id: 'f57d8f26'
+- name: 🇳🇱NL_73|271KB/s|S001-260618
+  type: socks5
+  server: 185.145.99.41
+  port: 1080
+  password: dGVzdDEyMzp0ZXN0MTIz
+- name: 🇳🇱NL_84|586KB/s|M003-260806
+  type: vless
+  server: 212.192.3.113
+  port: 9543
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  tls: true
+  sni: storage.yandexcloud.net
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+- name: 🇩🇪 德国 | DEU 7
+  server: 179.254.166.168
+  port: 443
+  type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KxfzsDIYTVadr9WuSIA50_uOGvRc314DJ9xWKDviWjs
+    short-id: '0f673feb52601022'
+  servername: de.superspidy.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: 🇳🇱 荷兰 (Netherlands) 376 - xiaohe
+  server: 132.243.242.115
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '[freeSub#230] C🟠🇪🇸hos[🤖💬🔮🎮]_dokng.com_c851b7e4'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: '42426c882c5fcd41'
+  server: 196.196.149.81
+  servername: 7aa271t.es1.h1clayd.click
+  tls: true
+  type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  x-toolall-mihomo: true
+- name: 🇩🇪 德国 | DEU 3
+  server: 144.31.62.22
+  port: 443
+  type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KxfzsDIYTVadr9WuSIA50_uOGvRc314DJ9xWKDviWjs
+    short-id: '0f673feb52601022'
+  servername: de.superspidy.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: 🇩🇪 德国 | DEU 10
+  server: 64.188.106.170
+  port: 443
+  type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KxfzsDIYTVadr9WuSIA50_uOGvRc314DJ9xWKDviWjs
+    short-id: '0f673feb52601022'
+  servername: de.superspidy.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: 🇨🇿 捷克 (Czech) 375 - xiaohe
+  server: 195.133.93.227
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 613 - xiaohe
+  server: 37.221.76.116
+  port: 2090
+  udp: true
+  type: vless
+  uuid: f131d292-d3c2-42b3-bcea-f9712c31b303
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
+    short-id: 'bb472a184677af64'
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 | DEU
+  server: 189.24.115.57
+  port: 443
+  type: vless
+  uuid: 6741bf3d-8a92-45f1-8fb2-4a456b1c8be3
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: AhDERBTHDZpZw7mNp8ZQTGtO4QzQxJdXC--msHTQHnA
+    short-id: '2261e95185893b80'
+  servername: www.apple.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: 🇩🇪 德国 | DEU 12
+  server: 179.254.166.170
+  port: 443
+  type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KxfzsDIYTVadr9WuSIA50_uOGvRc314DJ9xWKDviWjs
+    short-id: '0f673feb52601022'
+  servername: de.superspidy.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[freeSub#255] C🟠🇪🇸hos[💬🔮🎮✈️]_dokng.com_2e5562ed'
+  port: 443
+  reality-opts:
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: '42426c882c5fcd41'
+  server: 196.196.149.80
+  servername: 7aa271t.es1.h1clayd.click
+  skip-cert-verify: false
+  sni: 7aa271t.es1.h1clayd.click
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  x-toolall-mihomo: true
+- name: 🇩🇪 德国 (Germany) 222 - xiaohe
+  server: 47.91.74.232
+  port: 443
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+- name: 🇪🇸 西班牙 (Spain) 237 - xiaohe
+  server: 5.188.181.201
+  port: 9003
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: JdmRK9gMEqFgs8nP
+- name: 🇪🇸ES_1|443KB/s|M001-260618
+  type: ss
+  server: 5.188.181.201
+  port: 9027
+  cipher: aes-256-cfb
+  password: EXN3S3eQpjE7EJu8
+- name: 🇩🇪 德国 (Germany) 400 - xiaohe
+  server: 191.217.215.228
+  port: 2096
+  udp: true
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  tls: true
+  servername: st3b6e5.rumedia-cdn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: st3b6e5.rumedia-cdn.com
+- name: 🇮🇶 IQ 627 - xiaohe
+  server: 79.182.70.220
+  port: 443
+  udp: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  reality-opts:
+    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
+    short-id: '50a749f0eccb628c'
+  servername: 15b171g.nl7.h1clayd.click
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 5b79e8a94241
+- name: 🇩🇪 德国 | DEU 9
+  server: 177.1.187.186
+  port: 443
+  type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KxfzsDIYTVadr9WuSIA50_uOGvRc314DJ9xWKDviWjs
+    short-id: '0f673feb52601022'
+  servername: de.superspidy.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: 🇪🇸ES_3|328KB/s|M001-260618
+  type: ss
+  server: 5.188.181.201
+  port: 9025
+  cipher: aes-256-cfb
+  password: XPtzA9sCug3SPR4c
+- name: 🇵🇱PL_19|257KB/s|B007-260618
+  type: vless
+  server: 144.31.4.18
+  port: 443
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  tls: true
+  sni: marginbirch.cleanfoodshop.org
+  network: ws
+  ws-opts:
+    path: /media/ws/
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 335 - xiaohe
+  server: 188.116.27.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: f3d543c5-f41b-46d7-85f8-d6f3ccefe280
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mprwTEsQ9nJ78qG7BJskAWXaVfDxeMHBkQHbReVfMnc
+    short-id: '1174'
+  servername: www.sony.co.uk
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 | POL
+  server: 191.217.253.12
+  port: 443
+  type: vless
+  uuid: 6dd17e9f-5b7c-466d-a53a-7c30f5dc8338
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: 'db04ce8bdb8900f1'
+  servername: 191.217.253.12
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: 🇸🇪SE_6|564KB/s|M003-260806
+  type: vless
+  server: 88.216.129.84
+  port: 443
+  uuid: 9986b4e5-58dd-4360-8c58-d6b9c86584e2
+  tls: true
+  sni: reeltiles.com
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 0MrhgrveImRyxFaC9Q11Mm4-oN38uFlFFt4UnmGrxRo
+    short-id: '041a595c72d82db0'
+- name: 🇩🇪 德国 (Germany) 412 - xiaohe
+  server: 146.103.40.91
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 525 - xiaohe
+  server: 79.182.70.192
+  port: 443
+  udp: true
+  type: vless
+  uuid: 26843758-24de-4f76-b5d0-624038e353c4
+  tls: true
+  reality-opts:
+    public-key: xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4
+    short-id: 'c71118d9399fb8c2'
+  servername: 15d7fft.nl11.h1clayd.click
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 657 - xiaohe
+  server: 147.45.221.225
+  port: 443
+  udp: true
+  type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  tls: true
+  servername: nl.lucheeebezlimitnoekino.stream
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /media/ws/
+- name: 🇩🇪 德国 | DEU 5
+  server: 87.82.59.60
+  port: 837
+  type: vless
+  uuid: d8b42cd5-b149-4356-9e61-444444444444
+  tls: false
+  network: tcp
+  udp: true
+- name: 🇩🇪 德国 (Germany) 501 - xiaohe
+  server: 146.103.43.70
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇫🇮FI_2|315KB/s|M003-260806
+  type: vless
+  server: 107.181.151.128
+  port: 443
+  uuid: 8cc7d0fc-1b83-4ee3-b51d-8a03a9b19435
+  tls: true
+  sni: www.microsoft.com
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
+    short-id: '87174b37ce3b'
+- name: 🇵🇱PL_12|784KB/s|M001-260618
+  type: ss
+  server: 217.30.10.70
+  port: 9045
+  cipher: aes-256-cfb
+  password: Lp27rqyJq72bZsqX
+- name: 🇵🇱 波兰 (Poland) 261 - xiaohe
+  server: 217.30.10.70
+  port: 9011
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: M3t2ZEQcMGRWBjRa
+- name: 🇩🇪 德国 (Germany) 394 - xiaohe
+  server: 146.103.41.14
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇦🇱 AL 459 - xiaohe
+  server: 31.171.152.222
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 9a597d68-6688-4046-bf24-a5a541e115e0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU
+    short-id: 'f8d0271b4b5f9efc'
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 568 - xiaohe
+  server: hysteria.udpgw.com
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: HowdyHysteria2023w0W
+  sni: sni-here.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HysteriaHowdy
+  up: 100 Mbps
+  down: 200 Mbps
+- name: 🇩🇪 德国 | DEU 16
+  server: 144.31.119.69
+  port: 443
+  type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: gi2oD1AwSK4qShGQSnxkcZHa8Lj12GNsAHfMcuKkAjE
+    short-id: 'b86f68318eceac87'
+  servername: fi.superspidy.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: 🇮🇹IT_11|198KB/s|A004-260618
+  type: ss
+  server: 91.201.65.122
+  port: 9092
+  cipher: aes-256-cfb
+  password: TyNkGmp9hs6eGpDK
+- name: 🇩🇪 德国 (Germany) 409 - xiaohe
+  server: 132.243.242.216
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 | RUS 3
+  server: 168.113.253.178
+  port: 443
+  type: vless
+  uuid: aea0ed55-4e5e-0001-a4fe-5d626d914a9f
+  tls: true
+  servername: uzndiuvzvqqljdyhzs.fcloudservices.site
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 5b79e8a94241
+  name: '[freeSub#175] A🟢🇳🇱res[🤖💬🔮🧩]_dokng.com_1e276af8'
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
+    short-id: '50a749f0eccb628c'
+  server: 196.245.52.183
+  servername: 15b171g.nl7.h1clayd.click
+  skip-cert-verify: false
+  sni: 15b171g.nl7.h1clayd.click
+  tls: true
+  type: vless
+  udp: true
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  x-toolall-mihomo: true
+- name: 🇷🇺 俄罗斯 (Russia) 670 - xiaohe
+  server: 212.233.90.78
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9548ef84-b54d-41dc-b17c-9da21d52ba82
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ
+    short-id: '2c6df23e'
+  servername: birch-ledger.justext.space
+  client-fingerprint: firefox
+- name: 🇮🇹IT_6|1.9MB/s|A004-260618
+  type: ss
+  server: 91.201.65.122
+  port: 9053
+  cipher: aes-256-cfb
+  password: SBM7R883jBmnqe6C
+- name: 🇧🇬 保加利亚 (Bulgaria) 353 - xiaohe
+  server: 213.183.63.60
+  port: 9029
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: dU3DSNS8wYPXzEKw
+- name: 🇱🇹LT_2|330KB/s|A004-260618
+  type: ss
+  server: 195.238.126.20
+  port: 9086
+  cipher: aes-256-cfb
+  password: 37Z4TFCYhfxcpc9Q
+- name: 🇳🇱NL_83|2.0MB/s|M003-260806
+  type: vless
+  server: 132.243.242.246
+  port: 9543
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  tls: true
+  sni: storage.yandexcloud.net
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+- name: 🇱🇹 立陶宛 (Lithuania) 365 - xiaohe
+  server: 195.238.126.20
+  port: 9045
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: Lp27rqyJq72bZsqX
+- name: 🇫🇷 法国 (France) 452 - xiaohe
+  server: 195.216.169.229
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 502 - xiaohe
   server: 193.233.89.130
   port: 8443
@@ -574,91 +1227,218 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: 🇯🇵 日本 (Japan) 507 - xiaohe
-  server: 172.105.203.15
+- name: 🇳🇱 荷兰 | NLD 3
+  server: 144.31.233.43
+  port: 443
+  type: vless
+  uuid: 85b8b4a4-d9c6-4357-a016-3a3ee04bf984
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 2Z-6I998RgBzmWr4rmHMkk8FRv0SLPvn798GLXdZ31A
+    short-id: '4c3ec2e687a31391'
+  servername: nl.superspidy.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: '[freeSub#218] A🟢🇧🇷res_dokng.com_dbd9f715'
+  password: 0mvrt5jb
+  port: 62000
+  server: 191.7.129.133
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: uwrgfkwg
+  x-toolall-mihomo: true
+- name: 🇷🇺 俄罗斯 | RUS 2
+  server: 201.51.12.98
+  port: 443
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: mobile.api.Event
+  udp: true
+- name: ❓Other_97|216KB/s|M003-260806
+  type: vless
+  server: alphafooter.newbuzideas.org
+  port: 443
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  tls: true
+  sni: alphafooter.newbuzideas.org
+  network: ws
+  ws-opts:
+    path: /media/ws/
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 497 - xiaohe
+  server: 201.51.11.65
   port: 443
   udp: true
   type: vless
-  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA
-    short-id: '0784b134'
-  servername: itunes.apple.com
+    public-key: GiDgVRVYrTkv1mZJeFVWkr736Iey2kqLM6L0eUbffV8
+  servername: absolute-disaster.org
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 517 - xiaohe
-  server: 198.13.53.39
-  port: 443
+- name: 🇳🇱 荷兰 (Netherlands) 518 - xiaohe
+  server: 212.192.3.222
+  port: 9543
   udp: true
   type: vless
-  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
-    short-id: '7a7cc838'
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 521 - xiaohe
-  server: 45.76.222.108
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 | RUS
+  server: 201.24.116.192
   port: 443
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: mobile.api.Event
+  udp: true
+- name: 🇱🇹LT_1|157KB/s|A004-260618
+  type: ss
+  server: 195.238.126.20
+  port: 9068
+  cipher: aes-256-cfb
+  password: mwgRg9hRq3b4Qnwb
+- name: 🇷🇺RU_4|300KB/s|M003-260806
+  type: vless
+  server: 109.107.189.69
+  port: 8443
+  uuid: cfd6ce74-f4c5-4815-bba4-2fd0fa77bf4e
+  tls: true
+  sni: gw-721bd5.dobry.monster
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: q1EhO97gyUBlF7LiAfeAESI0O2Mg95T4yIk7keOnMEE
+    short-id: '0912cc7f28aa26ba'
+- name: 🇷🇺 俄罗斯 (Russia) 442 - xiaohe
+  server: 78.159.245.147
+  port: 445
   udp: true
   type: vless
-  uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
   tls: true
   reality-opts:
-    public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
-    short-id: 'b5c85d2d'
-  servername: itunes.apple.com
+    public-key: VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA
+  servername: passport.yandex.ru
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 530 - xiaohe
-  server: 149.28.29.156
-  port: 443
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇷🇺 俄罗斯 (Russia) 449 - xiaohe
+  server: 176.32.33.126
+  port: 18443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+- name: 🇩🇪 德国 (Germany) 674 - xiaohe
+  server: 194.135.34.118
+  port: 8443
   udp: true
   type: vless
-  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+  uuid: 020f7f86-a559-4366-8d2d-c6f81d6bbe5f
   tls: true
-  reality-opts:
-    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
-    short-id: 'e535df57'
-  servername: itunes.apple.com
-  client-fingerprint: chrome
+  servername: web.hosttcp.fun
+  skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇸🇬 新加坡 (Singapore) 571 - xiaohe
-  server: 139.180.221.53
+    path: /api/v4/media/session
+- client-fingerprint: firefox
+  name: '[freeSub#171] A🟢🇳🇱res[🤖🔮📺🎵]_dokng.com_2e8886fe'
+  network: tcp
+  packet-encoding: xudp
   port: 443
-  udp: true
-  type: vless
-  uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
-  tls: true
   reality-opts:
-    public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
-    short-id: '2f6f6f87'
-  servername: itunes.apple.com
-  client-fingerprint: chrome
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: '361d0dd59c70516f'
+  server: 196.196.148.85
+  servername: 5d0319t.nl7.h1clayd.click
+  tls: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  x-toolall-mihomo: true
+- type: vless
+  name: '[free18#314] 🇸🇨_塞舌尔 (18)'
+  server: 196.196.148.177
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: 4935e4t.de25.h1clayd.click
+  sni: 4935e4t.de25.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: '6976d670818644cc'
+- name: 🇳🇱 荷兰 | NLD 5
+  server: 31.177.111.136
+  port: 443
+  type: vless
+  uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
+  tls: true
+  alpn:
+  - h2
+  servername: q075gi2cms.schoolbag.top
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /ws
+    path: /collector/runtime/channel/open
     headers:
-      Host: itunes.apple.com
+      Host: q075gi2cms.schoolbag.top
+  udp: true
+- name: 🇩🇪DE_30|108KB/s|M003-260806
+  type: vless
+  server: 4935e4t.de25.h1clayd.click
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  tls: true
+  sni: 4935e4t.de25.h1clayd.click
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: '6976d670818644cc'
+- name: '[NoMoreWalls#183] 🇨🇳 CN_87 #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20103
+  server: sclass-01.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+  udp: true
+- name: '[freeSub#208] D🔴🇫🇷hos_dokng.com_7e0187d9'
+  password: Zn5mR7vA
+  port: 42000
+  server: 144.56.22.78
+  skip-cert-verify: true
+  sub_tag: K001-260618
+  type: socks5
+  udp: true
+  username: L8wP3kQx
+  x-toolall-mihomo: true
 - name: 🇩🇪 德国 (Germany) 112
   server: birchbark.gerqix.online
   port: 443
@@ -672,75 +1452,470 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de7.v1
+- name: 🇩🇪DE_38|527KB/s|M003-260806
+  type: vless
+  server: 132.243.163.125
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  tls: true
+  sni: 4935e4t.de25.h1clayd.click
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: '6976d670818644cc'
+- name: '[freeSub#207] D🔴🇰🇷hos_dokng.com_e6634bb5'
+  port: 1080
+  server: 183.106.215.208
+  type: socks5
+- name: '🇳🇱 荷兰 | NLD #3'
+  type: vless
+  server: 48.102.205.89
+  port: 22444
+  uuid: a9ff24d3-f308-4e72-acb9-a76062583837
+  tls: true
+  sni: fontanka.ru
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+- name: 🇰🇷 韩国 | KOR 2
+  server: 43.155.199.22
+  port: 80
+  type: vmess
+  uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
+  alterId: 0
+  cipher: auto
+  tls: false
+  alpn:
+  - ''
+  skip-cert-verify: true
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+  udp: true
+- name: 🇫🇮FI_3|241KB/s|B007-260618
+  type: vmess
+  server: 185.212.149.7
+  port: 2053
+  uuid: aeb3c019-ae83-4677-af97-846baa787ad5
+  alterId: 0
+  cipher: auto
+  tls: false
+- name: 🇻🇳VN_1|180KB/s|R002-260618
+  type: socks5
+  server: 103.184.113.190
+  port: 62000
+  password: cVQ0NkRaTHY6akhzSzJncXM=
+- name: '[freeSub#158] D🔴🇵🇭hos_dokng.com_dffdda48'
+  password: s6a1j38q
+  port: 42000
+  server: 103.18.230.88
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: uv4oakg5
+  x-toolall-mihomo: true
+- name: '[freeSub#266] A🟢🇻🇳res_dokng.com_0a65daba'
+  password: jHsK2gqs
+  port: 62000
+  server: 103.184.113.236
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: qT46DZLv
+  x-toolall-mihomo: true
+- name: '[zhuhaiuk#016] VN - zhuhai.uk'
+  type: socks5
+  server: 221.133.22.195
+  port: 62000
+  username: KUs4xRXd
+  password: 480w0Yy4
+- name: '[freeSub#286] A🟢🇮🇩res_dokng.com_9bb962cb'
+  password: RRWtX6XP
+  port: 62000
+  server: 203.84.138.59
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: 9tcjLp2W
+  x-toolall-mihomo: true
+- name: '[freeSub#262] C🟠🇹🇭hos_dokng.com_5acf8d13'
+  password: KT5hiU8o
+  port: 42000
+  server: 104.234.70.82
+  type: socks5
+  username: rnt2L4XO
+- name: '[freeSub#253] A🟢🇹🇭res_dokng.com_3254c865'
+  password: ao3W5ZML
+  port: 42000
+  server: 168.222.8.66
+  type: socks5
+  username: JPjarpW3
+- name: '[NoMoreWalls#218] 🇮🇩ID_1|1.5MB/s'
+  password: APJ7RmY9
+  port: 62000
+  server: 202.155.99.212
+  skip-cert-verify: true
+  type: socks5
+  username: gebHTLF6
+- name: '[freeSub#268] A🟢🇹🇭res_dokng.com_bc7e86e5'
+  password: zdnivBaI
+  port: 62000
+  server: 109.66.136.194
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: r3ZzP8WW
+  x-toolall-mihomo: true
+- name: 🇹🇭TH_3|275KB/s|R002-260618
+  type: socks5
+  server: 109.66.136.42
+  port: 62000
+  password: cjNaelA4V1c6emRuaXZCYUk=
+- name: '[NoMoreWalls#168] 🇦🇪[www.v2nodes.com] trojan-AE-... #1'
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20123
+  server: sclass-00.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- name: '[freeSub#104] A🟢🇹🇭res_dokng.com_021435aa'
+  password: YlRoWvE0dL_cUqS94wPeKnA4
+  port: 62000
+  server: 87.84.49.245
+  type: socks5
+  username: ks878449260d
+- name: '[freeSub#257] A🟢🇹🇭res_dokng.com_bd4cb820'
+  password: VAwyJQX0iKMJiyCw5UVK9wGH
+  port: 42000
+  server: 103.14.164.30
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: route164JIa2CBPxfy
+  x-toolall-mihomo: true
+- name: '[freeSub#205] A🟢🇹🇭res_dokng.com_8be67b1a'
+  password: YlRoWvE0dL_cUqS94wPeKnA4
+  port: 62000
+  server: 87.84.49.140
+  type: socks5
+  username: ks878449260d
+- name: 🇮🇩 印尼 | IDN
+  server: i1tr.mateflora.com
+  port: 443
+  type: trojan
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  sni: i1tr.mateflora.com
+  skip-cert-verify: true
+  udp: true
+- name: '[freeSub#236] A🟢🇹🇭res_dokng.com_63f8b36e'
+  password: Ks4Iab43
+  port: 42000
+  server: 82.47.152.151
+  type: socks5
+  username: userLjVB
+- name: 🇹🇭TH_5|315KB/s|S001-260618
+  type: socks5
+  server: 87.84.49.206
+  port: 62000
+  password: a3M4Nzg0NDkyNjBkOllsUm9XdkUwZExfY1VxUzk0d1BlS25BNA==
+- name: '[freeSub#221] A🟢🇹🇭res_dokng.com_d8030385'
+  password: fAgE2jqK
+  port: 42000
+  server: 151.246.108.69
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: h87527jJ
+  x-toolall-mihomo: true
+- name: '[freeSub#274] A🟢🇹🇭res_dokng.com_bf81894b'
+  password: 1pB7HV6u
+  port: 42000
+  server: 151.246.109.158
+  type: socks5
+  username: AJ3d9gJw
+- name: ❓Other_96|372KB/s|M003-260806
+  type: vless
+  server: swself2.yandex-api.com
+  port: 443
+  uuid: 2b81c772-78c2-49d7-ac3f-537b654bc53e
+  tls: true
+  sni: smotret.tv
+  network: grpc
+  client-fingerprint: edge
+  reality-opts:
+    public-key: KQASJC-erEvv8cgBbvJRMfHq0Z0TApsQUNtdSwl0YQY
+    short-id: '8f3e9c4b1a8d6e21'
+- name: 🇫🇮 芬兰 (Finland) 662 - xiaohe
+  server: webdisk.jaggyslawa.org
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8cc7d0fc-1b83-4ee3-b51d-8a03a9b19435
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
+    short-id: '87174b37ce3b'
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+- name: '[freeSub#224] A🟢🇹🇭res[💬🔮🎵🐙]_dokng.com_da6cca38'
+  password: 1pB7HV6u
+  port: 42000
+  server: 151.246.109.86
+  type: socks5
+  username: AJ3d9gJw
+- name: 🇫🇷FR_20|338KB/s|M003-260806
+  type: vless
+  server: suh.cryptofront.uk
+  port: 80
+  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: suh.cryptofront.uk
+- name: 🇩🇪DE_45|544KB/s|M003-260806
+  type: vless
+  server: leviko-de6156.shopingggg.ir
+  port: 443
+  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+  tls: true
+  sni: o685y.save-node.com
+  network: ws
+  ws-opts:
+    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
+    headers:
+      Host: o685y.save-node.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 576 - xiaohe
+  server: 511.150333.xyz
+  port: 21004
+  udp: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '2df2bd9d8366cef1'
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- type: vless
+  name: '[free18#304] 🇪🇪_爱沙尼亚 (8)'
+  server: 7aa271t.es1.h1clayd.click
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: 7aa271t.es1.h1clayd.click
+  sni: 7aa271t.es1.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: '42426c882c5fcd41'
+- name: 🇩🇪 德国 (Germany) 655 - xiaohe
+  server: 146.103.41.6
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: '123abcdf'
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 | DEU 2
+  server: 92.5.156.71
+  port: 59924
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: DW0wW0DWgRaAr1uQT7T+gvWkAmxO9kXizNTG9fCFVLo=
+  udp: true
+- name: 🇷🇺 俄罗斯 | RUS 5
+  server: 91.132.190.161
+  port: 443
+  type: vless
+  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  flow: xtls-rprx-vision
+  servername: 171.22.183.166
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
 proxy-groups:
 - name: AUTO-FAST
   type: url-test
   proxies:
+  - 🇺🇸 美国 (United States) 668 - xiaohe
+  - 🇩🇪DE_41|207KB/s|M003-260806
+  - '[free18#044] 🇨🇭_瑞士 (12)'
+  - vless-1828374447
+  - 🇩🇪 德国 (Germany) 590 - xiaohe
+  - 🇩🇪DE_35|103KB/s|M003-260806
+  - 🇺🇸US_133|314KB/s|R002-260618
+  - 🇺🇸 美国 (United States) 20 - xiaohe
   - 🇺🇸US_27|490KB/s|S001-260618
-  - '[freeSub#001] D🔴🇸🇬hos_dokng.com_731ac5ff'
-  - '[freeSub#104] A🟢🇹🇭res_dokng.com_021435aa'
-  - '[freeSub#107] A🟢🇲🇽res[📺🐙🔍]_dokng.com_6938d0ba'
-  - '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
-  - '[freeSub#114] A🟢🇲🇽res[📺]_dokng.com_9b6eb0d6'
-  - '[freeSub#120] A🟢🇲🇽res_dokng.com_f20cb370'
-  - '[freeSub#128] C🟠🇲🇽hos_dokng.com_d02e3829'
-  - '[freeSub#136] C🟠🇲🇽hos_dokng.com_12126395'
-  - '[freeSub#146] C🟠🇲🇽hos_dokng.com_d123f47b'
-  - '[freeSub#158] D🔴🇵🇭hos_dokng.com_dffdda48'
-  - '[freeSub#167] U⚪🇰🇷ukn_dokng.com_418b38c8'
-  - '[freeSub#171] A🟢🇳🇱res[🤖🔮📺🎵]_dokng.com_2e8886fe'
-  - '[freeSub#175] A🟢🇳🇱res[🤖💬🔮🧩]_dokng.com_1e276af8'
-  - '[freeSub#180] C🟠🇺🇸hos[🤖🔮🧩📺]_dokng.com_e49a43e6'
-  - '[freeSub#186] C🟠🇺🇸hos[🤖💬🔮🎮]_dokng.com_52af43bb'
-  - '[freeSub#203] D🔴🇮🇹hos_dokng.com_c59918d2'
-  - '[freeSub#205] A🟢🇹🇭res_dokng.com_8be67b1a'
-  - '[freeSub#207] D🔴🇰🇷hos_dokng.com_e6634bb5'
-  - '[freeSub#208] D🔴🇫🇷hos_dokng.com_7e0187d9'
-  - '[freeSub#218] A🟢🇧🇷res_dokng.com_dbd9f715'
-  - '[freeSub#221] A🟢🇹🇭res_dokng.com_d8030385'
-  - '[freeSub#224] A🟢🇹🇭res[💬🔮🎵🐙]_dokng.com_da6cca38'
-  - '[freeSub#226] C🟠🇲🇽hos_dokng.com_445b01af'
-  - '[freeSub#230] C🟠🇪🇸hos[🤖💬🔮🎮]_dokng.com_c851b7e4'
-  - '[freeSub#234] C🟠🇲🇽hos_dokng.com_a749b37b'
-  - '[freeSub#236] A🟢🇹🇭res_dokng.com_63f8b36e'
-  - '[freeSub#246] D🔴🇯🇵hos_dokng.com_13120a28'
-  - '[freeSub#253] A🟢🇹🇭res_dokng.com_3254c865'
-  - '[freeSub#255] C🟠🇪🇸hos[💬🔮🎮✈️]_dokng.com_2e5562ed'
-  - '[freeSub#257] A🟢🇹🇭res_dokng.com_bd4cb820'
-  - '[freeSub#258] C🟠🇺🇸hos_dokng.com_54966195'
-  - '[freeSub#262] C🟠🇹🇭hos_dokng.com_5acf8d13'
-  - '[freeSub#266] A🟢🇻🇳res_dokng.com_0a65daba'
-  - '[freeSub#268] A🟢🇹🇭res_dokng.com_bc7e86e5'
-  - '[freeSub#274] A🟢🇹🇭res_dokng.com_bf81894b'
-  - '[freeSub#276] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_72b598f1'
-  - '[freeSub#282] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_3c052db8'
-  - '[freeSub#284] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_5eb446e9'
-  - '[freeSub#286] A🟢🇮🇩res_dokng.com_9bb962cb'
-  - '[NoMoreWalls#168] 🇦🇪[www.v2nodes.com] trojan-AE-... #1'
-  - '[NoMoreWalls#183] 🇨🇳 CN_87 #1'
-  - '[NoMoreWalls#216] 🇭🇰HK_2|1.1MB/s'
-  - '[NoMoreWalls#218] 🇮🇩ID_1|1.5MB/s'
-  - '[NoMoreWalls#237] 🇷🇺 俄罗斯 | RUS 2'
-  - '[NoMoreWalls#239] 🇷🇺 俄罗斯 | RUS 4'
-  - '[zhuhaiuk#004] US - zhuhai.uk 09'
+  - 🇺🇸 美国 | USA 6
+  - 🇺🇸 美国 (United States) 363 - xiaohe
+  - 🇯🇵 日本 (Japan) 507 - xiaohe
+  - 🇯🇵 日本 (Japan) 499 - xiaohe
   - '[zhuhaiuk#013] JP - zhuhai.uk'
+  - 🇯🇵 日本 (Japan) 517 - xiaohe
   - '[zhuhaiuk#014] JP - zhuhai.uk 02'
-  - '[zhuhaiuk#016] VN - zhuhai.uk'
-  - '[free18#304] 🇪🇪_爱沙尼亚 (8)'
-  - '[free18#314] 🇸🇨_塞舌尔 (18)'
-  - '🇳🇱 荷兰 | NLD #3'
+  - '[freeSub#246] D🔴🇯🇵hos_dokng.com_13120a28'
+  - 🇯🇵 日本 (Japan) 512 - xiaohe
+  - 🇯🇵 日本 (Japan) 521 - xiaohe
+  - 🇯🇵 日本 (Japan) 530 - xiaohe
+  - 🇭🇰 香港 | HKG 2
+  - '[NoMoreWalls#216] 🇭🇰HK_2|1.1MB/s'
+  - 🇸🇬 新加坡 | SGP 3
+  - '[freeSub#001] D🔴🇸🇬hos_dokng.com_731ac5ff'
+  - 🇸🇬 新加坡 (Singapore) 571 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 582 - xiaohe
+  - 🇸🇬 新加坡 | SGP 2
   - 🇺🇸 美国 (United States) 224 - xiaohe
+  - '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
   - 🇺🇸 美国 (United States) 243 - xiaohe
   - 🇺🇸 美国 (United States) 251 - xiaohe
   - 🇺🇸 美国 (United States) 252 - xiaohe
-  - 🇯🇵 日本 (Japan) 499 - xiaohe
+  - 🇺🇸 美国 | USA 3
+  - 🇺🇸US_136|437KB/s|M003-260806
+  - 🇺🇸 美国 | USA
+  - '[freeSub#258] C🟠🇺🇸hos_dokng.com_54966195'
+  - '[freeSub#186] C🟠🇺🇸hos[🤖💬🔮🎮]_dokng.com_52af43bb'
+  - 🇺🇸 美国 | USA 5
+  - 🇺🇸 美国 (United States) 656 - xiaohe
+  - '[freeSub#180] C🟠🇺🇸hos[🤖🔮🧩📺]_dokng.com_e49a43e6'
+  - '[freeSub#284] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_5eb446e9'
+  - '[freeSub#282] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_3c052db8'
+  - '[freeSub#276] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_72b598f1'
+  - 🇺🇸 美国 (United States) 621 - xiaohe
+  - '[zhuhaiuk#004] US - zhuhai.uk 09'
+  - 🇲🇽MX_2|220KB/s|R002-260618
+  - '[freeSub#107] A🟢🇲🇽res[📺🐙🔍]_dokng.com_6938d0ba'
+  - '[freeSub#114] A🟢🇲🇽res[📺]_dokng.com_9b6eb0d6'
+  - '[freeSub#120] A🟢🇲🇽res_dokng.com_f20cb370'
+  - '[freeSub#226] C🟠🇲🇽hos_dokng.com_445b01af'
+  - '[freeSub#234] C🟠🇲🇽hos_dokng.com_a749b37b'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - '[freeSub#136] C🟠🇲🇽hos_dokng.com_12126395'
+  - ❓Other_89|252KB/s|M003-260806
+  - '[freeSub#128] C🟠🇲🇽hos_dokng.com_d02e3829'
+  - '[freeSub#146] C🟠🇲🇽hos_dokng.com_d123f47b'
+  - '[freeSub#203] D🔴🇮🇹hos_dokng.com_c59918d2'
+  - 🇳🇱NL_61|577KB/s|B007-260618
+  - 🇳🇱NL_85|215KB/s|M003-260806
+  - 🇨🇿 捷克 (Czech) 367 - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 504 - xiaohe
+  - 🇫🇷FR_6|1.3MB/s
+  - 🇳🇱NL_73|271KB/s|S001-260618
+  - 🇳🇱NL_84|586KB/s|M003-260806
+  - 🇩🇪 德国 | DEU 7
+  - 🇳🇱 荷兰 (Netherlands) 376 - xiaohe
+  - '[freeSub#230] C🟠🇪🇸hos[🤖💬🔮🎮]_dokng.com_c851b7e4'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 10
+  - 🇨🇿 捷克 (Czech) 375 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 613 - xiaohe
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 12
+  - '[freeSub#255] C🟠🇪🇸hos[💬🔮🎮✈️]_dokng.com_2e5562ed'
+  - 🇩🇪 德国 (Germany) 222 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 237 - xiaohe
+  - 🇪🇸ES_1|443KB/s|M001-260618
+  - 🇩🇪 德国 (Germany) 400 - xiaohe
+  - 🇮🇶 IQ 627 - xiaohe
+  - 🇩🇪 德国 | DEU 9
+  - 🇪🇸ES_3|328KB/s|M001-260618
+  - 🇵🇱PL_19|257KB/s|B007-260618
+  - 🇳🇱 荷兰 (Netherlands) 335 - xiaohe
+  - 🇵🇱 波兰 | POL
+  - 🇸🇪SE_6|564KB/s|M003-260806
+  - 🇩🇪 德国 (Germany) 412 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 525 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 657 - xiaohe
+  - 🇩🇪 德国 | DEU 5
+  - 🇩🇪 德国 (Germany) 501 - xiaohe
+  - 🇫🇮FI_2|315KB/s|M003-260806
+  - 🇵🇱PL_12|784KB/s|M001-260618
+  - 🇵🇱 波兰 (Poland) 261 - xiaohe
+  - 🇩🇪 德国 (Germany) 394 - xiaohe
+  - 🇦🇱 AL 459 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 568 - xiaohe
+  - 🇩🇪 德国 | DEU 16
+  - 🇮🇹IT_11|198KB/s|A004-260618
+  - 🇩🇪 德国 (Germany) 409 - xiaohe
+  - 🇷🇺 俄罗斯 | RUS 3
+  - '[freeSub#175] A🟢🇳🇱res[🤖💬🔮🧩]_dokng.com_1e276af8'
+  - 🇷🇺 俄罗斯 (Russia) 670 - xiaohe
+  - 🇮🇹IT_6|1.9MB/s|A004-260618
+  - 🇧🇬 保加利亚 (Bulgaria) 353 - xiaohe
+  - 🇱🇹LT_2|330KB/s|A004-260618
+  - 🇳🇱NL_83|2.0MB/s|M003-260806
+  - 🇱🇹 立陶宛 (Lithuania) 365 - xiaohe
+  - 🇫🇷 法国 (France) 452 - xiaohe
   - 🇨🇭 瑞士 (Switzerland) 502 - xiaohe
-  - 🇯🇵 日本 (Japan) 507 - xiaohe
-  - 🇯🇵 日本 (Japan) 517 - xiaohe
-  - 🇯🇵 日本 (Japan) 521 - xiaohe
-  - 🇯🇵 日本 (Japan) 530 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 571 - xiaohe
+  - 🇳🇱 荷兰 | NLD 3
+  - '[freeSub#218] A🟢🇧🇷res_dokng.com_dbd9f715'
+  - 🇷🇺 俄罗斯 | RUS 2
+  - ❓Other_97|216KB/s|M003-260806
+  - 🇳🇱 荷兰 (Netherlands) 497 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 518 - xiaohe
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇱🇹LT_1|157KB/s|A004-260618
+  - 🇷🇺RU_4|300KB/s|M003-260806
+  - 🇷🇺 俄罗斯 (Russia) 442 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 449 - xiaohe
+  - 🇩🇪 德国 (Germany) 674 - xiaohe
+  - '[freeSub#171] A🟢🇳🇱res[🤖🔮📺🎵]_dokng.com_2e8886fe'
+  - '[free18#314] 🇸🇨_塞舌尔 (18)'
+  - 🇳🇱 荷兰 | NLD 5
+  - 🇩🇪DE_30|108KB/s|M003-260806
+  - '[NoMoreWalls#183] 🇨🇳 CN_87 #1'
+  - '[freeSub#208] D🔴🇫🇷hos_dokng.com_7e0187d9'
   - 🇩🇪 德国 (Germany) 112
+  - 🇩🇪DE_38|527KB/s|M003-260806
+  - '[freeSub#207] D🔴🇰🇷hos_dokng.com_e6634bb5'
+  - '🇳🇱 荷兰 | NLD #3'
+  - 🇰🇷 韩国 | KOR 2
+  - 🇫🇮FI_3|241KB/s|B007-260618
+  - 🇻🇳VN_1|180KB/s|R002-260618
+  - '[freeSub#158] D🔴🇵🇭hos_dokng.com_dffdda48'
+  - '[freeSub#266] A🟢🇻🇳res_dokng.com_0a65daba'
+  - '[zhuhaiuk#016] VN - zhuhai.uk'
+  - '[freeSub#286] A🟢🇮🇩res_dokng.com_9bb962cb'
+  - '[freeSub#262] C🟠🇹🇭hos_dokng.com_5acf8d13'
+  - '[freeSub#253] A🟢🇹🇭res_dokng.com_3254c865'
+  - '[NoMoreWalls#218] 🇮🇩ID_1|1.5MB/s'
+  - '[freeSub#268] A🟢🇹🇭res_dokng.com_bc7e86e5'
+  - 🇹🇭TH_3|275KB/s|R002-260618
+  - '[NoMoreWalls#168] 🇦🇪[www.v2nodes.com] trojan-AE-... #1'
+  - '[freeSub#104] A🟢🇹🇭res_dokng.com_021435aa'
+  - '[freeSub#257] A🟢🇹🇭res_dokng.com_bd4cb820'
+  - '[freeSub#205] A🟢🇹🇭res_dokng.com_8be67b1a'
+  - 🇮🇩 印尼 | IDN
+  - '[freeSub#236] A🟢🇹🇭res_dokng.com_63f8b36e'
+  - 🇹🇭TH_5|315KB/s|S001-260618
+  - '[freeSub#221] A🟢🇹🇭res_dokng.com_d8030385'
+  - '[freeSub#274] A🟢🇹🇭res_dokng.com_bf81894b'
+  - ❓Other_96|372KB/s|M003-260806
+  - 🇫🇮 芬兰 (Finland) 662 - xiaohe
+  - '[freeSub#224] A🟢🇹🇭res[💬🔮🎵🐙]_dokng.com_da6cca38'
+  - 🇫🇷FR_20|338KB/s|M003-260806
+  - 🇩🇪DE_45|544KB/s|M003-260806
+  - 🇨🇦 加拿大 (Canada) 576 - xiaohe
+  - '[free18#304] 🇪🇪_爱沙尼亚 (8)'
+  - 🇩🇪 德国 (Germany) 655 - xiaohe
+  - 🇩🇪 德国 | DEU 2
+  - 🇷🇺 俄罗斯 | RUS 5
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -750,7 +1925,9 @@ proxy-groups:
 - name: HK-POOL
   type: url-test
   proxies:
+  - 🇭🇰 香港 | HKG 2
   - '[NoMoreWalls#216] 🇭🇰HK_2|1.1MB/s'
+  - 🇭🇰 中国香港 (Hong Kong) 582 - xiaohe
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -760,12 +1937,13 @@ proxy-groups:
 - name: JP-POOL
   type: url-test
   proxies:
-  - '[freeSub#246] D🔴🇯🇵hos_dokng.com_13120a28'
-  - '[zhuhaiuk#013] JP - zhuhai.uk'
-  - '[zhuhaiuk#014] JP - zhuhai.uk 02'
-  - 🇯🇵 日本 (Japan) 499 - xiaohe
   - 🇯🇵 日本 (Japan) 507 - xiaohe
+  - 🇯🇵 日本 (Japan) 499 - xiaohe
+  - '[zhuhaiuk#013] JP - zhuhai.uk'
   - 🇯🇵 日本 (Japan) 517 - xiaohe
+  - '[zhuhaiuk#014] JP - zhuhai.uk 02'
+  - '[freeSub#246] D🔴🇯🇵hos_dokng.com_13120a28'
+  - 🇯🇵 日本 (Japan) 512 - xiaohe
   - 🇯🇵 日本 (Japan) 521 - xiaohe
   - 🇯🇵 日本 (Japan) 530 - xiaohe
   url: http://cp.cloudflare.com/generate_204
@@ -777,19 +1955,30 @@ proxy-groups:
 - name: US-POOL
   type: url-test
   proxies:
+  - 🇺🇸 美国 (United States) 668 - xiaohe
+  - 🇺🇸US_133|314KB/s|R002-260618
+  - 🇺🇸 美国 (United States) 20 - xiaohe
   - 🇺🇸US_27|490KB/s|S001-260618
-  - '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
-  - '[freeSub#180] C🟠🇺🇸hos[🤖🔮🧩📺]_dokng.com_e49a43e6'
-  - '[freeSub#186] C🟠🇺🇸hos[🤖💬🔮🎮]_dokng.com_52af43bb'
-  - '[freeSub#258] C🟠🇺🇸hos_dokng.com_54966195'
-  - '[freeSub#276] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_72b598f1'
-  - '[freeSub#282] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_3c052db8'
-  - '[freeSub#284] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_5eb446e9'
-  - '[zhuhaiuk#004] US - zhuhai.uk 09'
+  - 🇺🇸 美国 | USA 6
+  - 🇺🇸 美国 (United States) 363 - xiaohe
   - 🇺🇸 美国 (United States) 224 - xiaohe
+  - '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
   - 🇺🇸 美国 (United States) 243 - xiaohe
   - 🇺🇸 美国 (United States) 251 - xiaohe
   - 🇺🇸 美国 (United States) 252 - xiaohe
+  - 🇺🇸 美国 | USA 3
+  - 🇺🇸US_136|437KB/s|M003-260806
+  - 🇺🇸 美国 | USA
+  - '[freeSub#258] C🟠🇺🇸hos_dokng.com_54966195'
+  - '[freeSub#186] C🟠🇺🇸hos[🤖💬🔮🎮]_dokng.com_52af43bb'
+  - 🇺🇸 美国 | USA 5
+  - 🇺🇸 美国 (United States) 656 - xiaohe
+  - '[freeSub#180] C🟠🇺🇸hos[🤖🔮🧩📺]_dokng.com_e49a43e6'
+  - '[freeSub#284] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_5eb446e9'
+  - '[freeSub#282] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_3c052db8'
+  - '[freeSub#276] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_72b598f1'
+  - 🇺🇸 美国 (United States) 621 - xiaohe
+  - '[zhuhaiuk#004] US - zhuhai.uk 09'
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -799,19 +1988,36 @@ proxy-groups:
 - name: AI-POOL
   type: url-test
   proxies:
+  - 🇺🇸 美国 (United States) 668 - xiaohe
+  - 🇩🇪DE_41|207KB/s|M003-260806
+  - '[free18#044] 🇨🇭_瑞士 (12)'
+  - vless-1828374447
+  - 🇩🇪 德国 (Germany) 590 - xiaohe
+  - 🇩🇪DE_35|103KB/s|M003-260806
+  - 🇺🇸US_133|314KB/s|R002-260618
+  - 🇺🇸 美国 (United States) 20 - xiaohe
   - 🇺🇸US_27|490KB/s|S001-260618
-  - '[freeSub#001] D🔴🇸🇬hos_dokng.com_731ac5ff'
-  - '[freeSub#104] A🟢🇹🇭res_dokng.com_021435aa'
+  - 🇺🇸 美国 | USA 6
+  - 🇺🇸 美国 (United States) 363 - xiaohe
+  - 🇲🇽MX_2|220KB/s|R002-260618
   - '[freeSub#107] A🟢🇲🇽res[📺🐙🔍]_dokng.com_6938d0ba'
-  - '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
   - '[freeSub#114] A🟢🇲🇽res[📺]_dokng.com_9b6eb0d6'
   - '[freeSub#120] A🟢🇲🇽res_dokng.com_f20cb370'
-  - '[freeSub#128] C🟠🇲🇽hos_dokng.com_d02e3829'
+  - '[freeSub#226] C🟠🇲🇽hos_dokng.com_445b01af'
+  - '[freeSub#234] C🟠🇲🇽hos_dokng.com_a749b37b'
+  - 🇺🇸 美国 (United States) 224 - xiaohe
+  - '[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
   - '[freeSub#136] C🟠🇲🇽hos_dokng.com_12126395'
+  - ❓Other_89|252KB/s|M003-260806
+  - '[freeSub#128] C🟠🇲🇽hos_dokng.com_d02e3829'
   - '[freeSub#146] C🟠🇲🇽hos_dokng.com_d123f47b'
-  - '[freeSub#158] D🔴🇵🇭hos_dokng.com_dffdda48'
-  - '[freeSub#167] U⚪🇰🇷ukn_dokng.com_418b38c8'
-  - '[freeSub#171] A🟢🇳🇱res[🤖🔮📺🎵]_dokng.com_2e8886fe'
+  - 🇺🇸 美国 (United States) 243 - xiaohe
+  - 🇺🇸 美国 (United States) 251 - xiaohe
+  - 🇺🇸 美国 (United States) 252 - xiaohe
+  - '[freeSub#203] D🔴🇮🇹hos_dokng.com_c59918d2'
+  - 🇺🇸 美国 | USA 3
+  - 🇺🇸US_136|437KB/s|M003-260806
   url: http://cp.cloudflare.com/generate_204
   interval: 180
   tolerance: 50
