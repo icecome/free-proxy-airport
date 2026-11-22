@@ -72,6 +72,9 @@ def record_verified(reg: dict, proxy: dict, detail: str = "", now: float | None 
         "type": proxy.get("type"),
         "at": int(ts),
         "detail": detail[:120],
+        # keep the full config so publishing never has to re-match against
+        # upstream sources (a source may drop the node while it still works)
+        "proxy": {k: v for k, v in proxy.items() if not k.startswith("_")},
     }
     # a passing node is no longer failed
     reg["failed"].pop(node_key(proxy), None)

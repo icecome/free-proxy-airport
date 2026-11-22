@@ -657,6 +657,26 @@ def collect_proxies() -> tuple[int, list[dict[str, Any]], list[tuple[str, bool]]
 
     sanitized = sanitize_and_deduplicate(collected)
 
+    # Verified nodes from the registry are authoritative: they were proven to
+    # tunnel real traffic from CN, and a source dropping them does not make
+    # them unusable. Inject any registry entry that is still fresh.
+    reg_pre = registry.load_registry()
+    have = {registry.node_key(p) for p in sanitized}
+    injected = 0
+    for key, entry in reg_pre.get("verified", {}).items():
+        proxy = entry.get("proxy")
+        if not proxy or key in have:
+            continue
+        candidate = dict(proxy)
+        normalized = normalize_proxy(candidate, 0)
+        if not normalized:
+            continue
+        if registry.is_verified(reg_pre, normalized) and not registry.is_blacklisted(reg_pre, normalized):
+            sanitized.append(normalized)
+            injected += 1
+    if injected:
+        print(f"[SUMMARY] registry: injected {injected} verified nodes missing from sources")
+
     # Registry filter: blacklisted nodes are dropped, verified ones are marked
     # so publication can prefer them.
     reg = registry.load_registry()
