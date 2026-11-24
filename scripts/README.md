@@ -1,44 +1,32 @@
 # 源发现脚本（按需运行，不进 cron）
 
-`generator.py` 只消费 `sources.txt` 里的固定 URL，不会自己找新源。这三个脚本负责"找"，
+`airport/generator.py` 只消费 `sources.txt` 里的固定 URL，不会自己找新源。本目录的脚本负责"找"，
 跑完人工确认后再写进 `sources.txt`。**它们不参与日常订阅生成**，不改动 `output/`。
+
+> 日常流水线（采集 / 体检 / 台账 / 发布）在 `airport/`，不在本目录。
+> 目录职责见 [../documentation/structure.md](../documentation/structure.md)。
 
 ## 脚本
 
 | 脚本 | 作用 |
 |---|---|
+| `_probe_lib.py` | 共用抓取工具：镜像回退、硬性墙钟超时、base64 解码、节点计数、并发包装（私有，下划线前缀） |
 | `discover_github.py` | GitHub Search API 按 15 组关键字翻页，对每个仓库并发探测 14 条订阅路径 |
 | `discover_telegram.py` | 找 Telegram 公开频道，走 `t.me/s/<handle>` 无登录预览抓节点 |
 | `harvest_telegram.py` | 对已确认发节点的频道翻更多页，测订阅 URL 与单体节点 TCP |
 | `check_discovered.py` | 对发现结果做存活复检：能否取到、节点数、TCP 抽样存活率 |
 | `report_candidates.py` | 汇总排序，输出推荐清单（可选 `--append` 写回 `sources.txt`） |
 
-## 本地体检脚本（2026-11-24）
-
-这四个是「已经发出去的 400 条到底还能不能用」的判据，按顺序跑；细节见项目 README。
-
-| 脚本 | 作用 | 产物 |
-|---|---|---|
-| `local_verify.py` | mihomo 批量体检：TCP -> delay -> egress -> 流式测速，四阶段记录死在哪一步 | `out/verify_report.json` |
-| `rescue_pass.py` | 对首轮判死的节点做二次意见：TCP 重试 x3 + sing-box 独立隧道复测 | `out/rescue_report.json` |
-| `apply_verdicts.py` | 报告写进 `data/node_registry.json`（verified 24h / failed IP 7d 域 3d） | `data/node_registry.json` |
-| `publish_verified.py` | 只用 verified 条目重建订阅，凭据级去重，复用 generator 的发布链路 | `output/clash.yaml`、`docs/clash.yaml` |
+## 用法
 
 ```pwsh
-python scripts\local_verify.py --workers 8 --batch 50 --no-registry
-python scripts\rescue_pass.py --workers 16
-python scripts\apply_verdicts.py --apply --extra out\rescue_report.json --extra-authoritative out\confirm_mihomo.json
-python scripts\publish_verified.py --apply
+python scripts\discover_github.py --pages 3 --max-repos 400 --workers 16 --repo-budget 14
+python scripts\check_discovered.py --in data\discovered_github.json --out data\checked_github.json
+python scripts\report_candidates.py            # 只看
+python scripts\report_candidates.py --append   # 直接写进 sources.txt
 ```
 
-## 用法（源发现）
-
-```pwsh
-python scripts/discover_github.py --pages 3 --max-repos 400 --workers 16 --repo-budget 14
-python scripts/check_discovered.py --in data/discovered_github.json --out data/checked_github.json
-python scripts/report_candidates.py            # 只看
-python scripts/report_candidates.py --append   # 直接写进 sources.txt
-```
+默认输出路径由 `airport/paths.py` 锚定仓库根，从任何工作目录跑都落到 `data/`。
 
 ## 踩过的坑（改代码前先看）
 
@@ -60,7 +48,7 @@ python scripts/report_candidates.py --append   # 直接写进 sources.txt
    改成仓库内 8 路并发后降到 8~14 秒。
 
 6. **单引擎判定不能当黑名单依据**（2026-11-24）。55 节点交叉复核里 mihomo 与 sing-box
-   各有 3 个「对方说死、自己说活」；黑名单一条是 7 天（IP），必须过 `rescue_pass.py`。
+   各有 3 个「对方说死、自己说活」；黑名单一条是 7 天（IP），必须过 `airport/rescue_pass.py`。
    另外 mihomo 1.19.34 已删除 `global-client-fingerprint` 配置项（启动日志里报 removed），
    节点要自带 `client-fingerprint`。
 
@@ -74,7 +62,7 @@ python scripts/report_candidates.py --append   # 直接写进 sources.txt
   `@v2raynodes`（13 个代理链接 + 4 个订阅）、`@v2rayfree`（4）、`@nodeshare`（3）、`@freefq`（1 订阅）。
 - 但**当天晚些时候 t.me 连接被阻断**，`harvest_telegram.py` 的翻页复抓未能完成。
   频道内容已存于 `data/discovered_telegram.json`，网络恢复后可直接
-  `python scripts/harvest_telegram.py` 补跑，无需重新发现。
+  `python scripts\harvest_telegram.py` 补跑，无需重新发现。
 - 用搜索引擎反查频道名（Bing/DDG）在此网络下无效：结果页被代理拦截，`t.me/` 命中数为 0。
   目前的频道名来自脚本内置种子列表。
 
@@ -84,3 +72,5 @@ python scripts/report_candidates.py --append   # 直接写进 sources.txt
 - `data/checked_github.json` —— 存活复检结果（20/20 可用）
 - `data/discovered_telegram.json` —— 频道发现结果
 - `data/candidates_report.json` —— 汇总排序
+
+字段含义见 [../documentation/reference/data-files.md](../documentation/reference/data-files.md)。

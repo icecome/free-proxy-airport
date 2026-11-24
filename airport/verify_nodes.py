@@ -22,6 +22,14 @@ Outputs:
 """
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import argparse
 import concurrent.futures
 import json
@@ -35,12 +43,11 @@ import tempfile
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import node_registry as registry
+from airport import node_registry as registry
+from airport import paths
 
-HERE = Path(__file__).resolve().parent
 SING_BOX = next(
-    (p for p in HERE.glob(".tools/sing-box-*/sing-box.exe")), None
+    (p for p in paths.TOOLS_DIR.glob("sing-box-*/sing-box.exe")), None
 )
 EGRESS_URL = "http://ip-api.com/json/?fields=status,country,countryCode,query"
 TLS_TIMEOUT = 6.0
@@ -419,7 +426,7 @@ def main() -> int:
     for stage, n in stages.most_common():
         print(f"  {stage:<8} {n:>5}")
     print(f"\nUSABLE: {len(usable)}/{len(results)} ({100*len(usable)//max(1,len(results))}%)")
-    print(f"report -> {args.out}   names -> verify_alive.txt")
+    print(f"report -> {args.out}   names -> {alive_path}")
     return 0
 
 

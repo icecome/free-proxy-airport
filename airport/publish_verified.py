@@ -24,6 +24,14 @@ Usage:
 """
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import argparse
 import shutil
 import sys
@@ -32,10 +40,11 @@ from pathlib import Path
 
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-import generator as g  # noqa: E402
-import node_registry as registry  # noqa: E402
+from airport import generator as g
+from airport import node_registry as registry
+from airport import paths
+
+ROOT = paths.ROOT
 
 
 # Protocols whose credential identifies the upstream *service*, so the same
@@ -162,8 +171,8 @@ def main() -> int:
             print(f"[INFO] backup {rel} -> {dst.relative_to(ROOT)}")
 
     g.publish(metrics, len(metrics), len(metrics))
-    docs = ROOT / "docs" / "clash.yaml"
-    docs.write_bytes((ROOT / "output" / "clash.yaml").read_bytes())
+    docs = paths.PAGES_PATH
+    docs.write_bytes(paths.OUTPUT_PATH.read_bytes())
     print(f"[INFO] docs/clash.yaml synced ({docs.stat().st_size} bytes)")
 
     data = yaml.safe_load(docs.read_bytes().decode("utf-8"))

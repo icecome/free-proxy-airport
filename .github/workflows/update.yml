@@ -13,7 +13,7 @@ on:
     branches: [main]
     paths:
       - "sources.txt"
-      - "generator.py"
+      - "airport/**"
       - ".github/workflows/update.yml"
 
 permissions:
@@ -54,10 +54,10 @@ jobs:
       - name: Generate Clash subscription
         env:
           # Collection is the only way a stale probe queue ever gets refreshed;
-          # see the Phase A/B deadlock notes in generator.py:main().
+          # see the Phase A/B deadlock notes in airport/generator.py:main().
           FREE_PROXY_AIRPORT_FORCE_COLLECT: "1"
         run: |
-          python generator.py
+          python -m airport.generator
           mkdir -p docs
           cp output/clash.yaml docs/clash.yaml
           touch docs/.nojekyll

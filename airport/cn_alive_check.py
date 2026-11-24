@@ -16,6 +16,14 @@
 """
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import argparse
 import concurrent.futures
 import json

@@ -1,5 +1,13 @@
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import base64
 import gzip
 import hashlib
@@ -24,7 +32,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import quote
 
-import node_registry as registry
+from airport import node_registry as registry
+from airport import paths
 import urllib.parse
 
 import requests
@@ -32,7 +41,7 @@ import yaml
 
 
 VERSION = "v7.1"
-OUTPUT_PATH = Path("output/clash.yaml")
+OUTPUT_PATH = paths.OUTPUT_PATH
 # Health-check target. This URL is embedded in every proxy-group as `url`,
 # so it is probed BY THE CLIENT, from inside mainland China, through each
 # node. gstatic/google generate_204 are TCP-blackholed in CN (measured:
@@ -62,7 +71,7 @@ PROBE_QUEUE_LIMIT = int(os.getenv("FREE_PROXY_AIRPORT_PROBE_QUEUE", "500"))
 # adding a score bonus, which used to pin one frozen set above the 400-node
 # cut line. Kept so old env files do not break; no longer read.
 CN_ALIVE_BOOST = float(os.getenv("FREE_PROXY_AIRPORT_CN_BOOST", "1000.0"))
-CANDIDATES_FILE = Path("data/candidates.json")
+CANDIDATES_FILE = paths.CANDIDATES_FILE
 # How long a cloud-collected candidate set stays valid for phase B.
 CANDIDATES_TTL_SECONDS = 26 * 3600
 SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=4000000"
@@ -115,7 +124,9 @@ CN_ALIVE_FRESH_SECONDS = int(os.getenv("FREE_PROXY_AIRPORT_CN_FRESH", "7200"))
 
 # One subscription URL per line. Lines starting with # are comments.
 # Add a new free source -> append a line. A source that keeps failing -> delete its line.
-SOURCES_FILE = Path(os.getenv("FREE_PROXY_AIRPORT_SOURCES", "sources.txt"))
+# Env override stays relative to the repo root, not to the CWD.
+_sources_override = os.getenv("FREE_PROXY_AIRPORT_SOURCES", "").strip()
+SOURCES_FILE = (Path(_sources_override) if _sources_override else paths.SOURCES_FILE)
 # Legacy fallback list, only used when sources.txt is missing/empty.
 # Kept in sync with sources.txt (2026-11-01 curation): dead sources removed.
 DEFAULT_SOURCES = """\
@@ -539,7 +550,7 @@ def load_source_urls() -> list[str]:
     return urls
 
 
-SOURCE_STATS_FILE = Path("data/source_stats.json")
+SOURCE_STATS_FILE = paths.SOURCE_STATS_FILE
 SOURCE_STATS_TTL_DAYS = 30
 SOURCE_DEAD_STREAK_LIMIT = 3
 
@@ -1858,7 +1869,7 @@ def publish(metrics: list[ProxyMetric], total_nodes: int, candidates: int) -> No
 
 def write_probe_queue(candidates: list[dict[str, Any]]) -> None:
     """Emit the CN-probe queue for the NAS worker (data/probe_queue.json)."""
-    queue_path = Path("data/probe_queue.json")
+    queue_path = paths.PROBE_QUEUE_FILE
     queue_path.parent.mkdir(parents=True, exist_ok=True)
     targets = []
     for proxy in candidates[:PROBE_QUEUE_LIMIT]:
@@ -1886,7 +1897,7 @@ def load_cn_alive() -> dict[str, dict[str, Any]]:
     from admission gate to hint once it stops being fresh.
     """
     global _CN_ALIVE_TS
-    path = Path("data/cn_alive.json")
+    path = paths.CN_ALIVE_FILE
     if not path.exists():
         return {}
     try:

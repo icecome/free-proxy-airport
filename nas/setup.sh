@@ -14,7 +14,7 @@ git log --oneline -3
 git config user.name "nas-probe[bot]"
 git config user.email "nas-probe@users.noreply.github.com"
 git config --global --add safe.directory /workspace
-python3 /workspace/nas_probe.py
+python3 /workspace/airport/nas_probe.py
 echo "probe exit code: $?"
 echo "=== starting loop ==="
 exec sh /workspace/loop.sh

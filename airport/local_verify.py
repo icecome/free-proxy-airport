@@ -30,6 +30,14 @@ Outputs (gitignored, out/ is local diagnostics only):
 """
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import argparse
 import concurrent.futures
 import json
@@ -47,15 +55,15 @@ from urllib.parse import quote
 import requests
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-import node_registry as registry  # noqa: E402
+from airport import node_registry as registry
+from airport import paths
 
+ROOT = paths.ROOT
 ENGINE_ENV = os.getenv("FREE_PROXY_AIRPORT_ENGINE", "").strip()
 ENGINE_CANDIDATES = [
     Path(ENGINE_ENV) if ENGINE_ENV else None,
-    ROOT / ".tools" / "mihomo" / "mihomo.exe",
-    ROOT / ".tools" / "mihomo" / "mihomo",
+    paths.TOOLS_DIR / "mihomo" / "mihomo.exe",
+    paths.TOOLS_DIR / "mihomo" / "mihomo",
 ]
 TEST_URL = "http://cp.cloudflare.com/generate_204"
 SPEED_URL = "https://speed.cloudflare.com/__down?bytes=4000000"
@@ -66,7 +74,7 @@ LATENCY_TIMEOUT_MS = int(os.getenv("FREE_PROXY_AIRPORT_LATENCY_TIMEOUT_MS", "500
 EGRESS_URL = "http://ip-api.com/json/?fields=status,country,countryCode,query"
 DELAY_CONCURRENCY = int(os.getenv("FREE_PROXY_AIRPORT_DELAY_CONCURRENCY", "12"))
 TCP_TIMEOUT = float(os.getenv("FREE_PROXY_AIRPORT_TCP_TIMEOUT", "4"))
-OUT_DIR = ROOT / "out"
+OUT_DIR = paths.OUT_DIR
 
 
 def session() -> requests.Session:
@@ -332,13 +340,13 @@ def run_instance(engine: Path, proxies: list[dict], work_dir: Path, tag: str) ->
 def apply_registry(report_path: Path, dry_run: bool) -> int:
     """Replay a saved report into node_registry (same rules as a live run)."""
     report = json.loads(report_path.read_text(encoding="utf-8"))
-    proxies, _ = dedupe(load_proxies(report.get("source", str(ROOT / "docs" / "clash.yaml"))))
+    proxies, _ = dedupe(load_proxies(report.get("source", str(paths.PAGES_PATH))))
     by_key = {registry.node_key(p): p for p in proxies}
-    reg_path = ROOT / "data" / "node_registry.json"
+    reg_path = paths.REGISTRY_FILE
     if dry_run:
         print("[DRY-RUN] verdicts that would be written:")
     else:
-        backup = ROOT / "data" / f"_node_registry-{time.strftime('%Y%m%d-%H%M%S')}.json"
+        backup = paths.DATA_DIR / f"_node_registry-{time.strftime('%Y%m%d-%H%M%S')}.json"
         if reg_path.exists():
             shutil.copy2(reg_path, backup)
             print(f"[INFO] registry backup -> {backup.name}")
@@ -371,7 +379,7 @@ def apply_registry(report_path: Path, dry_run: bool) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--sub", default=str(ROOT / "docs" / "clash.yaml"))
+    ap.add_argument("--sub", default=str(paths.PAGES_PATH))
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--workers", type=int, default=8, help="mihomo instances in parallel")
     ap.add_argument("--batch", type=int, default=50, help="nodes per instance")
@@ -473,8 +481,8 @@ def main() -> int:
     print(f"report -> {args.out}\nsummary -> {OUT_DIR / 'verify_summary.txt'}")
 
     if not args.no_registry:
-        reg_path = ROOT / "data" / "node_registry.json"
-        backup = ROOT / "data" / f"_node_registry-{time.strftime('%Y%m%d-%H%M%S')}.json"
+        reg_path = paths.REGISTRY_FILE
+        backup = paths.DATA_DIR / f"_node_registry-{time.strftime('%Y%m%d-%H%M%S')}.json"
         if reg_path.exists():
             shutil.copy2(reg_path, backup)
             print(f"[INFO] registry backup -> {backup.name}")

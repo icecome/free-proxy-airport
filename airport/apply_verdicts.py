@@ -21,6 +21,14 @@ Usage:
 """
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import argparse
 import json
 import shutil
@@ -30,9 +38,10 @@ from pathlib import Path
 
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-import node_registry as registry  # noqa: E402
+from airport import node_registry as registry
+from airport import paths
+
+ROOT = paths.ROOT
 
 
 def load_sub(path: Path) -> dict[str, dict]:
@@ -43,14 +52,14 @@ def load_sub(path: Path) -> dict[str, dict]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--primary", default=str(ROOT / "out" / "verify_report.json"),
+    ap.add_argument("--primary", default=str(paths.VERIFY_REPORT),
                     help="mihomo pass report (authoritative)")
     ap.add_argument("--extra", action="append", default=[],
                     help="reports used only as evidence (rescue / cross-check)")
     ap.add_argument("--extra-authoritative", action="append", default=[],
                     help="additional mihomo reports whose OK verdicts also count as verified")
-    ap.add_argument("--sub", default=str(ROOT / "docs" / "clash.yaml"))
-    ap.add_argument("--registry", default=str(ROOT / "data" / "node_registry.json"))
+    ap.add_argument("--sub", default=str(paths.PAGES_PATH))
+    ap.add_argument("--registry", default=str(paths.REGISTRY_FILE))
     ap.add_argument("--apply", action="store_true", help="write the registry (default: dry run)")
     args = ap.parse_args()
 

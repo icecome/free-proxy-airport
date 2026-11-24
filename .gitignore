@@ -1,10 +1,25 @@
-﻿.history/
+# Python
 __pycache__/
-# Local diagnostics / rollback snapshots (not published)
-out/
-_bak-*/
 *.pyc
+.pytest_cache/
+
+# Editors / OS
+.history/
+.DS_Store
+Thumbs.db
+
+# Local scratch: verifier reports, debug dumps, throwaway scripts.
+# NOT a home for anything the project depends on — tests live in tests/.
+out/
+
+# Rollback snapshots taken before destructive edits (R4 in the workspace rules).
+_bak-*/
+
+# Downloaded engines (mihomo / sing-box), ~137 MB. Re-fetch with
+# `python -m airport.local_verify` on first run; see documentation/ops/engines.md.
 .tools/
+
+# Ad-hoc local diagnostics written next to the code they debug
 _*.txt
 _*.log
 _*.json

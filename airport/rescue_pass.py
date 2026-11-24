@@ -27,6 +27,14 @@ Output: out/rescue_report.json
 """
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import argparse
 import concurrent.futures
 import json
@@ -40,10 +48,11 @@ from pathlib import Path
 import requests
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-import node_registry as registry  # noqa: E402
-import verify_nodes as vn  # noqa: E402  (reuses build_singbox_config)
+from airport import node_registry as registry
+from airport import paths
+from airport import verify_nodes as vn  # reuses build_singbox_config
+
+ROOT = paths.ROOT
 
 EGRESS_URL = "http://ip-api.com/json/?fields=status,country,countryCode,query"
 SPEED_URL = "https://speed.cloudflare.com/__down?bytes=4000000"
@@ -199,9 +208,9 @@ def rescue_one(proxy: dict, work_dir: Path, index: int) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--report", default=str(ROOT / "out" / "verify_report.json"))
-    ap.add_argument("--sub", default=str(ROOT / "docs" / "clash.yaml"))
-    ap.add_argument("--out", default=str(ROOT / "out" / "rescue_report.json"))
+    ap.add_argument("--report", default=str(paths.VERIFY_REPORT))
+    ap.add_argument("--sub", default=str(paths.PAGES_PATH))
+    ap.add_argument("--out", default=str(paths.RESCUE_REPORT))
     ap.add_argument("--workers", type=int, default=10)
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
@@ -215,7 +224,7 @@ def main() -> int:
         rejected = rejected[: args.limit]
     print(f"[INFO] first pass rejected {len(rejected)} nodes; retrying TCP x{TCP_ATTEMPTS}")
 
-    work_dir = ROOT / "out" / "rescue"
+    work_dir = paths.OUT_DIR / "rescue"
     work_dir.mkdir(parents=True, exist_ok=True)
     t0 = time.monotonic()
     rows: list[dict] = []

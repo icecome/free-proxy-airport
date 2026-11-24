@@ -11,6 +11,14 @@
 """
 from __future__ import annotations
 
+# Allow `python airport/<module>.py` as well as `python -m airport.<module>`:
+# the script form puts airport/ on sys.path, not the repo root.
+if __package__ in (None, ""):
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+
 import base64
 import concurrent.futures
 import hashlib
@@ -21,10 +29,12 @@ import sys
 import time
 from pathlib import Path
 
-REPO_DIR = Path(__file__).resolve().parent
-QUEUE_FILE = REPO_DIR / "data" / "probe_queue.json"
-RESULT_FILE = REPO_DIR / "data" / "cn_alive.json"
-STATE_FILE = REPO_DIR / "data" / ".probe_state"
+from airport import paths
+
+REPO_DIR = paths.ROOT
+QUEUE_FILE = paths.PROBE_QUEUE_FILE
+RESULT_FILE = paths.CN_ALIVE_FILE
+STATE_FILE = paths.DATA_DIR / ".probe_state"
 
 TIMEOUT_S = 4.0
 WORKERS = 48

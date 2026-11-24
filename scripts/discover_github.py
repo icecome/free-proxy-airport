@@ -20,6 +20,8 @@ import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from airport import paths  # noqa: E402
+
 from scripts._probe_lib import (  # noqa: E402
     count_nodes,
     dump_json,
@@ -168,7 +170,7 @@ def main() -> int:
     ap.add_argument("--sleep", type=float, default=7.0, help="seconds between search calls")
     ap.add_argument("--repo-budget", type=float, default=25.0,
                     help="seconds allowed per repo before giving up")
-    ap.add_argument("--out", default="data/discovered_github.json")
+    ap.add_argument("--out", default=str(paths.DATA_DIR / "discovered_github.json"))
     args = ap.parse_args()
 
     print(f"[1/3] GitHub search: {len(QUERIES)} queries x {args.pages} pages")
@@ -219,7 +221,7 @@ def main() -> int:
 
     known = set()
     try:
-        with open("sources.txt", encoding="utf-8") as fh:
+        with open(paths.SOURCES_FILE, encoding="utf-8") as fh:
             for line in fh:
                 line = line.strip()
                 if line and not line.startswith("#"):

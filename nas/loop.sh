@@ -6,5 +6,5 @@ echo "[probe] loop started, interval=${INTERVAL}s"
 while true; do
   sleep "$INTERVAL" || true
   cd /workspace
-  python3 /app/nas_probe.py 2>&1 || echo "[probe] run failed, will retry next interval"
+  python3 /workspace/airport/nas_probe.py 2>&1 || echo "[probe] run failed, will retry next interval"
 done

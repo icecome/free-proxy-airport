@@ -12,11 +12,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import sys
 import time
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from airport import paths  # noqa: E402
 
 KNOWN = set()
 try:
-    with open("sources.txt", encoding="utf-8") as _fh:
+    with open(paths.SOURCES_FILE, encoding="utf-8") as _fh:
         for _line in _fh:
             _line = _line.strip()
             if _line and not _line.startswith("#"):
@@ -40,9 +46,9 @@ def main() -> int:
     ap.add_argument("--min-nodes", type=int, default=20)
     args = ap.parse_args()
 
-    checked = load("data/checked_github.json") or {"results": []}
-    telegram = load("data/harvested_telegram.json") or {}
-    disc_tg = load("data/discovered_telegram.json") or {}
+    checked = load(paths.DATA_DIR / "checked_github.json") or {"results": []}
+    telegram = load(paths.DATA_DIR / "harvested_telegram.json") or {}
+    disc_tg = load(paths.DATA_DIR / "discovered_telegram.json") or {}
 
     rows = []
     for r in checked.get("results", []):
@@ -96,7 +102,7 @@ def main() -> int:
         print(f"  {r['url']}")
 
     if args.append and picked:
-        with open("sources.txt", "a", encoding="utf-8") as fh:
+        with open(paths.SOURCES_FILE, "a", encoding="utf-8") as fh:
             fh.write(
                 f"\n# === {time.strftime('%Y-%m-%d')} 自动发现 "
                 f"(TCP 抽样存活>={args.min_tcp_pct:.0f}%，节点数>={args.min_nodes}) ===\n"
@@ -105,7 +111,7 @@ def main() -> int:
                 fh.write(f"{r['url']}\n")
         print(f"\nappended {len(picked)} URLs to sources.txt")
 
-    with open("data/candidates_report.json", "w", encoding="utf-8") as fh:
+    with open(paths.DATA_DIR / "candidates_report.json", "w", encoding="utf-8") as fh:
         json.dump({"generated_at": int(time.time()), "rows": rows,
                    "recommended": picked}, fh, ensure_ascii=False, indent=2)
     print("\nwrote data/candidates_report.json")

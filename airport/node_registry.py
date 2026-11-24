@@ -21,7 +21,9 @@ import json
 import re
 from pathlib import Path
 
-REGISTRY_FILE = Path("data/node_registry.json")
+from airport import paths
+
+REGISTRY_FILE = paths.REGISTRY_FILE
 
 VERIFIED_TTL = 24 * 3600        # a "working" node must be re-verified daily
 FAILED_TTL_IP = 7 * 86400       # IP: gateway blocks may lift

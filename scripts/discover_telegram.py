@@ -23,6 +23,8 @@ import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from airport import paths  # noqa: E402
+
 from scripts._probe_lib import (  # noqa: E402
     PROTO_SCHEMES,
     http_get,
@@ -137,7 +139,7 @@ def dedupe(seq):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="data/discovered_telegram.json")
+    ap.add_argument("--out", default=str(paths.DATA_DIR / "discovered_telegram.json"))
     ap.add_argument("--skip-search", action="store_true")
     args = ap.parse_args()
 

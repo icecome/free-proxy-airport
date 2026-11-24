@@ -20,6 +20,8 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from airport import paths  # noqa: E402
+
 from scripts._probe_lib import (  # noqa: E402
     dump_json,
     http_get,
@@ -118,8 +120,8 @@ def fetch_channel(handle: str, pages: int = 3, per_page_sleep: float = 1.2) -> d
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--in", dest="inp", default="data/discovered_telegram.json")
-    ap.add_argument("--out", dest="out", default="data/harvested_telegram.json")
+    ap.add_argument("--in", dest="inp", default=str(paths.DATA_DIR / "discovered_telegram.json"))
+    ap.add_argument("--out", dest="out", default=str(paths.DATA_DIR / "harvested_telegram.json"))
     ap.add_argument("--pages", type=int, default=3)
     args = ap.parse_args()
 
