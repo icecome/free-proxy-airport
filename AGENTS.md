@@ -38,14 +38,10 @@
 ## 2. 目录结构
 
 ```
-airport/          业务库 + 流水线入口（唯一被 import 的代码来源）
-scripts/          源发现脚本（人工、低频，不进流水线）
-tests/            回归测试（纳入版本控制，不依赖网络）
-documentation/    人类文档
-data/             提交的运行时状态
-output/ docs/     订阅产物（两份字节一致）
-nas/              NAS 容器部署脚本（POSIX sh）
-out/ .tools/ _bak-*/   gitignored：草稿、引擎、回滚快照
+airport/       业务库 + 流水线入口      scripts/     源发现（人工、低频）
+tests/         回归测试（纳入版本控制）  documentation/  人类文档
+data/          提交的运行时状态          output/ docs/  订阅产物（两份字节一致）
+nas/           NAS 部署脚本（POSIX sh）  out/ .tools/ _bak-*/   gitignored
 ```
 
 | 目录 | 允许存放 | 禁止存放 |
