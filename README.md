@@ -25,6 +25,41 @@ python out\test_loopback.py
 python out\verify_config.py output\clash.yaml
 ```
 
+## 本地节点体检（2026-11-24 起）
+
+云端 `generator.py` 只按 delay 排序，且采集源在本机常常整段不可达（`raw.githubusercontent.com`
+被 RST）。本地体检把「当前发布列表到底还能不能用」测实，并把结论写回 `data/node_registry.json`：
+
+```pwsh
+# 0) 引擎：mihomo 走 ghproxy.net 镜像下载，落在 .tools/（gitignore 已忽略）
+#    1.19.34 windows-amd64-compatible；sing-box 1.14.4 只作交叉复核
+# 1) 全量体检：TCP -> mihomo delay -> egress 国家/IP -> 流式测速
+python scripts\local_verify.py --workers 8 --batch 50 --no-registry
+# 2) 二次意见：对首轮被判死的节点重试 TCP x3，再用 sing-box 独立复测
+python scripts\rescue_pass.py --workers 16
+# 3) 结论落库：mihomo 判定为准（客户端跑的是 mihomo），sing-box 只作证据
+python scripts\apply_verdicts.py --apply --extra out\rescue_report.json `
+  --extra-authoritative out\confirm_mihomo.json
+# 4) 只用 verified 条目重建订阅（凭据级去重 + 复用 generator 的发布/校验链路）
+python scripts\publish_verified.py --apply
+```
+
+| 脚本 | 作用 | 产物 |
+|---|---|---|
+| `scripts/local_verify.py` | mihomo 批量体检，四阶段记录死在哪一步 | `out/verify_report.json`、`out/verify_summary.txt` |
+| `scripts/rescue_pass.py` | 对首轮判死的节点做二次意见（TCP x3 + sing-box 独立隧道） | `out/rescue_report.json` |
+| `scripts/apply_verdicts.py` | 把报告写进 registry（verified 24h / failed IP 7d 域 3d） | `data/node_registry.json` |
+| `scripts/publish_verified.py` | 只用 verified 条目出订阅，凭据级去重 | `output/clash.yaml`、`docs/clash.yaml` |
+
+**两条实测出来的规则**（2026-11-24，400 节点全量）：
+
+1. **单引擎判定不能当黑名单依据。** 55 节点交叉复核：mihomo 认为 15 个可用、sing-box 认为 16 个，
+   只有 12 个一致 —— 双向各有 3 个「对方说死、自己说活」。所以被判死的节点必须过 `rescue_pass.py`，
+   `apply_verdicts.py` 只把 mihomo 的结论当判决（发布物是 mihomo 配置），sing-box 的「OK」只写成
+   `engine-mismatch` 证据，避免 7 天误杀。
+2. **凭据级去重只对 vmess/vless/trojan/ss 成立。** socks5 的 `password` 常是公共默认值（本次 6 个
+   节点同为 `Og==`），按凭据折叠会把互不相干的家宽出口删掉，所以 socks5/http 一律按 endpoint 认身份。
+
 ## 已修问题（2026-11-10）
 
 | 症状 | 根因 | 修复 |
@@ -49,6 +84,7 @@ python out\verify_config.py output\clash.yaml
 | `FREE_PROXY_AIRPORT_SPEED_ATTEMPTS` | `1` | 每节点下载探测次数 |
 | `FREE_PROXY_AIRPORT_TCP_TIMEOUT_MS` | `2000` | TCP 降级拨测超时 |
 | `FREE_PROXY_AIRPORT_TCP_WORKERS` | `64` | TCP 降级并发数 |
+| `FREE_PROXY_AIRPORT_ENGINE` | 空 | 本地体检用的 mihomo 可执行文件路径；默认 `.tools/mihomo/mihomo.exe` |
 
 ## 产物
 

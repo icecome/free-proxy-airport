@@ -13,7 +13,25 @@
 | `check_discovered.py` | 对发现结果做存活复检：能否取到、节点数、TCP 抽样存活率 |
 | `report_candidates.py` | 汇总排序，输出推荐清单（可选 `--append` 写回 `sources.txt`） |
 
-## 用法
+## 本地体检脚本（2026-11-24）
+
+这四个是「已经发出去的 400 条到底还能不能用」的判据，按顺序跑；细节见项目 README。
+
+| 脚本 | 作用 | 产物 |
+|---|---|---|
+| `local_verify.py` | mihomo 批量体检：TCP -> delay -> egress -> 流式测速，四阶段记录死在哪一步 | `out/verify_report.json` |
+| `rescue_pass.py` | 对首轮判死的节点做二次意见：TCP 重试 x3 + sing-box 独立隧道复测 | `out/rescue_report.json` |
+| `apply_verdicts.py` | 报告写进 `data/node_registry.json`（verified 24h / failed IP 7d 域 3d） | `data/node_registry.json` |
+| `publish_verified.py` | 只用 verified 条目重建订阅，凭据级去重，复用 generator 的发布链路 | `output/clash.yaml`、`docs/clash.yaml` |
+
+```pwsh
+python scripts\local_verify.py --workers 8 --batch 50 --no-registry
+python scripts\rescue_pass.py --workers 16
+python scripts\apply_verdicts.py --apply --extra out\rescue_report.json --extra-authoritative out\confirm_mihomo.json
+python scripts\publish_verified.py --apply
+```
+
+## 用法（源发现）
 
 ```pwsh
 python scripts/discover_github.py --pages 3 --max-repos 400 --workers 16 --repo-budget 14
@@ -28,7 +46,7 @@ python scripts/report_candidates.py --append   # 直接写进 sources.txt
    （`_probe_lib.RAW_MIRRORS`）。注意是 **http** 不是 https —— https 握手会间歇性 reset。
 
 2. **本机 nekobox 的系统代理会把请求变成 5 秒后返回的假 502**，看起来像"所有镜像全挂"。
-   所以 `_probe_lib` 用 `requests` 且 `trust_env=False`，绝不吃系统代理。
+   所以 `_probe_lib` 用 `requests` 且 `trust_env=False`，绝不吃系统代理。本地体检脚本同规。
 
 3. **ghproxy.net 对 404 响应极慢**（实测 19~32 秒）。`requests` 的 read timeout 只约束单次
    socket 读，管不住这种慢速回包，必须用 `http_get_hard()` 的 `future.result(timeout=...)`
@@ -40,6 +58,15 @@ python scripts/report_candidates.py --append   # 直接写进 sources.txt
 
 5. **单仓库的多条路径必须并行探测**。串行时每个 404 吃 19 秒，一个仓库要 3 分钟；
    改成仓库内 8 路并发后降到 8~14 秒。
+
+6. **单引擎判定不能当黑名单依据**（2026-11-24）。55 节点交叉复核里 mihomo 与 sing-box
+   各有 3 个「对方说死、自己说活」；黑名单一条是 7 天（IP），必须过 `rescue_pass.py`。
+   另外 mihomo 1.19.34 已删除 `global-client-fingerprint` 配置项（启动日志里报 removed），
+   节点要自带 `client-fingerprint`。
+
+7. **mihomo 的 delay 接口报 503 不一定是节点坏**。REALITY-over-WS 这类配置 sing-box 能通、
+   mihomo 报 `unexpected status: 404 Not Found` / x509 IP SAN 错误。这类节点记为
+   `engine-mismatch`，不直接拉黑。
 
 ## Telegram 现状（2026-11-23）
 

@@ -1,62 +1,19 @@
 {
  "verified": {
-  "1723832b7d088e38e6ec": {
-   "server": "archive.filnex.baby",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=DE ip=185.126.67.46"
-  },
-  "1f53d1baefb7acb47896": {
-   "server": "cabinet.filnex.baby",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=DE ip=185.126.67.46"
-  },
-  "6aa2b614c60f3922aca1": {
-   "server": "birchbark.gerqix.online",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=DE ip=185.126.67.46",
-   "proxy": {
-    "name": "🇩🇪 德国 (Germany) 112",
-    "server": "birchbark.gerqix.online",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
-    "tls": true,
-    "servername": "birchbark.gerqix.online",
-    "skip-cert-verify": false,
-    "client-fingerprint": "firefox",
-    "network": "grpc",
-    "grpc-opts": {
-     "grpc-service-name": "glush.de7.v1"
-    }
-   }
-  },
-  "2f29d5997c46e786c682": {
-   "server": "31.177.111.136",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=NL ip=212.34.134.203"
-  },
   "29c25c66cfa209229527": {
    "server": "162.35.101.177",
    "port": 443,
    "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=173.214.164.110",
+   "at": 1795491098,
+   "detail": "OK 1694ms 3.38Mbps exit=US",
    "proxy": {
     "client-fingerprint": "edge",
     "grpc-opts": {
      "grpc-service-name": "99f2107b03f8"
     },
-    "name": "[freeSub#186] C🟠🇺🇸hos[🤖💬🔮🎮]_dokng.com_52af43bb",
+    "name": "✅ [freeSub#052] C🟠🇺🇸hos[🤖💬🔮🧩]_dokng.com_379449c0",
     "network": "grpc",
+    "packet-encoding": "xudp",
     "port": 443,
     "reality-opts": {
      "public-key": "cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk",
@@ -74,108 +31,24 @@
    "server": "69.55.49.177",
    "port": 38182,
    "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=69.55.49.177",
+   "at": 1795491098,
+   "detail": "SLOW 1222ms 0.0Mbps exit=US",
    "proxy": {
-    "name": "🇺🇸US_27|490KB/s|S001-260618",
+    "name": "✅ 🇺🇸US_221|1.5MB/s|S001-260618",
     "type": "socks5",
     "server": "69.55.49.177",
     "port": 38182,
     "password": "Og=="
    }
   },
-  "153a4eefac9f2880c2bf": {
-   "server": "195.135.255.98",
-   "port": 1080,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=LV ip=195.135.255.98"
-  },
-  "982dbe71e15645b0b6f8": {
-   "server": "47.251.249.48",
-   "port": 7777,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=47.251.249.48"
-  },
-  "c26bb2b3a58b039a7320": {
-   "server": "48.102.205.89",
-   "port": 22444,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=NL ip=2.27.40.12",
-   "proxy": {
-    "name": "🇳🇱 荷兰 | NLD #3",
-    "type": "vless",
-    "server": "48.102.205.89",
-    "port": 22444,
-    "uuid": "a9ff24d3-f308-4e72-acb9-a76062583837",
-    "tls": true,
-    "sni": "fontanka.ru",
-    "flow": "xtls-rprx-vision",
-    "client-fingerprint": "firefox"
-   }
-  },
-  "e49b93cb144391a9170f": {
-   "server": "216.132.114.27",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=216.132.114.27"
-  },
-  "e4a7163c9ad3beebb62f": {
-   "server": "87.84.49.245",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=87.84.49.245",
-   "proxy": {
-    "name": "[freeSub#104] A🟢🇹🇭res_dokng.com_021435aa",
-    "password": "YlRoWvE0dL_cUqS94wPeKnA4",
-    "port": 62000,
-    "server": "87.84.49.245",
-    "type": "socks5",
-    "username": "ks878449260d"
-   }
-  },
-  "772367c03a2380d0ac88": {
-   "server": "94.194.166.52",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=94.194.166.52",
-   "proxy": {
-    "name": "[freeSub#107] A🟢🇲🇽res[📺🐙🔍]_dokng.com_6938d0ba",
-    "password": "KsPAxZGn",
-    "port": 42000,
-    "server": "94.194.166.52",
-    "type": "socks5",
-    "username": "userLRgK"
-   }
-  },
-  "a41edb453bde0e2ee3b5": {
-   "server": "47.236.168.243",
-   "port": 1080,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=SG ip=47.236.168.243",
-   "proxy": {
-    "name": "[freeSub#001] D🔴🇸🇬hos_dokng.com_731ac5ff",
-    "password": "8888",
-    "port": 1080,
-    "server": "47.236.168.243",
-    "type": "socks5",
-    "username": "8888"
-   }
-  },
   "4bd9774dcdca76f70f10": {
    "server": "66.253.2.69",
    "port": 62000,
    "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=66.253.2.69",
+   "at": 1795491098,
+   "detail": "OK 883ms 6.28Mbps exit=US",
    "proxy": {
-    "name": "[freeSub#112] D🔴🇺🇸hos_dokng.com_a6052a43",
+    "name": "✅ [freeSub#020] D🔴🇺🇸hos_dokng.com_a6052a43",
     "password": "l1tlrdx52v",
     "port": 62000,
     "server": "66.253.2.69",
@@ -183,76 +56,14 @@
     "username": "u_rb1dba2"
    }
   },
-  "d99778b85ba082b26fb2": {
-   "server": "94.194.164.203",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=94.194.164.203",
-   "proxy": {
-    "name": "[freeSub#114] A🟢🇲🇽res[📺]_dokng.com_9b6eb0d6",
-    "password": "2j7CCZQb",
-    "port": 62000,
-    "server": "94.194.164.203",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "rVkkraqT",
-    "x-toolall-mihomo": true
-   }
-  },
-  "48b783a7359db473890b": {
-   "server": "72.57.228.30",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=72.57.228.30"
-  },
-  "eb5929acdbb48ffc19f0": {
-   "server": "94.194.165.96",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=94.194.165.96",
-   "proxy": {
-    "name": "[freeSub#120] A🟢🇲🇽res_dokng.com_f20cb370",
-    "password": "lcFa8dTH",
-    "port": 62000,
-    "server": "94.194.165.96",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "QyVdo5ks",
-    "x-toolall-mihomo": true
-   }
-  },
-  "1d9b0becb9e512e10898": {
-   "server": "144.225.47.158",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=144.225.47.158",
-   "proxy": {
-    "name": "[freeSub#128] C🟠🇲🇽hos_dokng.com_d02e3829",
-    "password": "sZnD8GTz",
-    "port": 42000,
-    "server": "144.225.47.158",
-    "skip-cert-verify": true,
-    "sub_tag": "P002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "DJy1T0dt",
-    "x-toolall-mihomo": true
-   }
-  },
   "f8a68b5476930c450a93": {
    "server": "144.225.47.106",
    "port": 42000,
    "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=144.225.47.106",
+   "at": 1795491098,
+   "detail": "OK 1544ms 4.68Mbps exit=MX",
    "proxy": {
-    "name": "[freeSub#136] C🟠🇲🇽hos_dokng.com_12126395",
+    "name": "✅ [freeSub#136] C🟠🇲🇽hos_dokng.com_12126395",
     "password": "sZnD8GTz",
     "port": 42000,
     "server": "144.225.47.106",
@@ -260,116 +71,14 @@
     "username": "DJy1T0dt"
    }
   },
-  "4531cbdf5a7da54acab9": {
-   "server": "103.18.230.88",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=PH ip=103.18.230.88",
-   "proxy": {
-    "name": "[freeSub#158] D🔴🇵🇭hos_dokng.com_dffdda48",
-    "password": "s6a1j38q",
-    "port": 42000,
-    "server": "103.18.230.88",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "uv4oakg5",
-    "x-toolall-mihomo": true
-   }
-  },
-  "0ceea1c8deb36067ad0d": {
-   "server": "121.169.46.116",
-   "port": 1090,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=KR ip=121.169.46.116",
-   "proxy": {
-    "name": "[freeSub#167] U⚪🇰🇷ukn_dokng.com_418b38c8",
-    "port": 1090,
-    "server": "121.169.46.116",
-    "type": "socks5"
-   }
-  },
-  "a774355ad461fd3bea80": {
-   "server": "192.204.15.135",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=192.204.15.135"
-  },
-  "86959192f8b7a5a23d21": {
-   "server": "183.106.215.208",
-   "port": 1080,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=KR ip=59.24.42.101",
-   "proxy": {
-    "name": "[freeSub#207] D🔴🇰🇷hos_dokng.com_e6634bb5",
-    "port": 1080,
-    "server": "183.106.215.208",
-    "type": "socks5"
-   }
-  },
-  "3e33cd98f47574fb7d7e": {
-   "server": "144.225.47.68",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=144.225.47.68",
-   "proxy": {
-    "name": "[freeSub#146] C🟠🇲🇽hos_dokng.com_d123f47b",
-    "password": "sZnD8GTz",
-    "port": 42000,
-    "server": "144.225.47.68",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "DJy1T0dt",
-    "x-toolall-mihomo": true
-   }
-  },
-  "f0b7e325b76590c6fdab": {
-   "server": "151.246.108.69",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=151.246.108.69",
-   "proxy": {
-    "name": "[freeSub#221] A🟢🇹🇭res_dokng.com_d8030385",
-    "password": "fAgE2jqK",
-    "port": 42000,
-    "server": "151.246.108.69",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "h87527jJ",
-    "x-toolall-mihomo": true
-   }
-  },
-  "b053359ee1921290e0be": {
-   "server": "45.61.129.165",
-   "port": 9050,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=DE ip=185.220.101.98",
-   "proxy": {
-    "name": "[freeSub#203] D🔴🇮🇹hos_dokng.com_c59918d2",
-    "password": "null",
-    "port": 9050,
-    "server": "45.61.129.165",
-    "type": "socks5",
-    "username": "null"
-   }
-  },
   "4a33bcdb0349c154dc66": {
    "server": "191.7.129.133",
    "port": 62000,
    "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=BR ip=191.7.129.133",
+   "at": 1795491098,
+   "detail": "OK 1663ms 3.55Mbps exit=BR",
    "proxy": {
-    "name": "[freeSub#218] A🟢🇧🇷res_dokng.com_dbd9f715",
+    "name": "✅ [freeSub#218] A🟢🇧🇷res_dokng.com_dbd9f715",
     "password": "0mvrt5jb",
     "port": 62000,
     "server": "191.7.129.133",
@@ -380,61 +89,18 @@
     "x-toolall-mihomo": true
    }
   },
-  "9e85054925b5f5a4bfc8": {
-   "server": "196.196.148.85",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=NL ip=81.90.29.98",
-   "proxy": {
-    "client-fingerprint": "firefox",
-    "name": "[freeSub#171] A🟢🇳🇱res[🤖🔮📺🎵]_dokng.com_2e8886fe",
-    "network": "tcp",
-    "packet-encoding": "xudp",
-    "port": 443,
-    "reality-opts": {
-     "public-key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
-     "short-id": "361d0dd59c70516f"
-    },
-    "server": "196.196.148.85",
-    "servername": "5d0319t.nl7.h1clayd.click",
-    "tls": true,
-    "type": "vless",
-    "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-    "x-toolall-mihomo": true
-   }
-  },
-  "05f056d4bd4c7b9fa1cc": {
-   "server": "144.56.22.78",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=FR ip=144.56.22.78",
-   "proxy": {
-    "name": "[freeSub#208] D🔴🇫🇷hos_dokng.com_7e0187d9",
-    "password": "Zn5mR7vA",
-    "port": 42000,
-    "server": "144.56.22.78",
-    "skip-cert-verify": true,
-    "sub_tag": "K001-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "L8wP3kQx",
-    "x-toolall-mihomo": true
-   }
-  },
   "237da4171a9fbf7f9924": {
    "server": "153.56.230.6",
    "port": 443,
    "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=173.214.164.110",
+   "at": 1795491098,
+   "detail": "OK 3857ms 3.15Mbps exit=US",
    "proxy": {
     "client-fingerprint": "edge",
     "grpc-opts": {
      "grpc-service-name": "99f2107b03f8"
     },
-    "name": "[freeSub#180] C🟠🇺🇸hos[🤖🔮🧩📺]_dokng.com_e49a43e6",
+    "name": "✅ [freeSub#059] C🟠🇺🇸hos[🤖💬🔮📺]_dokng.com_e49a43e6",
     "network": "grpc",
     "port": 443,
     "reality-opts": {
@@ -449,299 +115,16 @@
     "x-toolall-mihomo": true
    }
   },
-  "20b7a1890e48d7cde9f7": {
-   "server": "109.66.136.42",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=109.66.136.42"
-  },
-  "11fb4dd1a65317cff384": {
-   "server": "87.84.49.140",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=87.84.49.140",
-   "proxy": {
-    "name": "[freeSub#205] A🟢🇹🇭res_dokng.com_8be67b1a",
-    "password": "YlRoWvE0dL_cUqS94wPeKnA4",
-    "port": 62000,
-    "server": "87.84.49.140",
-    "type": "socks5",
-    "username": "ks878449260d"
-   }
-  },
-  "fc769dff28778f6775f0": {
-   "server": "82.47.152.151",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=82.47.152.151",
-   "proxy": {
-    "name": "[freeSub#236] A🟢🇹🇭res_dokng.com_63f8b36e",
-    "password": "Ks4Iab43",
-    "port": 42000,
-    "server": "82.47.152.151",
-    "type": "socks5",
-    "username": "userLjVB"
-   }
-  },
-  "5394cdd6986968ef363c": {
-   "server": "144.225.47.161",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=144.225.47.161",
-   "proxy": {
-    "name": "[freeSub#234] C🟠🇲🇽hos_dokng.com_a749b37b",
-    "password": "DJy1T0dt",
-    "port": 42000,
-    "server": "144.225.47.161",
-    "type": "socks5",
-    "username": "Tek2x6av"
-   }
-  },
-  "87b947f42eca05d4711b": {
-   "server": "103.14.164.202",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=103.14.164.202"
-  },
-  "e980953fb6d67b680569": {
-   "server": "196.245.52.183",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=NL ip=81.90.29.98",
-   "proxy": {
-    "client-fingerprint": "firefox",
-    "grpc-opts": {
-     "grpc-service-name": "5b79e8a94241"
-    },
-    "name": "[freeSub#175] A🟢🇳🇱res[🤖💬🔮🧩]_dokng.com_1e276af8",
-    "network": "grpc",
-    "port": 443,
-    "reality-opts": {
-     "public-key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
-     "short-id": "50a749f0eccb628c"
-    },
-    "server": "196.245.52.183",
-    "servername": "15b171g.nl7.h1clayd.click",
-    "skip-cert-verify": false,
-    "sni": "15b171g.nl7.h1clayd.click",
-    "tls": true,
-    "type": "vless",
-    "udp": true,
-    "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-    "x-toolall-mihomo": true
-   }
-  },
-  "6bc5edab857bcba97f3d": {
-   "server": "151.246.109.86",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=151.246.109.86",
-   "proxy": {
-    "name": "[freeSub#224] A🟢🇹🇭res[💬🔮🎵🐙]_dokng.com_da6cca38",
-    "password": "1pB7HV6u",
-    "port": 42000,
-    "server": "151.246.109.86",
-    "type": "socks5",
-    "username": "AJ3d9gJw"
-   }
-  },
-  "3973c97f0e98c80cb6be": {
-   "server": "144.225.47.8",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=MX ip=144.225.47.8",
-   "proxy": {
-    "name": "[freeSub#226] C🟠🇲🇽hos_dokng.com_445b01af",
-    "password": "DJy1T0dt",
-    "port": 42000,
-    "server": "144.225.47.8",
-    "type": "socks5",
-    "username": "Tek2x6av"
-   }
-  },
-  "e3f09d09452df557b3ab": {
-   "server": "104.234.70.82",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=104.234.70.82",
-   "proxy": {
-    "name": "[freeSub#262] C🟠🇹🇭hos_dokng.com_5acf8d13",
-    "password": "KT5hiU8o",
-    "port": 42000,
-    "server": "104.234.70.82",
-    "type": "socks5",
-    "username": "rnt2L4XO"
-   }
-  },
-  "4be1d831f087e309fba3": {
-   "server": "103.184.113.190",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=VN ip=103.184.113.190"
-  },
-  "5246af3569db4738b6b3": {
-   "server": "103.248.150.50",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=JP ip=103.248.150.50",
-   "proxy": {
-    "name": "[freeSub#246] D🔴🇯🇵hos_dokng.com_13120a28",
-    "password": "EGJDy5Kg",
-    "port": 42000,
-    "server": "103.248.150.50",
-    "skip-cert-verify": true,
-    "sub_tag": "P002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "paZFN3JA",
-    "x-toolall-mihomo": true
-   }
-  },
-  "304269f94c2f471a8a22": {
-   "server": "103.14.164.30",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=103.14.164.30",
-   "proxy": {
-    "name": "[freeSub#257] A🟢🇹🇭res_dokng.com_bd4cb820",
-    "password": "VAwyJQX0iKMJiyCw5UVK9wGH",
-    "port": 42000,
-    "server": "103.14.164.30",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "route164JIa2CBPxfy",
-    "x-toolall-mihomo": true
-   }
-  },
-  "162ffb363a78be566392": {
-   "server": "168.222.8.66",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=168.222.8.66",
-   "proxy": {
-    "name": "[freeSub#253] A🟢🇹🇭res_dokng.com_3254c865",
-    "password": "ao3W5ZML",
-    "port": 42000,
-    "server": "168.222.8.66",
-    "type": "socks5",
-    "username": "JPjarpW3"
-   }
-  },
-  "d6f35b4dcd84b80538c1": {
-   "server": "192.204.15.192",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=192.204.15.192"
-  },
-  "c3a0affdb18966cb4cd1": {
-   "server": "109.66.136.194",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=109.66.136.194",
-   "proxy": {
-    "name": "[freeSub#268] A🟢🇹🇭res_dokng.com_bc7e86e5",
-    "password": "zdnivBaI",
-    "port": 62000,
-    "server": "109.66.136.194",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "r3ZzP8WW",
-    "x-toolall-mihomo": true
-   }
-  },
-  "8aa9f346cbc184367c61": {
-   "server": "151.246.109.158",
-   "port": 42000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=TH ip=151.246.109.158",
-   "proxy": {
-    "name": "[freeSub#274] A🟢🇹🇭res_dokng.com_bf81894b",
-    "password": "1pB7HV6u",
-    "port": 42000,
-    "server": "151.246.109.158",
-    "type": "socks5",
-    "username": "AJ3d9gJw"
-   }
-  },
-  "cffb44ee15bc262b01b7": {
-   "server": "103.184.113.236",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=VN ip=103.184.113.236",
-   "proxy": {
-    "name": "[freeSub#266] A🟢🇻🇳res_dokng.com_0a65daba",
-    "password": "jHsK2gqs",
-    "port": 62000,
-    "server": "103.184.113.236",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "qT46DZLv",
-    "x-toolall-mihomo": true
-   }
-  },
-  "78429050f822af65b777": {
-   "server": "23.230.200.250",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=23.230.200.250",
-   "proxy": {
-    "name": "[freeSub#258] C🟠🇺🇸hos_dokng.com_54966195",
-    "password": "kingstar123++",
-    "port": 62000,
-    "server": "23.230.200.250",
-    "type": "socks5",
-    "username": "kingstar123"
-   }
-  },
-  "556ecb49035cc4a5ecd6": {
-   "server": "203.84.138.59",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=ID ip=203.84.138.59",
-   "proxy": {
-    "name": "[freeSub#286] A🟢🇮🇩res_dokng.com_9bb962cb",
-    "password": "RRWtX6XP",
-    "port": 62000,
-    "server": "203.84.138.59",
-    "sub_tag": "R002-260618",
-    "type": "socks5",
-    "udp": true,
-    "username": "9tcjLp2W",
-    "x-toolall-mihomo": true
-   }
-  },
   "6909abe6501249d5691e": {
    "server": "196.196.149.81",
    "port": 443,
    "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=ES ip=45.198.55.40",
+   "at": 1795491098,
+   "detail": "OK 3296ms 2.84Mbps exit=ES",
    "proxy": {
     "client-fingerprint": "firefox",
     "flow": "xtls-rprx-vision",
-    "name": "[freeSub#230] C🟠🇪🇸hos[🤖💬🔮🎮]_dokng.com_c851b7e4",
+    "name": "✅ [freeSub#084] C🟠🇪🇸hos[🤖💬🔮🎵]_dokng.com_c851b7e4",
     "network": "tcp",
     "port": 443,
     "reality-opts": {
@@ -756,248 +139,14 @@
     "x-toolall-mihomo": true
    }
   },
-  "44844fa9c2e5b73515db": {
-   "server": "196.196.149.80",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=ES ip=45.198.55.40",
-   "proxy": {
-    "client-fingerprint": "chrome",
-    "flow": "xtls-rprx-vision",
-    "name": "[freeSub#255] C🟠🇪🇸hos[💬🔮🎮✈️]_dokng.com_2e5562ed",
-    "port": 443,
-    "reality-opts": {
-     "public-key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
-     "short-id": "42426c882c5fcd41"
-    },
-    "server": "196.196.149.80",
-    "servername": "7aa271t.es1.h1clayd.click",
-    "skip-cert-verify": false,
-    "sni": "7aa271t.es1.h1clayd.click",
-    "tls": true,
-    "type": "vless",
-    "udp": true,
-    "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
-    "x-toolall-mihomo": true
-   }
-  },
-  "c7b7013535cc50407e65": {
-   "server": "69.55.49.177",
-   "port": 38182,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=69.55.49.177"
-  },
-  "44cd2414b5e9419db8d1": {
-   "server": "69.55.49.177",
-   "port": 38182,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=69.55.49.177"
-  },
-  "d24f0dabcf65f6d21826": {
-   "server": "89.124.122.19",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=173.214.164.110",
-   "proxy": {
-    "client-fingerprint": "chrome",
-    "grpc-opts": {
-     "grpc-service-name": "99f2107b03f8"
-    },
-    "name": "[freeSub#284] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_5eb446e9",
-    "network": "grpc",
-    "port": 443,
-    "reality-opts": {
-     "public-key": "cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk",
-     "short-id": "bd8f712209a9c283"
-    },
-    "server": "89.124.122.19",
-    "servername": "0592efg.us8.h1clayd.click",
-    "tls": true,
-    "type": "vless",
-    "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-    "x-toolall-mihomo": true
-   }
-  },
-  "2bd570331ff409b7595d": {
-   "server": "217.69.174.175",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=173.214.164.110",
-   "proxy": {
-    "client-fingerprint": "firefox",
-    "name": "[freeSub#276] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_72b598f1",
-    "port": 443,
-    "reality-opts": {
-     "public-key": "UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY",
-     "short-id": "ba2a3dce62b99092"
-    },
-    "server": "217.69.174.175",
-    "servername": "04535dt.us8.h1clayd.click",
-    "tls": true,
-    "type": "vless",
-    "udp": true,
-    "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-    "x-toolall-mihomo": true
-   }
-  },
-  "d6fe24d60a3143ebf48e": {
-   "server": "196.245.52.187",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=173.214.164.110",
-   "proxy": {
-    "client-fingerprint": "firefox",
-    "name": "[freeSub#282] C🟠🇺🇸hos[🤖💬🔮🎵]_dokng.com_3c052db8",
-    "network": "tcp",
-    "port": 443,
-    "reality-opts": {
-     "public-key": "UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY",
-     "short-id": "ba2a3dce62b99092"
-    },
-    "server": "196.245.52.187",
-    "servername": "04535dt.us8.h1clayd.click",
-    "tls": true,
-    "type": "vless",
-    "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-    "x-toolall-mihomo": true
-   }
-  },
-  "c3c5639cc9b5761013ad": {
-   "server": "sclass-00.catcat321.com",
-   "port": 20123,
-   "type": "trojan",
-   "at": 1795355096,
-   "detail": "exit=AE ip=89.36.162.39",
-   "proxy": {
-    "name": "[NoMoreWalls#168] 🇦🇪[www.v2nodes.com] trojan-AE-... #1",
-    "password": "d9064589-74af-432a-9390-5d8a9da281bf",
-    "port": 20123,
-    "server": "sclass-00.catcat321.com",
-    "skip-cert-verify": true,
-    "sni": "hk.catxstar.com",
-    "type": "trojan"
-   }
-  },
-  "8554e022c10b1791e492": {
-   "server": "sclass-01.catcat321.com",
-   "port": 20103,
-   "type": "trojan",
-   "at": 1795355096,
-   "detail": "exit=NG ip=176.97.192.138",
-   "proxy": {
-    "name": "[NoMoreWalls#183] 🇨🇳 CN_87 #1",
-    "password": "d7563108-615c-4338-a7bd-77f359869a4a",
-    "port": 20103,
-    "server": "sclass-01.catcat321.com",
-    "skip-cert-verify": true,
-    "sni": "hk.catxstar.com",
-    "type": "trojan",
-    "udp": true
-   }
-  },
-  "bb5331f35d1a7b8107c0": {
-   "server": "202.155.99.212",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=ID ip=202.155.99.212",
-   "proxy": {
-    "name": "[NoMoreWalls#218] 🇮🇩ID_1|1.5MB/s",
-    "password": "APJ7RmY9",
-    "port": 62000,
-    "server": "202.155.99.212",
-    "skip-cert-verify": true,
-    "type": "socks5",
-    "username": "gebHTLF6"
-   }
-  },
-  "a0e9fc483bd447bc47fb": {
-   "server": "201.24.116.192",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=RU ip=129.101.105.29",
-   "proxy": {
-    "client-fingerprint": "firefox",
-    "grpc-opts": {
-     "grpc-mode": "gun",
-     "grpc-service-name": "mobile.api.Event"
-    },
-    "name": "[NoMoreWalls#239] 🇷🇺 俄罗斯 | RUS 4",
-    "network": "grpc",
-    "port": 443,
-    "server": "201.24.116.192",
-    "servername": "vps3.nemnogogo.com",
-    "tls": true,
-    "type": "vless",
-    "udp": true,
-    "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
-   }
-  },
-  "877ffb9fc6c3f4680386": {
-   "server": "201.51.12.98",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=RU ip=129.101.105.29",
-   "proxy": {
-    "client-fingerprint": "firefox",
-    "grpc-opts": {
-     "grpc-mode": "gun",
-     "grpc-service-name": "mobile.api.Event"
-    },
-    "name": "[NoMoreWalls#237] 🇷🇺 俄罗斯 | RUS 2",
-    "network": "grpc",
-    "port": 443,
-    "server": "201.51.12.98",
-    "servername": "vps3.nemnogogo.com",
-    "tls": true,
-    "type": "vless",
-    "udp": true,
-    "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
-   }
-  },
-  "1c762c45cbf3114aed99": {
-   "server": "193.25.215.182",
-   "port": 22222,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=US ip=193.25.215.182",
-   "proxy": {
-    "name": "[zhuhaiuk#004] US - zhuhai.uk 09",
-    "type": "socks5",
-    "server": "193.25.215.182",
-    "port": 22222
-   }
-  },
-  "56e568072823b5823029": {
-   "server": "219.78.223.199",
-   "port": 5001,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=HK ip=219.78.223.199",
-   "proxy": {
-    "name": "[NoMoreWalls#216] 🇭🇰HK_2|1.1MB/s",
-    "port": 5001,
-    "server": "219.78.223.199",
-    "skip-cert-verify": true,
-    "type": "socks5"
-   }
-  },
   "2a2fa4911e1511688e9d": {
    "server": "101.36.104.239",
    "port": 10808,
    "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=JP ip=101.36.104.239",
+   "at": 1795491098,
+   "detail": "SLOW 784ms 0.0Mbps exit=JP",
    "proxy": {
-    "name": "[zhuhaiuk#014] JP - zhuhai.uk 02",
+    "name": "✅ [zhuhaiuk#024] JP - zhuhai.uk 02",
     "type": "socks5",
     "server": "101.36.104.239",
     "port": 10808
@@ -1007,55 +156,146 @@
    "server": "101.36.104.46",
    "port": 10808,
    "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=JP ip=101.36.104.46",
+   "at": 1795491098,
+   "detail": "SLOW 467ms 0.0Mbps exit=JP",
    "proxy": {
-    "name": "[zhuhaiuk#013] JP - zhuhai.uk",
+    "name": "✅ [zhuhaiuk#023] JP - zhuhai.uk",
     "type": "socks5",
     "server": "101.36.104.46",
     "port": 10808
    }
   },
-  "565acdaffd72a43afbba": {
-   "server": "221.133.22.195",
-   "port": 62000,
+  "01638fbd9a0c3388638f": {
+   "server": "47.243.173.50",
+   "port": 11211,
    "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=VN ip=221.133.22.195",
+   "at": 1795491098,
+   "detail": "SLOW 252ms 0.0Mbps exit=HK",
    "proxy": {
-    "name": "[zhuhaiuk#016] VN - zhuhai.uk",
+    "name": "⚠️ [freeSub#104] C🟠🇭🇰hos_dokng.com_47d8185d",
+    "password": "111",
+    "port": 11211,
+    "server": "47.243.173.50",
     "type": "socks5",
-    "server": "221.133.22.195",
-    "port": 62000,
-    "username": "KUs4xRXd",
-    "password": "480w0Yy4"
+    "username": "111"
    }
   },
-  "b4170eb5c510e5ffee5c": {
-   "server": "66.80.2.252",
-   "port": 62000,
-   "type": "socks5",
-   "at": 1795355096,
-   "detail": "exit=SG ip=66.80.2.252"
-  },
-  "ea4dc96760b6b29dcd8e": {
-   "server": "196.196.148.177",
+  "022be5b2ef8cd68b6313": {
+   "server": "196.196.208.22",
    "port": 443,
    "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=DE ip=93.123.85.81",
+   "at": 1795491098,
+   "detail": "OK 781ms 6.59Mbps exit=GB",
    "proxy": {
+    "name": "⚠️ 🇬🇧 英国 | GBR 2",
+    "server": "196.196.208.22",
+    "port": 443,
     "type": "vless",
-    "name": "[free18#314] 🇸🇨_塞舌尔 (18)",
-    "server": "196.196.148.177",
+    "uuid": "cae99415-10a6-4317-81bd-19a4586b5d76",
+    "tls": true,
+    "reality-opts": {
+     "public-key": "_yJGJ5q-8IxTuWFcoy5wpKKYtk9p9q4lQ6svfXC1IUU",
+     "short-id": "621290c77645b731"
+    },
+    "servername": "9303d6x.fi-p1b.h1clayd.click",
+    "client-fingerprint": "firefox",
+    "network": "xhttp",
+    "xhttp-opts": {
+     "path": "/f57a81c99fea",
+     "host": "9303d6x.fi-p1b.h1clayd.click",
+     "mode": "auto"
+    },
+    "udp": true
+   }
+  },
+  "d4e353b22fa43384ef5c": {
+   "server": "guanwang.awsno.com",
+   "port": 443,
+   "type": "vmess",
+   "at": 1795491098,
+   "detail": "OK 1103ms 9.13Mbps exit=?",
+   "proxy": {
+    "name": "⚠️ 🇺🇸 美国 (United States) 94",
+    "server": "guanwang.awsno.com",
+    "port": 443,
+    "udp": true,
+    "type": "vmess",
+    "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+    "alterId": 0,
+    "cipher": "auto",
+    "tls": true,
+    "servername": "guanwang.awsno.com",
+    "skip-cert-verify": false,
+    "network": "ws",
+    "ws-opts": {
+     "path": "/hls/cctv5phd.m3u8"
+    }
+   }
+  },
+  "3eb93894146664eee709": {
+   "server": "172.64.145.93",
+   "port": 443,
+   "type": "vmess",
+   "at": 1795491098,
+   "detail": "SLOW 2791ms 0.0Mbps exit=?",
+   "proxy": {
+    "name": "⚠️ 🇺🇸 美国 (United States) 99 - xiaohe",
+    "server": "172.64.145.93",
+    "port": 443,
+    "udp": true,
+    "type": "vmess",
+    "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+    "alterId": 0,
+    "cipher": "auto",
+    "tls": true,
+    "servername": "guanwang.awsno.com",
+    "skip-cert-verify": false,
+    "network": "ws",
+    "ws-opts": {
+     "path": "/hls/cctv5phd.m3u8",
+     "headers": {
+      "Host": "guanwang.awsno.com"
+     }
+    }
+   }
+  },
+  "d385ca7a193db5533bf6": {
+   "server": "8a2e72t.nl20.h1clayd.shop",
+   "port": 443,
+   "type": "vless",
+   "at": 1795491098,
+   "detail": "OK 4605ms 4.08Mbps exit=DE",
+   "proxy": {
+    "name": "⚠️ 🇳🇱NL_202|111KB/s|M003-260806",
+    "type": "vless",
+    "server": "8a2e72t.nl20.h1clayd.shop",
     "port": 443,
     "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
-    "flow": "xtls-rprx-vision",
-    "udp": true,
     "tls": true,
-    "servername": "4935e4t.de25.h1clayd.click",
+    "sni": "8a2e72t.nl20.h1clayd.shop",
+    "flow": "xtls-rprx-vision",
+    "client-fingerprint": "firefox",
+    "reality-opts": {
+     "public-key": "VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA",
+     "short-id": "8d0d0679f42ffd98"
+    }
+   }
+  },
+  "2c5d3cacaca495c0f52e": {
+   "server": "4935e4t.de25.h1clayd.click",
+   "port": 443,
+   "type": "vless",
+   "at": 1795491098,
+   "detail": "SLOW 4837ms 1.61Mbps exit=DE",
+   "proxy": {
+    "name": "⚠️ 🇩🇪DE_57|77KB/s|M003-260806",
+    "type": "vless",
+    "server": "4935e4t.de25.h1clayd.click",
+    "port": 443,
+    "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
+    "tls": true,
     "sni": "4935e4t.de25.h1clayd.click",
-    "skip-cert-verify": false,
+    "flow": "xtls-rprx-vision",
     "client-fingerprint": "firefox",
     "reality-opts": {
      "public-key": "MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw",
@@ -1063,344 +303,267 @@
     }
    }
   },
-  "19604be78c7fa3ccbeda": {
-   "server": "7aa271t.es1.h1clayd.click",
+  "28feb87b66395d3014a7": {
+   "server": "103.248.228.166",
+   "port": 5555,
+   "type": "socks5",
+   "at": 1795491098,
+   "detail": "SLOW 355ms 0.57Mbps exit=SG",
+   "proxy": {
+    "name": "⚠️ 🇸🇬SG_70|758KB/s|S001-260618",
+    "type": "socks5",
+    "server": "103.248.228.166",
+    "port": 5555,
+    "password": "Og=="
+   }
+  },
+  "43935bc87ec57304f863": {
+   "server": "47.251.166.203",
+   "port": 1080,
+   "type": "socks5",
+   "at": 1795491098,
+   "detail": "SLOW 1474ms 0.0Mbps exit=US",
+   "proxy": {
+    "name": "⚠️ [NoMoreWalls#259] 🇺🇸US_13|3.5MB/s",
+    "port": 1080,
+    "server": "47.251.166.203",
+    "skip-cert-verify": true,
+    "type": "socks5"
+   }
+  },
+  "0ceea1c8deb36067ad0d": {
+   "server": "121.169.46.116",
+   "port": 1090,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "OK 197ms 13.61Mbps exit=KR",
+   "proxy": {
+    "name": "⚠️ [ermaozi#036] 🇰🇷KR_1|4.1MB/s",
+    "port": 1090,
+    "server": "121.169.46.116",
+    "skip-cert-verify": true,
+    "type": "socks5",
+    "username": "T2clM0QlM0Q6"
+   }
+  },
+  "bcb51a72bfdeb0b51947": {
+   "server": "183.106.215.208",
+   "port": 1080,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "OK 203ms 8.97Mbps exit=KR",
+   "proxy": {
+    "name": "⚠️ 🇰🇷KR_43|287KB/s|R002-260618",
+    "type": "socks5",
+    "server": "183.106.215.208",
+    "port": 1080,
+    "password": "Og=="
+   }
+  },
+  "3565a0a27943197bdc4b": {
+   "server": "103.124.172.134",
+   "port": 1080,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "OK 957ms 8.46Mbps exit=IN",
+   "proxy": {
+    "name": "⚠️ [zhuhaiuk#016] IN - zhuhai.uk",
+    "type": "socks5",
+    "server": "103.124.172.134",
+    "port": 1080
+   }
+  },
+  "2bd570331ff409b7595d": {
+   "server": "217.69.174.175",
    "port": 443,
    "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=ES ip=45.198.55.40",
+   "at": 1795491753,
+   "detail": "OK 1294ms 2.24Mbps exit=US",
    "proxy": {
     "type": "vless",
-    "name": "[free18#304] 🇪🇪_爱沙尼亚 (8)",
-    "server": "7aa271t.es1.h1clayd.click",
+    "name": "⚠️ [free18#149] 🇩🇪_德国",
+    "server": "217.69.174.175",
     "port": 443,
-    "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
-    "flow": "xtls-rprx-vision",
+    "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
     "udp": true,
     "tls": true,
-    "servername": "7aa271t.es1.h1clayd.click",
-    "sni": "7aa271t.es1.h1clayd.click",
+    "servername": "04535dt.us8.h1clayd.click",
+    "sni": "04535dt.us8.h1clayd.click",
     "skip-cert-verify": false,
-    "client-fingerprint": "chrome",
+    "client-fingerprint": "firefox",
     "reality-opts": {
-     "public-key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
-     "short-id": "42426c882c5fcd41"
+     "public-key": "UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY",
+     "short-id": "ba2a3dce62b99092"
     }
    }
   },
-  "224141bcc005e1fc5265": {
-   "server": "107.191.58.86",
+  "162ffb363a78be566392": {
+   "server": "168.222.8.66",
+   "port": 42000,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "OK 1356ms 4.91Mbps exit=TH",
+   "proxy": {
+    "name": "⚠️ [freeSub#253] A🟢🇹🇭res_dokng.com_3254c865",
+    "password": "ao3W5ZML",
+    "port": 42000,
+    "server": "168.222.8.66",
+    "type": "socks5",
+    "username": "JPjarpW3"
+   }
+  },
+  "fc769dff28778f6775f0": {
+   "server": "82.47.152.151",
+   "port": 42000,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "OK 1376ms 6.63Mbps exit=TH",
+   "proxy": {
+    "name": "⚠️ [freeSub#236] A🟢🇹🇭res_dokng.com_63f8b36e",
+    "password": "Ks4Iab43",
+    "port": 42000,
+    "server": "82.47.152.151",
+    "type": "socks5",
+    "username": "userLjVB"
+   }
+  },
+  "e0b5fd8a034777b873d7": {
+   "server": "192.204.14.58",
+   "port": 42000,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "OK 1393ms 4.63Mbps exit=TH",
+   "proxy": {
+    "name": "⚠️ [zhuhaiuk#019] TH - zhuhai.uk",
+    "type": "socks5",
+    "server": "192.204.14.58",
+    "port": 42000,
+    "username": "2FYbAx8H",
+    "password": "3ahWX7l1"
+   }
+  },
+  "fee1bd77428a37f70380": {
+   "server": "a80b5386.fi2.h1clayd.click",
    "port": 443,
    "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=107.191.58.86",
+   "at": 1795491753,
+   "detail": "OK 1559ms 2.31Mbps exit=GB",
    "proxy": {
-    "name": "🇺🇸 美国 (United States) 224 - xiaohe",
-    "server": "107.191.58.86",
+    "name": "⚠️ 🇩🇪 德国 | DEU 5",
+    "server": "a80b5386.fi2.h1clayd.click",
     "port": 443,
-    "udp": true,
     "type": "vless",
-    "uuid": "4444e77e-3d2a-4dc9-bf31-936f038f5570",
+    "uuid": "2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df",
     "tls": true,
     "reality-opts": {
-     "public-key": "ZZwZGoX0Us8t6nLvckDWskC1c25F9rL0_nUXmd8BFxQ",
-     "short-id": "8dd324c1"
+     "public-key": "PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc",
+     "short-id": "cc678f10161992a9"
     },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
+    "servername": "a80b5386.fi2.h1clayd.click",
+    "client-fingerprint": "firefox",
+    "network": "tcp"
    }
   },
-  "73929de5a8c2027ea5bd": {
-   "server": "172.236.241.130",
+  "bda37fdeac876671ff03": {
+   "server": "171.25.158.95",
+   "port": 1080,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "SLOW 1602ms 0.11Mbps exit=SE",
+   "proxy": {
+    "name": "⚠️ 🇸🇪SE_13|537KB/s|P002-260618",
+    "type": "socks5",
+    "server": "171.25.158.95",
+    "port": 1080,
+    "password": "Og=="
+   }
+  },
+  "565acdaffd72a43afbba": {
+   "server": "221.133.22.195",
+   "port": 62000,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "OK 2131ms 4.1Mbps exit=VN",
+   "proxy": {
+    "name": "⚠️ [zhuhaiuk#016] VN - zhuhai.uk",
+    "type": "socks5",
+    "server": "221.133.22.195",
+    "port": 62000,
+    "username": "KUs4xRXd",
+    "password": "480w0Yy4"
+   }
+  },
+  "9e85054925b5f5a4bfc8": {
+   "server": "196.196.148.85",
    "port": 443,
    "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=172.236.241.130",
+   "at": 1795491753,
+   "detail": "SLOW 2293ms 1.93Mbps exit=NL",
    "proxy": {
-    "name": "🇺🇸 美国 (United States) 252 - xiaohe",
-    "server": "172.236.241.130",
+    "client-fingerprint": "firefox",
+    "name": "⚠️ [freeSub#080] A🟢🇳🇱res[🤖💬🔮🎮]_dokng.com_fbb5c550",
     "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "21117a67-21c2-4e2a-ba8f-bc49e23b0ae8",
-    "tls": true,
     "reality-opts": {
-     "public-key": "ibi0jOH5SfYhh7ycxdBrqq5oN4ajN3-dNiHKWC2VYWs",
-     "short-id": "51ecfe9e"
+     "public-key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
+     "short-id": "361d0dd59c70516f"
     },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
+    "server": "196.196.148.85",
+    "servername": "5d0319t.nl7.h1clayd.click",
+    "tls": true,
+    "type": "vless",
+    "udp": true,
+    "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+    "x-toolall-mihomo": true
    }
   },
-  "c33cee40e95b79645c5e": {
-   "server": "172.233.142.149",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=172.233.142.149",
+  "c3c5639cc9b5761013ad": {
+   "server": "sclass-00.catcat321.com",
+   "port": 20123,
+   "type": "trojan",
+   "at": 1795491753,
+   "detail": "SLOW 2719ms 0.0Mbps exit=AE",
    "proxy": {
-    "name": "🇺🇸 美国 (United States) 251 - xiaohe",
-    "server": "172.233.142.149",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "61e3954d-0d66-4b69-b6cd-9b4fc2352303",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "f9D1ZzG6vP1HgjCaCIutbykWkab8VEDuitwuwaeuBgY",
-     "short-id": "4206512a"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
+    "name": "⚠️ [NoMoreWalls#171] 🇦🇪[www.v2nodes.com] trojan-AE-... #1",
+    "password": "d9064589-74af-432a-9390-5d8a9da281bf",
+    "port": 20123,
+    "server": "sclass-00.catcat321.com",
+    "skip-cert-verify": true,
+    "sni": "hk.catxstar.com",
+    "type": "trojan"
    }
   },
-  "ed49fbeddb61b979ecd2": {
-   "server": "172.233.129.172",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=US ip=172.233.129.172",
+  "556ecb49035cc4a5ecd6": {
+   "server": "203.84.138.59",
+   "port": 62000,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "SLOW 3125ms 1.93Mbps exit=ID",
    "proxy": {
-    "name": "🇺🇸 美国 (United States) 243 - xiaohe",
-    "server": "172.233.129.172",
-    "port": 443,
+    "name": "⚠️ [freeSub#286] A🟢🇮🇩res_dokng.com_9bb962cb",
+    "password": "RRWtX6XP",
+    "port": 62000,
+    "server": "203.84.138.59",
+    "sub_tag": "R002-260618",
+    "type": "socks5",
     "udp": true,
-    "type": "vless",
-    "uuid": "40a4b915-5e6f-4316-9bb1-e899f30608e3",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "LWfC_chpo4uDtzJ9VVnuTcf6zTzWKx-LCJAE2Ltl7h4",
-     "short-id": "5818adc3"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
+    "username": "9tcjLp2W",
+    "x-toolall-mihomo": true
    }
   },
-  "bf9e7f21788204dc4b1a": {
-   "server": "193.233.89.130",
-   "port": 8443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=CH ip=45.90.56.165",
+  "bb5331f35d1a7b8107c0": {
+   "server": "202.155.99.212",
+   "port": 62000,
+   "type": "socks5",
+   "at": 1795491753,
+   "detail": "SLOW 3138ms 0.0Mbps exit=ID",
    "proxy": {
-    "name": "🇨🇭 瑞士 (Switzerland) 502 - xiaohe",
-    "server": "193.233.89.130",
-    "port": 8443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "7bd7c4aa-52c4-482c-bdcc-e7380fa6b5fe",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c"
-    },
-    "servername": "g.play2go.gay",
-    "client-fingerprint": "chrome",
-    "network": "grpc",
-    "grpc-opts": {
-     "grpc-service-name": "grpc"
-    }
-   }
-  },
-  "c0470c12b18953d224ef": {
-   "server": "198.13.53.39",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=JP ip=198.13.53.39",
-   "proxy": {
-    "name": "🇯🇵 日本 (Japan) 517 - xiaohe",
-    "server": "198.13.53.39",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "8f21c635-ef0a-4b05-8356-f44d463b6e34",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k",
-     "short-id": "7a7cc838"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
-   }
-  },
-  "58fee2f1b60c18b5d02a": {
-   "server": "172.105.203.15",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=JP ip=172.105.203.15",
-   "proxy": {
-    "name": "🇯🇵 日本 (Japan) 507 - xiaohe",
-    "server": "172.105.203.15",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "c8c9b995-b4b9-4915-9c7d-dee94aa733ba",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA",
-     "short-id": "0784b134"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
-   }
-  },
-  "4ce0783eb6d45ba99597": {
-   "server": "172.104.86.181",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=JP ip=172.104.86.181",
-   "proxy": {
-    "name": "🇯🇵 日本 (Japan) 499 - xiaohe",
-    "server": "172.104.86.181",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "010431f3-04f6-4404-a801-b93bf2e3c2b2",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk",
-     "short-id": "c8559ca1"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
-   }
-  },
-  "7360fa25a8d60b6d5c97": {
-   "server": "149.28.29.156",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=JP ip=149.28.29.156",
-   "proxy": {
-    "name": "🇯🇵 日本 (Japan) 530 - xiaohe",
-    "server": "149.28.29.156",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "aa1a9052-720f-4bb0-92be-21b6baf9f386",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0",
-     "short-id": "e535df57"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
-   }
-  },
-  "bb9e96fa71a039f95136": {
-   "server": "45.76.222.108",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=JP ip=45.76.222.108",
-   "proxy": {
-    "name": "🇯🇵 日本 (Japan) 521 - xiaohe",
-    "server": "45.76.222.108",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "bd95a04e-e3e1-460e-b89d-e9a693d393e0",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "-_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE",
-     "short-id": "b5c85d2d"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
-   }
-  },
-  "5ba4a84125d55bffa858": {
-   "server": "139.180.221.53",
-   "port": 443,
-   "type": "vless",
-   "at": 1795355096,
-   "detail": "exit=SG ip=139.180.221.53",
-   "proxy": {
-    "name": "🇸🇬 新加坡 (Singapore) 571 - xiaohe",
-    "server": "139.180.221.53",
-    "port": 443,
-    "udp": true,
-    "type": "vless",
-    "uuid": "2b30d0df-6ebe-4aed-9bad-b7c554e35e1d",
-    "tls": true,
-    "reality-opts": {
-     "public-key": "plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4",
-     "short-id": "2f6f6f87"
-    },
-    "servername": "itunes.apple.com",
-    "client-fingerprint": "chrome",
-    "network": "ws",
-    "ws-opts": {
-     "path": "/ws",
-     "headers": {
-      "Host": "itunes.apple.com"
-     }
-    }
+    "name": "⚠️ [NoMoreWalls#218] 🇮🇩ID_1|1.5MB/s",
+    "password": "APJ7RmY9",
+    "port": 62000,
+    "server": "202.155.99.212",
+    "skip-cert-verify": true,
+    "type": "socks5",
+    "username": "gebHTLF6"
    }
   }
  },
@@ -19516,7 +18679,3799 @@
    "stage": "EGRESS",
    "at": 1795355096,
    "expires_at": 1795959896
+  },
+  "3a3d2b536a530b131997": {
+   "server": "104.18.27.217",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e77249ff4bdcf7da34bd": {
+   "server": "104.18.26.217",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0150cc6559c4e9cfc465": {
+   "server": "172.66.44.211",
+   "port": 2083,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1a6a76999a549804d53c": {
+   "server": "104.18.114.33",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "77405ec01b65af0ac672": {
+   "server": "104.21.238.148",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e48d9d9c381351ecd068": {
+   "server": "104.18.114.56",
+   "port": 8880,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "33195482d94dff95f6b6": {
+   "server": "162.159.45.77",
+   "port": 8880,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f1090312034945286020": {
+   "server": "104.18.32.47",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d47d6375d0d0f4297318": {
+   "server": "104.21.94.203",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "bf629906ac68853e1013": {
+   "server": "172.66.47.45",
+   "port": 2083,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "55405f251fd0dcfdaf7f": {
+   "server": "104.18.42.54",
+   "port": 2083,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3fa167e48f8ed04fa0e6": {
+   "server": "172.66.44.200",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "55c121e0c75cd7bd379c": {
+   "server": "104.18.114.188",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "76dd139e95ea1ee40e44": {
+   "server": "104.18.114.69",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d015139ae8cc23cf740a": {
+   "server": "104.18.114.118",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "00fa03fd0f64ec2657fd": {
+   "server": "162.159.45.165",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ac153933cdffaf952b6a": {
+   "server": "104.18.114.162",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0fe27068a55e87df0318": {
+   "server": "104.21.238.37",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5125fddbad5a33c4f18b": {
+   "server": "104.26.0.239",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c87140c74ecb8d8432cf": {
+   "server": "104.18.114.125",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c9560bc28be095cfc4c6": {
+   "server": "104.18.114.183",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d1c86e2969fbdd4cc0d1": {
+   "server": "104.18.114.107",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0d350c878cabfe135e65": {
+   "server": "104.26.0.183",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "72fb2deb114a7bfa38b7": {
+   "server": "104.18.114.122",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "31d3cebe943718120e64": {
+   "server": "104.18.114.58",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7e09e34fe23be65a332a": {
+   "server": "104.21.238.182",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0767469f439c0fcad77a": {
+   "server": "104.18.114.108",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "9d51af92c11ea9946603": {
+   "server": "104.18.114.111",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b815b1113fb3c1baaf47": {
+   "server": "104.26.0.15",
+   "port": 8880,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "500b4e8a4e946feae0a0": {
+   "server": "104.26.0.206",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "37479dd03f456c1895a4": {
+   "server": "162.159.45.53",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "591a5053b1e71bc2f6a2": {
+   "server": "104.26.0.100",
+   "port": 8880,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "67041cb7b38eef2d13f4": {
+   "server": "162.159.45.47",
+   "port": 8880,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a7495b5adbe0f17bb6ce": {
+   "server": "162.159.45.181",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "eca430b65f19434e1d18": {
+   "server": "172.64.155.209",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "2e5c16080cc0cf86d4ca": {
+   "server": "104.19.52.70",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7196856b4f1a165acb49": {
+   "server": "172.64.150.43",
+   "port": 2052,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1cc5e90db263b9e1abe7": {
+   "server": "162.159.130.234",
+   "port": 2083,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d9a4df8c67609560fc49": {
+   "server": "104.17.177.160",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1ed35279e19fbe77eb0e": {
+   "server": "188.114.98.0",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7e1d9ac82af595329890": {
+   "server": "104.18.12.229",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0a2c6f306ebc261a5025": {
+   "server": "104.18.13.229",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "28a35640b67d2bf112cb": {
+   "server": "104.18.0.181",
+   "port": 2052,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "11750db0ddfbfcb81405": {
+   "server": "162.159.254.201",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e6f66feae45ec344ba7c": {
+   "server": "162.159.135.234",
+   "port": 2096,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "afc963141aa5cd2492bc": {
+   "server": "162.159.39.153",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6eaa0e733f7e43d37214": {
+   "server": "172.66.44.124",
+   "port": 2096,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ea5f56e0637b4ce4f9fc": {
+   "server": "172.66.47.45",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "cfb6b41be9d34b23f6e6": {
+   "server": "104.25.5.52",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "288e4d7ac090a808aa4d": {
+   "server": "104.24.30.89",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "fde318da0e24322bcdd2": {
+   "server": "104.26.0.87",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c51a6636e4edcd9189f0": {
+   "server": "104.26.0.71",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "956c858294dabf4e1e65": {
+   "server": "www.speedtest.net",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "ff315aa0599392194aa9": {
+   "server": "chatgpt.com",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "8cc35804d0192c898c25": {
+   "server": "104.18.35.86",
+   "port": 2096,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0bcbddd6a512c1c11f8c": {
+   "server": "38.91.100.16",
+   "port": 1270,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e287bd2ace68ed2f4c77": {
+   "server": "support.zoom.us",
+   "port": 8080,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "09b4bc29f424a01b68ca": {
+   "server": "vless.cloudxzw2027.ccwu.cc",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "0cf5368bf50da4c4fc13": {
+   "server": "154.40.59.238",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "775dfd1d2ffe74dca779": {
+   "server": "31.76.91.98",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e251d169acd9020a5038": {
+   "server": "45.153.245.181",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7055d5d236ae9789b146": {
+   "server": "nu2rb.supertoolify.com",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "43ca1006757628ee6a47": {
+   "server": "151.158.0.83",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "28832636d08c58d3a6aa": {
+   "server": "64.118.130.152",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b2ad74e78f3326424804": {
+   "server": "43.129.80.179",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f2182917cb8b529ad823": {
+   "server": "64.118.129.151",
+   "port": 22222,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ebd19cc7388a104cd526": {
+   "server": "nb1hk.hikigo.com",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "56e568072823b5823029": {
+   "server": "219.78.223.199",
+   "port": 5001,
+   "type": "socks5",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "fd3da66d0578532cf566": {
+   "server": "zfd-hkv2.kunlun01dns.com",
+   "port": 16112,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "bccca87fccb697f43282": {
+   "server": "77.93.89.2",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "9b291619c77bf2533b0b": {
+   "server": "149.33.27.162",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "9ed30fd62bf5df25b5eb": {
+   "server": "i1tr.mateflora.com",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "491ba5727c6625a19d93": {
+   "server": "27.124.5.86",
+   "port": 8388,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1bcf6133584bf920ff2b": {
+   "server": "129.226.157.220",
+   "port": 59121,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "741ff05dc012fc8ca9e6": {
+   "server": "43.134.187.97",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0fb5720da54f4ec20c23": {
+   "server": "68.183.227.45",
+   "port": 8080,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "876be57dc19a3b014b02": {
+   "server": "156.245.234.97",
+   "port": 2096,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "79c621663dbcc9b87609": {
+   "server": "128.199.172.224",
+   "port": 8080,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c4ce2e0fa3c76f2c7fbc": {
+   "server": "216.23.93.27",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "83f047cbe1a7e717de1d": {
+   "server": "dg4.ianai.it.com",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "097562b6e2101837ec2c": {
+   "server": "axe.mastopen14.ir",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "51445185570b0f8f94e6": {
+   "server": "bYWXdhIRqKJj8XAZ.v.3dns.vip",
+   "port": 443,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "7f621e8b7335e7a96602": {
+   "server": "155.248.175.201",
+   "port": 23169,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "77218eb3ad82af33eb71": {
+   "server": "xray2-direct-mci1-fs-ce.freesocks.work",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "87851c1f193fca74714d": {
+   "server": "192.166.82.21",
+   "port": 443,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1b486eaf03aefc1c467c": {
+   "server": "129.146.200.49",
+   "port": 50356,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "cd842a935416359d6839": {
+   "server": "179.254.94.184",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0d179124a1c1ac4a07ba": {
+   "server": "43.110.39.161",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f392c1fc76f2b7a12104": {
+   "server": "dtt4.toe.qd.je",
+   "port": 2317,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "4c9ec682363e3dc71d6f": {
+   "server": "89.18.60.230",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f9858e636474016abfc1": {
+   "server": "198.200.37.74",
+   "port": 20002,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "bc3a6b18971a4f5511c9": {
+   "server": "107.150.19.24",
+   "port": 54321,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "10748cb433a1f329f051": {
+   "server": "45.9.190.245",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "92e6d2849868ba8f360c": {
+   "server": "31.76.3.52",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "771b4e9bf08534e27270": {
+   "server": "179.254.191.2",
+   "port": 39105,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e2bd4ff2dafcdf56595d": {
+   "server": "dog-us.kunlun01dns.com",
+   "port": 21009,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "799e994711c508442550": {
+   "server": "179.254.115.111",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0a4f5cd910c42b92ac0b": {
+   "server": "179.254.115.200",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "34bc2317dcec91c651aa": {
+   "server": "132.243.66.159",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "525d942825981ff66c1c": {
+   "server": "185.71.216.95",
+   "port": 2088,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7ce8e027daeefac0b9a8": {
+   "server": "tjmg2.m2k699.com",
+   "port": 24999,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "5160c68104d44318f2b7": {
+   "server": "cloud-de01.dynv6.net",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "61a7a3a56a1f0fed8957": {
+   "server": "www.visa.com.sg",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "608a34455016a9159584": {
+   "server": "kozel.cc.cd",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "b4ae473356c4c5aa411c": {
+   "server": "3.248.201.197",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d0de7f94216015fdd723": {
+   "server": "66.163.117.58",
+   "port": 22324,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "39777d864cb5579c8f9c": {
+   "server": "62.210.24.143",
+   "port": 32202,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "41713a57803715529d98": {
+   "server": "62.210.70.194",
+   "port": 37783,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d143314be524ef6cfbe5": {
+   "server": "172.99.189.239",
+   "port": 1270,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f1c93248d81bb8eb803d": {
+   "server": "57.128.164.21",
+   "port": 80,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "26d78562ffea7fe4d1d1": {
+   "server": "51.75.160.126",
+   "port": 80,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6e8a1906a59762bf47f3": {
+   "server": "23.137.249.110",
+   "port": 30011,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "114bef694f8bba9d5469": {
+   "server": "165.232.46.76",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "aa779cc3ec22f651817d": {
+   "server": "195.133.93.179",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "cee25c075311b2fc2a44": {
+   "server": "132.243.242.40",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7992ce0ad31475bf0c53": {
+   "server": "94.241.172.107",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3e639ae91277c0f8b10c": {
+   "server": "134.209.27.89",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "60b9a15964e4cfe9bd8d": {
+   "server": "178.62.110.142",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d62cd82f6af397563f91": {
+   "server": "178.62.115.66",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e1f6c242413c4d19aee2": {
+   "server": "46.101.59.48",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a228cf13d7e82d538bed": {
+   "server": "46.101.56.175",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "76587e9ef660b286f01a": {
+   "server": "66.163.118.62",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "23297c11f443018dc0a2": {
+   "server": "18.134.240.81",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "41b2770a66b071eda140": {
+   "server": "132.243.242.216",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7e4a5bfa445e8e3dc3d1": {
+   "server": "212.192.3.222",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c8fba793afa2b02d64ad": {
+   "server": "195.216.169.182",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "49c11a5084ef9a59bf83": {
+   "server": "212.192.3.113",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c6308d4efe858b879ff3": {
+   "server": "132.243.242.115",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "be9744ba9ded6b079d1b": {
+   "server": "146.190.16.218",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5fc7f581e1a2c41bfece": {
+   "server": "164.92.155.204",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "16ed7c4bbe8a72dc2e56": {
+   "server": "195.133.93.227",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b7111bc27d312e2f403d": {
+   "server": "185.255.115.103",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ef36b5058c51043c5fe3": {
+   "server": "185.255.115.118",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "fa4c8c372ac72336fb0b": {
+   "server": "195.15.207.252",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f9f49c5da266fab9bb77": {
+   "server": "8.209.119.13",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7bd259539542a70d5631": {
+   "server": "13.143.179.17",
+   "port": 52006,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8c280b6ffd28d26c4f62": {
+   "server": "47.91.74.232",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "2f93ed6c4e72a459b701": {
+   "server": "68.183.212.173",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d408ec1d608a901c70e7": {
+   "server": "191.217.215.228",
+   "port": 2096,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a0aaaacea30c49a9b8ca": {
+   "server": "212.192.3.237",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "77028e91a57821e0ea07": {
+   "server": "191.217.215.228",
+   "port": 2053,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a648422c20bf2a7664d3": {
+   "server": "185.14.29.29",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e8d200a33fb19888dd72": {
+   "server": "164.37.224.51",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "53b011e049bec46532a1": {
+   "server": "190.2.147.119",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "bba44529c858dcc8574c": {
+   "server": "176.65.151.85",
+   "port": 8880,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "407e9dd4a65dbc3c9da6": {
+   "server": "5.188.181.201",
+   "port": 9003,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "20eca60b045ca1f866d5": {
+   "server": "195.206.235.34",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "113327934cdbeb8e1459": {
+   "server": "201.8.64.254",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "98933ac6a804041a25da": {
+   "server": "5.188.181.201",
+   "port": 9025,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "81594627f279cd83dda0": {
+   "server": "79.182.70.192",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b48b24ef6805fb7c5bac": {
+   "server": "195.206.235.139",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6bf914ae7a8f862f4024": {
+   "server": "191.217.253.12",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "2009003d900ae147ee6a": {
+   "server": "147.45.221.225",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8b3ffe3c9392ed0ca9aa": {
+   "server": "195.206.235.215",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "532e8440e7ea00251153": {
+   "server": "201.8.71.230",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "54c86adff1f999b72181": {
+   "server": "146.103.43.82",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "cb65aaf4dd87661b8c78": {
+   "server": "5.188.181.201",
+   "port": 9027,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a7177e2d1191a1cc32cb": {
+   "server": "62.113.194.49",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f89bb35ed531c89bdda8": {
+   "server": "146.103.41.6",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "dadcc9b0b46ea703d2a8": {
+   "server": "51.195.91.135",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e76ab9e3684af40296f4": {
+   "server": "leviko-al8733.shopingggg.ir",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "ce5b0f4a200dd33c75a6": {
+   "server": "146.103.42.165",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "43d9f7ece400ee6e1918": {
+   "server": "146.103.43.91",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "82975f54abaac6bb20bd": {
+   "server": "146.103.42.119",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "891872e88728a31a61fe": {
+   "server": "82.118.19.153",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c4ee24c2de180319fb51": {
+   "server": "146.103.43.15",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c1835547df6c33674dd5": {
+   "server": "146.103.40.173",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3c7d804affc8faf0fe94": {
+   "server": "146.103.41.14",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ee08e32aa6b0979a065c": {
+   "server": "146.103.43.124",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e358fe2b7389b9b8d884": {
+   "server": "146.103.42.26",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7c7c7ecdec634a07ce65": {
+   "server": "179.254.115.118",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5653d54a7c9e8f11506e": {
+   "server": "164.37.224.246",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "bc8a19c4bea6d8967c00": {
+   "server": "79.182.70.245",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0f7e78c585d85207be58": {
+   "server": "79.182.70.81",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "751b59b5076d0d2d6374": {
+   "server": "195.206.235.119",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "819eef96704dfb558f0d": {
+   "server": "hysteria.udpgw.com",
+   "port": 8443,
+   "type": "hysteria2",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "0cc55f96ddd90699e448": {
+   "server": "31.77.142.19",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c27fa45843e049350d50": {
+   "server": "146.103.41.89",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "50d84b79ebb0aa29f32c": {
+   "server": "217.30.10.70",
+   "port": 9045,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1c5f30f85277d8fc10c2": {
+   "server": "188.166.120.52",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b3f781980de9027e6066": {
+   "server": "217.30.10.70",
+   "port": 9014,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "208b0a9cc6a570927b34": {
+   "server": "217.30.10.70",
+   "port": 9097,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "853523b16f43e5b8fe18": {
+   "server": "217.30.10.70",
+   "port": 9042,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6ca374c886dbdb287d59": {
+   "server": "217.30.10.70",
+   "port": 9079,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "50c911931960103afbe7": {
+   "server": "217.30.10.70",
+   "port": 9037,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6b4a058e7609eb8ea2a6": {
+   "server": "217.30.10.70",
+   "port": 9025,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "892a743d036c074860a4": {
+   "server": "217.30.10.70",
+   "port": 9000,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7c21d36a1ddec2addc5a": {
+   "server": "217.30.10.70",
+   "port": 9070,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8c1f668030ebbea3e540": {
+   "server": "217.30.10.70",
+   "port": 9008,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "672532a91f76e03e541a": {
+   "server": "91.201.65.122",
+   "port": 9092,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3ef59a63933299bf91c5": {
+   "server": "31.171.152.222",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d48ea38753d5381a823b": {
+   "server": "217.30.10.70",
+   "port": 9024,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3943a22a665fb28b2137": {
+   "server": "217.30.10.70",
+   "port": 9006,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "728fe3a97ea0ba6cc682": {
+   "server": "217.30.10.70",
+   "port": 9026,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "837c1039800b407495b0": {
+   "server": "217.30.10.70",
+   "port": 9060,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6d04a88490929ab19ad6": {
+   "server": "217.30.10.70",
+   "port": 9053,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8304a72dcaf203223d71": {
+   "server": "217.30.10.70",
+   "port": 9064,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "fe438ae82060ed36e494": {
+   "server": "217.30.10.70",
+   "port": 9056,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "60234375986f61b06b1e": {
+   "server": "91.201.65.122",
+   "port": 9053,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "26e89674bb360b36908c": {
+   "server": "217.30.10.70",
+   "port": 9011,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "45665e2f4e694239ee6a": {
+   "server": "217.30.10.70",
+   "port": 9033,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8f51ec09598925970671": {
+   "server": "217.60.182.96",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ed4aff09b3991c6fe62a": {
+   "server": "217.30.10.70",
+   "port": 9041,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "fc0a64739a9801e344bf": {
+   "server": "217.30.10.70",
+   "port": 9005,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "46f267b97fe6cd246624": {
+   "server": "217.30.10.70",
+   "port": 9073,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "9a65bbb0a8e170ded894": {
+   "server": "217.30.10.70",
+   "port": 9007,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8deff55c7423e0b4c096": {
+   "server": "217.30.10.70",
+   "port": 9010,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f99cb63be18a87df0b9e": {
+   "server": "217.30.10.70",
+   "port": 9093,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "035cc4cc41fda1e42238": {
+   "server": "217.30.10.70",
+   "port": 9043,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d71ff7bb14c74d8ad69d": {
+   "server": "217.30.10.70",
+   "port": 9003,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "754cfbd23899a3576c84": {
+   "server": "217.30.10.70",
+   "port": 9038,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e9993aaf9405e3c1c948": {
+   "server": "45.9.120.53",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c3b804f62e969cbe0a70": {
+   "server": "138.124.70.41",
+   "port": 14430,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1676a0864c1712c691d8": {
+   "server": "191.217.244.190",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b5394586584eca73f2dd": {
+   "server": "144.31.1.172",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "331bd863f1912f7f69c3": {
+   "server": "91.201.65.122",
+   "port": 9050,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "079d88ad0c4ee290392d": {
+   "server": "213.183.63.60",
+   "port": 9029,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e9746e60932e5df5cb36": {
+   "server": "195.238.126.20",
+   "port": 9068,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ee587837a8647d051389": {
+   "server": "195.238.126.20",
+   "port": 9002,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1d8ac6821462d08b6ac7": {
+   "server": "150.251.113.34",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1b5d5766743f07d0a179": {
+   "server": "195.238.126.20",
+   "port": 9008,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8026a84a6a34b30c74dd": {
+   "server": "195.238.126.20",
+   "port": 9086,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7696187ab03266608414": {
+   "server": "195.238.126.20",
+   "port": 9045,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c26bb2b3a58b039a7320": {
+   "server": "48.102.205.89",
+   "port": 22444,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3fc5fa5a1072f4893862": {
+   "server": "185.158.151.235",
+   "port": 54005,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f0d7f5c220300df8de4a": {
+   "server": "31.56.18.99",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6233de1841f7a65b38d1": {
+   "server": "bl1.nexfile.net",
+   "port": 4443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "e231d8ff8474b516e8dd": {
+   "server": "144.31.125.60",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "718ad78ff242a3ad087c": {
+   "server": "200.169.179.233",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "4f5712dc6de3b20cf2ec": {
+   "server": "195.238.126.20",
+   "port": 9012,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "aefd56ebaf4c9d92392e": {
+   "server": "109.248.17.252",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "99c9cd26151c72d9a38d": {
+   "server": "81.200.158.26",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5d5ff10d0aae30d3d673": {
+   "server": "pl134.vpnbook.com",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "9da7b863389c1e9a96c2": {
+   "server": "85.90.197.220",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b9e6b2a3688eabbaea16": {
+   "server": "fr1.vmess.site",
+   "port": 443,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "8e9586a376b9ab11586c": {
+   "server": "31.76.3.51",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "bc3dffcd47e9581e330f": {
+   "server": "1c.hlclub.tech",
+   "port": 8446,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "bf9e7f21788204dc4b1a": {
+   "server": "193.233.89.130",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "db0b4f4dfdd7aa096661": {
+   "server": "196.196.204.137",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b8202685524458139545": {
+   "server": "176.32.33.126",
+   "port": 18443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "558b195dd143ae37550d": {
+   "server": "146.103.43.70",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1086df87860733c4fe73": {
+   "server": "pl140.vpnbook.com",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "30c4a554079311025cbe": {
+   "server": "31.77.144.255",
+   "port": 8444,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c6ee7a63c340bcef203e": {
+   "server": "185.242.247.252",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5d335a62afad98822fb9": {
+   "server": "132.243.163.125",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "da74ec15a8ad01741fb7": {
+   "server": "depotchannel.lucheeebezlimitnoekino.stream",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "d1dd9262d04661d0b229": {
+   "server": "196.245.153.104",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "860c521cfc36beda8d5a": {
+   "server": "132.243.163.174",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e84a5da0230ac03be733": {
+   "server": "132.243.66.220",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3f34c4d34ab635bf5572": {
+   "server": "91.207.183.48",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d06b31e0fa51f2dfd6f1": {
+   "server": "94.194.166.52",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "79f0d44b325bc505d3d8": {
+   "server": "94.194.164.203",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "acc91660c6c9f9abc3df": {
+   "server": "144.225.47.158",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0af219e399577e764996": {
+   "server": "144.225.47.8",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "36385e433362a775bd7b": {
+   "server": "144.225.47.68",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d6fe24d60a3143ebf48e": {
+   "server": "196.245.52.187",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "44844fa9c2e5b73515db": {
+   "server": "196.196.149.80",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0a34e020338cc3b17d22": {
+   "server": "46.101.0.105",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7b660bb45e406f77b98b": {
+   "server": "179.254.166.168",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e69f2b85ea76e07c3f6c": {
+   "server": "179.254.166.170",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ba5b801038ff5a1d6f61": {
+   "server": "167.99.203.0",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0ad57b1845ce5f7cb2ae": {
+   "server": "64.227.41.219",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d24f0dabcf65f6d21826": {
+   "server": "89.124.122.19",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "cf9f0afead4b999bc24b": {
+   "server": "199.247.23.31",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "21498fea3a11a45c8344": {
+   "server": "91.219.23.76",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7e9f26d25ca8e068c9c1": {
+   "server": "64.188.98.130",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5b1753d93a33382abd87": {
+   "server": "79.182.39.135",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b9dbee449f4be6f340b3": {
+   "server": "72.57.228.30",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1c762c45cbf3114aed99": {
+   "server": "193.25.215.182",
+   "port": 22222,
+   "type": "socks5",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ca1af030ab077c733835": {
+   "server": "185.145.99.41",
+   "port": 1080,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8e4a4407b09a59c06d91": {
+   "server": "193.181.212.81",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b155cf68e32f5ea447ac": {
+   "server": "144.31.218.188",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "438dcea6c69cd7d4172d": {
+   "server": "13.143.180.220",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d7c9587a8556461dd510": {
+   "server": "144.31.119.69",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b8b5eaf83fa10a8475e1": {
+   "server": "196.245.52.178",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e26eec7d3e54ba5546e3": {
+   "server": "185.244.182.162",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e980953fb6d67b680569": {
+   "server": "196.245.52.183",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "74d794cd8b619d17c2f8": {
+   "server": "144.31.233.43",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "789407ca2318bd0430c7": {
+   "server": "e60833x.nl7.h1clayd.click",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "024f8abd5ff771f293f6": {
+   "server": "fr-xr.vkrysk.space",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "236caaf1f990f732c66b": {
+   "server": "31.15.19.180",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8c6d7dc5378145370a29": {
+   "server": "43.163.112.174",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "69c989f34e307f0a5c52": {
+   "server": "P1.shoppingturbo.com",
+   "port": 443,
+   "type": "ss",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "877ffb9fc6c3f4680386": {
+   "server": "201.51.12.98",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a0e9fc483bd447bc47fb": {
+   "server": "201.24.116.192",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c6ef564f531b19372f5c": {
+   "server": "parchment.merlano.monster",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "7e6c61493a1f1c79a2f0": {
+   "server": "ochre.merlano.monster",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "1f53d1baefb7acb47896": {
+   "server": "cabinet.filnex.baby",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "f73c13519862e67c9801": {
+   "server": "217.60.33.215",
+   "port": 443,
+   "type": "hysteria2",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f177bd189ce4ec0507dd": {
+   "server": "paperclip.filnex.baby",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "26b5563939ae21da4d3c": {
+   "server": "rowanberry.moltex.click",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "6aa2b614c60f3922aca1": {
+   "server": "birchbark.gerqix.online",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "35ca7c9e30159e1dc4a9": {
+   "server": "inlay.merlano.monster",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "aa2cc572c819b34581f6": {
+   "server": "cedar.filnex.baby",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "f153f4e81fff8c513605": {
+   "server": "47.243.194.125",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3a6602d52a422d7f1e05": {
+   "server": "xjc03.clkhd.quest",
+   "port": 10540,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "ef954bd8c65bcb5fec4c": {
+   "server": "103.248.150.50",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a351182509d3ddd33fd0": {
+   "server": "47.236.168.243",
+   "port": 1080,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c0470c12b18953d224ef": {
+   "server": "198.13.53.39",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "bb9e96fa71a039f95136": {
+   "server": "45.76.222.108",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "e30513b22b7e054a2588": {
+   "server": "206.237.18.145",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7360fa25a8d60b6d5c97": {
+   "server": "149.28.29.156",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5ba4a84125d55bffa858": {
+   "server": "139.180.221.53",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3c9ec36394215a5e2597": {
+   "server": "45.32.57.15",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6edf9108d73f863b314c": {
+   "server": "wryly-messiest.video-streams.org",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "5bfe5e832f13bde940c5": {
+   "server": "104.168.249.36",
+   "port": 1080,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c16b7d8a17e5fa6dc6ad": {
+   "server": "pdmv4.xiaoyan.io",
+   "port": 16632,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "3c52e605cb62c6fe737f": {
+   "server": "byr3a.xiaoyan.io",
+   "port": 16618,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "f2f0a28f971272a17a9c": {
+   "server": "48.102.204.67",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "224141bcc005e1fc5265": {
+   "server": "107.191.58.86",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "c33cee40e95b79645c5e": {
+   "server": "172.233.142.149",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0de0ac6e7311c4b88e59": {
+   "server": "172.236.231.45",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "73929de5a8c2027ea5bd": {
+   "server": "172.236.241.130",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "6334831ce6c790f1270e": {
+   "server": "23.230.200.250",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "ed49fbeddb61b979ecd2": {
+   "server": "172.233.129.172",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "88011c004d5c6592e0a1": {
+   "server": "47.88.52.220",
+   "port": 80,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "98edbf5b73a3e7fed6f2": {
+   "server": "homestead-walloping.sports-streams.org",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "f08f21e9641d4f8af765": {
+   "server": "leviko-us6922.shopingggg.ir",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "681518ecfaa9dce1c472": {
+   "server": "www.true.th",
+   "port": 80,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "9dc85311addeb36f2c4f": {
+   "server": "43.156.246.147",
+   "port": 23889,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b989a159b510190674f3": {
+   "server": "87.120.106.95",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d723c917cba32f70151c": {
+   "server": "95.129.236.70",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "9a897205dd757963815c": {
+   "server": "pdmv4.xiaoyan.io",
+   "port": 16648,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "649347dd61cf86e82892": {
+   "server": "bestcdn2.868863.xyz",
+   "port": 2087,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "7acd99f15e962d2089aa": {
+   "server": "166.88.14.71",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f97fcef9741217bd8d2f": {
+   "server": "43.159.41.66",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "148ce00b58ae2218b61f": {
+   "server": "196.245.52.188",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "4117c56a304daa3a3705": {
+   "server": "144.225.47.161",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "8c52ec449cac8733c167": {
+   "server": "94.194.165.96",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "7e7a057aa637a93fa1f6": {
+   "server": "8.209.236.192",
+   "port": 1080,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "30c7a7fd623ac34b33a7": {
+   "server": "116.213.43.43",
+   "port": 11106,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3d57532d478dca02606f": {
+   "server": "72.57.228.87",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f8408c9bbf84244756c7": {
+   "server": "bestcdn2.868863.xyz",
+   "port": 2096,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "cae756f1cb1c007ae5bc": {
+   "server": "n04.jinggai.online",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "73f020fced5de3262b3b": {
+   "server": "bestcdn2.868863.xyz",
+   "port": 2083,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "34910ba0dafcc0da0427": {
+   "server": "starlink-ft.251313.xyz",
+   "port": 443,
+   "type": "hysteria2",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "23d4759c0af64b689345": {
+   "server": "172.64.145.94",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "aa5d1418a32b62659af4": {
+   "server": "172.64.150.248",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a330acc8386b209dd2e2": {
+   "server": "172.67.178.143",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "875894edd680cd1d7907": {
+   "server": "172.64.153.205",
+   "port": 2087,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d53ec2bbfea10b1e47e4": {
+   "server": "104.18.220.84",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3ec4055749cf1e019712": {
+   "server": "104.18.151.231",
+   "port": 2053,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "71be1bb1ce794c78cad3": {
+   "server": "194.36.55.4",
+   "port": 2082,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a20308b962b2b8c25461": {
+   "server": "172.67.127.250",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "54b02fc70ebab05da23b": {
+   "server": "104.16.242.176",
+   "port": 443,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "0b31647e031631a33ef2": {
+   "server": "172.67.131.125",
+   "port": 2083,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "fd4d7e490275e5c142f1": {
+   "server": "172.67.184.45",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "9d707a63149d37816646": {
+   "server": "188.114.97.6",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "eee09f0cc85f4e588740": {
+   "server": "172.64.150.57",
+   "port": 8080,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "aefda7fcf9a176e27be8": {
+   "server": "146.75.59.186",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "2ed21f599a281eebc61a": {
+   "server": "104.17.171.34",
+   "port": 80,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "f360c43ce0872fab7bb6": {
+   "server": "173.245.58.100",
+   "port": 2086,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "5e600520d777a5450646": {
+   "server": "172.66.44.97",
+   "port": 8080,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3b8d16e607fec4917b55": {
+   "server": "203.30.191.19",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1b8db9f67d20d3f2d2ae": {
+   "server": "104.21.43.115",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "1e8dd464b731bca8797a": {
+   "server": "104.17.70.206",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "91616b3c5732a819343e": {
+   "server": "162.159.153.4",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "99e48c75993e649ed182": {
+   "server": "154.92.9.70",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "3ed80f496adb848a6cb6": {
+   "server": "172.64.80.1",
+   "port": 8443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "26211d0917293d44a094": {
+   "server": "104.19.47.36",
+   "port": 2086,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "d08294e852f6fc61f5b6": {
+   "server": "23.227.39.11",
+   "port": 8080,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "93dd78b2380bc141a552": {
+   "server": "104.19.47.237",
+   "port": 8080,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "2baeb6dbe75debf639a0": {
+   "server": "104.16.106.252",
+   "port": 443,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "59aa79a307b586da7358": {
+   "server": "45.80.111.9",
+   "port": 2082,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a276f428e4496937caae": {
+   "server": "190.93.244.1",
+   "port": 2082,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "2b8581fa1a53101349ed": {
+   "server": "104.21.7.101",
+   "port": 80,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "042ed42cb162fbac8c9b": {
+   "server": "162.159.15.39",
+   "port": 8443,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "53396bd6cd51381b38ba": {
+   "server": "216.132.114.27",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "418a80ab41256fd97ffc": {
+   "server": "cf.008500.xyz",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "9ed3b5f36530dbb555d1": {
+   "server": "172.64.148.165",
+   "port": 8443,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "9ccd9415dfe81bbad7f9": {
+   "server": "guessable-turnpikes.cdn-content.com",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "1dfd11c11b536bfdfa1c": {
+   "server": "sparkling-gadabout.quick-cdn.net",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "86bebc6d022a32422572": {
+   "server": "www.calmlunch.com",
+   "port": 443,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "2ba7b0d55f4d49be22e9": {
+   "server": "185.16.110.62",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "fba4db8b7478f710217c": {
+   "server": "byr3a.xiaoyan.io",
+   "port": 16622,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "4ce0783eb6d45ba99597": {
+   "server": "172.104.86.181",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "a7195519c360bfe9a52e": {
+   "server": "139.162.91.182",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "58fee2f1b60c18b5d02a": {
+   "server": "172.105.203.15",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "b3485fd88b988af12fb0": {
+   "server": "104.21.0.1",
+   "port": 8443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "17ed025d22f4fb885b36": {
+   "server": "162.159.130.234",
+   "port": 2096,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1796095898
+  },
+  "23f72a07f93afd72fc07": {
+   "server": "nickgus.cc.cd",
+   "port": 443,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "e99f31f215caf16271ad": {
+   "server": "www.vmware.com",
+   "port": 2087,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "84892c04bdfd1156c641": {
+   "server": "fast.145779.xyz",
+   "port": 2053,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491098,
+   "expires_at": 1795750298
+  },
+  "906943c68995571595b1": {
+   "server": "dtt4.toe.qd.je",
+   "port": 2109,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "22e90587523080c4f8e8": {
+   "server": "132.243.67.224",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "8bf087c889d460ebacce": {
+   "server": "185.71.216.177",
+   "port": 2194,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "c54deccf52c7c28a9e14": {
+   "server": "suh.cryptofront.uk",
+   "port": 80,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "7debe1560930315924ba": {
+   "server": "13.143.239.253",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "4c4b9645467b79854a3b": {
+   "server": "119.46.51.45",
+   "port": 37515,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "c5b14ac365aae2451cfe": {
+   "server": "185.71.216.94",
+   "port": 2092,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "aff77160333347da2417": {
+   "server": "38.180.206.44",
+   "port": 48982,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "bea10d8b412554c986e8": {
+   "server": "ww2.levikogjgfdd.ir",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "d324acecdd61ea58892c": {
+   "server": "glance.asuscomm.com",
+   "port": 10099,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "7ed65e40d94958c71e63": {
+   "server": "iran.crackerbinam.org",
+   "port": 54005,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "4234d33cb6958883ee34": {
+   "server": "185.71.216.94",
+   "port": 2195,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "67aac7838d5263f4eb84": {
+   "server": "13.140.253.35",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "45cb9eb0dcf07f16167b": {
+   "server": "185.71.216.95",
+   "port": 2093,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "5b601f41d59327fac254": {
+   "server": "45.38.143.210",
+   "port": 30584,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "db3d4a3106cf0781a8a8": {
+   "server": "78.159.240.72",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "4b52fc9857bd6e49e643": {
+   "server": "leviko-nl6763.shopingggg.ir",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "c0e62109a5b0fa90f081": {
+   "server": "sw100.marshonet.store",
+   "port": 8228,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "ccf953caa5b20ea47842": {
+   "server": "195.133.53.33",
+   "port": 443,
+   "type": "hysteria2",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "314b4f8a7ac2ba9b278e": {
+   "server": "uuyjnfbv.localip.ir",
+   "port": 2087,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "6da5355a9a993f6b1751": {
+   "server": "leviko-pl7374.shopingggg.ir",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "8f1d986e670be15401ab": {
+   "server": "plaindune.com",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "58f3e315200ca1318dec": {
+   "server": "leviko-de8799.shopingggg.ir",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "86e0dae99a349fe1ba73": {
+   "server": "leviko-de2473.shopingggg.ir",
+   "port": 2087,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "bb875d891395fb120f1d": {
+   "server": "leviko-ua2721.shopingggg.ir",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "33a36bcc740b26fe3312": {
+   "server": "ww3.levikogjgfdd.ir",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "53758ad25686734ef608": {
+   "server": "leviko-ch9924.shopingggg.ir",
+   "port": 19999,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "9f7a8609a3cbf2c770a2": {
+   "server": "leviko-nl9472.shopingggg.ir",
+   "port": 9543,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "9ed3ab61ff1b59dcd899": {
+   "server": "xvxn1hkzf.mateflora.com",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "4aca0034cb14a8526ead": {
+   "server": "143.246.41.117",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "bbb793357d673ad54dfe": {
+   "server": "43.155.199.22",
+   "port": 80,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "8f62f17191533c40467e": {
+   "server": "aiclouding.hchdhsbs12gd.ir",
+   "port": 7005,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "9f268729e264ac55593b": {
+   "server": "91.132.190.161",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "6299f9ac2c199b7dedc7": {
+   "server": "dp8yk.xiaoyan.io",
+   "port": 16616,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "0ce2cd74ce2366f5b0ba": {
+   "server": "45.95.232.233",
+   "port": 27020,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "f585ca94018ab3dd444a": {
+   "server": "185.71.216.95",
+   "port": 2194,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "be5b7ace4e177c04a109": {
+   "server": "34.80.15.95",
+   "port": 443,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "0ec5b18ae8c0150f0ede": {
+   "server": "8.209.117.187",
+   "port": 443,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "77075b59cd0074e2b4aa": {
+   "server": "189.24.115.57",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "293a5dcd7dcf1566e392": {
+   "server": "188.253.12.91",
+   "port": 45619,
+   "type": "trojan",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "48d4cb47c90b68c9f014": {
+   "server": "194.135.34.118",
+   "port": 8443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "108afc8ec6cf4096f2cf": {
+   "server": "zfd-boardv2.kunlun01dns.com",
+   "port": 16308,
+   "type": "vmess",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "b17285e7801e00aeaef6": {
+   "server": "dns22.m3hrzd.ir",
+   "port": 1355,
+   "type": "ss",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "02f919747000b308ad5d": {
+   "server": "511.150333.xyz",
+   "port": 21004,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "578dd9ddd1fb88caa1a9": {
+   "server": "store.blog-forme.ru",
+   "port": 443,
+   "type": "hysteria2",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "19604be78c7fa3ccbeda": {
+   "server": "7aa271t.es1.h1clayd.click",
+   "port": 443,
+   "type": "vless",
+   "stage": "TCP",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "0f4bdf71556a03ec7573": {
+   "server": "ga1data.xyy123.bid",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "4cae9988c5d149811dfc": {
+   "server": "us1.oh-node.com",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "10dbf5370d7605af7901": {
+   "server": "37.110.209.228",
+   "port": 80,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "a37152ea37ae4476e572": {
+   "server": "45.201.39.74",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "4fc0233e73124b1a706a": {
+   "server": "151.246.109.86",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "94d0636d96ec64ff4eba": {
+   "server": "0592efg.us8.h1clayd.click",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "6df3aab0baa7fc1394d4": {
+   "server": "151.246.108.69",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "510b7fa529ff83600ed1": {
+   "server": "131.186.22.95",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "a9e803115e57a581720d": {
+   "server": "151.246.109.158",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "d7a1bd7a468d27a9bcb7": {
+   "server": "154.40.61.186",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "f8f42f4cc9c0ea9ac065": {
+   "server": "ip13.shabkhosh.sbs",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "55f261596c5c22cab108": {
+   "server": "api.mediaklenov.cc",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "a463ed6fd9a278553757": {
+   "server": "saas.sin.fan",
+   "port": 2087,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "c85bd70854a9d388b09e": {
+   "server": "saas.sin.fan",
+   "port": 2083,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "fa91f9cd6b8d05573247": {
+   "server": "fdy.chonglangyun1366590.com",
+   "port": 39959,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "7a154066f2297d539a9a": {
+   "server": "xjc03.clkhd.quest",
+   "port": 39959,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "993682be57aa1efee91d": {
+   "server": "saas.sin.fan",
+   "port": 8443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "8685293af92aa0058d1f": {
+   "server": "144.56.22.78",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "e2fa516414485e70a816": {
+   "server": "hsaia.connainho.lol",
+   "port": 46074,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "a7ff0fda0a6896aeb654": {
+   "server": "87.84.49.245",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "70aaf4355030f476869a": {
+   "server": "192.204.15.138",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "97feabc95893811bb84c": {
+   "server": "p6-olduser.linuxlh.xin",
+   "port": 16641,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "d0ef0736ad29526741b4": {
+   "server": "109.66.136.194",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "d49159536ac62e072ac7": {
+   "server": "103.18.230.88",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "5139c76981fbbd26db02": {
+   "server": "104.234.70.82",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "7e822a96c722acb4cd53": {
+   "server": "168.222.8.119",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "cd0bbfb8eb115494e15a": {
+   "server": "168.222.8.4",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "0889719f8025912ed603": {
+   "server": "109.66.136.234",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "178e04e415c7a2730c70": {
+   "server": "109.66.136.42",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "50704c0a7a92826d3771": {
+   "server": "109.66.136.242",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "a22a2aa7fbc2bb400e71": {
+   "server": "87.84.49.206",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "44bc3d20fbe86583b868": {
+   "server": "104.234.70.136",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "993735310c2316964c53": {
+   "server": "87.84.49.140",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "d8e1f38f04eac88913c1": {
+   "server": "103.14.164.30",
+   "port": 42000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "4200cdbf1771c2d472fb": {
+   "server": "sclass-b1.catcat321.com",
+   "port": 20028,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "25b206a22163368e9163": {
+   "server": "lt-tcp.h1.vpnprime.ru",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "47da9f567fe729c6b177": {
+   "server": "hammer.676767676767.ru",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "d186686eb135e2a3adf4": {
+   "server": "us3.oh-node.com",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "b9a9ad6d51a8119a8c3b": {
+   "server": "14.44.19.57",
+   "port": 12101,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "8554e022c10b1791e492": {
+   "server": "sclass-01.catcat321.com",
+   "port": 20103,
+   "type": "trojan",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "55a4605c67511c04813b": {
+   "server": "reedbank.moltex.click",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "ddef74d65b5799cb7126": {
+   "server": "grovewood.moltex.click",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1795750953
+  },
+  "16be7f4e11005bd2880f": {
+   "server": "202.155.99.32",
+   "port": 62000,
+   "type": "socks5",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "02fd3552eeff062dfda2": {
+   "server": "112.132.215.108",
+   "port": 50002,
+   "type": "vmess",
+   "stage": "DELAY",
+   "at": 1795491753,
+   "expires_at": 1796096553
+  },
+  "ea4dc96760b6b29dcd8e": {
+   "server": "196.196.148.177",
+   "port": 443,
+   "type": "vless",
+   "stage": "DELAY (engine-mismatch: sing-box OK)",
+   "at": 1795491753,
+   "expires_at": 1796096553
   }
  },
- "updated_at": 1795355096
+ "updated_at": 1795491753
 }
