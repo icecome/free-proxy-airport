@@ -58,6 +58,8 @@ out/ .tools/ _bak-*/   gitignored：草稿、引擎、回滚快照
 | `docs/` | 仅 `clash.yaml`、`.nojekyll` | **任何文档** |
 | `out/` | 报告、调试转储 | 任何项目依赖的东西 |
 
+完整职责表与新增文件的决策树在 [structure.md](documentation/structure.md) §2 §3，本文不复读。
+
 ---
 
 ## 3. 常用命令（已核实 2026-11-24）
@@ -228,13 +230,11 @@ socks5/http 一律按 endpoint 认身份。
 | 文档 | 回答什么 | 冲突时 |
 |---|---|---|
 | [documentation/structure.md](documentation/structure.md) | 文件放哪、目录职责、开发约束 | **以它为准** |
-| [documentation/README.md](documentation/README.md) | 文档索引 | — |
-| [documentation/reference/modules.md](documentation/reference/modules.md) | 模块做什么、被谁调用 | 与代码冲突以代码为准 |
+| [documentation/README.md](documentation/README.md) | 文档索引（含 design/dev/ops/reference 全部条目） | — |
+| [documentation/reference/modules.md](documentation/reference/modules.md) | 模块做什么、被谁调用、改动的连带影响 | 与代码冲突以代码为准 |
 | [documentation/reference/env-vars.md](documentation/reference/env-vars.md) | 环境变量清单 | 与代码冲突以代码为准 |
-| [documentation/reference/data-files.md](documentation/reference/data-files.md) | `data/` 的 JSON schema | 与代码冲突以代码为准 |
-| [documentation/dev/coding-conventions.md](documentation/dev/coding-conventions.md) | 怎么写、怎么测 | — |
-| [documentation/ops/runbook.md](documentation/ops/runbook.md) | 怎么跑、怎么修 | — |
-| [documentation/design/structure-decisions.md](documentation/design/structure-decisions.md) | 为什么这样组织 | — |
+| [documentation/reference/data-files.md](documentation/reference/data-files.md) | `data/` 与产物的 JSON schema | 与代码冲突以代码为准 |
+| [documentation/ops/runbook.md](documentation/ops/runbook.md) | 怎么跑、怎么修、怎么回滚 | — |
 
 工作区级约定（多项目共用目录、会话归位规则）在上一级 `../AGENTS.md`，本文不复读。
 
@@ -251,5 +251,5 @@ socks5/http 一律按 endpoint 认身份。
 | 命令跑通或失效 | 本文 §3（带核实日期） |
 | 架构决策被推翻 | `design/structure-decisions.md` 追加一条，写明原状/问题/决定/依据 |
 
-本文维持 200 行上下。超过 250 行时先拆到 `documentation/`，规则条数不减，
-只把细节挪走、留一句话规则 + 链接。
+本文上限 250 行。超过时先拆到 `documentation/`：规则条数不减，只把细节挪走、
+留一句话规则 + 链接。
