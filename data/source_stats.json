@@ -9,11 +9,12 @@
    63,
    47,
    62,
-   64
+   64,
+   63
   ],
   "dead_streak": 0,
-  "last_count": 64,
-  "updated_at": 1795694218,
+  "last_count": 63,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/V2Ray.yml": {
@@ -26,11 +27,12 @@
    1964,
    807,
    1157,
-   421
+   421,
+   1679
   ],
   "dead_streak": 0,
-  "last_count": 421,
-  "updated_at": 1795694218,
+  "last_count": 1679,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml": {
@@ -43,11 +45,12 @@
    858,
    726,
    894,
-   728
+   728,
+   733
   ],
   "dead_streak": 0,
-  "last_count": 728,
-  "updated_at": 1795694218,
+  "last_count": 733,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/bily1258-design/beimi/main/output/clash.yaml": {
@@ -60,11 +63,12 @@
    768,
    772,
    643,
-   722
+   722,
+   895
   ],
   "dead_streak": 0,
-  "last_count": 722,
-  "updated_at": 1795694218,
+  "last_count": 895,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/chenzhihan1751-cyber/node-sub-zixf/main/sub/v2ray.txt": {
@@ -77,11 +81,12 @@
    722,
    702,
    688,
-   692
+   692,
+   769
   ],
   "dead_streak": 0,
-  "last_count": 692,
-  "updated_at": 1795694218,
+  "last_count": 769,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/cheshi888/freesub-v2/main/output/clash.yaml": {
@@ -94,11 +99,12 @@
    723,
    723,
    703,
-   680
+   680,
+   686
   ],
   "dead_streak": 0,
-  "last_count": 680,
-  "updated_at": 1795694218,
+  "last_count": 686,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/meroseem/acaesub/main/output/clash.yaml": {
@@ -111,11 +117,12 @@
    479,
    479,
    419,
-   415
+   415,
+   467
   ],
   "dead_streak": 0,
-  "last_count": 415,
-  "updated_at": 1795694218,
+  "last_count": 467,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/lucas8864/freesub/main/output/clash.yaml": {
@@ -128,11 +135,12 @@
    472,
    441,
    454,
-   431
+   431,
+   489
   ],
   "dead_streak": 0,
-  "last_count": 431,
-  "updated_at": 1795694218,
+  "last_count": 489,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/clash.yaml": {
@@ -145,11 +153,12 @@
    146,
    113,
    114,
-   103
+   103,
+   118
   ],
   "dead_streak": 0,
-  "last_count": 103,
-  "updated_at": 1795694218,
+  "last_count": 118,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/v2raynnodes/clashfree/main/clash.yaml": {
@@ -162,15 +171,17 @@
    0,
    1,
    0,
-   0
+   0,
+   1
   ],
-  "dead_streak": 2,
-  "last_count": 0,
-  "updated_at": 1795694218,
-  "priority": 0.0
+  "dead_streak": 0,
+  "last_count": 1,
+  "updated_at": 1795780172,
+  "priority": 1.0
  },
  "https://raw.githubusercontent.com/v2raynnodes/v2rayfree/main/v2ray.txt": {
   "history": [
+   50,
    50,
    50,
    50,
@@ -183,7 +194,7 @@
   ],
   "dead_streak": 0,
   "last_count": 50,
-  "updated_at": 1795694218,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/kevin-sanas/free-clash-verge/main/output/clash.yaml": {
@@ -193,11 +204,12 @@
    500,
    500,
    500,
+   500,
    500
   ],
   "dead_streak": 0,
   "last_count": 500,
-  "updated_at": 1795694218,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml": {
@@ -207,11 +219,12 @@
    391,
    322,
    382,
-   363
+   363,
+   399
   ],
   "dead_streak": 0,
-  "last_count": 363,
-  "updated_at": 1795694218,
+  "last_count": 399,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/share-daily/node/main/clash.yaml": {
@@ -221,11 +234,12 @@
    234,
    233,
    256,
-   995
+   995,
+   1008
   ],
   "dead_streak": 0,
-  "last_count": 995,
-  "updated_at": 1795694218,
+  "last_count": 1008,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/xituimao/spider-clash/main/output/clash.yaml": {
@@ -235,11 +249,12 @@
    80,
    41,
    62,
-   37
+   37,
+   40
   ],
   "dead_streak": 0,
-  "last_count": 37,
-  "updated_at": 1795694218,
+  "last_count": 40,
+  "updated_at": 1795780172,
   "priority": 1.0
  },
  "https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml": {
@@ -249,11 +264,12 @@
    30,
    30,
    10,
-   20
+   20,
+   5
   ],
   "dead_streak": 0,
-  "last_count": 20,
-  "updated_at": 1795694218,
-  "priority": 1.0
+  "last_count": 5,
+  "updated_at": 1795780172,
+  "priority": 0.3
  }
 }

@@ -7,83 +7,58 @@ unified-delay: true
 tcp-concurrent: true
 global-client-fingerprint: chrome
 generated-by: free-proxy-airport-v7.1
-generated-at: '2026-11-26T13:14:14.672269+00:00'
+generated-at: '2026-11-27T12:59:23.860270+00:00'
 proxies:
-- type: ss
-  name: ⚠️ [free18#124] 🇯🇵_日本 (66)
-  server: 8.209.221.183
+- name: ⚠️ JP日本-147
+  type: ss
+  server: 8.209.198.176
   port: 5555
-  password: '123456'
   cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#131] 🇯🇵_日本 (73)
-  server: 8.216.3.83
-  port: 5555
   password: '123456'
-  cipher: aes-256-gcm
   udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#139] 🇯🇵_日本 (81)
-  server: 8.216.9.217
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#141] 🇯🇵_日本 (83)
-  server: 8.216.8.176
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ 🇭🇰HK_16
-  type: hysteria2
-  server: vpn-hk-004.fastervpn.world
+- name: ⚠️ 🇯🇵JP_3|142KB/s|M003-260806
+  type: ss
+  server: jpa.123069.xyz
+  port: 53758
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+- name: ⚠️ 🇯🇵 日本 | JPN 2
+  server: 50.7.159.242
   port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  udp: true
-  sni: vpn-hk-004.fastervpn.world
-  servername: vpn-hk-004.fastervpn.world
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇭🇰HK_96
   type: vless
-  server: leviko-hk4530.shopingggg.ir
-  port: 31001
-  uuid: 12a4f736-2238-49ee-831f-5516f15cc951
-  udp: true
-  network: tcp
+  uuid: 8840fac2-5361-4cb6-b887-cd1b95092394
   tls: true
-  servername: mensura.cdn-apple.com
+  servername: jp.reddotcorp.org
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- type: vless
+  name: ⚠️ [free18#128] 🇯🇵_日本 (19)
+  server: jpg1radio.jumpernode.site
+  port: 443
+  uuid: f45ccbaa-521d-4d3a-a4e7-13a3094f2b90
   flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: www.cdn.amazon.com
+  sni: www.cdn.amazon.com
+  skip-cert-verify: true
   client-fingerprint: chrome
   reality-opts:
-    public-key: lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY
-    short-id: '39793bc4708abbbb'
-- name: ⚠️ SG VLESS-11 | free-nodes
-  type: vless
-  server: ct.877774.xyz
-  port: 443
-  uuid: 201d6c87-5de6-4bda-973c-024129b228fb
+    public-key: dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I
+    short-id: '949ddd6bacbc'
+- name: ⚠️ 🇸🇬 新加坡 (Singapore) 565 - xiaohe
+  server: 149.88.107.51
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   tls: true
-  sni: ap-south.862400.xyz
-  network: ws
-  ws-opts:
-    path: /announcement?ed=2048
-    headers:
-      Host: ap-south.862400.xyz
-  client-fingerprint: random
-- name: ⚠️ 🇸🇬 新加坡 (Singapore) 578 - xiaohe
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: ⚠️ 🇸🇬 新加坡 (Singapore) 579 - xiaohe
   server: 172.236.145.200
   port: 119
   udp: true
@@ -93,17 +68,37 @@ proxies:
   servername: whatsapp.net
   skip-cert-verify: true
   client-fingerprint: chrome
-- name: ⚠️ 🇸🇬 新加坡 (Singapore) 612 - xiaohe
-  server: 43.156.36.253
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
-  sni: tx-hy2
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇺🇸 美国 (United States) 108 - xiaohe
+- name: ⚠️ 🇭🇰HK_94|670KB/s|C001-260618
+  type: ss
+  server: waic.pro.main.sys-metric-report.com
+  port: 28014
+  cipher: chacha20-ietf-poly1305
+  password: abc62f00-95a8-4c2e-a85d-36a2cdc977da
+- name: ⚠️ 🇺🇸US_752|1.1MB/s|S004-260618
+  type: ss
+  server: 108.181.9.202
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+- name: ⚠️ 🇺🇸US_761|1.4MB/s|M003-260806
+  type: ss
+  server: 64.42.181.98
+  port: 12992
+  cipher: aes-128-gcm
+  password: dbf6a2305d0c50e7217ff13513c20a4b
+- name: ⚠️ 🇺🇸US_738|1.6MB/s|M003-260806
+  type: ss
+  server: 108.181.133.138
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: H12pAAJYL
+- name: ⚠️ 🇺🇸US_735|1.9MB/s|S004-260618
+  type: ss
+  server: 38.99.82.34
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: TyWIy6paiFUX
+- name: ⚠️ 🇺🇸 美国 (United States) 174 - xiaohe
   server: 172.111.36.244
   port: 1270
   udp: true
@@ -114,36 +109,39 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: ⚠️ 🇺🇸 美国 (United States) 101 - xiaohe
-  server: 167.88.63.37
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+- name: ⚠️ 🇺🇸US_745|728KB/s|M003-260806
+  type: vless
+  server: x.m-90.xyz
+  port: 443
+  uuid: eee8ae65-bc48-438f-a606-a96f10bfb3b8
   tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: ⚠️ 🇺🇸 美国 (United States) 386 - xiaohe
-  server: 38.59.243.225
-  port: 4076
+  sni: x.m-90.xyz
+  network: ws
+  ws-opts:
+    path: /t.me/TEAMNETGRATISCOL
+    headers:
+      Host: x.m-90.xyz
+  client-fingerprint: chrome
+- name: ⚠️ 🇺🇸US_605|566KB/s|M003-260806
+  type: vless
+  server: kuruish.org
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  tls: true
+  sni: kuruish.org
+  client-fingerprint: chrome
+- name: ⚠️ 🇺🇸 美国 (United States) 525 - xiaohe
+  server: 196.198.111.138
+  port: 8443
   udp: true
   type: vless
-  uuid: b73a8f0b-0aad-4272-bd40-bc5d0e918d38
+  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: MnJgQSRNwrlqHe1jPhOJBEhVCZvcLIajf7CegwtV0Fg
-  servername: aws.amazon.com
-  client-fingerprint: firefox
-- name: ⚠️ [freeSub#024] D🔴🇺🇸hos_dokng.com_a6052a43
-  password: l1tlrdx52v
-  port: 62000
-  server: 66.253.2.69
-  type: socks5
-  username: u_rb1dba2
-- name: ⚠️ 🇺🇸 美国 (United States) 327 - xiaohe
+  servername: api-6b04608f.adhil.uk
+  skip-cert-verify: false
+  client-fingerprint: safari
+- name: ⚠️ 🇺🇸 美国 (United States) 441 - xiaohe
   server: edge.bookmai.com
   port: 443
   udp: true
@@ -155,52 +153,23 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: mother-earth.fyi
   client-fingerprint: chrome
-- type: vmess
-  name: ⚠️ [ermaozi#002] 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
+- name: ⚠️ 🇺🇸 美国 (United States) 78
   server: www.shopify.com
   port: 443
+  udp: true
+  type: vmess
   uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  cipher: auto
   alterId: 0
+  cipher: auto
   tls: true
   servername: guanwang.awsno.com
-  sni: guanwang.awsno.com
+  skip-cert-verify: false
   network: ws
   ws-opts:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
-- name: ⚠️ 🇺🇸 美国 (United States) 61
-  server: promo.betust.net
-  port: 443
-  udp: true
-  type: hysteria2
-  password: d4ca9415f0eac7897472e1e5b86d2e96
-  sni: promo.betust.net
-  skip-cert-verify: false
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇺🇸 美国 (United States) 487 - xiaohe
-  server: 198.247.124.187
-  port: 23456
-  udp: true
-  type: hysteria2
-  password: dongtaiwang.com
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇺🇸 美国 (United States) 407 - xiaohe
-  server: de2.substituteme.space
-  port: 443
-  udp: true
-  type: hysteria2
-  password: PEisy6m-98HcX1TWZt0yXiCS7jRZG4IzKQTXo6k1qb4
-  sni: de2.substituteme.space
-  skip-cert-verify: false
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇺🇸 美国 (United States) 461 - xiaohe
+- name: ⚠️ 🇺🇸 美国 (United States) 47
   server: guanwang.awsno.com
   port: 443
   udp: true
@@ -216,151 +185,133 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
-- name: ⚠️ US美国(mibei77.com 米贝节点分享)-22
-  type: vless
-  server: djj.zjlo.top
-  port: 23169
-  uuid: 7318caa1-93d1-4a9d-c481-504599902700
-  udp: true
-  network: tcp
-  tls: true
-  servername: djj.zjlo.top
-  flow: xtls-rprx-vision
-- name: ⚠️ [ermaozi#062] 🇭🇰 香港 | HKG 3
-  server: vl-x2.qz10086.top
-  port: 38101
-  type: vless
-  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
-  tls: true
-  packet-encoding: xudp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: j7lihAdLvNKWg67WMGQsRSM8WFbaUK5dAi7D2R7iXHM
-    short-id: 'd5a01375'
-  servername: www.apple.com
-  client-fingerprint: firefox
-  network: tcp
-- name: ⚠️ US美国-200
-  type: vless
-  server: 4935e4t.de25.h1clayd.click
+- name: ⚠️ 🇺🇸 美国 (United States) 342 - aceo
+  server: 172.64.145.93
   port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   udp: true
-  network: tcp
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: 4935e4t.de25.h1clayd.click
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: '6976d670818644cc'
-- name: ⚠️ trojan-1940485917
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.114.132
-  skip-cert-verify: true
-  sni: 66.163.114.132
-  type: trojan
-  udp: true
-- name: ⚠️ trojan-1929965354
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.114.45
+  servername: guanwang.awsno.com
   skip-cert-verify: false
-  sni: cdn.findconnectwithemployersandbuildprofessionalnetwork.com
-  type: trojan
-  udp: true
-- name: ⚠️ ❓Other_109|400KB/s|M003-260806
-  type: vless
-  server: 195.110.15.216
-  port: 31652
-  uuid: 2da03bdf-8af3-4207-96c7-d70e0dd22c36
-- name: ⚠️ 🇨🇦CA_8|299KB/s|S004-260618
-  type: vless
-  server: kuruish.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  tls: true
-  sni: kuruish.org
-  client-fingerprint: chrome
-- name: ⚠️ trojan-1939194006
-  password: f0eb8c92ce8946aaba856569cff1a16b
-  port: 443
-  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: ⚠️ trojan-1924748552
-  password: 242a3d8eee5e4ed1a6bfa4141d549a25
-  port: 443
-  server: www.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: true
-  sni: ''
-  type: trojan
-  udp: true
-- name: ⚠️ [NoMoreWalls#017] 🆓13@oneclickvpnkeys
-  password: 04920673-035c-410d-94e4-5b1469d3fb6f
-  port: 42848
-  server: 171.22.183.158
-  sni: 171.22.183.158
-  tls: false
-  type: hysteria2
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇷🇺 俄罗斯 | RUS
-  server: 194.87.69.12
-  port: 18443
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- name: ⚠️ JP日本-454
   type: ss
+  server: 8.216.8.185
+  port: 5555
   cipher: aes-256-gcm
-  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+  password: '123456'
   udp: true
-- name: ⚠️ 🇪🇸ES_18|537KB/s|M003-260806
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  name: '⚠️ [ermaozi#060] 🇸🇬 新加坡 | SGP #1'
+  network: ws
+  port: 54327
+  server: 8.222.172.146
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8a3d03bc-9b35-43b4-d901-c8531f2bbc6d
+  ws-opts:
+    path: /pages
+- client-fingerprint: firefox
+  name: '⚠️ [NoMoreWalls#088] 🇯🇵 日本 | JPN #1'
+  network: ws
+  port: 8463
+  server: 213.183.41.31
+  servername: share.plumstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  ws-opts:
+    path: /ws
+- name: ⚠️ 🇬🇧GB_45|4.7MB/s|M003-260806
+  type: ss
+  server: 51.195.248.85
+  port: 14114
+  cipher: aes-128-gcm
+  password: 8bc8CZHJUuNcD6pI66wcSxXhYWB4iORQ
+- name: ⚠️ 🇫🇷FR_153|4.4MB/s|S004-260618
+  type: ss
+  server: 23.162.152.245
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: ySGkGhr2sKHV
+- name: ⚠️ 🇬🇧GB_46|526KB/s|M003-260806
+  type: ss
+  server: 82.145.63.22
+  port: 18667
+  cipher: aes-128-gcm
+  password: bZndo716esIr4jQ1QvBPjFSPJhSmjZ/v
+- name: ⚠️ 🇳🇱 荷兰 | NLD
+  server: 185.16.110.62
+  port: 2052
+  type: vless
+  uuid: 85432578-96fd-4613-a255-e235a81cc94b
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2052
+    headers:
+      Host: cd90.u8o.lol
+  udp: true
+- name: ⚠️ 🇩🇪DE_122|397KB/s|M003-260806
+  type: ss
+  server: 8.220.83.202
+  port: 443
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+- name: ⚠️ 🇪🇸ES_46|2.8MB/s|M003-260806
   type: ss
   server: 108.181.121.170
   port: 443
   cipher: chacha20-ietf-poly1305
   password: qItG8SueYQcP
-- name: ⚠️ 🇫🇷 法国 (France) 336 - xiaohe
-  server: 46.105.222.156
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: ⚠️ trojan-1943021601
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: ⚠️ UN-VLESS-04
+  type: vless
+  server: 204.138.145.163
   port: 443
-  server: 193.108.119.96
-  skip-cert-verify: false
-  sni: learn.iloverussia2026.com
-  type: trojan
   udp: true
-- name: ⚠️ 🇹🇷TR_2|393KB/s|G001-260618
+  uuid: 9e92bb57-2332-4c30-bb97-f269a94e53a3
+  network: tcp
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: SkR5Vn9gdkPsr7MInaC9rkAaJz57VeGN4U2AgXaol0s
+    short-id: '296654cee8d6832e'
+- name: ⚠️ 🇪🇸ES_49|3.7MB/s|M003-260806
   type: ss
-  server: 38.180.104.37
-  port: 19084
-  cipher: aes-128-gcm
-  password: ff4d354078394558933d699be149ad69
-- name: ⚠️ [NoMoreWalls#234] 🇲🇽MX_3|3.2MB/s
-  password: KsPAxZGn
-  port: 42000
-  server: 94.194.166.52
-  skip-cert-verify: true
-  type: socks5
-  username: userLRgK
-- name: ⚠️ [NoMoreWalls#235] 🇲🇽MX_4|2.4MB/s
-  password: VvUAFi2E
-  port: 62000
-  server: 72.57.228.87
-  skip-cert-verify: true
-  type: socks5
-  username: UBXich0K
-- name: ⚠️ 🇳🇱 荷兰 | NLD 2
+  server: 108.181.121.178
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+- cipher: aes-256-gcm
+  name: ⚠️ [NoMoreWalls#167] 🇷🇺[www.v2nodes.com] ss-RU-1624...
+  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+  port: 18443
+  server: 194.87.69.12
+  type: ss
+- name: ⚠️ 🇳🇱NL_254|8.4MB/s|M003-260806
+  type: hysteria2
+  server: 171.22.183.158
+  port: 42848
+  password: 04920673-035c-410d-94e4-5b1469d3fb6f
+  tls: true
+  sni: 171.22.183.158
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇳🇱 荷兰 | NLD 3
   server: 98.98.132.110
   port: 443
   type: vless
@@ -375,1161 +326,121 @@ proxies:
     grpc-mode: gun
     grpc-service-name: 2e7d5cf6a7e50c564bfddf62c87e02e1
   udp: true
-- name: ⚠️ 🇬🇧 英国 | GBR
+- name: ⚠️ 🇳🇱NL_269|5.6MB/s|M003-260806
+  type: hysteria2
+  server: 185.200.199.179
+  port: 54706
+  password: Cqx5aT9Zux
+  tls: true
+  sni: 185.200.199.179
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇫🇷FR_154|3.6MB/s|M003-260806
+  type: ss
+  server: leviko-fr1459.shopingggg.ir
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: ySGkGhr2sKHV
+- name: ⚠️ 🇩🇪DE_120|3.8MB/s|P002-260618
+  type: hysteria2
   server: 128.254.186.57
   port: 13337
-  type: hysteria2
   password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  auth: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  tls: true
   sni: mother-earth.fyi
-  skip-cert-verify: true
   up: 100 Mbps
   down: 200 Mbps
-- name: ⚠️ 🇬🇧 英国 | GBR 4
-  server: uk-tube-01.stre4m.net
-  port: 13337
-  type: hysteria2
-  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  auth: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  sni: mother-earth.fyi
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: 100 Mbps
-  down: 200 Mbps
-- auth: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  name: '⚠️ [NoMoreWalls#271] 🇬🇧 英国 | GBR #1'
-  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  port: 13337
-  server: 128.254.186.190
-  skip-cert-verify: true
-  sni: mother-earth.fyi
-  tls: false
-  type: hysteria2
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇳🇱 荷兰 | NLD
-  server: 185.134.203.106
-  port: 443
-  type: vless
-  uuid: 3af3f8f0-569f-4dd3-be99-2ef4bfe7867c
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: 'db04ce8bdb8900f1'
-  servername: api.vk.me
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-- name: ⚠️ 🇩🇪 德国 (Germany) 381 - xiaohe
-  server: gr1.vpnjantit.com
-  port: 8443
-  udp: true
-  type: vless
-  uuid: a688bbe2-e455-11f1-a2d1-0f56c102b673
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GbzSIW3yd11r22Twahtyz4CMDxUj_QQe5RKvZukxDUw
-    short-id: '992f9f92ddfa5056'
-  servername: cloudflare.com
-  client-fingerprint: firefox
-- name: ⚠️ 🇫🇮 芬兰 (Finland) 485 - xiaohe
-  server: 31.76.77.231
-  port: 443
-  udp: true
-  type: vless
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PMtmgfkxpREXi51S_EUUi3KbYauQLjGD6c_llKRk8H4
-    short-id: 'cc85fc7134024405'
-  servername: www.google.com
-  client-fingerprint: firefox
-- type: vmess
-  name: ⚠️ [ermaozi#006] @DeltaKroneckerGithub_3021_IPV4
-  server: 172.64.145.93
-  port: 443
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  cipher: auto
-  alterId: 0
-  tls: true
-  servername: guanwang.awsno.com
-  sni: guanwang.awsno.com
-  network: ws
-  ws-opts:
-    path: /hls/cctv5phd.m3u8
-    headers:
-      Host: guanwang.awsno.com
-- name: ⚠️ 🇰🇷 韩国 (South Korea) 649 - xiaohe
-  server: 146.56.112.110
-  port: 8888
-  udp: true
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  alterId: 0
-  cipher: auto
-- name: ⚠️ 🇧🇬 保加利亚 (Bulgaria) 519 - xiaohe
-  server: 195.123.226.21
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6589c320-db68-43cd-a273-b46299bab355
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo
-    short-id: '77bb0d07bddbc832'
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: ⚠️ UN-VMESS-01
-  type: vmess
-  server: uwz9g-g05.jp07-1f28-vm0.entry.fr0307a.art
-  port: 28787
-  udp: true
-  uuid: d4b889ad-dd2e-39ee-ba1a-05821751bb3a
-  network: tcp
-  tls: false
-  alterId: 1
-  cipher: none
-- name: ⚠️ 🇮🇱 以色列 (Israel) 526 - xiaohe
-  server: 129.159.156.109
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: f25f19f29ce3fb53a35bf1b35b452a43
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ [ermaozi#059] 🇩🇪 德国 | DEU 2
-  server: 5.42.104.42
-  port: 443
-  type: vless
-  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: nPYLh9nRxKK0OQVQrboJyKN4Y3DViI412cbN9Tbz9AQ
-    short-id: '53668ac88eefee81'
-  servername: rugermicro2.gangplatform.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-- name: ⚠️ 🇸🇪 瑞典 (Sweden) 69
-  server: leviko-se6979.shopingggg.ir
-  port: 48115
-  udp: true
-  type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-  tls: true
-  servername: 138-124-86-230.sslip.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 138-124-86-230-sslip-io
-- name: ⚠️ 🇦🇺 澳大利亚 (Australia) 589 - xiaohe
-  server: 3.106.35.101
-  port: 36712
-  udp: true
-  type: hysteria2
-  password: linlin-2026
-  sni: 3.106.35.101
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ UN-VLESS-01
-  type: vless
-  server: 202.144.192.76
-  port: 13779
-  udp: true
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-  network: tcp
-  tls: true
-  servername: tesla.com
-  client-fingerprint: chrome
-  host: tesla.com
-  reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-    short-id: 'af1bdd293097b664'
-- name: ⚠️ 🇦🇪AE_3|600KB/s|T001-260618 01
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: ⚠️ 🇩🇪 德国 (Germany) 343
-  server: ytsdnol.localip.ir
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 92a188aa-2e86-4557-bd30-b2079a70f824
-  tls: true
-  servername: ytsdnol.localip.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: ⚠️ 🇩🇪 德国 (Germany) 393 - xiaohe
-  server: 94.103.168.169
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 92a188aa-2e86-4557-bd30-b2079a70f824
-  tls: true
-  servername: ytsdnol.localip.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: ⚠️ 🇩🇪 德国 (Germany) 439 - xiaohe
-  server: 146.103.43.8
-  port: 9543
-  udp: true
-  type: vless
-  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: '123abcdf'
-  servername: storage.yandexcloud.net
-  client-fingerprint: chrome
-- name: ⚠️ 🇳🇱 荷兰 (Netherlands) 318
-  server: free-amsterdam-node-1.cloudwidecdn.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
-    short-id: '1d86d17709852910'
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: ⚠️ 🇰🇿 哈萨克斯坦 (Kazakhstan) 650 - xiaohe
-  server: 3h-kazakhstan1.09vpn.com
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2424febb-43cb-488d-bdd1-401e923c8e48
-  tls: true
-  servername: 3h-kazakhstan1.09vpn.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vless/
-- name: ⚠️ 🇳🇱 荷兰 (Netherlands) 520 - xiaohe
-  server: 179.254.126.86
-  port: 25201
-  udp: true
-  type: vless
-  uuid: e89a2a0e-7803-447e-b050-3ba67962ed95
-  tls: true
-  reality-opts:
-    public-key: YOgsoXtChX3RvA0Gf9SSsP8VLP4GGk7dytVBo9qZCH4
-    short-id: '221ba0d14384ccf1'
-  servername: s-25454.nl18.h1clayd.click
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: becc6caf9bea
-- name: ⚠️ 🇸🇬SG_60
-  type: vless
-  server: 141.193.213.21
-  port: 8443
-  uuid: 4d8d9640-7cc7-4c55-ba54-6ce0d1709541
-  udp: true
-  network: ws
-  ws-opts:
-    path: '%2F'
-    headers:
-      Host: matrix.learnpodedu.com
-  tls: true
-  servername: matrix.learnpodedu.com
-  client-fingerprint: chrome
-- name: ⚠️ 🇨🇿 捷克 (Czech) 438 - xiaohe
-  server: 153.52.69.249
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WVfpQqoeOrTtCq052_IOxvMv7RCWfLlAOxEfsH1aa2U
-    short-id: 'd5492c7a39515c65'
-  servername: cache-78.topp-con.xyz
-  client-fingerprint: chrome
-- name: ⚠️ 🇨🇦 加拿大 (Canada) 631 - xiaohe
-  server: 510.150333.xyz
-  port: 21003
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: 'f3602a3a1cf928b7'
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: ⚠️ 🇨🇦 加拿大 (Canada) 641 - xiaohe
-  server: 510.150333.xyz
-  port: 21002
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: 'd9a6b52e98121db2'
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: ⚠️ 🇨🇦 加拿大 (Canada) 632 - xiaohe
-  server: 510.150333.xyz
-  port: 21001
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: 'a51c3ccb2320024a'
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: ⚠️ 🇨🇦 加拿大 (Canada) 640 - xiaohe
-  server: 510.150333.xyz
-  port: 21004
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: '4e0418d648f86141'
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: ⚠️ 🇩🇪 德国 (Germany) 576 - xiaohe
-  server: 146.103.42.117
-  port: 9543
-  udp: true
-  type: vless
-  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: '123abcdf'
-  servername: storage.yandexcloud.net
-  client-fingerprint: chrome
-- name: ⚠️ 🇦🇪 阿联酋 (UAE) 430 - xiaohe
-  server: 212.192.3.63
-  port: 9543
-  udp: true
-  type: vless
-  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: '123abcdf'
-  servername: storage.yandexcloud.net
-  client-fingerprint: chrome
-- name: ⚠️ 🇺🇸US_546
-  type: vless
-  server: 207.244.243.12
-  port: 443
-  uuid: a33f9fb8-51bb-46d0-8d3a-6b54fdc15943
-  udp: true
-  network: raw
-  tls: true
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 7pnL_m6XftDfRH5Lue-2zI1a0XWg-xcQd5F8m5lqChg
-    short-id: 'd5f348390b201e86'
-- name: ⚠️ 🇮🇳 印度 (India) 568 - xiaohe
-  server: in.smrtai.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
-  tls: true
-  reality-opts:
-    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
-    short-id: '6bdc8320'
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: ⚠️ 🇨🇭CH_12|448KB/s|S004-260618
+- name: ⚠️ 🇫🇷FR_155|3.7MB/s|M003-260806
   type: ss
-  server: leviko-ch7709.shopingggg.ir
+  server: leviko-fr5418.shopingggg.ir
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: ⚠️ 🇪🇪 爱沙尼亚 (Estonia) 505 - xiaohe
-  server: 165.231.157.150
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: api-6b04608f.adhil.uk
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- type: ss
-  name: ⚠️ [free18#077] 🇯🇵_日本 (19)
-  server: 8.216.16.102
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ [ermaozi#071] 🇺🇸 美国 | USA 2
-  server: 196.196.149.34
-  port: 443
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: LsaTohbE6CqCH9UbYKwIybVXG3E5Wgz_X9czqas2LAI
-    short-id: '9acff4d98e2fbcc6'
-  servername: 35295cx.us8.h1clayd.click
-  client-fingerprint: qq
-  network: xhttp
-  xhttp-opts:
-    path: /1812842934d4
-    host: 35295cx.us8.h1clayd.click
-    mode: auto
-  udp: true
-- name: ⚠️ 🇸🇬SG_59
-  type: vless
-  server: support.zoom.us
-  port: 80
-  uuid: 9ce32242-557a-4d18-864d-c9c385b3dfa4
-  udp: true
-  network: ws
-  ws-opts:
-    path: '%2F'
-    headers:
-      Host: matrix.learnpodedu.com
-- type: ss
-  name: ⚠️ [free18#103] 🇯🇵_日本 (45)
-  server: 8.216.17.86
-  port: 6666
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#061] 🇯🇵_日本 (3)
-  server: 8.216.18.170
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#105] 🇯🇵_日本 (47)
-  server: 8.216.14.94
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#136] 🇯🇵_日本 (78)
-  server: 8.216.18.189
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#111] 🇯🇵_日本 (53)
-  server: 8.216.17.52
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ 🇦🇹 奥地利 (Austria) 458 - xiaohe
-  server: leviko-at3530.shopingggg.ir
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: ⚠️ 🇰🇿 哈萨克斯坦 (Kazakhstan) 582 - xiaohe
-  server: 38.180.38.19
-  port: 15231
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 5126ccc78eea4c643cbed4e6c21465e8
-- type: ss
-  name: ⚠️ [free18#085] 🇯🇵_日本 (27)
-  server: 8.216.10.204
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ 🇮🇳 印度 (India) 660 - xiaohe
-  server: 13.140.253.35
-  port: 443
-  udp: true
-  type: vless
-  uuid: 213224a4-6cd1-b7f4-8bbc-4f50e5ed847b
-  tls: true
-  servername: xray-ikmqcro3-rapid-river-6.cloady.io
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /c54a815e676d9acc
-    headers:
-      Host: xray-ikmqcro3-rapid-river-6.cloady.io
-- type: ss
-  name: ⚠️ [free18#095] 🇯🇵_日本 (37)
-  server: 8.209.249.190
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#132] 🇯🇵_日本 (74)
-  server: 8.216.17.19
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#143] 🇯🇵_日本 (85)
-  server: 47.91.15.175
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#130] 🇯🇵_日本 (72)
-  server: 8.216.8.0
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#062] 🇯🇵_日本 (4)
-  server: 8.216.9.154
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#138] 🇯🇵_日本 (80)
-  server: 8.216.0.168
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ 🇮🇱 以色列 (Israel) 524 - xiaohe
-  server: 153.56.229.218
-  port: 443
-  udp: true
-  type: vless
-  uuid: 26843758-24de-4f76-b5d0-624038e353c4
-  tls: true
-  reality-opts:
-    public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
-    short-id: 'e572b6579ea525d4'
-  servername: 71b840t.de7.h1clayd.click
-  client-fingerprint: firefox
-- name: ⚠️ [ermaozi#065] 🇮🇱 以色列 | ISR
-  server: 71b840t.de7.h1clayd.click
-  port: 443
-  type: vless
-  uuid: 26843758-24de-4f76-b5d0-624038e353c4
-  tls: true
-  reality-opts:
-    public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
-    short-id: 'e572b6579ea525d4'
-  servername: 71b840t.de7.h1clayd.click
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-- name: ⚠️ [ermaozi#060] 🇪🇪 爱沙尼亚 | EST
-  server: 13.141.36.163
-  port: 443
-  type: vless
-  uuid: 73ebb72a-e2a8-44c8-a0e3-938740a4f578
-  tls: true
-  reality-opts:
-    public-key: NMS-P97L7IrYGl7mQv1j2K_EBX6G57fu6DvREZYl01U
-    short-id: '35a329a23bb50d2b'
-  servername: 079b6et.ee5.h1clayd.shop
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-- type: ss
-  name: ⚠️ [free18#071] 🇯🇵_日本 (13)
-  server: 47.74.27.11
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#116] 🇯🇵_日本 (58)
-  server: 8.216.9.190
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#084] 🇯🇵_日本 (26)
-  server: 8.216.15.30
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#088] 🇯🇵_日本 (30)
-  server: 47.245.40.193
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#121] 🇯🇵_日本 (63)
-  server: 8.216.18.139
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#073] 🇯🇵_日本 (15)
-  server: 8.209.199.75
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#115] 🇯🇵_日本 (57)
-  server: 8.216.6.19
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#069] 🇯🇵_日本 (11)
-  server: 8.209.236.164
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#101] 🇯🇵_日本 (43)
-  server: 8.216.17.189
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#110] 🇯🇵_日本 (52)
-  server: 47.74.40.77
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#074] 🇯🇵_日本 (16)
-  server: 47.74.49.154
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#109] 🇯🇵_日本 (51)
-  server: 8.216.3.160
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#100] 🇯🇵_日本 (42)
-  server: 47.91.31.150
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#112] 🇯🇵_日本 (54)
-  server: 47.91.29.60
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#078] 🇯🇵_日本 (20)
-  server: 47.74.41.139
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ 🇯🇵JP_1|102KB/s|M003-260806
-  type: ss
-  server: jpa.123069.xyz
-  port: 53758
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-- type: ss
-  name: ⚠️ [free18#090] 🇯🇵_日本 (32)
-  server: 47.74.40.243
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#113] 🇯🇵_日本 (55)
-  server: 47.245.54.15
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#108] 🇯🇵_日本 (50)
-  server: 8.209.196.228
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ 🇸🇬SG_2|485KB/s|A004-260618
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  tls: false
-- name: ⚠️ 🇸🇬 新加坡 | SGP 2
-  server: 47.129.155.154
-  port: 8443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  udp: true
-- name: ⚠️ 🇸🇬SG_8|215KB/s|S004-260618
-  type: ss
-  server: leviko-sg2619.shopingggg.ir
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: ⚠️ 🇭🇰 香港 | HKG 3
-  server: 209.9.200.147
-  port: 443
-  type: vless
-  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
-  tls: true
-  packet-encoding: xudp
-  reality-opts:
-    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-    short-id: '2da72ce6'
-  servername: navi.bankrate.com
-  client-fingerprint: chrome
-  network: tcp
-- type: ss
-  name: ⚠️ [free18#089] 🇯🇵_日本 (31)
-  server: 47.74.17.125
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#097] 🇯🇵_日本 (39)
-  server: 8.209.198.176
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#079] 🇯🇵_日本 (21)
-  server: 47.91.16.50
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: ⚠️ [NoMoreWalls#237] 🇯🇵JP_1|2.1MB/s
-  password: J5rM2xL9
-  port: 42000
-  server: 103.248.150.238
-  skip-cert-verify: true
-  type: socks5
-  username: tB4vN7qP
-- name: ⚠️ [zhuhaiuk#010] HK - zhuhai.uk
-  type: socks5
-  server: 123.58.219.171
-  port: 10808
-- name: ⚠️ 🇸🇬 新加坡 | SGP 3
-  server: 47.129.155.154
-  port: 443
+- name: ⚠️ 🇵🇱PL_16|2.2MB/s|M003-260806
   type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
-  sni: www.bing.com
-  skip-cert-verify: true
+  server: 194.87.224.137
+  port: 9443
+  password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
+  tls: true
+  sni: n34.neproxy.net
   up: 100 Mbps
   down: 200 Mbps
-- name: ⚠️ 🇯🇵 日本 | JPN
-  server: JP032010.ssgreen.org
-  port: 443
-  type: vmess
-  uuid: f9a1ee44-21b3-4d0e-81b6-265fa2f3ba57
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: JP032010.ssgreen.org
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: JP032010.ssgreen.org
-- name: ⚠️ [zhuhaiuk#020] SG - zhuhai.uk
-  type: socks5
-  server: 66.80.2.252
-  port: 62000
-  username: usereb7d
-  password: c0a34a
-- name: ⚠️ [freeSub#044] D🔴🇸🇬hos_dokng.com_731ac5ff
-  password: '8888'
-  port: 1080
-  server: 47.236.168.243
-  type: socks5
-  username: '8888'
-- name: ⚠️ 🇸🇬 新加坡 | SGP
-  server: 213.183.45.23
-  port: 8444
-  type: vless
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  tls: true
-  servername: media.plumstatic.com
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
-  udp: true
-- type: ss
-  name: ⚠️ [free18#080] 🇯🇵_日本 (22)
-  server: 8.216.9.142
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- type: ss
-  name: ⚠️ [free18#099] 🇯🇵_日本 (41)
-  server: 8.216.8.84
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- client-fingerprint: firefox
-  name: '⚠️ [NoMoreWalls#092] 🇯🇵 日本 | JPN #2'
-  network: ws
-  port: 8463
-  server: 213.183.41.31
-  servername: share.plumstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  ws-opts:
-    path: /ws
-- client-fingerprint: chrome
-  encryption: none
-  name: ⚠️ [NoMoreWalls#247] 🇺🇸US_10|2.0MB/s
-  network: ws
-  port: 443
-  server: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
-  servername: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1fd2e2d1-96f5-2056-19fd-b375b1a9d851
-  ws-opts:
-    headers:
-      Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
-      User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.17
-        (KHTML, like Gecko) Chrome/10.0.649.0 Safari/534.17
-    path: /ffad70ffdfc3bcda
-  xudp: true
-- name: ⚠️ 🇺🇸 美国 | USA 6
-  server: US032021.ssgreen.org
-  port: 443
-  type: vmess
-  uuid: bcb0310d-6a1a-49aa-b6d0-9bcb69805670
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: US032021.ssgreen.org
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: US032021.ssgreen.org
-- name: ⚠️ 🇺🇸 美国 | USA 3
-  server: US032020.ssgreen.org
-  port: 443
-  type: vmess
-  uuid: 25e53ac3-1737-48c0-b92c-10d012af52f5
-  alterId: 0
-  cipher: auto
-  tls: true
-  alpn:
-  - ''
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: US032020.ssgreen.org
-  udp: true
-- name: ⚠️ 🇺🇸 美国 | USA 4
-  server: h3.1free.us.ci
-  port: 443
-  type: vless
-  uuid: 2377a148-5e9b-431f-93f4-a1bbaa3dabe9
-  tls: true
-  servername: h3.1free.us.ci
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /57252d2116d6439f
-    headers:
-      Host: h3.1free.us.ci
-  udp: true
-- name: ⚠️ 🇺🇸 美国 | USA 8
-  server: 162.35.101.177
-  port: 443
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: 'bd8f712209a9c283'
-  servername: 0592efg.us8.h1clayd.click
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: 99f2107b03f8
-- name: ⚠️ 🇺🇸 美国 | USA
-  server: JP032011.ssgreen.org
-  port: 443
-  type: vmess
-  uuid: 4b9dc0c5-388d-45c5-9ad3-a91db984784e
-  alterId: 0
-  cipher: auto
-  tls: true
-  alpn:
-  - ''
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: JP032011.ssgreen.org
-  udp: true
-- type: vless
-  name: ⚠️ [free18#041] 🇺🇸_美国 (8)
-  server: 31.76.93.112
-  port: 443
-  uuid: d7121b33-e335-4921-bb00-4c0b157e7fc1
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: m47.scan-cdn.com
-  sni: m47.scan-cdn.com
-  skip-cert-verify: true
-- name: ⚠️ 🇺🇸 美国 | USA 5
-  server: 153.56.230.6
-  port: 443
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: 'bd8f712209a9c283'
-  servername: 0592efg.us8.h1clayd.click
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: 99f2107b03f8
-- encryption: mlkem768x25519plus.native.0rtt.NPITyKcLP3ZK5ulXf_tjxU85NIRZTq1etgX54VAeI0c
-  name: '⚠️ [NoMoreWalls#208] 🇺🇸 美国 | USA #3'
-  network: tcp
-  port: 443
-  server: 176.114.95.245
-  tls: false
-  type: vless
-  udp: true
-  uuid: 9a591702-24c7-4abf-9f14-ac59438a64e6
-  ws-opts:
-    path: /
-  xudp: true
-- name: ⚠️ ❓Other_113|174KB/s|K001-260618
-  type: ss
-  server: 91.206.92.158
-  port: 18443
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-- name: ⚠️ [NoMoreWalls#018] 🔰66@oneclickvpnkeys
-  password: 04920673-035c-410d-94e4-5b1469d3fb6f
-  port: 42848
+- name: ⚠️ 🇳🇱NL_255|2.8MB/s|M003-260806
+  type: hysteria2
   server: 91.211.27.231
+  port: 42848
+  password: 04920673-035c-410d-94e4-5b1469d3fb6f
+  tls: true
   sni: 171.22.183.158
-  tls: false
-  type: hysteria2
   up: 100 Mbps
   down: 200 Mbps
-- cipher: chacha20-ietf
-  name: ⚠️ [freeSub#012] U⚪🏳️ukn[💬🔮🎵🎮]_dokng.com_6d6b41c5
-  obfs: tls1.2_ticket_auth
-  password: dongtaiwang.com
-  port: 33336
-  protocol: auth_chain_a
-  server: ssr2.762988.xyz
-  type: ssr
-  x-toolall-mihomo: true
-- name: ⚠️ 🇰🇷 韩国 | KOR
-  server: 211.233.33.228
-  port: 8388
-  type: ss
-  cipher: aes-256-gcm
-  password: qpowi_vip_tunnel_2026_secure
-  udp: true
-- name: ⚠️ 🇫🇷FR_22|384KB/s|M003-260806
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+- name: ⚠️ 🇩🇪DE_116|4.0MB/s|A003-260618
+  type: hysteria2
+  server: 128.254.186.190
+  port: 13337
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
   tls: true
-  sni: freeceshi6.frii.site
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      Host: freeceshi6.frii.site
-  client-fingerprint: unsafe
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: ⚠️ [NoMoreWalls#113] 🇹🇷[www.v2nodes.com] vless-TR-1...
-  port: 50738
-  server: turkey-ip1.mmdaqaorg.xyz
-  servername: turkey-ip1.mmdaqaorg.xyz
-  tls: true
-  type: vless
-  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
-- name: ⚠️ 🇸🇪SE_5|291KB/s|M003-260806
-  type: vless
-  server: sajed.kdns.fr
-  port: 443
-  uuid: cffa0e31-7cce-4541-8a2e-4e115873090b
-  sni: sajed.kdns.fr
-  network: ws
-  ws-opts:
-    path: /@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe@Ghiinvdikhfe
-    headers:
-      Host: sajed.kdns.fr
-- name: '⚠️ [NoMoreWalls#034] @OutlineReleasedKey #2'
+  sni: mother-earth.fyi
+  up: 100 Mbps
+  down: 200 Mbps
+- name: '⚠️ [NoMoreWalls#032] @OutlineReleasedKey #2'
   password: 87bb2ac4-b7a1-0001-b11d-2107709ea6cb
   port: 443
   server: 136.148.83.69
-  skip-cert-verify: true
   sni: szqbx-ru-77dc.my-fade.cloud
   tls: false
   type: hysteria2
   up: 100 Mbps
   down: 200 Mbps
-- name: ⚠️ 🇷🇺 俄罗斯 | RUS 5
+- name: ⚠️ 🇩🇪DE_113|1.2MB/s|M003-260806
+  type: hysteria2
+  server: der.substituteme.space
+  port: 443
+  password: 7ltdv0p-ThUzWHLNKwejOnmWRVfgq7gswzL34GP_7n8
+  tls: true
+  sni: der.substituteme.space
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇩🇪DE_143|1.4MB/s|M003-260806
+  type: vless
+  server: api.setevoypriliv.cc
+  port: 443
+  uuid: 9a0b863b-d0aa-42ab-b51a-ecbdc582ba19
+  tls: true
+  sni: api.setevoypriliv.cc
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  reality-opts:
+    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
+    short-id: 'a8'
+- name: ⚠️ 🇩🇪DE_139|927KB/s|M003-260806
+  type: hysteria2
+  server: 128.254.186.213
+  port: 13337
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  tls: true
+  sni: mother-earth.fyi
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇩🇪DE_111|2.9MB/s|M003-260806
+  type: hysteria2
+  server: 48.102.130.17
+  port: 443
+  password: PEisy6m-98HcX1TWZt0yXiCS7jRZG4IzKQTXo6k1qb4
+  tls: true
+  sni: de2.substituteme.space
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇳🇱NL_135|3.4MB/s|A004-260618
+  type: hysteria2
+  server: promo.betust.net
+  port: 443
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  tls: true
+  sni: promo.betust.net
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇷🇺 俄罗斯 | RUS
   server: vps3.nemnogogo.com
   port: 443
   type: vless
@@ -1544,6 +455,223 @@ proxies:
     grpc-mode: gun
     grpc-service-name: mobile.api.Event
   udp: true
+- name: ⚠️ [NoMoreWalls#217] 🇰🇷KR_1|4.7MB/s
+  port: 1080
+  server: 59.11.209.162
+  skip-cert-verify: true
+  type: socks5
+- name: ⚠️ UN-VLESS-01
+  type: vless
+  server: 202.144.192.76
+  port: 13779
+  udp: true
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  network: raw
+  tls: true
+  servername: tesla.com
+  client-fingerprint: random
+  host: tesla.com
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: 'af1bdd293097b664'
+- name: ⚠️ 🇸🇪 瑞典 (Sweden) 436 - xiaohe
+  server: leviko-se3307.shopingggg.ir
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: mobile.api.Event
+  name: ⚠️ [NoMoreWalls#273] 🇷🇺 俄罗斯 | RUS
+  network: grpc
+  port: 443
+  server: leviko-ru0640.shopingggg.ir
+  servername: vps3.nemnogogo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+- name: ⚠️ 🇺🇦 乌克兰 (Ukraine) 416
+  server: 104.21.44.113
+  port: 443
+  udp: true
+  type: trojan
+  password: 963A4918-A630-29DA-A873-093CDF8AD784
+  sni: bitter-math-4364.vpnetwork3567.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: ⚠️ 🇳🇱 荷兰 (Netherlands) 403
+  server: 201.51.11.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GiDgVRVYrTkv1mZJeFVWkr736Iey2kqLM6L0eUbffV8
+  servername: absolute-disaster.org
+  client-fingerprint: chrome
+- name: ⚠️ [zhuhaiuk#023] DE - zhuhai.uk 02
+  type: vless
+  server: bookend.filnex.baby
+  port: 443
+  uuid: 749b1c56-e658-4bf5-94bd-5c3286a4aed1
+  udp: true
+  network: ws
+  tls: true
+  servername: ferncrest.gerqix.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/de1/stream
+    headers:
+      Host: bookend.filnex.baby
+- name: ⚠️ 🇬🇧 英国 | GBR
+  server: uk-tube-01.stre4m.net
+  port: 13337
+  type: hysteria2
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  auth: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  sni: mother-earth.fyi
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇫🇮FI_20|1.9MB/s|M003-260806
+  type: vless
+  server: a80b5386.fi16.h1clayd.click
+  port: 443
+  uuid: 2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df
+  tls: true
+  sni: a80b5386.fi16.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc
+    short-id: 'cc678f10161992a9'
+- client-fingerprint: firefox
+  name: '⚠️ [NoMoreWalls#092] 🇱🇻 拉脱维亚 | LVA #1'
+  network: ws
+  port: 8450
+  server: 213.183.45.23
+  servername: fonts.plumstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  ws-opts:
+    path: /ws
+- name: ⚠️ 🇨🇦 加拿大 (Canada) 440 - aceo
+  server: 510.150333.xyz
+  port: 21003
+  udp: true
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: 'f3602a3a1cf928b7'
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: ⚠️ 🇨🇦 加拿大 (Canada) 105
+  server: 103.106.229.177
+  port: 21004
+  udp: true
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: '4e0418d648f86141'
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: ⚠️ 🇨🇦 加拿大 (Canada) 632 - xiaohe
+  server: 510.150333.xyz
+  port: 21001
+  udp: true
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: 'a51c3ccb2320024a'
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- type: vless
+  name: ⚠️ [free18#016] 🇷🇺_俄罗斯 (4)
+  server: 213.183.45.23
+  port: 8454
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  udp: true
+  tls: true
+  servername: store.plumstatic.com
+  sni: store.plumstatic.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /ws
+- client-fingerprint: firefox
+  name: '⚠️ [NoMoreWalls#104] 🏳[www.v2nodes.com] vless- #7'
+  network: ws
+  port: 8444
+  server: 213.183.45.23
+  servername: media.plumstatic.com
+  tls: true
+  type: vless
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  ws-opts:
+    path: /ws
+- type: vless
+  name: ⚠️ [free18#015] 🇷🇺_俄罗斯 (2)
+  server: 213.183.41.31
+  port: 8459
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  udp: true
+  tls: true
+  servername: photos.plumstatic.com
+  sni: photos.plumstatic.com
+  skip-cert-verify: true
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /ws
+- name: ⚠️ 🇩🇪 德国 | DEU 2
+  server: 91.107.185.86
+  port: 16893
+  type: vless
+  uuid: 80256d6f-7cd3-4a3a-8df6-2981e52551dc
+  tls: true
+  reality-opts:
+    public-key: dpmXAfLC6-Sf6cPjkQKGx_NliRQRFZ_oUiiPA5ALW0I
+    short-id: '849711f2b99d1176'
+  servername: play.google.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: ⚠️ 🇳🇱 荷兰 (Netherlands) 475
+  server: 153.52.85.149
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: '8d0d0679f42ffd98'
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: chrome
 - name: ⚠️ 🇬🇧 英国 | GBR 3
   server: 136.148.83.70
   port: 443
@@ -1551,520 +679,450 @@ proxies:
   uuid: 00000000-0000-0001-0000-000000000000
   tls: true
   servername: aszbk-ru-78dc.my-fade.cloud
-  client-fingerprint: qq
+  client-fingerprint: chrome
   network: tcp
   udp: true
-- name: '⚠️ [NoMoreWalls#084] 🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  network: ws
-  port: 80
-  server: ov-france1.09vpn.com
-  servername: ov-france1.09vpn.com
-  tls: false
+- name: ⚠️ 🇵🇱PL_18|460KB/s|M003-260806
   type: vless
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  ws-opts:
-    headers:
-      Host: ov-france1.09vpn.com
-    path: /vless/
-- name: ⚠️ 🇷🇺 俄罗斯 | RUS 4
-  server: 194.26.229.207
-  port: 4100
-  type: vless
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
-  tls: false
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  udp: true
-- name: ⚠️ 🇩🇪 德国 | DEU 5
-  server: mail3.besttotaldns.com
-  port: 443
-  type: vless
-  uuid: 18fe142e-1522-47ae-af55-bd8daf6273df
-  tls: true
-  alpn:
-  - http/1.1
-  servername: mail3.besttotaldns.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /wo9a5v3jcz
-    headers:
-      Host: mail3.besttotaldns.com
-  udp: true
-- name: ⚠️ 🇬🇧 英国 | GBR 2
-  server: 136.148.83.71
-  port: 443
-  type: vless
-  uuid: 00000000-0000-0001-0000-000000000000
-  tls: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-  client-fingerprint: qq
-  network: tcp
-  udp: true
-- name: ⚠️ [NoMoreWalls#082] 🇫🇷[www.v2nodes.com] vless-FR-1...
-  network: ws
-  port: 80
-  server: 188.114.99.137
-  tls: false
-  type: vless
-  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
-  ws-opts:
-    headers:
-      Host: suh.cryptofront.uk
-    path: /
-- name: ⚠️ [NoMoreWalls#231] 🇲🇽MX_2|1.7MB/s
-  password: DJy1T0dt
-  port: 42000
-  server: 144.225.47.161
-  skip-cert-verify: true
-  type: socks5
-  username: Tek2x6av
-- name: ⚠️ [freeSub#029] A🟢🇲🇽res_dokng.com_1aa34d5e
-  password: 2j7CCZQb
-  port: 62000
-  server: 94.194.164.203
-  type: socks5
-  username: rVkkraqT
-- name: ⚠️ 🇪🇪 爱沙尼亚 | EST
-  server: 165.231.157.126
-  port: 8443
-  type: vless
-  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
-  tls: true
-  flow: xtls-rprx-vision
-  servername: api-6b04608f.adhil.uk
-  client-fingerprint: safari
-  network: tcp
-  udp: true
-- name: ⚠️ [NoMoreWalls#230] 🇲🇽MX_1|1.1MB/s
-  password: sZnD8GTz
-  port: 42000
-  server: 144.225.47.68
-  type: socks5
-  username: DJy1T0dt
-- name: ⚠️ 🇫🇷FR_26|376KB/s|B007-260618
-  type: vless
-  server: 88.151.197.87
-  port: 2025
-  uuid: 1697852e-cd5c-472d-b377-0def0f301d98
-  network: ws
-  ws-opts:
-    path: /
-- name: ⚠️ 🇰🇷 韩国 | KOR 2
-  server: www.ddsos.cc
-  port: 7788
-  type: hysteria2
-  password: c8aa4ba6a243ddfdeb67515aa849624b
-  auth: c8aa4ba6a243ddfdeb67515aa849624b
-  sni: www.ddsos.cc
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-- type: vless
-  name: ⚠️ [free18#044] 🇳🇱_荷兰 (9)
-  server: 13.141.36.63
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: 4935e4t.de25.h1clayd.click
-  sni: 4935e4t.de25.h1clayd.click
-  skip-cert-verify: true
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: '6976d670818644cc'
-- name: ⚠️ 🇰🇷 韩国 | KOR 3
-  server: 13.124.238.118
-  port: 443
-  type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-- name: ⚠️ 🇮🇹 意大利 | ITA 2
-  server: freev2.cloudflare.182682.xyz
-  port: 443
-  type: vless
-  uuid: 201d6c87-5de6-4bda-973c-024129b228fb
-  tls: true
-  servername: it-mil.862400.xyz
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /announcement?ed=2048
-    headers:
-      Host: it-mil.862400.xyz
-  udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '⚠️ [NoMoreWalls#287] 🇷🇺 俄罗斯 | RUS #6'
-  network: ws
-  port: 443
-  server: smartcdn.top
-  servername: smartcdn.top
-  tls: true
-  type: vless
-  udp: true
-  uuid: 37af0181-5598-4aad-a040-d926bcb65757
-  ws-opts:
-    headers:
-      Host: smartcdn.top
-    path: /useraction/collect/8a64b355ef0c/
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: mobile.api.Event
-  name: ⚠️ [NoMoreWalls#284] 🇷🇺 俄罗斯 | RUS
-  network: grpc
-  port: 443
-  server: leviko-ru4448.shopingggg.ir
-  servername: vps3.nemnogogo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-- client-fingerprint: firefox
-  name: ⚠️ [NoMoreWalls#226] 🇫🇷FR_4|2.0MB/s
-  network: ws
-  port: 8454
-  server: 213.183.45.23
-  servername: store.plumstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  ws-opts:
-    path: /ws
-- client-fingerprint: firefox
-  name: ⚠️ [NoMoreWalls#103] 🇸🇪[www.v2nodes.com] vless-SE-1...
-  network: ws
-  port: 443
-  server: 185.247.224.206
-  servername: accessfooter.cleanfoodshop.org
-  tls: true
-  type: vless
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  ws-opts:
-    headers:
-      Host: accessfooter.cleanfoodshop.org
-    path: /media/ws/
-- name: ⚠️ 🇷🇺 俄罗斯 | RUS 6
-  server: polarladder.com
-  port: 2053
-  type: vless
-  uuid: 37af0181-5598-4aad-a040-d926bcb65757
-  tls: true
-  servername: polarladder.com
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/upload
-    host: polarladder.com
-    mode: auto
-  udp: true
-- name: ⚠️ [NoMoreWalls#212] 🇰🇷KR_1|4.4MB/s
-  port: 1080
-  server: 59.11.209.162
-  skip-cert-verify: true
-  type: socks5
-- name: ⚠️ 🇩🇪 德国 | DEU 4
   server: 188.225.33.67
   port: 443
-  type: vless
   uuid: b432a23a-acff-425c-bf69-70480cd6ed09
   tls: true
-  alpn:
-  - http/1.1
-  servername: e2.cdnwh.icu
-  client-fingerprint: firefox
+  sni: x55cf8ug.devcdn.icu
   network: ws
   ws-opts:
-    path: /stream/segment/3078a41dd7eb/
-    headers:
-      Host: e2.cdnwh.icu
-  udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '⚠️ [NoMoreWalls#283] 🇵🇱 波兰 | POL #1'
-  network: ws
-  port: 443
-  server: devcdn.icu
-  servername: devcdn.icu
-  tls: true
-  type: vless
-  udp: true
-  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
-  ws-opts:
-    headers:
-      Host: devcdn.icu
     path: /edge/chunk/b2265efffa29/
-- name: ⚠️ [zhuhaiuk#014] ZA - zhuhai.uk
-  type: vmess
-  server: 16.28.28.15
-  port: 443
-  uuid: 8ce18eab-fcc0-4757-b552-dbda5047ea11
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: za-a-zzy.glnyhlgc.com
-  network: ws
-  ws-opts:
-    path: /7788/about
-- name: ⚠️ 🇱🇻 拉脱维亚 | LVA
-  server: 213.183.45.23
-  port: 8450
-  type: vless
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  tls: true
-  servername: fonts.plumstatic.com
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
-  udp: true
-- name: ⚠️ 🇹🇭TH_4|143KB/s|S004-260618
-  type: vless
-  server: 108.138.26.63
-  port: 80
-  uuid: 05f53797-bd04-4006-8a78-41c071e67837
-  network: ws
-  ws-opts:
-    path: /tikvpn2/
     headers:
-      Host: d27g7kjkk3cw22.cloudfront.net
-- name: ⚠️ 🇷🇺 俄罗斯 | RUS 3
-  server: 78.159.240.62
-  port: 2053
-  type: vless
-  uuid: 37af0181-5598-4aad-a040-d926bcb65757
-  tls: true
-  servername: polarladder.com
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/upload
-    host: polarladder.com
-    mode: auto
+      Host: x55cf8ug.devcdn.icu
+  client-fingerprint: edge
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '⚠️ [NoMoreWalls#202] 🇩🇪 德国 | DEU #4'
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  port: 443
+  server: 8.211.56.98
+  type: ss
   udp: true
+- name: ⚠️ 🇫🇷 法国 (France) 342 - xiaohe
+  server: 152.228.162.19
+  port: 80
+  udp: true
+  type: vless
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+  network: ws
+  ws-opts:
+    path: /vless/
+- name: ⚠️ 🇰🇷KR_52|403KB/s|M003-260806
+  type: vless
+  server: 104.26.13.54
+  port: 443
+  uuid: db906786-8c49-4b17-9182-cea680ef954d
+  tls: true
+  sni: krc.80782636.xyz
+  network: ws
+  ws-opts:
+    path: /kw7x2mq9
+    headers:
+      Host: krc.80782636.xyz
+  client-fingerprint: chrome
+- name: ⚠️ 🇺🇸US_535
+  type: vless
+  server: fr-free.fastestrelay.com
+  port: 443
+  uuid: 43BCAE0A-10A6-4003-8615-BD510F4215BA
+  udp: true
+  network: ws
+  ws-opts:
+    path: '%2F700gvl-us-free'
+    headers:
+      Host: fr-free.fastestrelay.com
+  tls: true
+  servername: fr-free.fastestrelay.com
+  client-fingerprint: random
 - client-fingerprint: chrome
-  name: '⚠️ [NoMoreWalls#280] 🇰🇷 韩国 | KOR #1'
+  name: ⚠️ [NoMoreWalls#090] 🇰🇷[www.v2nodes.com] vless-KR-1...
   network: ws
   port: 443
   server: krd.80782636.xyz
   servername: krd.80782636.xyz
   tls: true
   type: vless
-  udp: true
   uuid: db906786-8c49-4b17-9182-cea680ef954d
   ws-opts:
     headers:
       Host: krd.80782636.xyz
     path: /kw7x2mq9
-- name: ⚠️ [zhuhaiuk#016] TH - zhuhai.uk
-  type: socks5
-  server: 109.66.136.242
-  port: 62000
-  username: r3ZzP8WW
-  password: zdnivBaI
-- name: ⚠️ [NoMoreWalls#232] 🇹🇭TH_1|1.5MB/s
-  password: VAwyJQX0iKMJiyCw5UVK9wGH
-  port: 42000
-  server: 103.14.164.202
-  skip-cert-verify: true
-  type: socks5
-  username: route164JIa2CBPxfy
-- name: ⚠️ [NoMoreWalls#233] 🇹🇭TH_2|1.8MB/s
-  password: VAwyJQX0iKMJiyCw5UVK9wGH
-  port: 42000
-  server: 103.14.164.30
-  skip-cert-verify: true
-  type: socks5
-  username: route164JIa2CBPxfy
-- client-fingerprint: firefox
-  name: '⚠️ [NoMoreWalls#266] 🇦🇪 阿联酋 | ARE #1'
-  network: ws
-  port: 8459
-  server: 213.183.41.31
-  servername: photos.plumstatic.com
-  tls: true
-  type: vless
+- name: ⚠️ JP日本-219
+  type: ss
+  server: 8.216.9.154
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
   udp: true
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+- name: ⚠️ JP日本-263
+  type: ss
+  server: 8.209.221.90
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ [zhuhaiuk#013] CN - zhuhai.uk
+  type: vmess
+  server: 106.15.107.224
+  port: 54321
+  uuid: f4587104-415d-468a-b50f-3b9d22d3386d
+  alterId: 0
+  cipher: auto
+  network: http
+- name: ⚠️ JP日本-353
+  type: ss
+  server: 8.209.199.75
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-443
+  type: ss
+  server: 8.209.249.190
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-311
+  type: ss
+  server: 8.209.249.205
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-395
+  type: ss
+  server: 8.216.8.135
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-437
+  type: ss
+  server: 47.74.0.207
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-560
+  type: ss
+  server: 8.216.16.102
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-866
+  type: ss
+  server: 8.216.9.217
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-922
+  type: ss
+  server: 8.216.4.146
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ 🇸🇬SG_81|1.0MB/s|M003-260806
+  type: ss
+  server: leviko-sg3063.shopingggg.ir
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: ⚠️ 🇸🇬SG_1|1009KB/s|A004-260618
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  tls: false
+- name: ⚠️ 🇸🇬SG_76|614KB/s|A004-260618
+  type: vless
+  server: support.zoom.us
+  port: 8080
+  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
+  network: ws
   ws-opts:
-    path: /ws
-- type: vless
-  name: ⚠️ [free18#036] 🇷🇺_俄罗斯 (20)
-  server: 103.88.241.220
-  port: 443
-  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
+    path: /
+    headers:
+      Host: free.nadun.store
+- name: ⚠️ JP日本-464
+  type: ss
+  server: 47.74.40.243
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ 🇸🇬SG_84|277KB/s|M003-260806
+  type: vless
+  server: 172.66.40.229
+  port: 8443
+  uuid: 1acec266-04ee-4769-b96b-402358531dcb
+  tls: true
+  sni: highspeed.sahanwickramasinghe.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: highspeed.sahanwickramasinghe.com
+  client-fingerprint: chrome
+- name: ⚠️ JP日本-584
+  type: ss
+  server: 8.211.174.191
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-480
+  type: ss
+  server: 8.209.253.213
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-684
+  type: ss
+  server: 8.216.9.151
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ JP日本-441
+  type: ss
+  server: 47.245.42.226
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ 🇯🇵JP_28|694KB/s|F003-260618
+  type: ss
+  server: 8.209.197.190
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+- name: ⚠️ JP日本-316
+  type: ss
+  server: 47.91.29.60
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: ⚠️ 香港 43
+  type: vless
+  server: hk3n.wxgqlfx.vip
+  port: 35193
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.apple.com
   flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: ruhongmicro2.gangplatform.com
-  sni: ruhongmicro2.gangplatform.com
-  skip-cert-verify: true
-  client-fingerprint: qq
+  client-fingerprint: chrome
   reality-opts:
-    public-key: u9GnN8KGzfV0xQj6R8Ydp1nvY4exEWlTIcIbA27N0Wo
-    short-id: 'bad10ef561d2e2a1'
-- type: vless
-  name: ⚠️ [free18#005] 🇮🇳_印度 (3)
-  server: xray-ikmqcro3-rapid-river-6.cloady.io
-  port: 443
-  uuid: 213224a4-6cd1-b7f4-8bbc-4f50e5ed847b
+    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
+    short-id: 'e8daed2d'
+- name: ⚠️ 🇭🇰 中国香港 (Hong Kong) 686 - xiaohe
+  server: 185.71.216.94
+  port: 2091
   udp: true
-  tls: true
-  servername: xray-ikmqcro3-rapid-river-6.cloady.io
-  sni: xray-ikmqcro3-rapid-river-6.cloady.io
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /c54a815e676d9acc
-- name: ⚠️ ❓Other_90|307KB/s|P002-260618
-  type: socks5
-  server: 69.55.49.177
-  port: 38182
-  password: Ok5vbmU=
-- client-fingerprint: chrome
-  name: '⚠️ [NoMoreWalls#095] 🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  network: ws
-  port: 443
-  server: 104.25.128.15
-  servername: krc.80782636.xyz
-  tls: true
   type: vless
+  uuid: c4d6567e-c46e-410f-95ab-ac3a61e030f3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+    short-id: '08a4b1f473932632'
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: ⚠️ 🇰🇷KR_53|377KB/s|M003-260806
+  type: vless
+  server: 162.159.160.73
+  port: 443
   uuid: db906786-8c49-4b17-9182-cea680ef954d
+  tls: true
+  sni: krc.80782636.xyz
+  network: ws
   ws-opts:
+    path: /kw7x2mq9
     headers:
       Host: krc.80782636.xyz
-    path: /kw7x2mq9
-- name: ⚠️ 🇪🇸 西班牙 | ESP
-  server: 196.196.149.81
+  client-fingerprint: chrome
+- name: ⚠️ [Eternity#093] 🇬🇧GB-141.98.101.179-0217 | 0.044MB
+  server: 141.98.101.179
+  port: 443
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: ⚠️ 🇺🇸 美国 (United States) 165 - xiaohe
+  server: 38.22.17.197
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: ⚠️ 🇺🇸 美国 (United States) 149 - xiaohe
+  server: 167.88.63.37
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: ⚠️ 🇺🇸US_756|1.4MB/s
+  type: hysteria2
+  server: 194.87.224.137
+  port: 14443
+  password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
+  tls: true
+  sni: n37.neproxy.net
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇺🇸 美国 | USA 6
+  server: 3.219.184.102
   port: 443
   type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  uuid: a5b1d16b-719b-4bd6-9d7b-fe6d84607da9
   tls: true
-  reality-opts:
-    public-key: 4mgkA2kT_Im0rkGi-fVSUU5CyF5xvMVcjA6MXBSEDAA
-    short-id: 'd5501b156391e01d'
-  servername: 38917fx.es1.h1clayd.click
+  alpn:
+  - h2
+  servername: fortuna.masynbazar.ru
   client-fingerprint: chrome
   network: xhttp
   xhttp-opts:
     path: /
-    host: 38917fx.es1.h1clayd.click
   udp: true
-- name: ⚠️ 🇩🇪DE_23|66KB/s|M003-260806
+- name: ⚠️ 🇺🇸US_577|1.3MB/s|S001-260618
+  type: socks5
+  server: 69.55.49.177
+  port: 38182
+  password: Og==
+- name: ⚠️ 🇺🇸 美国 | USA 5
+  server: 162.35.101.177
+  port: 443
   type: vless
-  server: 185.232.204.31
-  port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   tls: true
-  sni: accessfooter.cleanfoodshop.org
-  network: ws
-  ws-opts:
-    path: /media/ws/
-    headers:
-      Host: accessfooter.cleanfoodshop.org
-  client-fingerprint: firefox
-- type: vless
-  name: ⚠️ [free18#021] 🇩🇪_德国 (8)
-  server: 8a2e72t.nl20.h1clayd.shop
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: 8a2e72t.nl20.h1clayd.shop
-  sni: 8a2e72t.nl20.h1clayd.shop
-  skip-cert-verify: true
-  client-fingerprint: chrome
   reality-opts:
-    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
-    short-id: '8d0d0679f42ffd98'
-- type: vless
-  name: ⚠️ [free18#039] 🇩🇪_德国 (14)
-  server: 5d0319t.nl7.h1clayd.click
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: 'bd8f712209a9c283'
+  servername: 0592efg.us8.h1clayd.click
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: 99f2107b03f8
+- name: ⚠️ 🇺🇸US_512
+  type: vless
+  server: 153.56.230.6
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
   tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  sni: 5d0319t.nl7.h1clayd.click
-  skip-cert-verify: true
+  servername: 0592efg.us8.h1clayd.click
+  client-fingerprint: edge
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: 'bd8f712209a9c283'
+- name: ⚠️ 🇺🇸 美国 | USA 2
+  server: 23.237.202.252
+  port: 443
+  type: vless
+  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
+  tls: true
+  alpn:
+  - h2
+  servername: id-0173d52e.vmagnum.win
   client-fingerprint: chrome
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: '361d0dd59c70516f'
-- client-fingerprint: firefox
-  name: ⚠️ [freeSub#045] A🟢🇳🇱res[💬🔮🎮✈️]_dokng.com_2e8886fe
-  network: tcp
-  packet-encoding: xudp
-  port: 443
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: '361d0dd59c70516f'
-  server: 196.196.148.85
-  servername: 5d0319t.nl7.h1clayd.click
-  tls: true
+  network: xhttp
+  xhttp-opts:
+    path: /
+    mode: auto
+  udp: true
+- name: ⚠️ 未知 VLESS-644 | free-nodes
   type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  x-toolall-mihomo: true
-- name: ⚠️ 🇩🇪DE_26|68KB/s|M003-260806
-  type: vless
-  server: 62.60.156.24
-  port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  tls: true
-  sni: accessfooter.cleanfoodshop.org
+  server: 3h-unitedstates1.09vpn.com
+  port: 80
+  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
+  udp: true
   network: ws
   ws-opts:
-    path: /media/ws/
+    path: '%2Fvless%2F'
     headers:
-      Host: accessfooter.cleanfoodshop.org
-  client-fingerprint: firefox
-- type: vless
-  name: ⚠️ [free18#018] 🇪🇪_爱沙尼亚
-  server: 8a2e72t.nl11.h1clayd.click
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: 8a2e72t.nl11.h1clayd.click
-  sni: 8a2e72t.nl11.h1clayd.click
+      Host: ''
+- name: ⚠️ hysteria2-1853501557
+  password: b0917015b656b3dd2286b5633af0c5c1
+  port: 50160
+  server: 31.57.248.176
   skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇩🇪DE_128|4.4MB/s|M003-260806
+  type: trojan
+  server: leviko-de5094.shopingggg.ir
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  tls: true
+  sni: courses.iloverussia2026.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
-    short-id: '8d0d0679f42ffd98'
-- type: vless
-  name: ⚠️ [free18#004] 🇮🇳_印度
-  server: xray-dmr3b3hy-calm-maple-7.cloady.io
-  port: 443
-  uuid: 06a5afa1-2bbc-a5d1-1770-becd1089c636
-  udp: true
-  tls: true
-  servername: xray-dmr3b3hy-calm-maple-7.cloady.io
-  sni: xray-dmr3b3hy-calm-maple-7.cloady.io
-  skip-cert-verify: true
+- name: ⚠️ 🇩🇪DE_100|1.2MB/s|M003-260806
+  type: vless
+  server: 104.26.0.1
+  port: 2052
+  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
+  sni: eu02.123450908.xyz
   network: ws
   ws-opts:
-    path: /0175469f14317d82
-- name: ⚠️ 🇹🇼 🇨🇳 台湾 | TWN 4
-  server: 166.0.198.53
+    path: /rain1226
+    headers:
+      Host: eu02.123450908.xyz
+- name: ⚠️ 🇫🇷FR_157|1.1MB/s|M003-260806
+  type: vless
+  server: leviko-us6278.shopingggg.ir
+  port: 8443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  tls: true
+  sni: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: freeceshi6.frii.site
+  client-fingerprint: chrome
+- name: ⚠️ 🇱🇮 LI_03
+  server: nemazu.grandserver8.ir
+  port: 8445
+  type: hysteria2
+  password: AIbXqmbagi8c_pPQF8UkyQRgAlGbk5aT
+  auth: AIbXqmbagi8c_pPQF8UkyQRgAlGbk5aT
+  sni: donige.grandserver8.ir
+  skip-cert-verify: true
+  alpn:
+  - h3
+  obfs: salamander
+  obfs-password: 5wnhum8v8a5f8m9z
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇰🇷 韩国 | KOR 3
+  server: 130.94.30.242
   port: 443
   type: vless
   uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
@@ -2076,201 +1134,487 @@ proxies:
   servername: navi.bankrate.com
   client-fingerprint: chrome
   network: tcp
+- name: ⚠️ 🇷🇴 罗马尼亚 | ROU
+  server: 193.168.140.228
+  port: 443
+  type: vless
+  uuid: 89f361ea-a370-4cbe-b2b3-d3e9c0b7c4c1
+  tls: true
+  reality-opts:
+    public-key: UGeXXP0IS2_P7AWPDbbk_w7BzZLoPPrk3ha7OgI_0D4
+  servername: www.vodafone.ro
+  client-fingerprint: firefox
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: www.vodafone.ro
+    mode: auto
+    x-padding-bytes: 100-1000
+  udp: true
+- name: ⚠️ 🇩🇪DE_95|433KB/s|S001-260618
+  type: socks5
+  server: 57.128.249.250
+  port: 9052
+  password: Og==
+- name: ⚠️ 🇪🇸 西班牙 | ESP 2
+  server: api.ferrin.uk
+  port: 443
+  type: vless
+  uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
+  tls: true
+  alpn:
+  - h2
+  servername: 7d1a74fd.ferrin.uk
+  client-fingerprint: safari
+  network: xhttp
+  xhttp-opts:
+    path: /es
+    host: api.ferrin.uk
+    mode: stream-one
+  udp: true
+- name: ⚠️ 🇫🇷FR_142|1.6MB/s|B007-260618
+  type: vless
+  server: 88.151.197.87
+  port: 2025
+  uuid: 1697852e-cd5c-472d-b377-0def0f301d98
+  network: ws
+  ws-opts:
+    path: /
+- name: ⚠️ 🇰🇿KZ_4|1002KB/s
+  type: hysteria2
+  server: 194.87.224.137
+  port: 15443
+  password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
+  tls: true
+  sni: n9.neproxy.net
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇩🇪DE_83|870KB/s|M002-260618
+  type: vless
+  server: eu02.123450908.xyz
+  port: 2052
+  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
+  sni: eu02.123450908.xyz
+  network: ws
+  ws-opts:
+    path: /rain1226
+    headers:
+      Host: eu02.123450908.xyz
+- name: ⚠️ 🇳🇱NL_264|2.2MB/s|M003-260806
+  type: vless
+  server: 171.22.183.167
+  port: 443
+  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
+  tls: true
+  sni: 171.22.183.167
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+- name: ⚠️ 🇱🇻LV_15|1.1MB/s|M003-260806
+  type: vless
+  server: 62.60.148.146
+  port: 443
+  uuid: 81c91c05-179f-4b87-95ca-3306677fb310
+  tls: true
+  sni: g-it-2.r3vgawew123fg.pics
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: g-it-2.r3vgawew123fg.pics
+  client-fingerprint: firefox
+- name: ⚠️ 🇻🇳 越南 (Vietnam) 621 - xiaohe
+  server: 103.163.24.22
+  port: 56026
+  udp: true
+  type: vless
+  uuid: a1f0cbb8-c74a-4c27-b881-7b14d96aece1
+  tls: true
+  reality-opts:
+    public-key: gjOKbmRb5cGDPbdz3x8xkBFL43pn3xqL-I6sALHO7ls
+    short-id: '99676967e6867063'
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: ⚠️ 🇨🇦 加拿大 (Canada) 631 - xiaohe
+  server: 510.150333.xyz
+  port: 21002
+  udp: true
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: 'd9a6b52e98121db2'
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: ⚠️ 🇨🇦 加拿大 (Canada) 630 - xiaohe
+  server: 510.150333.xyz
+  port: 21004
+  udp: true
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: '4e0418d648f86141'
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: ⚠️ 🇨🇿 捷克 (Czech) 435 - xiaohe
+  server: 153.52.69.249
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WVfpQqoeOrTtCq052_IOxvMv7RCWfLlAOxEfsH1aa2U
+    short-id: 'd5492c7a39515c65'
+  servername: cache-78.topp-con.xyz
+  client-fingerprint: chrome
+- name: ⚠️ 🇩🇪DE_112|3.4MB/s|M003-260806
+  type: hysteria2
+  server: de2.substituteme.space
+  port: 443
+  password: PEisy6m-98HcX1TWZt0yXiCS7jRZG4IzKQTXo6k1qb4
+  tls: true
+  sni: de2.substituteme.space
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇳🇱NL_268|440KB/s|M003-260806
+  type: vless
+  server: 6bf329t.nl18.h1clayd.click
+  port: 443
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  tls: true
+  sni: 6bf329t.nl18.h1clayd.click
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: p35RUaaaItuoyNiCrLpGeStBUpEJMSiZ2AajdfhhmiM
+    short-id: '92aee92130b46fe2'
+- name: ⚠️ 🇩🇪DE_109|3.2MB/s|M003-260806
+  type: hysteria2
+  server: 48.102.229.114
+  port: 443
+  password: 7ltdv0p-ThUzWHLNKwejOnmWRVfgq7gswzL34GP_7n8
+  tls: true
+  sni: der.substituteme.space
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇫🇷FR_77|87KB/s|M003-260806
+  type: vless
+  server: suh.cryptofront.uk
+  port: 80
+  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: suh.cryptofront.uk
+- name: ⚠️ 🇵🇱 波兰 (Poland) 629 - xiaohe
+  server: devcdn.icu
+  port: 443
+  udp: true
+  type: vless
+  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  tls: true
+  servername: devcdn.icu
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      Host: devcdn.icu
+- name: ⚠️ 🇩🇪 德国 | DEU
+  server: mail1.besttotaldns.com
+  port: 443
+  type: vless
+  uuid: da14e323-6af7-406f-a5c2-1eb7975ada8b
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  flow: xtls-rprx-vision
+  servername: mail1.besttotaldns.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: ⚠️ 🇪🇸ES_48|133KB/s|M003-260806
+  type: vless
+  server: mcsp.67resserv67.info
+  port: 443
+  uuid: 5dd4822d-b8dc-49dd-84b6-c3ea44ef42f7
+  tls: true
+  sni: mcsp.67resserv67.info
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: gM_rANbedeIHB3Y1ltLG60xS1i2TuYt0PKgAgC1TzR4
+    short-id: '29455a3a790acbd0'
+- name: ⚠️ 🇳🇱NL_281|157KB/s|M003-260806
+  type: hysteria2
+  server: 194.93.61.148
+  port: 443
+  password: 162be7b9-eb38-4f74-b836-96afc49ae452
+  tls: true
+  sni: nether.cxhub.su
+  up: 100 Mbps
+  down: 200 Mbps
+- name: ⚠️ 🇬🇧 英国 | GBR 2
+  server: 136.148.83.71
+  port: 443
+  type: vless
+  uuid: 00000000-0000-0001-0000-000000000000
+  tls: true
+  servername: wccfu-ru-79dc.my-fade.cloud
+  client-fingerprint: qq
+  network: tcp
+  udp: true
+- name: ⚠️ 🇩🇪DE_135|207KB/s|M001-260618
+  type: vmess
+  server: 94.130.237.57
+  port: 27154
+  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-opts:
+    path: /Telegram=@AmyraxVPN
+- name: ⚠️ 🇳🇱NL_207|154KB/s|M003-260806
+  type: vless
+  server: 8a2e72t.nl11.h1clayd.click
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  tls: true
+  sni: 8a2e72t.nl11.h1clayd.click
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: '8d0d0679f42ffd98'
+- name: ⚠️ 🇳🇱NL_216|67KB/s|M003-260806
+  type: vless
+  server: 8a2e72t.nl20.h1clayd.shop
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  tls: true
+  sni: 8a2e72t.nl20.h1clayd.shop
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: '8d0d0679f42ffd98'
+- name: ⚠️ 🇰🇷KR_39|176KB/s|R002-260618
+  type: socks5
+  server: 121.169.46.116
+  port: 1090
+  password: T2clM0QlM0Q6
+- name: ⚠️ 🇳🇱NL_165|134KB/s|M003-260806
+  type: vless
+  server: 5d0319t.nl7.h1clayd.click
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  sni: 5d0319t.nl7.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: '361d0dd59c70516f'
+- name: ⚠️ 🇮🇳IN_10|447KB/s|M003-260806
+  type: vless
+  server: xray-dmr3b3hy-calm-maple-7.cloady.io
+  port: 443
+  uuid: 06a5afa1-2bbc-a5d1-1770-becd1089c636
+  tls: true
+  sni: xray-dmr3b3hy-calm-maple-7.cloady.io
+  network: ws
+  ws-opts:
+    path: /0175469f14317d82
+    headers:
+      Host: xray-dmr3b3hy-calm-maple-7.cloady.io
+  client-fingerprint: chrome
+- name: ⚠️ 🇫🇮FI_13|77KB/s|M003-260806
+  type: vless
+  server: one.alpheratzz.org
+  port: 8443
+  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
+  tls: true
+  sni: api-6b04608f.adhil.uk
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+- name: ⚠️ 🇪🇸 西班牙 (Spain) 638 - xiaohe
+  server: 196.245.153.114
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: '42426c882c5fcd41'
+  servername: 7aa271t.es9.h1clayd.click
+  client-fingerprint: random
+- name: ⚠️ 🇬🇧GB_24|292KB/s|A004-260618
+  type: vless
+  server: uk1.connectsuite.org
+  port: 443
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  tls: true
+  sni: uk1.connectsuite.org
+  network: ws
+  ws-opts:
+    path: /cdn-cgi/ws
+  client-fingerprint: chrome
 proxy-groups:
 - name: AUTO-FAST
   type: url-test
   proxies:
-  - ⚠️ [free18#124] 🇯🇵_日本 (66)
-  - ⚠️ [free18#131] 🇯🇵_日本 (73)
-  - ⚠️ [free18#139] 🇯🇵_日本 (81)
-  - ⚠️ [free18#141] 🇯🇵_日本 (83)
-  - ⚠️ 🇭🇰HK_16
-  - ⚠️ 🇭🇰HK_96
-  - ⚠️ SG VLESS-11 | free-nodes
-  - ⚠️ 🇸🇬 新加坡 (Singapore) 578 - xiaohe
-  - ⚠️ 🇸🇬 新加坡 (Singapore) 612 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 108 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 101 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 386 - xiaohe
-  - ⚠️ [freeSub#024] D🔴🇺🇸hos_dokng.com_a6052a43
-  - ⚠️ 🇺🇸 美国 (United States) 327 - xiaohe
-  - ⚠️ [ermaozi#002] 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
-  - ⚠️ 🇺🇸 美国 (United States) 61
-  - ⚠️ 🇺🇸 美国 (United States) 487 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 407 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 461 - xiaohe
-  - ⚠️ US美国(mibei77.com 米贝节点分享)-22
-  - ⚠️ [ermaozi#062] 🇭🇰 香港 | HKG 3
-  - ⚠️ US美国-200
-  - ⚠️ trojan-1940485917
-  - ⚠️ trojan-1929965354
-  - ⚠️ ❓Other_109|400KB/s|M003-260806
-  - ⚠️ 🇨🇦CA_8|299KB/s|S004-260618
-  - ⚠️ trojan-1939194006
-  - ⚠️ trojan-1924748552
-  - ⚠️ [NoMoreWalls#017] 🆓13@oneclickvpnkeys
-  - ⚠️ 🇷🇺 俄罗斯 | RUS
-  - ⚠️ 🇪🇸ES_18|537KB/s|M003-260806
-  - ⚠️ 🇫🇷 法国 (France) 336 - xiaohe
-  - ⚠️ trojan-1943021601
-  - ⚠️ 🇹🇷TR_2|393KB/s|G001-260618
-  - ⚠️ [NoMoreWalls#234] 🇲🇽MX_3|3.2MB/s
-  - ⚠️ [NoMoreWalls#235] 🇲🇽MX_4|2.4MB/s
-  - ⚠️ 🇳🇱 荷兰 | NLD 2
-  - ⚠️ 🇬🇧 英国 | GBR
-  - ⚠️ 🇬🇧 英国 | GBR 4
-  - '⚠️ [NoMoreWalls#271] 🇬🇧 英国 | GBR #1'
+  - ⚠️ JP日本-147
+  - ⚠️ 🇯🇵JP_3|142KB/s|M003-260806
+  - ⚠️ 🇯🇵 日本 | JPN 2
+  - ⚠️ [free18#128] 🇯🇵_日本 (19)
+  - ⚠️ 🇸🇬 新加坡 (Singapore) 565 - xiaohe
+  - ⚠️ 🇸🇬 新加坡 (Singapore) 579 - xiaohe
+  - ⚠️ 🇭🇰HK_94|670KB/s|C001-260618
+  - ⚠️ 🇺🇸US_752|1.1MB/s|S004-260618
+  - ⚠️ 🇺🇸US_761|1.4MB/s|M003-260806
+  - ⚠️ 🇺🇸US_738|1.6MB/s|M003-260806
+  - ⚠️ 🇺🇸US_735|1.9MB/s|S004-260618
+  - ⚠️ 🇺🇸 美国 (United States) 174 - xiaohe
+  - ⚠️ 🇺🇸US_745|728KB/s|M003-260806
+  - ⚠️ 🇺🇸US_605|566KB/s|M003-260806
+  - ⚠️ 🇺🇸 美国 (United States) 525 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 441 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 78
+  - ⚠️ 🇺🇸 美国 (United States) 47
+  - ⚠️ 🇺🇸 美国 (United States) 342 - aceo
+  - ⚠️ JP日本-454
+  - '⚠️ [ermaozi#060] 🇸🇬 新加坡 | SGP #1'
+  - '⚠️ [NoMoreWalls#088] 🇯🇵 日本 | JPN #1'
+  - ⚠️ 🇬🇧GB_45|4.7MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_153|4.4MB/s|S004-260618
+  - ⚠️ 🇬🇧GB_46|526KB/s|M003-260806
   - ⚠️ 🇳🇱 荷兰 | NLD
-  - ⚠️ 🇩🇪 德国 (Germany) 381 - xiaohe
-  - ⚠️ 🇫🇮 芬兰 (Finland) 485 - xiaohe
-  - ⚠️ [ermaozi#006] @DeltaKroneckerGithub_3021_IPV4
-  - ⚠️ 🇰🇷 韩国 (South Korea) 649 - xiaohe
-  - ⚠️ 🇧🇬 保加利亚 (Bulgaria) 519 - xiaohe
-  - ⚠️ UN-VMESS-01
-  - ⚠️ 🇮🇱 以色列 (Israel) 526 - xiaohe
-  - ⚠️ [ermaozi#059] 🇩🇪 德国 | DEU 2
-  - ⚠️ 🇸🇪 瑞典 (Sweden) 69
-  - ⚠️ 🇦🇺 澳大利亚 (Australia) 589 - xiaohe
+  - ⚠️ 🇩🇪DE_122|397KB/s|M003-260806
+  - ⚠️ 🇪🇸ES_46|2.8MB/s|M003-260806
+  - ⚠️ UN-VLESS-04
+  - ⚠️ 🇪🇸ES_49|3.7MB/s|M003-260806
+  - ⚠️ [NoMoreWalls#167] 🇷🇺[www.v2nodes.com] ss-RU-1624...
+  - ⚠️ 🇳🇱NL_254|8.4MB/s|M003-260806
+  - ⚠️ 🇳🇱 荷兰 | NLD 3
+  - ⚠️ 🇳🇱NL_269|5.6MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_154|3.6MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_120|3.8MB/s|P002-260618
+  - ⚠️ 🇫🇷FR_155|3.7MB/s|M003-260806
+  - ⚠️ 🇵🇱PL_16|2.2MB/s|M003-260806
+  - ⚠️ 🇳🇱NL_255|2.8MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_116|4.0MB/s|A003-260618
+  - '⚠️ [NoMoreWalls#032] @OutlineReleasedKey #2'
+  - ⚠️ 🇩🇪DE_113|1.2MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_143|1.4MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_139|927KB/s|M003-260806
+  - ⚠️ 🇩🇪DE_111|2.9MB/s|M003-260806
+  - ⚠️ 🇳🇱NL_135|3.4MB/s|A004-260618
+  - ⚠️ 🇷🇺 俄罗斯 | RUS
+  - ⚠️ [NoMoreWalls#217] 🇰🇷KR_1|4.7MB/s
   - ⚠️ UN-VLESS-01
-  - ⚠️ 🇦🇪AE_3|600KB/s|T001-260618 01
-  - ⚠️ 🇩🇪 德国 (Germany) 343
-  - ⚠️ 🇩🇪 德国 (Germany) 393 - xiaohe
-  - ⚠️ 🇩🇪 德国 (Germany) 439 - xiaohe
-  - ⚠️ 🇳🇱 荷兰 (Netherlands) 318
-  - ⚠️ 🇰🇿 哈萨克斯坦 (Kazakhstan) 650 - xiaohe
-  - ⚠️ 🇳🇱 荷兰 (Netherlands) 520 - xiaohe
-  - ⚠️ 🇸🇬SG_60
-  - ⚠️ 🇨🇿 捷克 (Czech) 438 - xiaohe
-  - ⚠️ 🇨🇦 加拿大 (Canada) 631 - xiaohe
-  - ⚠️ 🇨🇦 加拿大 (Canada) 641 - xiaohe
+  - ⚠️ 🇸🇪 瑞典 (Sweden) 436 - xiaohe
+  - ⚠️ [NoMoreWalls#273] 🇷🇺 俄罗斯 | RUS
+  - ⚠️ 🇺🇦 乌克兰 (Ukraine) 416
+  - ⚠️ 🇳🇱 荷兰 (Netherlands) 403
+  - ⚠️ [zhuhaiuk#023] DE - zhuhai.uk 02
+  - ⚠️ 🇬🇧 英国 | GBR
+  - ⚠️ 🇫🇮FI_20|1.9MB/s|M003-260806
+  - '⚠️ [NoMoreWalls#092] 🇱🇻 拉脱维亚 | LVA #1'
+  - ⚠️ 🇨🇦 加拿大 (Canada) 440 - aceo
+  - ⚠️ 🇨🇦 加拿大 (Canada) 105
   - ⚠️ 🇨🇦 加拿大 (Canada) 632 - xiaohe
-  - ⚠️ 🇨🇦 加拿大 (Canada) 640 - xiaohe
-  - ⚠️ 🇩🇪 德国 (Germany) 576 - xiaohe
-  - ⚠️ 🇦🇪 阿联酋 (UAE) 430 - xiaohe
-  - ⚠️ 🇺🇸US_546
-  - ⚠️ 🇮🇳 印度 (India) 568 - xiaohe
-  - ⚠️ 🇨🇭CH_12|448KB/s|S004-260618
-  - ⚠️ 🇪🇪 爱沙尼亚 (Estonia) 505 - xiaohe
-  - ⚠️ [free18#077] 🇯🇵_日本 (19)
-  - ⚠️ [ermaozi#071] 🇺🇸 美国 | USA 2
-  - ⚠️ 🇸🇬SG_59
-  - ⚠️ [free18#103] 🇯🇵_日本 (45)
-  - ⚠️ [free18#061] 🇯🇵_日本 (3)
-  - ⚠️ [free18#105] 🇯🇵_日本 (47)
-  - ⚠️ [free18#136] 🇯🇵_日本 (78)
-  - ⚠️ [free18#111] 🇯🇵_日本 (53)
-  - ⚠️ 🇦🇹 奥地利 (Austria) 458 - xiaohe
-  - ⚠️ 🇰🇿 哈萨克斯坦 (Kazakhstan) 582 - xiaohe
-  - ⚠️ [free18#085] 🇯🇵_日本 (27)
-  - ⚠️ 🇮🇳 印度 (India) 660 - xiaohe
-  - ⚠️ [free18#095] 🇯🇵_日本 (37)
-  - ⚠️ [free18#132] 🇯🇵_日本 (74)
-  - ⚠️ [free18#143] 🇯🇵_日本 (85)
-  - ⚠️ [free18#130] 🇯🇵_日本 (72)
-  - ⚠️ [free18#062] 🇯🇵_日本 (4)
-  - ⚠️ [free18#138] 🇯🇵_日本 (80)
-  - ⚠️ 🇮🇱 以色列 (Israel) 524 - xiaohe
-  - ⚠️ [ermaozi#065] 🇮🇱 以色列 | ISR
-  - ⚠️ [ermaozi#060] 🇪🇪 爱沙尼亚 | EST
-  - ⚠️ [free18#071] 🇯🇵_日本 (13)
-  - ⚠️ [free18#116] 🇯🇵_日本 (58)
-  - ⚠️ [free18#084] 🇯🇵_日本 (26)
-  - ⚠️ [free18#088] 🇯🇵_日本 (30)
-  - ⚠️ [free18#121] 🇯🇵_日本 (63)
-  - ⚠️ [free18#073] 🇯🇵_日本 (15)
-  - ⚠️ [free18#115] 🇯🇵_日本 (57)
-  - ⚠️ [free18#069] 🇯🇵_日本 (11)
-  - ⚠️ [free18#101] 🇯🇵_日本 (43)
-  - ⚠️ [free18#110] 🇯🇵_日本 (52)
-  - ⚠️ [free18#074] 🇯🇵_日本 (16)
-  - ⚠️ [free18#109] 🇯🇵_日本 (51)
-  - ⚠️ [free18#100] 🇯🇵_日本 (42)
-  - ⚠️ [free18#112] 🇯🇵_日本 (54)
-  - ⚠️ [free18#078] 🇯🇵_日本 (20)
-  - ⚠️ 🇯🇵JP_1|102KB/s|M003-260806
-  - ⚠️ [free18#090] 🇯🇵_日本 (32)
-  - ⚠️ [free18#113] 🇯🇵_日本 (55)
-  - ⚠️ [free18#108] 🇯🇵_日本 (50)
-  - ⚠️ 🇸🇬SG_2|485KB/s|A004-260618
-  - ⚠️ 🇸🇬 新加坡 | SGP 2
-  - ⚠️ 🇸🇬SG_8|215KB/s|S004-260618
-  - ⚠️ 🇭🇰 香港 | HKG 3
-  - ⚠️ [free18#089] 🇯🇵_日本 (31)
-  - ⚠️ [free18#097] 🇯🇵_日本 (39)
-  - ⚠️ [free18#079] 🇯🇵_日本 (21)
-  - ⚠️ [NoMoreWalls#237] 🇯🇵JP_1|2.1MB/s
-  - ⚠️ [zhuhaiuk#010] HK - zhuhai.uk
-  - ⚠️ 🇸🇬 新加坡 | SGP 3
-  - ⚠️ 🇯🇵 日本 | JPN
-  - ⚠️ [zhuhaiuk#020] SG - zhuhai.uk
-  - ⚠️ [freeSub#044] D🔴🇸🇬hos_dokng.com_731ac5ff
-  - ⚠️ 🇸🇬 新加坡 | SGP
-  - ⚠️ [free18#080] 🇯🇵_日本 (22)
-  - ⚠️ [free18#099] 🇯🇵_日本 (41)
-  - '⚠️ [NoMoreWalls#092] 🇯🇵 日本 | JPN #2'
-  - ⚠️ [NoMoreWalls#247] 🇺🇸US_10|2.0MB/s
-  - ⚠️ 🇺🇸 美国 | USA 6
-  - ⚠️ 🇺🇸 美国 | USA 3
-  - ⚠️ 🇺🇸 美国 | USA 4
-  - ⚠️ 🇺🇸 美国 | USA 8
-  - ⚠️ 🇺🇸 美国 | USA
-  - ⚠️ [free18#041] 🇺🇸_美国 (8)
-  - ⚠️ 🇺🇸 美国 | USA 5
-  - '⚠️ [NoMoreWalls#208] 🇺🇸 美国 | USA #3'
-  - ⚠️ ❓Other_113|174KB/s|K001-260618
-  - ⚠️ [NoMoreWalls#018] 🔰66@oneclickvpnkeys
-  - ⚠️ [freeSub#012] U⚪🏳️ukn[💬🔮🎵🎮]_dokng.com_6d6b41c5
-  - ⚠️ 🇰🇷 韩国 | KOR
-  - ⚠️ 🇫🇷FR_22|384KB/s|M003-260806
-  - ⚠️ [NoMoreWalls#113] 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - ⚠️ 🇸🇪SE_5|291KB/s|M003-260806
-  - '⚠️ [NoMoreWalls#034] @OutlineReleasedKey #2'
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 5
+  - ⚠️ [free18#016] 🇷🇺_俄罗斯 (4)
+  - '⚠️ [NoMoreWalls#104] 🏳[www.v2nodes.com] vless- #7'
+  - ⚠️ [free18#015] 🇷🇺_俄罗斯 (2)
+  - ⚠️ 🇩🇪 德国 | DEU 2
+  - ⚠️ 🇳🇱 荷兰 (Netherlands) 475
   - ⚠️ 🇬🇧 英国 | GBR 3
-  - '⚠️ [NoMoreWalls#084] 🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 4
-  - ⚠️ 🇩🇪 德国 | DEU 5
-  - ⚠️ 🇬🇧 英国 | GBR 2
-  - ⚠️ [NoMoreWalls#082] 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - ⚠️ [NoMoreWalls#231] 🇲🇽MX_2|1.7MB/s
-  - ⚠️ [freeSub#029] A🟢🇲🇽res_dokng.com_1aa34d5e
-  - ⚠️ 🇪🇪 爱沙尼亚 | EST
-  - ⚠️ [NoMoreWalls#230] 🇲🇽MX_1|1.1MB/s
-  - ⚠️ 🇫🇷FR_26|376KB/s|B007-260618
-  - ⚠️ 🇰🇷 韩国 | KOR 2
-  - ⚠️ [free18#044] 🇳🇱_荷兰 (9)
+  - ⚠️ 🇵🇱PL_18|460KB/s|M003-260806
+  - '⚠️ [NoMoreWalls#202] 🇩🇪 德国 | DEU #4'
+  - ⚠️ 🇫🇷 法国 (France) 342 - xiaohe
+  - ⚠️ 🇰🇷KR_52|403KB/s|M003-260806
+  - ⚠️ 🇺🇸US_535
+  - ⚠️ [NoMoreWalls#090] 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - ⚠️ JP日本-219
+  - ⚠️ JP日本-263
+  - ⚠️ [zhuhaiuk#013] CN - zhuhai.uk
+  - ⚠️ JP日本-353
+  - ⚠️ JP日本-443
+  - ⚠️ JP日本-311
+  - ⚠️ JP日本-395
+  - ⚠️ JP日本-437
+  - ⚠️ JP日本-560
+  - ⚠️ JP日本-866
+  - ⚠️ JP日本-922
+  - ⚠️ 🇸🇬SG_81|1.0MB/s|M003-260806
+  - ⚠️ 🇸🇬SG_1|1009KB/s|A004-260618
+  - ⚠️ 🇸🇬SG_76|614KB/s|A004-260618
+  - ⚠️ JP日本-464
+  - ⚠️ 🇸🇬SG_84|277KB/s|M003-260806
+  - ⚠️ JP日本-584
+  - ⚠️ JP日本-480
+  - ⚠️ JP日本-684
+  - ⚠️ JP日本-441
+  - ⚠️ 🇯🇵JP_28|694KB/s|F003-260618
+  - ⚠️ JP日本-316
+  - ⚠️ 香港 43
+  - ⚠️ 🇭🇰 中国香港 (Hong Kong) 686 - xiaohe
+  - ⚠️ 🇰🇷KR_53|377KB/s|M003-260806
+  - ⚠️ [Eternity#093] 🇬🇧GB-141.98.101.179-0217 | 0.044MB
+  - ⚠️ 🇺🇸 美国 (United States) 165 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 149 - xiaohe
+  - ⚠️ 🇺🇸US_756|1.4MB/s
+  - ⚠️ 🇺🇸 美国 | USA 6
+  - ⚠️ 🇺🇸US_577|1.3MB/s|S001-260618
+  - ⚠️ 🇺🇸 美国 | USA 5
+  - ⚠️ 🇺🇸US_512
+  - ⚠️ 🇺🇸 美国 | USA 2
+  - ⚠️ 未知 VLESS-644 | free-nodes
+  - ⚠️ hysteria2-1853501557
+  - ⚠️ 🇩🇪DE_128|4.4MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_100|1.2MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_157|1.1MB/s|M003-260806
+  - ⚠️ 🇱🇮 LI_03
   - ⚠️ 🇰🇷 韩国 | KOR 3
-  - ⚠️ 🇮🇹 意大利 | ITA 2
-  - '⚠️ [NoMoreWalls#287] 🇷🇺 俄罗斯 | RUS #6'
-  - ⚠️ [NoMoreWalls#284] 🇷🇺 俄罗斯 | RUS
-  - ⚠️ [NoMoreWalls#226] 🇫🇷FR_4|2.0MB/s
-  - ⚠️ [NoMoreWalls#103] 🇸🇪[www.v2nodes.com] vless-SE-1...
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 6
-  - ⚠️ [NoMoreWalls#212] 🇰🇷KR_1|4.4MB/s
-  - ⚠️ 🇩🇪 德国 | DEU 4
-  - '⚠️ [NoMoreWalls#283] 🇵🇱 波兰 | POL #1'
-  - ⚠️ [zhuhaiuk#014] ZA - zhuhai.uk
-  - ⚠️ 🇱🇻 拉脱维亚 | LVA
-  - ⚠️ 🇹🇭TH_4|143KB/s|S004-260618
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 3
-  - '⚠️ [NoMoreWalls#280] 🇰🇷 韩国 | KOR #1'
-  - ⚠️ [zhuhaiuk#016] TH - zhuhai.uk
-  - ⚠️ [NoMoreWalls#232] 🇹🇭TH_1|1.5MB/s
-  - ⚠️ [NoMoreWalls#233] 🇹🇭TH_2|1.8MB/s
-  - '⚠️ [NoMoreWalls#266] 🇦🇪 阿联酋 | ARE #1'
-  - ⚠️ [free18#036] 🇷🇺_俄罗斯 (20)
-  - ⚠️ [free18#005] 🇮🇳_印度 (3)
-  - ⚠️ ❓Other_90|307KB/s|P002-260618
-  - '⚠️ [NoMoreWalls#095] 🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - ⚠️ 🇪🇸 西班牙 | ESP
-  - ⚠️ 🇩🇪DE_23|66KB/s|M003-260806
-  - ⚠️ [free18#021] 🇩🇪_德国 (8)
-  - ⚠️ [free18#039] 🇩🇪_德国 (14)
-  - ⚠️ [freeSub#045] A🟢🇳🇱res[💬🔮🎮✈️]_dokng.com_2e8886fe
-  - ⚠️ 🇩🇪DE_26|68KB/s|M003-260806
-  - ⚠️ [free18#018] 🇪🇪_爱沙尼亚
-  - ⚠️ [free18#004] 🇮🇳_印度
-  - ⚠️ 🇹🇼 🇨🇳 台湾 | TWN 4
+  - ⚠️ 🇷🇴 罗马尼亚 | ROU
+  - ⚠️ 🇩🇪DE_95|433KB/s|S001-260618
+  - ⚠️ 🇪🇸 西班牙 | ESP 2
+  - ⚠️ 🇫🇷FR_142|1.6MB/s|B007-260618
+  - ⚠️ 🇰🇿KZ_4|1002KB/s
+  - ⚠️ 🇩🇪DE_83|870KB/s|M002-260618
+  - ⚠️ 🇳🇱NL_264|2.2MB/s|M003-260806
+  - ⚠️ 🇱🇻LV_15|1.1MB/s|M003-260806
+  - ⚠️ 🇻🇳 越南 (Vietnam) 621 - xiaohe
+  - ⚠️ 🇨🇦 加拿大 (Canada) 631 - xiaohe
+  - ⚠️ 🇨🇦 加拿大 (Canada) 630 - xiaohe
+  - ⚠️ 🇨🇿 捷克 (Czech) 435 - xiaohe
+  - ⚠️ 🇩🇪DE_112|3.4MB/s|M003-260806
+  - ⚠️ 🇳🇱NL_268|440KB/s|M003-260806
+  - ⚠️ 🇩🇪DE_109|3.2MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_77|87KB/s|M003-260806
+  - ⚠️ 🇵🇱 波兰 (Poland) 629 - xiaohe
+  - ⚠️ 🇩🇪 德国 | DEU
+  - ⚠️ 🇪🇸ES_48|133KB/s|M003-260806
+  - ⚠️ 🇳🇱NL_281|157KB/s|M003-260806
+  - ⚠️ 🇬🇧 英国 | GBR 2
+  - ⚠️ 🇩🇪DE_135|207KB/s|M001-260618
+  - ⚠️ 🇳🇱NL_207|154KB/s|M003-260806
+  - ⚠️ 🇳🇱NL_216|67KB/s|M003-260806
+  - ⚠️ 🇰🇷KR_39|176KB/s|R002-260618
+  - ⚠️ 🇳🇱NL_165|134KB/s|M003-260806
+  - ⚠️ 🇮🇳IN_10|447KB/s|M003-260806
+  - ⚠️ 🇫🇮FI_13|77KB/s|M003-260806
+  - ⚠️ 🇪🇸 西班牙 (Spain) 638 - xiaohe
+  - ⚠️ 🇬🇧GB_24|292KB/s|A004-260618
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -2280,7 +1624,7 @@ proxy-groups:
 - name: VERIFIED
   type: url-test
   proxies:
-  - ⚠️ [free18#124] 🇯🇵_日本 (66)
+  - ⚠️ JP日本-147
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -2290,197 +1634,149 @@ proxy-groups:
 - name: UNVERIFIED
   type: url-test
   proxies:
-  - ⚠️ [free18#124] 🇯🇵_日本 (66)
-  - ⚠️ [free18#131] 🇯🇵_日本 (73)
-  - ⚠️ [free18#139] 🇯🇵_日本 (81)
-  - ⚠️ [free18#141] 🇯🇵_日本 (83)
-  - ⚠️ 🇭🇰HK_16
-  - ⚠️ 🇭🇰HK_96
-  - ⚠️ SG VLESS-11 | free-nodes
-  - ⚠️ 🇸🇬 新加坡 (Singapore) 578 - xiaohe
-  - ⚠️ 🇸🇬 新加坡 (Singapore) 612 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 108 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 101 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 386 - xiaohe
-  - ⚠️ [freeSub#024] D🔴🇺🇸hos_dokng.com_a6052a43
-  - ⚠️ 🇺🇸 美国 (United States) 327 - xiaohe
-  - ⚠️ [ermaozi#002] 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
-  - ⚠️ 🇺🇸 美国 (United States) 61
-  - ⚠️ 🇺🇸 美国 (United States) 487 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 407 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 461 - xiaohe
-  - ⚠️ US美国(mibei77.com 米贝节点分享)-22
-  - ⚠️ [ermaozi#062] 🇭🇰 香港 | HKG 3
-  - ⚠️ US美国-200
-  - ⚠️ trojan-1940485917
-  - ⚠️ trojan-1929965354
-  - ⚠️ ❓Other_109|400KB/s|M003-260806
-  - ⚠️ 🇨🇦CA_8|299KB/s|S004-260618
-  - ⚠️ trojan-1939194006
-  - ⚠️ trojan-1924748552
-  - ⚠️ [NoMoreWalls#017] 🆓13@oneclickvpnkeys
-  - ⚠️ 🇷🇺 俄罗斯 | RUS
-  - ⚠️ 🇪🇸ES_18|537KB/s|M003-260806
-  - ⚠️ 🇫🇷 法国 (France) 336 - xiaohe
-  - ⚠️ trojan-1943021601
-  - ⚠️ 🇹🇷TR_2|393KB/s|G001-260618
-  - ⚠️ [NoMoreWalls#234] 🇲🇽MX_3|3.2MB/s
-  - ⚠️ [NoMoreWalls#235] 🇲🇽MX_4|2.4MB/s
-  - ⚠️ 🇳🇱 荷兰 | NLD 2
-  - ⚠️ 🇬🇧 英国 | GBR
-  - ⚠️ 🇬🇧 英国 | GBR 4
-  - '⚠️ [NoMoreWalls#271] 🇬🇧 英国 | GBR #1'
+  - ⚠️ JP日本-147
+  - ⚠️ 🇯🇵JP_3|142KB/s|M003-260806
+  - ⚠️ 🇯🇵 日本 | JPN 2
+  - ⚠️ [free18#128] 🇯🇵_日本 (19)
+  - ⚠️ 🇸🇬 新加坡 (Singapore) 565 - xiaohe
+  - ⚠️ 🇸🇬 新加坡 (Singapore) 579 - xiaohe
+  - ⚠️ 🇭🇰HK_94|670KB/s|C001-260618
+  - ⚠️ 🇺🇸US_752|1.1MB/s|S004-260618
+  - ⚠️ 🇺🇸US_761|1.4MB/s|M003-260806
+  - ⚠️ 🇺🇸US_738|1.6MB/s|M003-260806
+  - ⚠️ 🇺🇸US_735|1.9MB/s|S004-260618
+  - ⚠️ 🇺🇸 美国 (United States) 174 - xiaohe
+  - ⚠️ 🇺🇸US_745|728KB/s|M003-260806
+  - ⚠️ 🇺🇸US_605|566KB/s|M003-260806
+  - ⚠️ 🇺🇸 美国 (United States) 525 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 441 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 78
+  - ⚠️ 🇺🇸 美国 (United States) 47
+  - ⚠️ 🇺🇸 美国 (United States) 342 - aceo
+  - ⚠️ JP日本-454
+  - '⚠️ [ermaozi#060] 🇸🇬 新加坡 | SGP #1'
+  - '⚠️ [NoMoreWalls#088] 🇯🇵 日本 | JPN #1'
+  - ⚠️ 🇬🇧GB_45|4.7MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_153|4.4MB/s|S004-260618
+  - ⚠️ 🇬🇧GB_46|526KB/s|M003-260806
   - ⚠️ 🇳🇱 荷兰 | NLD
-  - ⚠️ 🇩🇪 德国 (Germany) 381 - xiaohe
-  - ⚠️ 🇫🇮 芬兰 (Finland) 485 - xiaohe
-  - ⚠️ [ermaozi#006] @DeltaKroneckerGithub_3021_IPV4
-  - ⚠️ 🇰🇷 韩国 (South Korea) 649 - xiaohe
-  - ⚠️ 🇧🇬 保加利亚 (Bulgaria) 519 - xiaohe
-  - ⚠️ UN-VMESS-01
-  - ⚠️ 🇮🇱 以色列 (Israel) 526 - xiaohe
-  - ⚠️ [ermaozi#059] 🇩🇪 德国 | DEU 2
-  - ⚠️ 🇸🇪 瑞典 (Sweden) 69
-  - ⚠️ 🇦🇺 澳大利亚 (Australia) 589 - xiaohe
+  - ⚠️ 🇩🇪DE_122|397KB/s|M003-260806
+  - ⚠️ 🇪🇸ES_46|2.8MB/s|M003-260806
+  - ⚠️ UN-VLESS-04
+  - ⚠️ 🇪🇸ES_49|3.7MB/s|M003-260806
+  - ⚠️ [NoMoreWalls#167] 🇷🇺[www.v2nodes.com] ss-RU-1624...
+  - ⚠️ 🇳🇱NL_254|8.4MB/s|M003-260806
+  - ⚠️ 🇳🇱 荷兰 | NLD 3
+  - ⚠️ 🇳🇱NL_269|5.6MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_154|3.6MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_120|3.8MB/s|P002-260618
+  - ⚠️ 🇫🇷FR_155|3.7MB/s|M003-260806
+  - ⚠️ 🇵🇱PL_16|2.2MB/s|M003-260806
+  - ⚠️ 🇳🇱NL_255|2.8MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_116|4.0MB/s|A003-260618
+  - '⚠️ [NoMoreWalls#032] @OutlineReleasedKey #2'
+  - ⚠️ 🇩🇪DE_113|1.2MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_143|1.4MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_139|927KB/s|M003-260806
+  - ⚠️ 🇩🇪DE_111|2.9MB/s|M003-260806
+  - ⚠️ 🇳🇱NL_135|3.4MB/s|A004-260618
+  - ⚠️ 🇷🇺 俄罗斯 | RUS
+  - ⚠️ [NoMoreWalls#217] 🇰🇷KR_1|4.7MB/s
   - ⚠️ UN-VLESS-01
-  - ⚠️ 🇦🇪AE_3|600KB/s|T001-260618 01
-  - ⚠️ 🇩🇪 德国 (Germany) 343
-  - ⚠️ 🇩🇪 德国 (Germany) 393 - xiaohe
-  - ⚠️ 🇩🇪 德国 (Germany) 439 - xiaohe
-  - ⚠️ 🇳🇱 荷兰 (Netherlands) 318
-  - ⚠️ 🇰🇿 哈萨克斯坦 (Kazakhstan) 650 - xiaohe
-  - ⚠️ 🇳🇱 荷兰 (Netherlands) 520 - xiaohe
-  - ⚠️ 🇸🇬SG_60
-  - ⚠️ 🇨🇿 捷克 (Czech) 438 - xiaohe
-  - ⚠️ 🇨🇦 加拿大 (Canada) 631 - xiaohe
-  - ⚠️ 🇨🇦 加拿大 (Canada) 641 - xiaohe
+  - ⚠️ 🇸🇪 瑞典 (Sweden) 436 - xiaohe
+  - ⚠️ [NoMoreWalls#273] 🇷🇺 俄罗斯 | RUS
+  - ⚠️ 🇺🇦 乌克兰 (Ukraine) 416
+  - ⚠️ 🇳🇱 荷兰 (Netherlands) 403
+  - ⚠️ [zhuhaiuk#023] DE - zhuhai.uk 02
+  - ⚠️ 🇬🇧 英国 | GBR
+  - ⚠️ 🇫🇮FI_20|1.9MB/s|M003-260806
+  - '⚠️ [NoMoreWalls#092] 🇱🇻 拉脱维亚 | LVA #1'
+  - ⚠️ 🇨🇦 加拿大 (Canada) 440 - aceo
+  - ⚠️ 🇨🇦 加拿大 (Canada) 105
   - ⚠️ 🇨🇦 加拿大 (Canada) 632 - xiaohe
-  - ⚠️ 🇨🇦 加拿大 (Canada) 640 - xiaohe
-  - ⚠️ 🇩🇪 德国 (Germany) 576 - xiaohe
-  - ⚠️ 🇦🇪 阿联酋 (UAE) 430 - xiaohe
-  - ⚠️ 🇺🇸US_546
-  - ⚠️ 🇮🇳 印度 (India) 568 - xiaohe
-  - ⚠️ 🇨🇭CH_12|448KB/s|S004-260618
-  - ⚠️ 🇪🇪 爱沙尼亚 (Estonia) 505 - xiaohe
-  - ⚠️ [free18#077] 🇯🇵_日本 (19)
-  - ⚠️ [ermaozi#071] 🇺🇸 美国 | USA 2
-  - ⚠️ 🇸🇬SG_59
-  - ⚠️ [free18#103] 🇯🇵_日本 (45)
-  - ⚠️ [free18#061] 🇯🇵_日本 (3)
-  - ⚠️ [free18#105] 🇯🇵_日本 (47)
-  - ⚠️ [free18#136] 🇯🇵_日本 (78)
-  - ⚠️ [free18#111] 🇯🇵_日本 (53)
-  - ⚠️ 🇦🇹 奥地利 (Austria) 458 - xiaohe
-  - ⚠️ 🇰🇿 哈萨克斯坦 (Kazakhstan) 582 - xiaohe
-  - ⚠️ [free18#085] 🇯🇵_日本 (27)
-  - ⚠️ 🇮🇳 印度 (India) 660 - xiaohe
-  - ⚠️ [free18#095] 🇯🇵_日本 (37)
-  - ⚠️ [free18#132] 🇯🇵_日本 (74)
-  - ⚠️ [free18#143] 🇯🇵_日本 (85)
-  - ⚠️ [free18#130] 🇯🇵_日本 (72)
-  - ⚠️ [free18#062] 🇯🇵_日本 (4)
-  - ⚠️ [free18#138] 🇯🇵_日本 (80)
-  - ⚠️ 🇮🇱 以色列 (Israel) 524 - xiaohe
-  - ⚠️ [ermaozi#065] 🇮🇱 以色列 | ISR
-  - ⚠️ [ermaozi#060] 🇪🇪 爱沙尼亚 | EST
-  - ⚠️ [free18#071] 🇯🇵_日本 (13)
-  - ⚠️ [free18#116] 🇯🇵_日本 (58)
-  - ⚠️ [free18#084] 🇯🇵_日本 (26)
-  - ⚠️ [free18#088] 🇯🇵_日本 (30)
-  - ⚠️ [free18#121] 🇯🇵_日本 (63)
-  - ⚠️ [free18#073] 🇯🇵_日本 (15)
-  - ⚠️ [free18#115] 🇯🇵_日本 (57)
-  - ⚠️ [free18#069] 🇯🇵_日本 (11)
-  - ⚠️ [free18#101] 🇯🇵_日本 (43)
-  - ⚠️ [free18#110] 🇯🇵_日本 (52)
-  - ⚠️ [free18#074] 🇯🇵_日本 (16)
-  - ⚠️ [free18#109] 🇯🇵_日本 (51)
-  - ⚠️ [free18#100] 🇯🇵_日本 (42)
-  - ⚠️ [free18#112] 🇯🇵_日本 (54)
-  - ⚠️ [free18#078] 🇯🇵_日本 (20)
-  - ⚠️ 🇯🇵JP_1|102KB/s|M003-260806
-  - ⚠️ [free18#090] 🇯🇵_日本 (32)
-  - ⚠️ [free18#113] 🇯🇵_日本 (55)
-  - ⚠️ [free18#108] 🇯🇵_日本 (50)
-  - ⚠️ 🇸🇬SG_2|485KB/s|A004-260618
-  - ⚠️ 🇸🇬 新加坡 | SGP 2
-  - ⚠️ 🇸🇬SG_8|215KB/s|S004-260618
-  - ⚠️ 🇭🇰 香港 | HKG 3
-  - ⚠️ [free18#089] 🇯🇵_日本 (31)
-  - ⚠️ [free18#097] 🇯🇵_日本 (39)
-  - ⚠️ [free18#079] 🇯🇵_日本 (21)
-  - ⚠️ [NoMoreWalls#237] 🇯🇵JP_1|2.1MB/s
-  - ⚠️ [zhuhaiuk#010] HK - zhuhai.uk
-  - ⚠️ 🇸🇬 新加坡 | SGP 3
-  - ⚠️ 🇯🇵 日本 | JPN
-  - ⚠️ [zhuhaiuk#020] SG - zhuhai.uk
-  - ⚠️ [freeSub#044] D🔴🇸🇬hos_dokng.com_731ac5ff
-  - ⚠️ 🇸🇬 新加坡 | SGP
-  - ⚠️ [free18#080] 🇯🇵_日本 (22)
-  - ⚠️ [free18#099] 🇯🇵_日本 (41)
-  - '⚠️ [NoMoreWalls#092] 🇯🇵 日本 | JPN #2'
-  - ⚠️ [NoMoreWalls#247] 🇺🇸US_10|2.0MB/s
-  - ⚠️ 🇺🇸 美国 | USA 6
-  - ⚠️ 🇺🇸 美国 | USA 3
-  - ⚠️ 🇺🇸 美国 | USA 4
-  - ⚠️ 🇺🇸 美国 | USA 8
-  - ⚠️ 🇺🇸 美国 | USA
-  - ⚠️ [free18#041] 🇺🇸_美国 (8)
-  - ⚠️ 🇺🇸 美国 | USA 5
-  - '⚠️ [NoMoreWalls#208] 🇺🇸 美国 | USA #3'
-  - ⚠️ ❓Other_113|174KB/s|K001-260618
-  - ⚠️ [NoMoreWalls#018] 🔰66@oneclickvpnkeys
-  - ⚠️ [freeSub#012] U⚪🏳️ukn[💬🔮🎵🎮]_dokng.com_6d6b41c5
-  - ⚠️ 🇰🇷 韩国 | KOR
-  - ⚠️ 🇫🇷FR_22|384KB/s|M003-260806
-  - ⚠️ [NoMoreWalls#113] 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - ⚠️ 🇸🇪SE_5|291KB/s|M003-260806
-  - '⚠️ [NoMoreWalls#034] @OutlineReleasedKey #2'
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 5
+  - ⚠️ [free18#016] 🇷🇺_俄罗斯 (4)
+  - '⚠️ [NoMoreWalls#104] 🏳[www.v2nodes.com] vless- #7'
+  - ⚠️ [free18#015] 🇷🇺_俄罗斯 (2)
+  - ⚠️ 🇩🇪 德国 | DEU 2
+  - ⚠️ 🇳🇱 荷兰 (Netherlands) 475
   - ⚠️ 🇬🇧 英国 | GBR 3
-  - '⚠️ [NoMoreWalls#084] 🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 4
-  - ⚠️ 🇩🇪 德国 | DEU 5
-  - ⚠️ 🇬🇧 英国 | GBR 2
-  - ⚠️ [NoMoreWalls#082] 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - ⚠️ [NoMoreWalls#231] 🇲🇽MX_2|1.7MB/s
-  - ⚠️ [freeSub#029] A🟢🇲🇽res_dokng.com_1aa34d5e
-  - ⚠️ 🇪🇪 爱沙尼亚 | EST
-  - ⚠️ [NoMoreWalls#230] 🇲🇽MX_1|1.1MB/s
-  - ⚠️ 🇫🇷FR_26|376KB/s|B007-260618
-  - ⚠️ 🇰🇷 韩国 | KOR 2
-  - ⚠️ [free18#044] 🇳🇱_荷兰 (9)
+  - ⚠️ 🇵🇱PL_18|460KB/s|M003-260806
+  - '⚠️ [NoMoreWalls#202] 🇩🇪 德国 | DEU #4'
+  - ⚠️ 🇫🇷 法国 (France) 342 - xiaohe
+  - ⚠️ 🇰🇷KR_52|403KB/s|M003-260806
+  - ⚠️ 🇺🇸US_535
+  - ⚠️ [NoMoreWalls#090] 🇰🇷[www.v2nodes.com] vless-KR-1...
+  - ⚠️ JP日本-219
+  - ⚠️ JP日本-263
+  - ⚠️ [zhuhaiuk#013] CN - zhuhai.uk
+  - ⚠️ JP日本-353
+  - ⚠️ JP日本-443
+  - ⚠️ JP日本-311
+  - ⚠️ JP日本-395
+  - ⚠️ JP日本-437
+  - ⚠️ JP日本-560
+  - ⚠️ JP日本-866
+  - ⚠️ JP日本-922
+  - ⚠️ 🇸🇬SG_81|1.0MB/s|M003-260806
+  - ⚠️ 🇸🇬SG_1|1009KB/s|A004-260618
+  - ⚠️ 🇸🇬SG_76|614KB/s|A004-260618
+  - ⚠️ JP日本-464
+  - ⚠️ 🇸🇬SG_84|277KB/s|M003-260806
+  - ⚠️ JP日本-584
+  - ⚠️ JP日本-480
+  - ⚠️ JP日本-684
+  - ⚠️ JP日本-441
+  - ⚠️ 🇯🇵JP_28|694KB/s|F003-260618
+  - ⚠️ JP日本-316
+  - ⚠️ 香港 43
+  - ⚠️ 🇭🇰 中国香港 (Hong Kong) 686 - xiaohe
+  - ⚠️ 🇰🇷KR_53|377KB/s|M003-260806
+  - ⚠️ [Eternity#093] 🇬🇧GB-141.98.101.179-0217 | 0.044MB
+  - ⚠️ 🇺🇸 美国 (United States) 165 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 149 - xiaohe
+  - ⚠️ 🇺🇸US_756|1.4MB/s
+  - ⚠️ 🇺🇸 美国 | USA 6
+  - ⚠️ 🇺🇸US_577|1.3MB/s|S001-260618
+  - ⚠️ 🇺🇸 美国 | USA 5
+  - ⚠️ 🇺🇸US_512
+  - ⚠️ 🇺🇸 美国 | USA 2
+  - ⚠️ 未知 VLESS-644 | free-nodes
+  - ⚠️ hysteria2-1853501557
+  - ⚠️ 🇩🇪DE_128|4.4MB/s|M003-260806
+  - ⚠️ 🇩🇪DE_100|1.2MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_157|1.1MB/s|M003-260806
+  - ⚠️ 🇱🇮 LI_03
   - ⚠️ 🇰🇷 韩国 | KOR 3
-  - ⚠️ 🇮🇹 意大利 | ITA 2
-  - '⚠️ [NoMoreWalls#287] 🇷🇺 俄罗斯 | RUS #6'
-  - ⚠️ [NoMoreWalls#284] 🇷🇺 俄罗斯 | RUS
-  - ⚠️ [NoMoreWalls#226] 🇫🇷FR_4|2.0MB/s
-  - ⚠️ [NoMoreWalls#103] 🇸🇪[www.v2nodes.com] vless-SE-1...
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 6
-  - ⚠️ [NoMoreWalls#212] 🇰🇷KR_1|4.4MB/s
-  - ⚠️ 🇩🇪 德国 | DEU 4
-  - '⚠️ [NoMoreWalls#283] 🇵🇱 波兰 | POL #1'
-  - ⚠️ [zhuhaiuk#014] ZA - zhuhai.uk
-  - ⚠️ 🇱🇻 拉脱维亚 | LVA
-  - ⚠️ 🇹🇭TH_4|143KB/s|S004-260618
-  - ⚠️ 🇷🇺 俄罗斯 | RUS 3
-  - '⚠️ [NoMoreWalls#280] 🇰🇷 韩国 | KOR #1'
-  - ⚠️ [zhuhaiuk#016] TH - zhuhai.uk
-  - ⚠️ [NoMoreWalls#232] 🇹🇭TH_1|1.5MB/s
-  - ⚠️ [NoMoreWalls#233] 🇹🇭TH_2|1.8MB/s
-  - '⚠️ [NoMoreWalls#266] 🇦🇪 阿联酋 | ARE #1'
-  - ⚠️ [free18#036] 🇷🇺_俄罗斯 (20)
-  - ⚠️ [free18#005] 🇮🇳_印度 (3)
-  - ⚠️ ❓Other_90|307KB/s|P002-260618
-  - '⚠️ [NoMoreWalls#095] 🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  - ⚠️ 🇪🇸 西班牙 | ESP
-  - ⚠️ 🇩🇪DE_23|66KB/s|M003-260806
-  - ⚠️ [free18#021] 🇩🇪_德国 (8)
-  - ⚠️ [free18#039] 🇩🇪_德国 (14)
-  - ⚠️ [freeSub#045] A🟢🇳🇱res[💬🔮🎮✈️]_dokng.com_2e8886fe
-  - ⚠️ 🇩🇪DE_26|68KB/s|M003-260806
-  - ⚠️ [free18#018] 🇪🇪_爱沙尼亚
-  - ⚠️ [free18#004] 🇮🇳_印度
-  - ⚠️ 🇹🇼 🇨🇳 台湾 | TWN 4
+  - ⚠️ 🇷🇴 罗马尼亚 | ROU
+  - ⚠️ 🇩🇪DE_95|433KB/s|S001-260618
+  - ⚠️ 🇪🇸 西班牙 | ESP 2
+  - ⚠️ 🇫🇷FR_142|1.6MB/s|B007-260618
+  - ⚠️ 🇰🇿KZ_4|1002KB/s
+  - ⚠️ 🇩🇪DE_83|870KB/s|M002-260618
+  - ⚠️ 🇳🇱NL_264|2.2MB/s|M003-260806
+  - ⚠️ 🇱🇻LV_15|1.1MB/s|M003-260806
+  - ⚠️ 🇻🇳 越南 (Vietnam) 621 - xiaohe
+  - ⚠️ 🇨🇦 加拿大 (Canada) 631 - xiaohe
+  - ⚠️ 🇨🇦 加拿大 (Canada) 630 - xiaohe
+  - ⚠️ 🇨🇿 捷克 (Czech) 435 - xiaohe
+  - ⚠️ 🇩🇪DE_112|3.4MB/s|M003-260806
+  - ⚠️ 🇳🇱NL_268|440KB/s|M003-260806
+  - ⚠️ 🇩🇪DE_109|3.2MB/s|M003-260806
+  - ⚠️ 🇫🇷FR_77|87KB/s|M003-260806
+  - ⚠️ 🇵🇱 波兰 (Poland) 629 - xiaohe
+  - ⚠️ 🇩🇪 德国 | DEU
+  - ⚠️ 🇪🇸ES_48|133KB/s|M003-260806
+  - ⚠️ 🇳🇱NL_281|157KB/s|M003-260806
+  - ⚠️ 🇬🇧 英国 | GBR 2
+  - ⚠️ 🇩🇪DE_135|207KB/s|M001-260618
+  - ⚠️ 🇳🇱NL_207|154KB/s|M003-260806
+  - ⚠️ 🇳🇱NL_216|67KB/s|M003-260806
+  - ⚠️ 🇰🇷KR_39|176KB/s|R002-260618
+  - ⚠️ 🇳🇱NL_165|134KB/s|M003-260806
+  - ⚠️ 🇮🇳IN_10|447KB/s|M003-260806
+  - ⚠️ 🇫🇮FI_13|77KB/s|M003-260806
+  - ⚠️ 🇪🇸 西班牙 (Spain) 638 - xiaohe
+  - ⚠️ 🇬🇧GB_24|292KB/s|A004-260618
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -2490,11 +1786,9 @@ proxy-groups:
 - name: HK-POOL
   type: url-test
   proxies:
-  - ⚠️ 🇭🇰HK_16
-  - ⚠️ 🇭🇰HK_96
-  - ⚠️ [ermaozi#062] 🇭🇰 香港 | HKG 3
-  - ⚠️ 🇭🇰 香港 | HKG 3
-  - ⚠️ [zhuhaiuk#010] HK - zhuhai.uk
+  - ⚠️ 🇭🇰HK_94|670KB/s|C001-260618
+  - ⚠️ 香港 43
+  - ⚠️ 🇭🇰 中国香港 (Hong Kong) 686 - xiaohe
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -2504,50 +1798,29 @@ proxy-groups:
 - name: JP-POOL
   type: url-test
   proxies:
-  - ⚠️ [free18#124] 🇯🇵_日本 (66)
-  - ⚠️ [free18#131] 🇯🇵_日本 (73)
-  - ⚠️ [free18#139] 🇯🇵_日本 (81)
-  - ⚠️ [free18#141] 🇯🇵_日本 (83)
-  - ⚠️ [free18#077] 🇯🇵_日本 (19)
-  - ⚠️ [free18#103] 🇯🇵_日本 (45)
-  - ⚠️ [free18#061] 🇯🇵_日本 (3)
-  - ⚠️ [free18#105] 🇯🇵_日本 (47)
-  - ⚠️ [free18#136] 🇯🇵_日本 (78)
-  - ⚠️ [free18#111] 🇯🇵_日本 (53)
-  - ⚠️ [free18#085] 🇯🇵_日本 (27)
-  - ⚠️ [free18#095] 🇯🇵_日本 (37)
-  - ⚠️ [free18#132] 🇯🇵_日本 (74)
-  - ⚠️ [free18#143] 🇯🇵_日本 (85)
-  - ⚠️ [free18#130] 🇯🇵_日本 (72)
-  - ⚠️ [free18#062] 🇯🇵_日本 (4)
-  - ⚠️ [free18#138] 🇯🇵_日本 (80)
-  - ⚠️ [free18#071] 🇯🇵_日本 (13)
-  - ⚠️ [free18#116] 🇯🇵_日本 (58)
-  - ⚠️ [free18#084] 🇯🇵_日本 (26)
-  - ⚠️ [free18#088] 🇯🇵_日本 (30)
-  - ⚠️ [free18#121] 🇯🇵_日本 (63)
-  - ⚠️ [free18#073] 🇯🇵_日本 (15)
-  - ⚠️ [free18#115] 🇯🇵_日本 (57)
-  - ⚠️ [free18#069] 🇯🇵_日本 (11)
-  - ⚠️ [free18#101] 🇯🇵_日本 (43)
-  - ⚠️ [free18#110] 🇯🇵_日本 (52)
-  - ⚠️ [free18#074] 🇯🇵_日本 (16)
-  - ⚠️ [free18#109] 🇯🇵_日本 (51)
-  - ⚠️ [free18#100] 🇯🇵_日本 (42)
-  - ⚠️ [free18#112] 🇯🇵_日本 (54)
-  - ⚠️ [free18#078] 🇯🇵_日本 (20)
-  - ⚠️ 🇯🇵JP_1|102KB/s|M003-260806
-  - ⚠️ [free18#090] 🇯🇵_日本 (32)
-  - ⚠️ [free18#113] 🇯🇵_日本 (55)
-  - ⚠️ [free18#108] 🇯🇵_日本 (50)
-  - ⚠️ [free18#089] 🇯🇵_日本 (31)
-  - ⚠️ [free18#097] 🇯🇵_日本 (39)
-  - ⚠️ [free18#079] 🇯🇵_日本 (21)
-  - ⚠️ [NoMoreWalls#237] 🇯🇵JP_1|2.1MB/s
-  - ⚠️ 🇯🇵 日本 | JPN
-  - ⚠️ [free18#080] 🇯🇵_日本 (22)
-  - ⚠️ [free18#099] 🇯🇵_日本 (41)
-  - '⚠️ [NoMoreWalls#092] 🇯🇵 日本 | JPN #2'
+  - ⚠️ JP日本-147
+  - ⚠️ 🇯🇵JP_3|142KB/s|M003-260806
+  - ⚠️ 🇯🇵 日本 | JPN 2
+  - ⚠️ [free18#128] 🇯🇵_日本 (19)
+  - ⚠️ JP日本-454
+  - '⚠️ [NoMoreWalls#088] 🇯🇵 日本 | JPN #1'
+  - ⚠️ JP日本-219
+  - ⚠️ JP日本-263
+  - ⚠️ JP日本-353
+  - ⚠️ JP日本-443
+  - ⚠️ JP日本-311
+  - ⚠️ JP日本-395
+  - ⚠️ JP日本-437
+  - ⚠️ JP日本-560
+  - ⚠️ JP日本-866
+  - ⚠️ JP日本-922
+  - ⚠️ JP日本-464
+  - ⚠️ JP日本-584
+  - ⚠️ JP日本-480
+  - ⚠️ JP日本-684
+  - ⚠️ JP日本-441
+  - ⚠️ 🇯🇵JP_28|694KB/s|F003-260618
+  - ⚠️ JP日本-316
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -2557,29 +1830,27 @@ proxy-groups:
 - name: US-POOL
   type: url-test
   proxies:
-  - ⚠️ 🇺🇸 美国 (United States) 108 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 101 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 386 - xiaohe
-  - ⚠️ [freeSub#024] D🔴🇺🇸hos_dokng.com_a6052a43
-  - ⚠️ 🇺🇸 美国 (United States) 327 - xiaohe
-  - ⚠️ [ermaozi#002] 🇺🇸 机场推荐:dafei.de 美国 26_IPV4
-  - ⚠️ 🇺🇸 美国 (United States) 61
-  - ⚠️ 🇺🇸 美国 (United States) 487 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 407 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 461 - xiaohe
-  - ⚠️ US美国(mibei77.com 米贝节点分享)-22
-  - ⚠️ US美国-200
-  - ⚠️ 🇺🇸US_546
-  - ⚠️ [ermaozi#071] 🇺🇸 美国 | USA 2
-  - ⚠️ [NoMoreWalls#247] 🇺🇸US_10|2.0MB/s
+  - ⚠️ 🇺🇸US_752|1.1MB/s|S004-260618
+  - ⚠️ 🇺🇸US_761|1.4MB/s|M003-260806
+  - ⚠️ 🇺🇸US_738|1.6MB/s|M003-260806
+  - ⚠️ 🇺🇸US_735|1.9MB/s|S004-260618
+  - ⚠️ 🇺🇸 美国 (United States) 174 - xiaohe
+  - ⚠️ 🇺🇸US_745|728KB/s|M003-260806
+  - ⚠️ 🇺🇸US_605|566KB/s|M003-260806
+  - ⚠️ 🇺🇸 美国 (United States) 525 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 441 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 78
+  - ⚠️ 🇺🇸 美国 (United States) 47
+  - ⚠️ 🇺🇸 美国 (United States) 342 - aceo
+  - ⚠️ 🇺🇸US_535
+  - ⚠️ 🇺🇸 美国 (United States) 165 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 149 - xiaohe
+  - ⚠️ 🇺🇸US_756|1.4MB/s
   - ⚠️ 🇺🇸 美国 | USA 6
-  - ⚠️ 🇺🇸 美国 | USA 3
-  - ⚠️ 🇺🇸 美国 | USA 4
-  - ⚠️ 🇺🇸 美国 | USA 8
-  - ⚠️ 🇺🇸 美国 | USA
-  - ⚠️ [free18#041] 🇺🇸_美国 (8)
+  - ⚠️ 🇺🇸US_577|1.3MB/s|S001-260618
   - ⚠️ 🇺🇸 美国 | USA 5
-  - '⚠️ [NoMoreWalls#208] 🇺🇸 美国 | USA #3'
+  - ⚠️ 🇺🇸US_512
+  - ⚠️ 🇺🇸 美国 | USA 2
   url: http://cp.cloudflare.com/generate_204
   interval: 120
   tolerance: 50
@@ -2589,36 +1860,34 @@ proxy-groups:
 - name: AI-POOL
   type: url-test
   proxies:
-  - ⚠️ trojan-1940485917
-  - ⚠️ 🇺🇸US_546
-  - ⚠️ trojan-1929965354
-  - ⚠️ 🇺🇸 美国 (United States) 108 - xiaohe
-  - ⚠️ 🇺🇸 美国 (United States) 101 - xiaohe
-  - ⚠️ ❓Other_109|400KB/s|M003-260806
-  - ⚠️ 🇺🇸 美国 (United States) 386 - xiaohe
-  - ⚠️ 🇨🇦CA_8|299KB/s|S004-260618
-  - ⚠️ trojan-1939194006
-  - ⚠️ trojan-1924748552
-  - ⚠️ [NoMoreWalls#017] 🆓13@oneclickvpnkeys
-  - ⚠️ 🇷🇺 俄罗斯 | RUS
-  - ⚠️ 🇪🇸ES_18|537KB/s|M003-260806
-  - ⚠️ 🇫🇷 法国 (France) 336 - xiaohe
-  - ⚠️ trojan-1943021601
-  - ⚠️ 🇹🇷TR_2|393KB/s|G001-260618
-  - ⚠️ [freeSub#024] D🔴🇺🇸hos_dokng.com_a6052a43
-  - ⚠️ [NoMoreWalls#234] 🇲🇽MX_3|3.2MB/s
-  - ⚠️ [NoMoreWalls#235] 🇲🇽MX_4|2.4MB/s
-  - ⚠️ 🇳🇱 荷兰 | NLD 2
-  - ⚠️ 🇨🇭CH_12|448KB/s|S004-260618
-  - ⚠️ 🇬🇧 英国 | GBR
-  - ⚠️ 🇬🇧 英国 | GBR 4
-  - '⚠️ [NoMoreWalls#271] 🇬🇧 英国 | GBR #1'
-  - ⚠️ 🇺🇸 美国 (United States) 327 - xiaohe
-  - ⚠️ [free18#111] 🇯🇵_日本 (53)
-  - ⚠️ [free18#124] 🇯🇵_日本 (66)
+  - ⚠️ 未知 VLESS-644 | free-nodes
+  - ⚠️ 🇺🇸US_752|1.1MB/s|S004-260618
+  - ⚠️ 🇺🇸US_761|1.4MB/s|M003-260806
+  - ⚠️ 🇺🇸US_738|1.6MB/s|M003-260806
+  - ⚠️ 🇺🇸US_735|1.9MB/s|S004-260618
+  - ⚠️ 🇺🇸 美国 (United States) 165 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 149 - xiaohe
+  - ⚠️ 🇺🇸 美国 (United States) 174 - xiaohe
+  - ⚠️ 🇬🇧GB_45|4.7MB/s|M003-260806
+  - ⚠️ 🇺🇸US_745|728KB/s|M003-260806
+  - ⚠️ 🇫🇷FR_153|4.4MB/s|S004-260618
+  - ⚠️ 🇬🇧GB_46|526KB/s|M003-260806
+  - ⚠️ 🇺🇸US_605|566KB/s|M003-260806
+  - ⚠️ [Eternity#093] 🇬🇧GB-141.98.101.179-0217 | 0.044MB
   - ⚠️ 🇳🇱 荷兰 | NLD
-  - ⚠️ [free18#077] 🇯🇵_日本 (19)
-  - ⚠️ [free18#103] 🇯🇵_日本 (45)
+  - ⚠️ 🇩🇪DE_122|397KB/s|M003-260806
+  - ⚠️ JP日本-353
+  - ⚠️ JP日本-443
+  - ⚠️ JP日本-311
+  - ⚠️ JP日本-395
+  - ⚠️ JP日本-437
+  - ⚠️ JP日本-560
+  - ⚠️ JP日本-866
+  - ⚠️ JP日本-922
+  - ⚠️ JP日本-147
+  - ⚠️ JP日本-263
+  - ⚠️ JP日本-454
+  - ⚠️ 🇪🇸ES_46|2.8MB/s|M003-260806
   url: http://cp.cloudflare.com/generate_204
   interval: 180
   tolerance: 50
